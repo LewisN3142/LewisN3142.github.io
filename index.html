@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <!-- For validation go to validator.w3.org -->
+    <!-- Make accessible using aria-labelledby etc (look up how to do) -->
+    <!-- Write readme to do with current sidebar dropdowns and their items -->
+    <!-- Update home page based on academia layout updates -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Lewis Napper">
+    <meta name="description" content="Personal Portfolio - Home Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Lewis Napper - Home </title>
+
+    <link rel="icon" href="img/Favicon_Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <!-- Get jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Get icon for dropdown menus -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="myScript.js"></script>
+</head>
+
+<!-- Website proper-->
+
+<body id="body">
+
+    <!-- Topbar -->
+    <header class="top-nav">
+        <!-- Note ../ means up one level in folder hierarchy (will need to change when make active page instead of test) -->
+
+        <div id="nav-burger-symbol" class="nav-section">
+            <!-- Burger Icon -->
+            <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
+                aria-expanded="false">
+                <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
+                    stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
+                    <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
+                    <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
+                    <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
+                    </path>
+                </svg>
+            </button>
+            <!-- End Icon -->
+        </div>
+        <div id="nav-logo-symbol" class="nav-section">
+            <a href="index.html">
+                <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45"
+                    viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+                    <circle cx="32.231" cy="32.181" r="29.632" style="fill:none;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="25.215" y="50.81" width="13.588" height="2.039"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="25.187" y="12.393" width="13.609" height="2.039"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="30.925" y="15.216" width="2.202" height="34.837"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <circle cx="18.522" cy="48.03" r="2.357" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <circle cx="45.431" cy="17.456" r="2.396"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <circle cx="45.421" cy="47.98" r="0.781" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <rect x="12.63" y="16.243" width="7.16" height="0.806"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <path
+                        d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
+                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919"
+                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
+                </svg>
+            </a>
+        </div>
+        <div id="nav-language-symbol" class="nav-section">
+            <p> TBC (Lang) </p>
+        </div>
+
+    </header>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar-nav" id="sidebar-nav">
+
+            <ul class="sidebar-text" id="primary-navigation">
+                <!-- Use class 'dropdown-item-current' ONLY for list items of dropdown under current page, to play animation and close dropdown on click. Standard links and dropdown items to other pages need no class or id. -->
+                <li>
+                    <div class="link-with-dropdown">
+                        <a class="link-next-to-dropdown" href="index.html" id="current-page"> Welcome! </a>
+                        <button class="dropdown-btn"> <i class="fas fa-angle-right dropdown-icon"></i>
+                        </button>
+                    </div>
+
+                    <ul class="dropdown-container">
+
+                        <li><a href="#aboutMe" class="dropdown-item-current">
+                                About Me
+                            </a></li>
+                        <!-- Link to about me section -->
+                        <li><a href="#myWork" class="dropdown-item-current">
+                                What I Do
+                            </a></li>
+                        <!-- Link to about my work section -->
+                        <li> <a href="#newsReel" class="dropdown-item-current"> News
+                                and Updates </a></li>
+                        <!-- Link to rolling news list of latest updates -->
+                        <li> <a href="#toDo" class="dropdown-item-current"> To Do List </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link-with-dropdown">
+                        <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia
+                        </a>
+                        <button class="dropdown-btn"> <i class="fas fa-angle-right dropdown-icon"></i> </button>
+                    </div>
+
+                    <ul class="dropdown-container">
+                        <li> <a href="academia_page/academia.html#researchInterests">
+                                Research Interests </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="buffer-item"> </li>
+            </ul>
+
+        </nav>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Page Content-->
+        <main>
+            <!-- Maybe put h1 here as hero image should be full width -->
+            <div class="title-color">
+                <h1> Hey! I'm Lewis Napper </h1>
+            </div>
+
+            <div class="container" aria-labelledby="main">
+
+                <hr id="aboutMe">
+
+                <article>
+
+                    <h2> About Me </h2>
+                    <p> Discussion about me and my background etc. Link to CV page for more information. </p>
+                    <p> This article will likely be one section. </p>
+
+                </article>
+                <hr id="myWork">
+                <article>
+
+                    <h2> What I Do </h2>
+                    <p> Brief Summary of my work --- see other pages for more (link to each in text too). </p>
+                    <p> This article will also likely be one section </p>
+
+                </article>
+                <hr id="newsReel">
+                <article>
+
+                    <h2> News and Updates </h2>
+                    <p> Rolling log of new posts and general news about my work/ life. </p>
+
+                </article>
+                <hr id=" toDo">
+                <article>
+
+                    <h2> To Do </h2>
+                    <ul>
+                        <li> Add in other pages
+                            <ol>
+                                <li> Art Gallery </li>
+                                <li> Clips Page -- Music and Speedruns </li>
+                                <li> CV page </li>
+                                <li> Research Publication Page </li>
+                                <li> Blog Page? For game reviews etc </li>
+                                <li> Code page or link to github on cv page. </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Scan old art to add to gallery page
+                        </li>
+                        <li>
+                            Slideshow hero block for home page and slideshow on gallery page
+                        </li>
+                        <li>
+                            Re-record music more clearly
+                        </li>
+                        <li>
+                            Implement css and js styling more
+                        </li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+            <footer>
+                © 2023 Lewis Napper | All rights reserved
+                <!-- Add in Terms popup -->
+            </footer>
+        </main>
+
+    </div>
+</body>

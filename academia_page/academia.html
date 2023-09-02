@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <!-- For validation go to validator.w3.org -->
+    <!-- Make under overlay be not keyboard focusable (try disable/ focus visible) -->
+    <!-- Write readme to do with current sidebar dropdowns and their items -->
+    <!-- copy dropdowns from academia to home -->
+    <!-- Do something with language toggle -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Lewis Napper">
+    <meta name="description" content="Personal Portfolio - Home Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> Lewis Napper - Academia </title>
+
+    <link rel="icon" href="../img/Favicon_Logo.ico" type="image/x-icon">
+    <!-- Page icons from icomoon site -->
+    <link rel="stylesheet" href="../font-styles.css" />
+    <link rel="stylesheet" href="../main.css" type="text/css">
+
+    <!-- Get jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="../myScript.js"></script>
+</head>
+
+<!-- Website proper-->
+
+<body id="body">
+
+    <!-- Topbar -->
+    <header class="top-nav">
+        <!-- Note ../ means up one level in folder hierarchy (will need to change when make active page instead of test) -->
+
+        <div id="nav-burger-symbol" class="nav-section">
+            <!-- Burger Icon -->
+            <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
+                aria-expanded="false">
+                <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
+                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
+                    <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
+                    <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
+                    <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
+                    </path>
+                </svg>
+            </button>
+            <!-- End Icon -->
+        </div>
+        <div id="nav-logo-symbol" class="nav-section">
+            <a href="../index.html">
+                <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45"
+                    viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+                    <circle cx="32.231" cy="32.181" r="29.632" style="fill:none;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="25.215" y="50.81" width="13.588" height="2.039"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="25.187" y="12.393" width="13.609" height="2.039"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <rect x="30.925" y="15.216" width="2.202" height="34.837"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <circle cx="18.522" cy="48.03" r="2.357" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <circle cx="45.431" cy="17.456" r="2.396"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <circle cx="45.421" cy="47.98" r="0.781" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <rect x="12.63" y="16.243" width="7.16" height="0.806"
+                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
+                    <path
+                        d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
+                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
+                    <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919"
+                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
+                </svg>
+            </a>
+        </div>
+        <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
+            <p> </p>
+        </div>
+
+    </header>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav class="sidebar-nav" id="sidebar-nav">
+
+            <ul class="sidebar-text" id="primary-navigation">
+                <!-- Use class 'dropdown-item-current' ONLY for list items of dropdown under current page, to play animation and close dropdown on click. Standard links and dropdown items to other pages need no class or id. -->
+                <li>
+                    <div class="link-with-dropdown">
+                        <a class="link-next-to-dropdown" href="../index.html"> Welcome! </a>
+                        <button class="dropdown-btn" type="button" aria-controls="Welcome-dropdown"
+                            aria-expanded="false"> <i class="icon-angle-right dropdown-icon"></i>
+                        </button>
+                    </div>
+
+                    <ul class="dropdown-container" id="Welcome-dropdown">
+
+                        <li><a href="../index.html#aboutMe">
+                                About Me
+                            </a></li>
+                        <!-- Link to about me section -->
+                        <li><a href="../index.html#myWork">
+                                What I Do
+                            </a></li>
+                        <!-- Link to about my work section -->
+                        <li> <a href="../index.html#newsReel"> News
+                                and Updates </a></li>
+                        <!-- Link to rolling news list of latest updates -->
+                        <li> <a href="../index.html#toDo"> To Do List </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!--
+                <li>
+                    <a href="../CardsTest/CardsTest.html"> Old HTML Tutorial Info </a>
+                </li>
+                -->
+
+                <li>
+                    <div class="link-with-dropdown">
+                        <a class="link-next-to-dropdown" href="academia.html" id="current-page"> Academia
+                        </a>
+                        <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown"
+                            aria-expanded="true"> <i class="icon-angle-right dropdown-icon"></i> </button>
+                    </div>
+
+                    <ul class="dropdown-container" id="Academia-dropdown">
+                        <li> <a href="academia.html#researchInterests" class="dropdown-item-current">
+                                Research Interests </a>
+                        </li>
+                        <li> <a href="academia.html#publications" class="dropdown-item-current">
+                                Publications </a>
+                        </li>
+                        <li> <a href="academia.html#newsEvents" class="dropdown-item-current">
+                                News and Events </a>
+                        </li>
+                        <li> <a href="academia.html#academicPresentations" class="dropdown-item-current">
+                                Presentations </a>
+                        </li>
+                        <li> <a href="academia.html#teaching" class="dropdown-item-current">
+                                Teaching</a>
+                        </li>
+                        <li> <a href="academia.html#awardsFunding" class="dropdown-item-current">
+                                Awards and Funding </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="buffer-item"> </li>
+            </ul>
+
+        </nav>
+
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Page Content-->
+        <main>
+            <div>
+                <h1> Academia </h1>
+            </div>
+
+            <div class="container">
+
+                <div class="section-break" id="researchInterests">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Research Interests </h2>
+                    <p class="centered-text">
+                        My research interests are many-fold, though predominantly revolve around geometry, topology, and
+                        PDE
+                        theory, as well as their application to problems in mathematical physics. Feel free to contact
+                        me if
+                        you have any questions or would like to propose a project or collaboration. What follows is a
+                        summary of some of my research, past and present:
+                    </p>
+
+
+                    <section class="Review-section">
+                        <h3> Monge&ndash;Ampère Geometry and the Topology of Vortices </h3>
+
+                        <p class="medium-para">
+                            First and foremost, my studies focus on the application of Monge&ndash;Ampère geometry
+                            and
+                            higher
+                            (categorified) symplectic geometry to classifying the properties of fluid dynamical
+                            flows.
+                            On
+                            the
+                            geometric side, I am interested in the existence of almost (generalised, para-)complex
+                            structures
+                            and conditions for their integrability with respect to choices of bracket. In
+                            particular,
+                            one
+                            wishes
+                            to use such structures to classify higher dimensional Monge&ndash;Ampère equations and
+                            extensions thereof.
+                        </p>
+                        <p class="medium-para">
+                            Motivating this study is the parallel problem of providing a consistent geometric
+                            description of vortices in a fluid flow &mdash; the Poisson equation for the pressure of
+                            an
+                            incompressible fluid flow is of Monge&ndash;Ampère type and induces structure which acts
+                            as
+                            a
+                            diagnostic
+                            tool for the dominance of vorticity and strain.
+                        </p>
+                        <p class="medium-para">
+                            This work is in collaboration with
+                            <a href="https://math.univ-angers.fr/~volodya/index_uk.html" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Volodya Rubtsov</a>
+                            and my supervisors <a href="https://www.surrey.ac.uk/people/martin-wolf" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Martin Wolf</a> and
+                            <a href="https://www.surrey.ac.uk/people/ian-roulstone" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Ian Roulstone</a> as
+                            part
+                            of
+                            my PhD and
+                            is currently funded by an
+                            <abbr title="Science and Technology Facilities Council">STFC</abbr> studentship.
+                        </p>
+                    </section>
+
+                    <section class="Review-section">
+                        <h3> Synthetic Lorentizan Geometry and Globalization of Curvature Bounds </h3>
+
+                        <p class="medium-para">
+                            Building on my work under the <abbr title="London Mathematical Society">LMS</abbr>
+                            undergraduate research bursary <a href="https://www.lms.ac.uk/grants/URBList"
+                                target="_blank" rel="noopener noreferrer"
+                                class="external-link under-overlay">(URB-18-19-70)</a> with <a
+                                href="https://www.surrey.ac.uk/people/james-grant" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">James Grant</a>, I
+                            am interested in establishing results in the relatively new field of synthetic Lorentzian
+                            geometry.
+                            The fundamental objects of study are Lorentzian pre-length spaces, which are to smooth
+                            spacetimes,
+                            what metric spaces and Alexandrov geometry are to smooth Riemannian manifolds. Such low
+                            regularity
+                            structures are of special interest in general relativity. In particular, my current work
+                            involves
+                            the study of (local) curvature bounds via triangle comparison and the globalization of these
+                            bounds.
+                        </p>
+                        <p class="medium-para">
+                            This work is part of a current collaboration with <a
+                                href="https://ufind.univie.ac.at/de/person.html?id=49261" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Tobias Beran</a>, <a
+                                href="https://ufind.univie.ac.at/de/person.html?id=114757" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Felix Rott</a>, and <a
+                                href="https://www.cardiff.ac.uk/people/view/2634069-harvey-john" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">John Harvey</a>.
+                        </p>
+                    </section>
+
+                    <section class="Review-section">
+                        <h3> The Algebraic Bethe Ansatz for su(2) Spin Chains and Beyond </h3>
+
+                        <p class="medium-para">
+                            Finally, the topic of my MMath final year thesis concerned the application of the Algebraic
+                            Bethe
+                            Ansatz to particles with spin, in particular to isotropic Heisenberg chains of particles
+                            with
+                            fundamental representation given by su(2) and su(3). The nested Bethe equations and their
+                            eigenvalues were re-derived in full detail and preliminary steps towards the construction of
+                            the
+                            universal R-matrix were made.
+                        </p>
+                        <p class="medium-para">
+                            This work was carried out under the supervision of <a href="https:
+                                                        //www.surrey.ac.uk/people/alessandro-torrielli" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Alessandro Torrielli</a>
+                            and
+                            <a href="https://www.surrey.ac.uk/people/andrea-prinsloo" target="_blank"
+                                rel="noopener noreferrer" class="external-link under-overlay">Andrea Prinsloo</a>.
+                        </p>
+                    </section>
+
+                </article>
+
+                <div class="section-break" id="publications">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Publications </h2>
+
+                    <h3> Preprints (In Review) </h3>
+                    <ul>
+                        <li>
+                            <b> A Toponogov globalization result for Lorentzian length spaces </b> (2023)
+
+                            <p class="small-para">
+                                <em> with Tobias Beran, John Harvey, and Felix Rott </em> <br>
+                                <em style="color:red;"> in preparation </em>
+                            </p>
+
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="Preprint3">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="Preprint3">
+                                <em>
+                                    In the synthetic geometric setting introduced by Kunzinger and Sämann, we
+                                    present an analogue of Toponogov's
+                                    Globalization Theorem which applies to Lorentzian length spaces with lower
+                                    (timelike) curvature bounds. Our approach
+                                    utilizes a "cat's cradle" construction akin to that which appears in several
+                                    proofs in the metric setting. On the road
+                                    to our main result, we also provide a lemma regarding the subdivision of triangles
+                                    in spaces with a local lower
+                                    curvature bound and a synthetic Lorentzian version of the Lebesgue Number Lemma.
+                                    Several properties of time functions
+                                    and the null distance on globally hyperbolic Lorentzian length spaces are also
+                                    highlighted. We conclude by presenting
+                                    several applications of our results, including the provision of sufficient
+                                    conditions for the homogeneity of the
+                                    McCann&ndash;Sämann dimension, as well as for the application of the
+                                    Bonnet&ndash;Myers Theorem and Splitting Theorem to
+                                    Lorentzian length spaces with local lower curvature bounds.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Alexandrov's Patchwork and the Bonnet&ndash;Myers Theorem for Lorentzian (pre-)length
+                                spaces </b> (2023)
+
+                            <p class="small-para">
+                                <em> with Tobias Beran and Felix Rott <br>
+                                    doi: arXiv.2302.11615 </em>
+                            </p>
+
+                            <a href="https://arxiv.org/abs/2302.11615" target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                ArXiv</a>
+                            |
+                            <a href="material/Lorentzian_Alexandrov_Paper.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> PDF</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="Preprint2">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="Preprint2">
+                                <em>
+                                    We present key initial results in the study of global timelike curvature bounds
+                                    within the Lorentzian pre-length space
+                                    framework. Most notably, we construct a Lorentzian analogue to Alexandrov's
+                                    Patchwork, thus proving that suitably nice
+                                    Lorentzian pre-length spaces with local upper timelike curvature bound also satisfy
+                                    a corresponding global upper bound.
+                                    Additionally, for spaces with global lower bound on their timelike curvature, we
+                                    provide a Bonnet&ndash;Myers style result,
+                                    constraining their finite diameter. Throughout, we make the natural comparisons to
+                                    the metric case, concluding with a
+                                    discussion of potential applications and ongoing work.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Monge&ndash;Ampère Geometry and Vortices </b> (2023)
+
+                            <p class="small-para">
+                                <em> with Ian Roulstone, Volodya Rubtsov, and Martin Wolf <br>
+                                    doi: arXiv.2302.11604 </em>
+                            </p>
+
+                            <a href="https://arxiv.org/abs/2302.11604" target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                ArXiv</a>
+                            |
+                            <a href="material/Geometry_Vortices_Paper.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> PDF</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                ariacontrols="Preprint1">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <div class="abstract-container" id="Preprint1">
+
+                                <p class="small-para">
+                                    <em>
+                                        We introduce a new approach to Monge&ndash;Ampère geometry based on techniques
+                                        from
+                                        higher symplectic geometry. Our work is
+                                        motivated by the application of Monge&ndash;Ampère geometry to the Poisson
+                                        equation
+                                        for the pressure that arises for
+                                        incompressible Navier&ndash;Stokes flows. Whilst this equation constitutes an
+                                        elliptic problem for the pressure, it can also
+                                        be viewed as a non-linear partial differential equation connecting the pressure,
+                                        the
+                                        vorticity, and the rate-of-strain.
+                                        As such, it is a key diagnostic relation in the quest to understand the
+                                        formation of
+                                        vortices in turbulent flows. We
+                                        study this equation via the (higher) Lagrangian submanifold it defines in the
+                                        cotangent bundle to the configuration
+                                        space of the fluid.
+                                    </em>
+                                </p>
+                                <p class="small-para"><em>
+                                        Using our definition of a (higher) Monge&ndash;Ampère structure,
+                                        we study an associated metric on the
+                                        cotangent bundle together with its pull-back to the (higher) Lagrangian
+                                        submanifold.
+                                        The signatures of these metrics are
+                                        dictated by the relationship between vorticity and rate-of-strain, and their
+                                        scalar
+                                        curvatures can be interpreted in a
+                                        physical context in terms of the accumulation of vorticity, strain, and their
+                                        gradients. We show explicity, in the case
+                                        of two-dimensional flows, how topological information can be derived from the
+                                        Monge-Ampere geometry of the Lagrangian
+                                        submanifold. We also demonstrate how certain solutions to the three-dimensional
+                                        incompressible Navier&ndash;Stokes equations,
+                                        such as Hill's spherical vortex and an integrable case of
+                                        Arnol'd&ndash;Beltrami&ndash;Childress flow, have symmetries that
+                                        facilitate a formulation of these solutions from the perspective of (higher)
+                                        symplectic reduction.
+                                    </em>
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <h3> Reports (unpublished) </h3>
+
+                    <ul>
+                        <li>
+                            <b> Monge&ndash;Ampère Geometry and Vortices &mdash; Confirmation Report </b> (2023)
+                            <p class="small-para">
+                                <em> Supervised by Martin Wolf and Ian Roulstone </em> <br>
+                            </p>
+                            <a href="material/Confirmation Report.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> PDF</a>
+                        </li>
+                        <li>
+                            <b> The algebraic Bethe ansatz for <em> SU(2) </em> spin chains and beyond &mdash; Master's
+                                Thesis </b> (2021)
+                            <p class="small-para">
+                                <em> Supervised by Alessandro Torrielli and Andrea Prinsloo </em> <br>
+                                <em style="color:red;"> (Document To Appear) </em>
+                            </p>
+                        </li>
+                    </ul>
+
+
+                </article>
+
+                <div class="section-break" id="newsEvents">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> News and Events </h2>
+
+                    <p style="color:red;"> Section TBC &mdash; Summer Schools, Conferences, and Workshops attended. </p>
+
+
+                </article>
+
+                <div class="section-break" id="academicPresentations">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Presentations </h2>
+
+                    <h3> University of Surrey Mathematics Department</h3>
+
+                    <ul>
+
+                        <li>
+                            <b> Monge&ndash;Ampère Geometry and the Navier&ndash;Stokes Equations </b> (29th
+                            March 2023)
+                            <p class="small-para">
+                                <em> A talk contributed as part of the first PGR Mathematics Conference, representing
+                                    the
+                                    work of students in the Fields, Strings, and Geometry research group. </em>
+                            </p>
+
+                            <a href="material/PGR_Conference_Booklet.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Conference Booklet</a>
+                            |
+                            <a href="material/PGR_Talk.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Slides</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="UoS_Presentation1">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="UoS_Presentation1">
+                                <em>
+                                    For partial differential equations of Monge-Ampère type, it has been shown that
+                                    solutions correspond to
+                                    Lagrangian submanifolds of the associated phase space. Building from the observation
+                                    that the Poisson equation for the
+                                    pressure of an incompressible, two-dimensional, Navier-Stokes flow is a Monge-Ampère
+                                    equation, this talk introduces a
+                                    framework for studying fluid dynamics using properties of the aforementioned
+                                    submanifolds. In particular, it is noted
+                                    that such a submanifold may be equipped with a metric whose signature acts as a
+                                    diagnostic for the dominance of
+                                    vorticity and strain. We provide an illustrative example in two dimensions and probe
+                                    the motivational question:
+                                    ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher
+                                    dimensions and some open questions.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Not all ravens are writing desks: An introduction to the topology of surfaces </b> (24th
+                            February
+                            2023)
+                            <p class="small-para">
+                                <em> A seminar in the Taste of Research Undergraduate Seminar (TORUS) Series designed by
+                                    mathematics PhD students to introduce undergraduate students to a taste of
+                                    doctoral research in mathematics. </em>
+                            </p>
+
+                            <a href="https://www.surrey.ac.uk/events/20230224-not-all-ravens-are-writing-desks-introduction-topology-surfaces"
+                                target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                Seminar Webpage</a>
+                            |
+                            <a href="material/TORUS_Talk.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Slides</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="UoS_Presentation2">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="UoS_Presentation2">
+                                <em>
+                                    In the tale Alice in Wonderland, Lewis Carroll asks "Why is a raven like a writing
+                                    desk?" With this open question in
+                                    mind, we provide a short pedagogical introduction to the topology of surfaces,
+                                    touching on the notions of orientability,
+                                    open and closed surfaces, and curvature. Most of our attention will be paid to the
+                                    concept of genus, which is loosely
+                                    described by the number of holes a closed surface has. Following some illustrative
+                                    examples, we shall apply the theory
+                                    to the question at hand, conclusively stating conditions under which a writing desk
+                                    is topologically equivalent to a
+                                    raven. Given time, we shall relate these ideas to current research into fluid
+                                    dynamics, space-times, and string theory.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Monge&ndash;Ampère Geometry and the Navier&ndash;Stokes Equations</b> (6th February
+                            2023)
+                            <p class="small-para">
+                                <em> A joint research seminar between the Fields, Strings and
+                                    Geometry
+                                    Group and the Non-linear
+                                    Waves and
+                                    Geometric
+                                    Fluid Dynamics Group. </em>
+                            </p>
+
+                            <a href="https://www.surrey.ac.uk/events/20230206-monge-ampere-geometry-and-navier-stokes-equations"
+                                target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                Seminar Webpage</a>
+                            |
+                            <a href="material/FSG_Seminar.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Slides</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="UoS_Presentation3">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="UoS_Presentation3">
+                                <em>
+                                    For partial differential equations of Monge-Ampère type, it has been shown that
+                                    solutions correspond to
+                                    Lagrangian submanifolds of the associated phase space. Building from the observation
+                                    that the Poisson equation for the
+                                    pressure of an incompressible, two-dimensional, Navier-Stokes flow is a Monge-Ampère
+                                    equation, this talk introduces a
+                                    framework for studying fluid dynamics using properties of the aforementioned
+                                    submanifolds. In particular, it is noted
+                                    that such a submanifold may be equipped with a metric whose signature acts as a
+                                    diagnostic for the dominance of
+                                    vorticity and strain. We provide an illustrative example in two dimensions and probe
+                                    the motivational question:
+                                    ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher
+                                    dimensions and some open questions.
+                                </em>
+                            </p>
+                        </li>
+
+                    </ul>
+
+                    <h3> External Contributed Talks </h3>
+
+                    <ul>
+                        <li>
+                            <b> Monge&ndash;Ampère Geometry and the Navier&ndash;Stokes Equations </b> (26th April 2023)
+
+                            <p class="small-para">
+                                <em>
+                                    Mathematical Physics Research Seminar <br>
+                                    University of Hertfordshire, UK.
+                                </em>
+                            </p>
+
+                            <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/04/28/lewis-napper-speaks-in-the-mathematical-physics-seminar-at-the-university-of-hertfordshire/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                UoS Blog</a>
+                            |
+                            <a href="material/Herts_Seminar.pdf" target="_blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Slides</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="External_Presentation1">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="External_Presentation1">
+                                <em>
+                                    Partial differential equations of Monge&ndash;Ampère type have been shown to
+                                    correspond
+                                    to specific choices of differential
+                                    form on the associated phase space. Furthermore, Lagrangian submanifolds of said
+                                    space may be viewed as a generalisation
+                                    of solutions to a Monge&ndash;Ampère equation. Building from the observation that
+                                    the
+                                    Poisson equation for the pressure of an
+                                    incompressible, two-dimensional, Navier&ndash;Stokes flow can be presented as an
+                                    equation of Monge&ndash;Ampère type, this talk
+                                    introduces a framework for studying fluid dynamics using properties of the
+                                    aforementioned submanifolds. In particular, it
+                                    is noted that such a submanifold may be equipped with a metric whose signature acts
+                                    as a diagnostic for the dominance of
+                                    vorticity and strain. We discuss how this approach may be extended to fluid flows on
+                                    an arbitrary Riemannian manifold and
+                                    to higher dimensions, through the use of higher (categorified) symplectic geometry.
+                                    We conclude with some comments on how
+                                    this facilitates symmetry reductions and some open questions.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Globalization of Curvature Bounds in Lorentzian Pre-length Spaces </b> (27th February
+                            2023)
+
+                            <p class="small-para">
+                                <em>
+                                    Interdisciplinary Junior Scientist Workshop
+                                    in Mathematical General Relativity <br>
+                                    Wildberg, Germany (Hosted by Universität
+                                    Tübingen and Universität Potsdam)
+                                </em>
+                            </p>
+
+                            <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/03/12/lewis-napper-speaks-at-two-week-workshop-on-mathematical-general-relativity-in-germany/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="external-link external-link-list-item under-overlay">
+                                UoS Blog</a>
+                            |
+                            <a href="https://www.math.uni-potsdam.de/grworkshop" target="_blank"
+                                rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                                Workshop Webpage</a>
+                            |
+                            <a href="material/Globo_Talk.pdf" target=" _blank" rel="noopener noreferrer"
+                                class="local-download under-overlay"> Slides</a>
+                            |
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="External_Presentation2">
+                                <i class="abstract-icon icon-angle-right"></i> Abstract
+                            </button>
+
+                            <p class="small-para abstract-container" id="External_Presentation2">
+                                <em>
+                                    Inspired by results from metric geometry, we discuss the globalization of timelike
+                                    curvature bounds in Lorentzian pre-length space framework of Kunzinger and Sämann.
+                                    In particular, utilising the formulation of curvature bounds in terms of triangle
+                                    comparison, we present a Lorentzian analogue of the Alexandrov patchwork
+                                    construction for spaces with curvature bounded above. We conclude with a summary of
+                                    ongoing work on the corresponding problem for Lorentzian pre-length spaces with
+                                    curvature bounded below. Should time permit, we will also discuss ideas for
+                                    applications.
+                                </em>
+                            </p>
+                        </li>
+                    </ul>
+
+                </article>
+
+                <div class="section-break" id="teaching">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Teaching </h2>
+                    <p class="centered-text"> Unless otherwise stated all of the below activities were undertaken at and
+                        for the University of
+                        Surrey, during the course of my undergraduate and postgraduate studies. </p>
+
+                    <div class="teach-row">
+                        <div class="teach-column">
+                            <section class="Teach-section First-column">
+                                <h3> Marking Support</h3>
+                                <ul>
+                                    <li>
+                                        <b> Graphs and Networks </b> <br>
+                                        Semester 2 - 2022/23 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT3043" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <b> Operations Research and Optimisation </b> <br>
+                                        Semester 2 - 2022/23 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT2009" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <b> Real Analysis I </b> <br>
+                                        Semester 1 - 2022/23 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT1032" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <b> Algebra </b> <br>
+                                        Semester 1 - 2022/23 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT1031" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <b> Manifolds and Topology </b> <br>
+                                        Semester 1 - 2021/22 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2021-2/module/MAT3009" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <b> Probability and Statistics </b> <br>
+                                        Semester 1 - 2021/22 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2021-2/module/MAT1033" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <div class="teach-column">
+
+                            <section class="Teach-section">
+                                <h3> Editorial Support</h3>
+                                <ul>
+                                    <li>
+                                        <b> Curves and Surfaces </b> <br>
+                                        Proof read notes and exercises<br>
+                                        Notes can be found <a
+                                            href="https://department-mathematics.pages.surrey.ac.uk/martin-wolf/personal/assets/files/lecture_notes/Curves_and_Surfaces.pdf"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay"> here </a> <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2023-4/module/MATM054" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <b> Relativistic Quantum Mechanics </b> <br>
+                                        Proof read notes and exercises<br>
+                                        Notes can be found <a
+                                            href="https://department-mathematics.pages.surrey.ac.uk/martin-wolf/personal/assets/files/lecture_notes/Relativistic_Quantum_Mechanics.pdf"
+                                            target="_blank" rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay"> here </a> <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2021-2/module/MATM054" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <b> Numerical and Computational Methods </b> <br>
+                                        Reviewed exercises and provided solutions <br>
+                                        Semester 2 - 2020/21 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2020-1/module/MAT2001" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </section>
+
+                            <section class="Teach-section">
+                                <h3> Computer Lab Assistant</h3>
+                                <ul>
+                                    <li>
+                                        <b> Probability and Statistics </b> <br>
+                                        Semester 1 - 2019/20 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2019-0/module/MAT1033" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <b> Numerical and Computational Methods </b> <br>
+                                        Semester 2 - 2019/20 and 2020/21 <br>
+                                        <a href="https://catalogue.surrey.ac.uk/2019-0/module/MAT2001" target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="external-link external-link-list-item under-overlay">
+                                            <em>
+                                                View module catalogue
+                                            </em>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+
+                    </div>
+                    <div style="height: 1em;"></div>
+
+                </article>
+
+                <div class="section-break" id="awardsFunding">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 -960 960 960"
+                        width="48" title="Aperture Science Laboratories" alt="camera icon">
+                        <path
+                            d="m449-638 144-252q95 26 169 92.5T875-638H449ZM329-530 182-782q61-59 137.5-91.5T477-906q18 0 36 1.5t30 3.5L329-530ZM68-373q-7-25-10-51.5T55-478q0-76 24-144t70-123l213 372H68ZM365-71q-95-28-167.5-93.5T85-323h425L365-71Zm123 16q-21 0-40-1t-32-3l214-370 147 253q-60 58-135.5 89.5T488-55Zm324-161L597-588h295q7 28 10.5 55t3.5 53q0 73-23.5 140T812-216Z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Awards and Funding </h2>
+
+                    <h3> Grants </h3>
+
+                    <ul>
+                        <li>
+                            <b> STFC PhD Studentship 2021-2024 </b>
+                            <br> Value: ~£56,000 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Grants_STFC_PhD">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Grants_STFC_PhD">
+                                <em>
+                                    Science and Technology Facilities Council funding for a 3-year PhD, researching the
+                                    Monge&ndash;Ampère Geometry of Vortices. The grant total includes the UKRI annual
+                                    stipend and a £3000 travel grant.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Institut Für Mathematik Participation Grant 2023 </b>
+                            <br> Value: €200 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Grants_Wildberg">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Grants_Wildberg">
+                                <em>
+                                    Funding to attend the Interdisciplinary Junior Scientist <a
+                                        href="https://www.math.uni-potsdam.de/grworkshop" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="external-link external-link-list-item under-overlay">Workshop</a>
+                                    in
+                                    Mathematical General Relativity in Wildberg, Germany, provided by Universität
+                                    Tübingen and Universität Potsdam. The grant also included accommodation costs not
+                                    represented in the value.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> LMS Early Career Researcher Travel Grant 2022 </b>
+                            <br> Value: £500 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Grants_LMS_ECR">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Grants_LMS_ECR">
+                                <em>
+                                    London Mathematical Society funding for travel to the
+                                    <a href="http://www.fields.utoronto.ca/" target="_blank" rel="noopener noreferrer"
+                                        class="external-link under-overlay">Fields Institute</a>,
+                                    Toronto, Canada to attend a
+                                    <a href="http://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
+                                        target="_blank" rel="noopener noreferrer" class="external-link under-overlay">
+                                        Workshop</a> on Mathematical Relativity, Scalar Curvature, and Synthetic
+                                    Lorentzian Geometry.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> Fields Institute Participation Grant 2022 </b>
+                            <br> Value: CAD$1000 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Grants_Fields">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Grants_Fields">
+                                <em>
+                                    Funding from the <a href="http://www.fields.utoronto.ca/" target="_blank"
+                                        rel="noopener noreferrer" class="external-link under-overlay">Fields
+                                        Institute</a> to cover travel and subsistence expenses while attending their
+                                    <a href="http://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
+                                        target="_blank" rel="noopener noreferrer" class="external-link under-overlay">
+                                        Workshop</a> on Mathematical Relativity, Scalar Curvature, and Synthetic
+                                    Lorentzian Geometry.
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> LMS Undergraduate Research Bursary 2019 </b>
+                            <br> Value: £1440 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Grants_LMS_URB">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Grants_LMS_URB">
+                                <em>
+                                    London Mathematical Society funded summer research project <a
+                                        href="https://www.lms.ac.uk/grants/URBList" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="external-link under-overlay">(URB-18-19-70)</a>.
+                                    Includes matched
+                                    funding
+                                    from the University of Surrey.
+                                </em>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h3> Awards </h3>
+
+                    <ul>
+                        <li>
+                            <b> Surrey Merit Scholarship 2017/18 </b>
+                            <br> Value: £2000 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Awards_Surrey_Merit">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Awards_Surrey_Merit">
+                                <em>
+                                    Scholarship awarded to undergraduate students enrolling at the University of Surrey
+                                    who achieve exceptional A-level grades (A*AA). The scholarship also included free
+                                    1-year membership to Surrey Sports Park. See the <a
+                                        href="https://money.surrey.ac.uk/funding/scholarships" target="_blank"
+                                        rel="noopener noreferrer" class="external-link under-overlay">University
+                                        Webpage</a> for more details.
+                                </em>
+                            </p>
+                        </li>
+                        <li>
+                            <b> Mathematics Department Prize for Excellence 2017-2021</b>
+                            <br> Value £400 | <button class="abstract-link under-overlay" type="button"
+                                aria-expanded="false" aria-controls="Awards_Surrey_Excellence">
+                                <i class="abstract-icon icon-angle-right"></i> Details
+                            </button>
+
+                            <p class="small-para abstract-container" id="Awards_Surrey_Excellence">
+                                <em>
+                                    Four times winner of the Mathematics Department Prize for Excellence at the
+                                    University of Surrey, awarded for the best performance in each year of an
+                                    undergraduate/ master's degree.
+                                </em>
+                            </p>
+                        </li>
+                    </ul>
+
+                </article>
+
+
+            </div>
+            <footer>
+                © 2023 Lewis Napper | All rights reserved
+                <!-- Add in Terms popup -->
+            </footer>
+        </main>
+
+    </div>
+</body>

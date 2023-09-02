@@ -1,0 +1,619 @@
+/*
+TODO:
+Replace <hr> with decorated whitespace --- use these as anchors for new sections
+Add hero image (maybe remove main padding so image touches sides)
+
+TODO: Check compatibility with Dave Grey Course and verification link in html.
+Neaten variables and choose colour scheme
+Remove doubly set colours/ variables where possible
+
+Nicer text formatting...
+Get Fontawesome pack so used icons load faster (pw notes)
+
+*/
+
+/* RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* VARIABLES */
+:root {
+  /* Colour Choices */
+
+  /* 114, 179, 235 */
+  /* 179, 209, 236 */
+  --foreground-default: #f5f5f5;
+  --foreground-active-blue: #88b8e2;
+  --foreground-clicked-blue: #3e8dd2;
+  --background-default: #333;
+  --background-mid-accent: #232323;
+  --background-second-accent: #292929;
+  --background-accent: #181818;
+  --overlay-color: rgba(245, 245, 245, 0.2);
+  --border-primary: #56a37b78;
+  --border-secondary: #a4ceba77;
+
+  /* Widths and Heights*/
+  --topbar-height: 3.5rem;
+  --sidebar-width: 18rem;
+
+  /* Fonts */
+  --font-size-sidebar: 1.05rem;
+  --sidebar-line-height: 1;
+  --font-size-default: 1.1rem;
+  --font-letter-spacing-default: 0.008em;
+  --font-word-spacing-default: 0.05em;
+  --main-line-height: 1.45;
+
+  /* CSS Animations */
+  --logo-pulse-in: all 300ms ease-out;
+  --logo-pulse-out: all 150ms ease;
+  --sidebar-speed: all 400ms ease;
+  --burger-menu-speed: all 600ms ease-in-out;
+  --dropdown-speed: all 250ms ease-in-out;
+  --dropdown-speed-revert: all 175ms ease;
+  --icon-rotate-speed: rotate 200ms ease-in-out;
+  --body-dropdown-speed: all 200ms ease-in-out;
+  --logo-scaling: scale(1.12);
+
+  /* Scrollbars */
+  --custom-scrollbar-width: 12px;
+  --custom-scrollbar-border-radius: 10px;
+}
+
+/* GOOGLE ICON FORMATTING*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+  color: whitesmoke;
+}
+
+.material-fill {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+
+/* OVERALL BODY STYLING */
+body {
+  background-color: var(--background-default);
+  color: var(--foreground-default);
+
+  font-size: var(--font-size-default);
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: var(--font-letter-spacing-default);
+  word-spacing: var(--font-word-spacing-default);
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+
+  overflow-x: hidden;
+}
+
+footer {
+  background: var(--background-accent);
+  padding-left: 3rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  color: #a2a2a2;
+  font-size: calc(0.9 * var(--font-size-default));
+}
+
+/* Body Anchor Link Style */
+body a {
+  text-decoration: none;
+  color: var(--foreground-active-blue);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Visited Link Colour*/
+body a:hover {
+  color: var(--foreground-clicked-blue);
+  text-decoration: underline;
+}
+
+/* SCROLLBAR STYLES */
+::-webkit-scrollbar-track {
+  background-color: var(--background-accent);
+}
+
+::-webkit-scrollbar {
+  width: var(--custom-scrollbar-width);
+  background-color: var(--background-default);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: var(--custom-scrollbar-border-radius);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: var(--foreground-default);
+}
+
+body::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 3.5rem;
+}
+
+.sidebar-nav::-webkit-scrollbar-track-piece:start {
+  background: transparent;
+  margin-top: 0.1rem;
+}
+
+.sidebar-nav::-webkit-scrollbar-track-piece:end {
+  background: transparent;
+  margin-bottom: 3.6rem;
+}
+
+/* UPPER NAV BAR */
+.top-nav {
+  z-index: 5;
+  display: flex;
+  background-color: var(--background-accent);
+  box-sizing: border-box;
+  min-height: var(--topbar-height);
+  position: fixed;
+  width: 100vw;
+  font-size: var(--font-size-sidebar);
+  line-height: var(--sidebar-line-height);
+}
+
+.nav-section {
+  padding: 0.1% 2%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: left;
+}
+
+#nav-burger-symbol {
+  flex-basis: calc(48% - 28.5px);
+}
+
+#nav-logo-symbol,
+#nav-language-symbol {
+  flex-grow: 1;
+}
+
+#nav-language-symbol {
+  justify-content: flex-end;
+}
+
+/* MENU BURGER */
+#menu-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--foreground-default);
+
+  display: flex;
+  justify-content: center;
+}
+
+.burger-button .line {
+  transition: var(--sidebar-speed);
+}
+
+.middle {
+  stroke-dasharray: 47 300;
+}
+
+#menu-toggle.toggled .middle {
+  stroke-dashoffset: -47;
+  stroke-dasharray: 147 300;
+  stroke: var(--foreground-active-blue);
+}
+
+.inner-circle {
+  stroke-dasharray: 47 300;
+}
+
+#menu-toggle.toggled .inner-circle {
+  stroke-dashoffset: -120;
+  stroke-dasharray: 120 300;
+  stroke: var(--foreground-active-blue);
+}
+
+/* LOGO */
+.site-logo {
+  display: flex;
+  justify-content: center;
+
+  -webkit-transition: var(--logo-pulse-in);
+  -moz-transition: var(--logo-pulse-in);
+  -o-transition: var(--logo-pulse-in);
+  transition: var(--logo-pulse-in);
+}
+
+.site-logo:hover {
+  -webkit-transform: var(--logo-scaling);
+  transform: var(--logo-scaling);
+
+  -webkit-transition: var(--logo-pulse-out);
+  -moz-transition: var(--logo-pulse-out);
+  -o-transition: var(--logo-pulse-out);
+  transition: var(--logo-pulse-out);
+}
+
+/* WRAPPERS FOR MAIN AND SIDEBAR */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: var(--sidebar-speed);
+  -moz-transition: var(--sidebar-speed);
+  -o-transition: var(--sidebar-speed);
+  transition: var(--sidebar-speed);
+  padding-top: var(--topbar-height);
+}
+
+main {
+  width: 100%;
+  color: var(--foreground-default);
+  line-height: var(--main-line-height);
+  position: absolute;
+}
+
+.section-break {
+  width: 100%;
+}
+
+.section-break svg {
+  display: block;
+  margin: auto;
+}
+
+main hr {
+  padding-bottom: var(--topbar-height);
+}
+
+/* Toggle Classes */
+#body.toggled {
+  overflow: hidden;
+}
+
+#wrapper.toggled {
+  padding-left: var(--sidebar-width);
+}
+
+#wrapper.toggled main {
+  position: absolute;
+  margin-right: calc(-1 * var(--sidebar-width));
+}
+
+/* SIDEBAR */
+#sidebar-nav {
+  font-size: var(--font-size-sidebar);
+  line-height: var(--sidebar-line-height);
+  z-index: 4;
+  position: fixed;
+  left: var(--sidebar-width);
+  width: 0;
+  height: 100vh;
+  margin-left: calc(-1 * var(--sidebar-width));
+  overflow-y: auto;
+
+  -webkit-transition: var(--sidebar-speed);
+  -moz-transition: var(--sidebar-speed);
+  -o-transition: var(--sidebar-speed);
+  transition: var(--sidebar-speed);
+
+  background-color: var(--background-accent);
+  color: var(--foreground-active-blue);
+
+  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3);
+}
+
+/* Toggle classes for sidebar and main body when sidebar visible (simply makes visible)*/
+#wrapper.toggled #sidebar-nav {
+  width: var(--sidebar-width);
+}
+
+#overlay {
+  position: fixed;
+  z-index: 3;
+  display: none;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  background-color: var(--overlay-color);
+}
+
+/* Sidebar Anchor Link Style */
+.sidebar-nav .sidebar-text li a {
+  text-decoration: none;
+  color: var(--foreground-active-blue);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 1.1rem;
+  display: block;
+}
+
+.sidebar-nav li {
+  list-style: none;
+  margin-left: -2rem;
+}
+
+.sidebar-nav .sidebar-text li a:hover {
+  background-color: var(--background-default);
+}
+
+#current-page {
+  color: var(--foreground-clicked-blue);
+}
+
+/* Fade in sidebar text */
+
+#primary-navigation {
+  padding-left: 2.5rem;
+  display: none;
+}
+
+/* DROPDOWN BUTTON */
+/* Dropdown Button Styling */
+.dropdown-btn {
+  text-decoration: none;
+  font-size: var(--font-size-sidebar);
+  color: var(--foreground-active-blue);
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  right: 0;
+  justify-content: flex-end;
+  padding: 1.12rem;
+  padding-top: 1.1rem;
+}
+
+/* Change Color Of Button Background On Hover */
+.dropdown-btn:hover {
+  background-color: var(--background-default);
+}
+
+/* Icon For Dropdown Animation */
+.dropdown-icon {
+  transition: var(--dropdown-speed-revert);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* Button Active Class */
+.active-dropdown {
+  color: var(--foreground-clicked-blue);
+  transform: rotate(90deg);
+  transition: var(--dropdown-speed);
+}
+
+/* Div Region For Dropdown Button and Link Side-by-side */
+.link-with-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* Size Link Next To Dropdown Button */
+.link-next-to-dropdown {
+  flex-basis: 90%;
+  display: block;
+}
+
+/* Color Background Of Link On Hover */
+.link-next-to-dropdown:hover {
+  background-color: var(--background-default);
+}
+
+/* Container For Dropdown Options */
+.dropdown-container {
+  display: none;
+  background-color: var(--background-mid-accent);
+}
+
+/* Buffer for bottom of sidebar so lowest item isn't cut off by edge of screen */
+.buffer-item {
+  padding: 1.3rem;
+}
+
+/* BODY TEXT FORMATTING */
+
+main h3,
+main p {
+  text-align: left;
+}
+
+main h1,
+main h2 {
+  text-align: center;
+}
+
+main .centered-text {
+  text-align: center;
+}
+
+main p {
+  margin-bottom: 2.5rem;
+}
+
+main .medium-para {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+main .small-para {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+main ul li {
+  margin-bottom: 1.5rem;
+}
+
+.Review-section {
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 15px 8px;
+  background-color: var(--background-second-accent);
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Media queries for screen width  */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* COLUMNS FOR TEACHING */
+.teach-column {
+  float: left;
+  width: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.teach-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 992px) {
+  .teach-column {
+    width: 100%;
+  }
+}
+
+.Teach-section {
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 15px 10px 15px 10px;
+  background-color: var(--background-second-accent);
+}
+
+.First-column {
+  margin-bottom: 0px;
+}
+
+/* HYPERLINK ICONS */
+
+.external-link::before {
+  font-family: "icomoon";
+  content: "\e902";
+  margin-right: 3px;
+  font-size: var(--font-size-default);
+  display: inline;
+  vertical-align: -0.0954rem;
+}
+
+.external-link-list-item::before {
+  margin-right: -2px;
+}
+
+.local-download::before {
+  font-family: "icomoon";
+  content: "\e901";
+  font-size: var(--font-size-default);
+  display: inline;
+  vertical-align: -0.096rem;
+}
+
+/* ABSTRACT DROPDOWN */
+.abstract-link {
+  display: inline-block;
+  color: var(--foreground-active-blue);
+  cursor: pointer;
+  background: none;
+  font-size: var(--font-size-default);
+  border: none;
+  margin-left: -5px;
+  padding: 0px 3px;
+}
+
+.abstract-link.abstract-toggled {
+  color: var(--foreground-clicked-blue);
+}
+
+.abstract-link:hover {
+  color: var(--foreground-clicked-blue);
+}
+
+.abstract-icon {
+  font-size: var(--font-size-default);
+  transition: var(--icon-rotate-speed);
+  vertical-align: -0.096rem;
+}
+
+.abstract-link.abstract-toggled .abstract-icon {
+  rotate: 90deg;
+  transition: var(--icon-rotate-speed);
+}
+
+.abstract-container {
+  display: none;
+  background-color: var(--background-mid-accent);
+  padding: 0.5rem;
+}
+
+/* CARD CAROUSEL */
+
+/* FOCUS VISIBLE ACCESSIBILITY */
+a:focus-visible {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+button:focus-visible {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.sidebar-nav .sidebar-text li a:focus-visible {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.sidebar-nav button:focus-visible {
+  outline: none;
+}
+
+#wrapper button:focus-visible {
+  outline: none;
+}
+
+.burger-button:focus-visible {
+  border: 2px solid white;
+  border-radius: 5px;
+}
