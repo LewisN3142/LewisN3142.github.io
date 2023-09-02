@@ -419,7 +419,7 @@ main hr {
 
 /* Buffer for bottom of sidebar so lowest item isn't cut off by edge of screen */
 .buffer-item {
-  padding: 1.3rem;
+  padding: 6rem;
 }
 
 /* BODY TEXT FORMATTING */
@@ -623,6 +623,7 @@ button:focus-visible {
 #finebox {
   align-items: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 #thisfine {
