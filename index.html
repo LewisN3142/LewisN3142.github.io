@@ -3,26 +3,26 @@
 
 <head>
     <!-- For validation go to validator.w3.org -->
-    <!-- Make accessible using aria-labelledby etc (look up how to do) -->
+    <!-- Make under overlay be not keyboard focusable (try disable/ focus visible) -->
     <!-- Write readme to do with current sidebar dropdowns and their items -->
-    <!-- Update home page based on academia layout updates -->
+    <!-- copy dropdowns from academia to home -->
+    <!-- Do something with language toggle -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Lewis Napper">
     <meta name="description" content="Personal Portfolio - Home Page">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
     <title> Lewis Napper - Home </title>
 
     <link rel="icon" href="img/Favicon_Logo.ico" type="image/x-icon">
+    <!-- Page icons from icomoon site -->
+    <link rel="stylesheet" href="font-styles.css" />
     <link rel="stylesheet" href="main.css" type="text/css">
 
     <!-- Get jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <!-- Get icon for dropdown menus -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script src="myScript.js"></script>
 </head>
@@ -40,7 +40,7 @@
             <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
                 aria-expanded="false">
                 <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
-                    stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
                     <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
                     <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
                     <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
@@ -77,8 +77,8 @@
                 </svg>
             </a>
         </div>
-        <div id="nav-language-symbol" class="nav-section">
-            <p> TBC (Lang) </p>
+        <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
+            <p> </p>
         </div>
 
     </header>
@@ -91,40 +91,66 @@
                 <!-- Use class 'dropdown-item-current' ONLY for list items of dropdown under current page, to play animation and close dropdown on click. Standard links and dropdown items to other pages need no class or id. -->
                 <li>
                     <div class="link-with-dropdown">
-                        <a class="link-next-to-dropdown" href="index.html" id="current-page"> Welcome! </a>
-                        <button class="dropdown-btn"> <i class="fas fa-angle-right dropdown-icon"></i>
+                        <a class="link-next-to-dropdown" href="index.html" id="current-page"> Home </a>
+                        <button class="dropdown-btn" type="button" aria-controls="Welcome-dropdown"
+                            aria-expanded="false"> <i class="icon-angle-right dropdown-icon"></i>
                         </button>
                     </div>
 
-                    <ul class="dropdown-container">
+                    <ul class="dropdown-container" id="Welcome-dropdown">
 
-                        <li><a href="#aboutMe" class="dropdown-item-current">
+                        <li><a href="index.html#aboutMe" class="dropdown-item-current">
                                 About Me
                             </a></li>
                         <!-- Link to about me section -->
-                        <li><a href="#myWork" class="dropdown-item-current">
-                                What I Do
-                            </a></li>
-                        <!-- Link to about my work section -->
-                        <li> <a href="#newsReel" class="dropdown-item-current"> News
+                        <li> <a href="index.html#newsReel" class="dropdown-item-current"> News
                                 and Updates </a></li>
                         <!-- Link to rolling news list of latest updates -->
-                        <li> <a href="#todo" class="dropdown-item-current"> To Do List </a>
+                        <li><a href="index.html#education" class="dropdown-item-current"> Education </a>
                         </li>
+                        <!-- Link to education section -->
+                        <li><a href="index.html#skillsExperience" class="dropdown-item-current">
+                                Skills and Experience
+                            </a>
+                        </li>
+                        <!-- Link to about  -->
 
                     </ul>
                 </li>
+
+                <!--
+                <li>
+                    <a href="../CardsTest/CardsTest.html"> Old HTML Tutorial Info </a>
+                </li>
+                -->
 
                 <li>
                     <div class="link-with-dropdown">
                         <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia
                         </a>
-                        <button class="dropdown-btn"> <i class="fas fa-angle-right dropdown-icon"></i> </button>
+                        <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown"
+                            aria-expanded="true">
+                            <i class="icon-angle-right dropdown-icon"></i> </button>
                     </div>
 
-                    <ul class="dropdown-container">
+                    <ul class="dropdown-container" id="Academia-dropdown">
                         <li> <a href="academia_page/academia.html#researchInterests">
                                 Research Interests </a>
+                        </li>
+                        <li> <a href="academia_page/academia.html#publications">
+                                Publications </a>
+                        </li>
+                        <li> <a href="academia_page/academia.html#newsEvents">
+                                News and Events </a>
+                        </li>
+                        <li> <a href="academia_page/academia.html#academicPresentations">
+                                Presentations </a>
+                        </li>
+                        <li> <a href="academia_page/academia.html#teaching">
+                                Teaching</a>
+                        </li>
+                        <li> <a href="academia_page/academia.html#awardsFunding">
+                                Awards and Funding </a>
                         </li>
                     </ul>
                 </li>
@@ -139,71 +165,109 @@
 
         <!-- Page Content-->
         <main>
-            <!-- Maybe put h1 here as hero image should be full width -->
-            <div class="title-color">
-                <h1> Hey! I'm Lewis Napper </h1>
+
+            <div class="hero-image">
+                <!--<img src="img/Slaine_Colour.jpg" alt="hero-image" width="100%"> Note this image needs making lower res (currently 4k)-->
+                <div class=" hero-text">
+                    <h1>Hey! I'm Lewis Napper</h1>
+                    <h2>Welcome to my Website!</h2>
+                </div>
             </div>
 
-            <div class="container" aria-labelledby="main">
+            <div class="container">
 
-                <hr id="aboutMe">
+                <div class="section-break" id="aboutMe">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+                        title="Home Page" alt="house icon">
+
+                        <path
+                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+                    </svg> -->
+                    <div style=height:48px;></div>
+                </div>
 
                 <article>
 
                     <h2> About Me </h2>
-                    <p> Discussion about me and my background etc. Link to CV page for more information. </p>
-                    <p> This article will likely be one section. This is a <a href="/gallery">Broken link</a> for
-                        testing </p>
+                    <p> Discussion about me and my background etc. Link to CV page for more information. Here is a <a
+                            href="404.html">Broken Link</a> for testing </p>
 
                 </article>
-                <hr id="myWork">
-                <article>
 
-                    <h2> What I Do </h2>
-                    <p> Brief Summary of my work --- see other pages for more (link to each in text too). </p>
-                    <p> This article will also likely be one section </p>
+                <div class="section-break" id="newsReel">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+                        title="Home Page" alt="house icon">
+                        <path
+                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+                    </svg>
+                </div>
 
-                </article>
-                <hr id="newsReel">
                 <article>
 
                     <h2> News and Updates </h2>
-                    <p> Rolling log of new posts and general news about my work/ life. </p>
+                    <p style="color:red;"> Card carousel with lastest additions to website and my work. Maybe link
+                        to a blog page?</p>
 
                 </article>
-                <hr id=" toDo">
+
+                <div class="section-break" id="education">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+                        title="Home Page" alt="house icon">
+                        <path
+                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+                    </svg>
+                </div>
+
                 <article>
 
+                    <h2> Education </h2>
+                    <p> Article covering my qualifications in (mostly) list format, with dropdowns </p>
+
+                </article>
+
+                <div class="section-break" id="skillsExperience">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+                        title="Home Page" alt="house icon">
+                        <path
+                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+                    </svg>
+                </div>
+
+                <article>
+
+                    <h2> Skills and Experience </h2>
+
+
+                </article>
+
+                <article>
                     <h2> To Do </h2>
                     <ul>
-                        <li> Add in other pages
+                        <li style="color:red;"> Other pages to appear include:
                             <ol>
                                 <li> Art Gallery </li>
                                 <li> Clips Page -- Music and Speedruns </li>
-                                <li> CV page </li>
-                                <li> Research Publication Page </li>
                                 <li> Blog Page? For game reviews etc </li>
                                 <li> Code page or link to github on cv page. </li>
                             </ol>
                         </li>
                         <li>
-                            Scan old art to add to gallery page
+                            Add Hero Image
                         </li>
                         <li>
-                            Slideshow hero block for home page and slideshow on gallery page
+                            Scan old art to add to gallery page
                         </li>
                         <li>
                             Re-record music more clearly
                         </li>
                         <li>
-                            Implement css and js styling more
+                            Clean up and upload old code to repos
                         </li>
                     </ul>
-
                 </article>
 
-            </div>
 
+            </div>
             <footer>
                 © 2023 Lewis Napper | All rights reserved
                 <!-- Add in Terms popup -->

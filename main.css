@@ -1,14 +1,11 @@
 /*
 TODO:
-Replace <hr> with decorated whitespace --- use these as anchors for new sections
 Add hero image (maybe remove main padding so image touches sides)
 
 TODO: Check compatibility with Dave Grey Course and verification link in html.
 Neaten variables and choose colour scheme
 Remove doubly set colours/ variables where possible
 
-Nicer text formatting...
-Get Fontawesome pack so used icons load faster (pw notes)
 
 */
 
@@ -641,3 +638,22 @@ button:focus-visible {
 #finepara {
   text-align: center;
 }
+
+/* HERO IMAGE */
+
+/*
+.hero-image {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.hero-text {
+  position: absolute;
+  margin: auto;
+  text-align: center;
+}
+*/
