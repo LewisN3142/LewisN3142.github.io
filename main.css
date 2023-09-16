@@ -24,9 +24,6 @@ html {
 /* VARIABLES */
 :root {
   /* Colour Choices */
-
-  /* 114, 179, 235 */
-  /* 179, 209, 236 */
   --foreground-default: #f5f5f5;
   --foreground-active-blue: #88b8e2;
   --foreground-clicked-blue: #3e8dd2;
@@ -66,23 +63,15 @@ html {
   --custom-scrollbar-border-radius: 10px;
 }
 
-/* GOOGLE ICON FORMATTING*/
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
-  color: whitesmoke;
-}
-
-.material-fill {
-  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
-}
-
 /* OVERALL BODY STYLING */
 body {
   background-color: var(--background-default);
   color: var(--foreground-default);
 
   font-size: var(--font-size-default);
-  font-family: "Montserrat", sans-serif;
+
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
   letter-spacing: var(--font-letter-spacing-default);
   word-spacing: var(--font-word-spacing-default);
 
@@ -429,6 +418,7 @@ main p {
 main h1,
 main h2 {
   text-align: center;
+  font-weight: 600;
 }
 
 main .centered-text {
@@ -456,7 +446,7 @@ main ul li {
 .Review-section {
   border-radius: 10px;
   padding: 5px 15px;
-  margin: 15px 8px;
+  margin: 15px 5px;
   background-color: var(--background-second-accent);
 }
 
@@ -466,31 +456,6 @@ main ul li {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-
-/* Media queries for screen width  */
-@media screen and (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
 }
 
 /* COLUMNS FOR TEACHING */
@@ -505,12 +470,6 @@ main ul li {
   content: "";
   display: table;
   clear: both;
-}
-
-@media screen and (max-width: 992px) {
-  .teach-column {
-    width: 100%;
-  }
 }
 
 .Teach-section {
@@ -582,9 +541,9 @@ main ul li {
   display: none;
   background-color: var(--background-mid-accent);
   padding: 0.5rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
-
-/* CARD CAROUSEL */
 
 /* FOCUS VISIBLE ACCESSIBILITY */
 a:focus-visible {
@@ -639,21 +598,99 @@ button:focus-visible {
   text-align: center;
 }
 
-/* HERO IMAGE */
+/* ABOUT SECTION */
+.download-less-padding:before {
+  margin-right: -0.15rem;
+}
 
-/*
-.hero-image {
-  position: relative;
+.about-column-text {
+  float: left;
+  width: 65%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
+.about-column-image {
+  float: left;
+  width: 35%;
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 1.2rem;
+  align-items: center;
+  position: relative;
 }
 
-.hero-text {
-  position: absolute;
-  margin: auto;
-  text-align: center;
+.about-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 1.5rem;
 }
-*/
+
+.img-about {
+  border: whitesmoke 2px solid;
+  border-radius: 50%;
+  height: 13.3rem;
+  margin: auto;
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.About-section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Module Results Sections */
+.grades-title {
+  margin-top: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Media queries for screen width  */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .img-about {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .img-about {
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 991.5px) {
+  /* Media query for teaching columns */
+  .teach-column {
+    width: 100%;
+  }
+  /* Media query for responsive about text/image */
+  .about-column-text {
+    width: 100%;
+  }
+  .about-column-image {
+    width: 100%;
+  }
+}

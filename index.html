@@ -3,9 +3,7 @@
 
 <head>
     <!-- For validation go to validator.w3.org -->
-    <!-- Make under overlay be not keyboard focusable (try disable/ focus visible) -->
     <!-- Write readme to do with current sidebar dropdowns and their items -->
-    <!-- copy dropdowns from academia to home -->
     <!-- Do something with language toggle -->
 
     <meta charset="UTF-8">
@@ -167,7 +165,6 @@
         <main>
 
             <div class="hero-image">
-                <!--<img src="img/Slaine_Colour.jpg" alt="hero-image" width="100%"> Note this image needs making lower res (currently 4k)-->
                 <div class=" hero-text">
                     <h1>Hey! I'm Lewis Napper</h1>
                     <h2>Welcome to my Website!</h2>
@@ -186,11 +183,46 @@
                     <div style=height:48px;></div>
                 </div>
 
+                <p style="color:red;">
+                    Please note that this website is currently a work in progress. As such, some content may be missing
+                    or may not function as intended. The page is updated regularly however, so revisit soon to see more
+                    of my work!
+                </p>
+
                 <article>
 
                     <h2> About Me </h2>
-                    <p> Discussion about me and my background etc. Link to CV page for more information. Here is a <a
-                            href="404.html">Broken Link</a> for testing </p>
+
+                    <div class="about-row">
+
+                        <div class="about-column-text">
+                            <section class="Review-section About-section">
+
+                                <p class="medium-para">
+                                    Hello, I'm Lewis Napper, a PhD mathematics student from the University of Surrey in
+                                    the United Kingdom. My research focuses on applications of abstract geometry to
+                                    problems in the theory of partial differential equations, fluid dynamics, and
+                                    relativity. Outside of my work in academia, I am an artist and occasional
+                                    programmer, with an interest in game development and computer graphics.
+                                </p>
+                                <p class="medium-para">
+                                    This site is intended to be a showcase of my work and hobbies across various fields,
+                                    acting as a catalogue of my academic career, artistic endeavours, and other
+                                    exploits. Explore to find out more or <a href="general_material/CV_LN.pdf"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="local-download under-overlay download-less-padding">
+                                        click here</a> for a PDF of my CV.
+                                </p>
+
+
+                            </section>
+                        </div>
+
+                        <div class="about-column-image">
+                            <img class="img-about" src="img/pupper.jpg" alt="my pet spaniel">
+                        </div>
+
+                    </div>
 
                 </article>
 
@@ -205,7 +237,8 @@
                 <article>
 
                     <h2> News and Updates </h2>
-                    <p style="color:red;"> Card carousel with lastest additions to website and my work. Maybe link
+                    <p style="color:red;">
+                        Card carousel with lastest additions to website and my work. Maybe link
                         to a blog page?</p>
 
                 </article>
@@ -221,7 +254,199 @@
                 <article>
 
                     <h2> Education </h2>
-                    <p> Article covering my qualifications in (mostly) list format, with dropdowns </p>
+
+                    Below is a list of my formal qualifications from GCSE to PhD level. For further details about the
+                    publications, presentations, and teaching completed during my undergraduate and postgraduate
+                    studies, see my <a href="academia_page/academia.html">Academia Page</a>.
+
+                    <ul>
+                        <li>
+                            <b> PhD Mathematics </b> (2021-<span style="color:red;">2024</span>) <br>
+                            University of Surrey
+
+                            <p class="small-para">
+                                <em> <span style="font-weight: 500;">Supervisors:</span> Dr. Martin Wolf and Prof. Ian
+                                    Roulstone </em> <br>
+                                <em> <span style="font-weight: 500;">Thesis Title:</span> Monge&ndash;Ampère Geometry
+                                    and Vortices </em>
+                            </p>
+
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="PhD_Modules">
+                                <i class="abstract-icon icon-angle-right"></i> Modules and Results
+                            </button>
+
+                            <p class="small-para abstract-container" id="PhD_Modules">
+                                <em>
+                                    100% &ndash; Lie groups and Lie algebras <br>
+                                    100% &ndash; String Theory <br>
+                                    96% &ndash; Symplectic Geometry<br>
+                                    88% &ndash; Algebraic Topology <br>
+                                    80% &ndash; Differential topology and Morse theory <br>
+                                    73% &ndash; Sheaf Cohomology
+                                </em>
+                            </p>
+                        </li>
+
+                        <li>
+                            <b> MMath Mathematics 1st Class Hons </b> (2017-2021) <br>
+                            University of Surrey
+
+                            <p class="small-para">
+                                <em> <span style="font-weight: 500;">Supervisors:</span> Dr. Alessandro Torrielli and
+                                    Dr. Andrea Prinsloo </em> <br>
+                                <em> <span style="font-weight:500;">Thesis Title:</span> Algebraic Bethe Ansatz for
+                                    su(2) Spin Chains and Beyond </em>
+                            </p>
+
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="MMath_Modules">
+                                <i class="abstract-icon icon-angle-right"></i> Modules and Results
+                            </button>
+
+                            <div class="abstract-container" id="MMath_Modules">
+                                <div class="teach-row">
+                                    <div class="teach-column">
+                                        <section>
+                                            <p class="grades-title">
+                                                <b> Year 1 </b> (93%)
+                                            </p>
+                                            <p class="small-para">
+                                                <em>
+                                                    97% &ndash; Vector Calculus <br>
+                                                    96% &ndash; Probability and Statistics <br>
+                                                    94% &ndash; Classical Dynamics <br>
+                                                    93% &ndash; Algebra <br>
+                                                    93% &ndash; Real Analysis I <br>
+                                                    92% &ndash; Calculus <br>
+                                                    92% &ndash; Professional Skills Development <br>
+                                                    88% &ndash; Linear Algebra
+                                                </em>
+                                            </p>
+                                        </section>
+                                    </div>
+                                    <div class="teach-column">
+                                        <p class="grades-title">
+                                            <b> Year 2 </b> (97%)
+                                        </p>
+                                        <p class="small-para">
+                                            <em>
+                                                100% &ndash; Linear Partial Differential Equations <br>
+                                                99% &ndash; Curves and Surfaces <br>
+                                                99% &ndash; Inviscid Fluid Dynamics <br>
+                                                98% &ndash; Real Analysis II <br>
+                                                97% &ndash; Numerical and Computational Methods <br>
+                                                96% &ndash; Ordinary Differential Equations <br>
+                                                94% &ndash; Groups and Rings <br>
+                                                92% &ndash; Introduction to Complex Analysis
+                                            </em>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="teach-row">
+                                    <div class="teach-column">
+                                        <p class="grades-title">
+                                            <b> Year 3 </b> (98%)
+                                        </p>
+                                        <p class="small-para">
+                                            <em>
+                                                100% &ndash; Introduction to Function Spaces <br>
+                                                99% &ndash; Manifolds and Topology <br>
+                                                98% &ndash; Mathematical Ecology and Epidemiology <br>
+                                                98% &ndash; Matrix Analysis <br>
+                                                95% &ndash; Graphs and Networks <br>
+                                                95% &ndash; Riemannian Geometry <br>
+                                                93% &ndash; Quantum Mechanics <br>
+                                                90% &ndash; Special Relativity and Electrodynamics
+                                            </em>
+                                        </p>
+                                    </div>
+                                    <div class="teach-column">
+                                        <p class="grades-title">
+                                            <b> Year 4 </b> (98%)
+                                        </p>
+                                        <p class="small-para">
+                                            <em>
+                                                100% &ndash; Calculus of Variations <br>
+                                                100% &ndash; Functional Analysis and Partial Differential Equations <br>
+                                                100% &ndash; Representation Theory <br>
+                                                98% &ndash; General Topology <br>
+                                                97% &ndash; Relativistic Quantum Mechanics <br>
+                                                95% &ndash; Advanced Techniques in Mathematics <br>
+                                                <br>
+                                                95% &ndash; Master's Thesis Report
+                                            </em>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <b> A-Levels </b> (2015-2017) <br>
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="ALevel_Results">
+                                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+                            </button>
+
+                            <div class="abstract-container" id="ALevel_Results">
+                                Mathematics &ndash; A* <br>
+                                Further Mathematics &ndash; A* <br>
+                                Physics &ndash; A* <br>
+                                Biology &ndash; A <br>
+                                Art AS-Level &ndash; A <br>
+                            </div>
+                        </li>
+                        <li>
+                            <b> GCSEs </b> (2012-2015) <br>
+                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                                aria-controls="GCSE_Results">
+                                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+                            </button>
+
+                            <div class="abstract-container" id="GCSE_Results">
+                                <div class="teach-row">
+                                    <div class="teach-column">
+                                        <p class="grades-title"> <b> A* </b> </p>
+                                        <p class="small-para">
+                                            Mathematics <br>
+                                            English Language <br>
+                                            German <br>
+                                            Art and Design <br>
+                                            History <br>
+                                            Biology <br>
+                                            Chemistry <br>
+                                            Physics <br>
+                                            Religious Studies
+                                        </p>
+                                    </div>
+                                    <div class="teach-column">
+                                        <p class="grades-title">
+                                            <b> A </b>
+                                        </p>
+                                        <p class="small-para">
+                                            English Literature <br>
+                                            Media Studies <br>
+                                            Science <br>
+                                        </p>
+                                        <p class="grades-title">
+                                            <b> B </b>
+                                        </p>
+                                        <p class="small-para">
+                                            Physical Education
+                                        </p>
+                                        <p class="grades-title">
+                                            <b> Equivalent Qualifications </b>
+                                        </p>
+                                        <p class="small-para">
+                                            Cambridge National ICT &ndash; D*2 <br>
+                                            FSMQ Additional Mathematics &ndash; A
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
                 </article>
 
@@ -249,6 +474,7 @@
                                 <li> Clips Page -- Music and Speedruns </li>
                                 <li> Blog Page? For game reviews etc </li>
                                 <li> Code page or link to github on cv page. </li>
+                                <li> contact page </li>
                             </ol>
                         </li>
                         <li>
@@ -262,6 +488,9 @@
                         </li>
                         <li>
                             Clean up and upload old code to repos
+                        </li>
+                        <li>
+                            New CV
                         </li>
                     </ul>
                 </article>
