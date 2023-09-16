@@ -70,7 +70,7 @@ body {
 
   font-size: var(--font-size-default);
 
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
   font-weight: 400;
   letter-spacing: var(--font-letter-spacing-default);
   word-spacing: var(--font-word-spacing-default);
