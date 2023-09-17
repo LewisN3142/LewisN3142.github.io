@@ -2,176 +2,125 @@
 <html lang="en-GB">
 
 <head>
-    <!-- For validation go to validator.w3.org -->
-    <!-- Make under overlay be not keyboard focusable (try disable/ focus visible) -->
-    <!-- Write readme to do with current sidebar dropdowns and their items -->
-    <!-- copy dropdowns from academia to home -->
-    <!-- Do something with language toggle -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Lewis Napper">
+  <meta name="description" content="Personal Portfolio - 404 Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Lewis Napper">
-    <meta name="description" content="Personal Portfolio - Home Page">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title> Lewis Napper - 404 </title>
 
-    <title> Lewis Napper - 404 </title>
+  <link rel="icon" href="global/img/favicon.ico" type="image/x-icon"> <!-- Favicon -->
 
-    <link rel="icon" href="img/Favicon_Logo.ico" type="image/x-icon">
-    <!-- Page icons from icomoon site -->
-    <link rel="stylesheet" href="font-styles.css" />
-    <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="global/font-styles.css" /> <!-- Icomoon Fonts -->
+  <link rel="stylesheet" href="global/main.css" type="text/css">
+  <link rel="stylesheet" href="404.css" type="text/css">
 
-    <!-- Get jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script src="myScript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- Get JQuery -->
+  <script src="global/script.js"></script>
 </head>
-
-<!-- Website proper-->
 
 <body id="body">
 
-    <!-- Topbar -->
-    <header class="top-nav">
-        <!-- Note ../ means up one level in folder hierarchy (will need to change when make active page instead of test) -->
-
-        <div id="nav-burger-symbol" class="nav-section">
-            <!-- Burger Icon -->
-            <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
-                aria-expanded="false">
-                <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
-                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                    <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
-                    <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
-                    <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
-                    <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
-                    </path>
-                </svg>
-            </button>
-            <!-- End Icon -->
-        </div>
-        <div id="nav-logo-symbol" class="nav-section">
-            <a href="index.html">
-                <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45"
-                    viewBox="0 0 64 64" version="1.1" xmlns="https://www.w3.org/2000/svg"
-                    xmlns:xlink="https://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="https://www.serif.com/"
-                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
-                    <circle cx="32.231" cy="32.181" r="29.632" style="fill:none;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="25.215" y="50.81" width="13.588" height="2.039"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="25.187" y="12.393" width="13.609" height="2.039"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="30.925" y="15.216" width="2.202" height="34.837"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <circle cx="18.522" cy="48.03" r="2.357" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <circle cx="45.431" cy="17.456" r="2.396"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <circle cx="45.421" cy="47.98" r="0.781" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <rect x="12.63" y="16.243" width="7.16" height="0.806"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <path
-                        d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
-                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919"
-                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
-                </svg>
-            </a>
-        </div>
-        <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
-            <p> </p>
-        </div>
-
-    </header>
-
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <nav class="sidebar-nav" id="sidebar-nav">
-
-            <ul class="sidebar-text" id="primary-navigation">
-                <!-- Use class 'dropdown-item-current' ONLY for list items of dropdown under current page, to play animation and close dropdown on click. Standard links and dropdown items to other pages need no class or id. -->
-                <li>
-                    <div class="link-with-dropdown">
-                        <a class="link-next-to-dropdown" href="index.html"> Home </a>
-                        <button class="dropdown-btn" type="button" aria-controls="Welcome-dropdown"
-                            aria-expanded="false"> <i class="icon-angle-right dropdown-icon"></i>
-                        </button>
-                    </div>
-
-                    <ul class="dropdown-container" id="Welcome-dropdown">
-
-                        <li><a href="index.html#aboutMe">
-                                About Me
-                            </a></li>
-                        <li><a href="index.html#newsReel">
-                                News and Updates
-                            </a></li>
-                        <li> <a href="index.html#education"> Education </a></li>
-                        <li> <a href="index.html#skillsExperience"> Skills and Experience </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li>
-                    <div class="link-with-dropdown">
-                        <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia
-                        </a>
-                        <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown"
-                            aria-expanded="true"> <i class="icon-angle-right dropdown-icon"></i> </button>
-                    </div>
-
-                    <ul class="dropdown-container" id="Academia-dropdown">
-                        <li> <a href="academia_page/academia.html#researchInterests">
-                                Research Interests </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#publications">
-                                Publications </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#newsEvents">
-                                News and Events </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#academicPresentations">
-                                Presentations </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#teaching">
-                                Teaching</a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#awardsFunding">
-                                Awards and Funding </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="buffer-item"> </li>
-            </ul>
-
-        </nav>
-
-        <!-- Overlay -->
-        <div class="overlay" id="overlay"></div>
-
-        <!-- Page Content-->
-        <main style="position:fixed; overflow:hidden;">
-
-            <div id="finebox">
-
-                <img src="img/404image.jpg" id="thisfine">
-
-                <h1> Error: 404</h1>
-                <p id="finepara">
-                    It seems like you're lost! <br>
-                    That's ok, just <a href="index.html">click here</a> to return home, or use the navigation menu in
-                    the top left.
-                </p>
-
-            </div>
-
-            <footer id="finefooter">
-                © 2023 Lewis Napper | All rights reserved
-                <!-- Add in Terms popup -->
-            </footer>
-        </main>
-
+  <header class="top-nav"> <!-- Top Nav Bar -->
+    <div id="nav-burger-symbol" class="nav-section"> <!-- Burger Icon -->
+      <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
+        aria-expanded="false">
+        <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
+          <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
+          <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
+          <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
+          </path>
+        </svg>
+      </button>
     </div>
+
+    <div id="nav-logo-symbol" class="nav-section"> <!--My Logo -->
+      <a href="index.html">
+        <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45" viewBox="0 0 64 64"
+          version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+          xml:space="preserve" xmlns:serif="https://www.serif.com/">
+          <circle cx="32.231" cy="32.181" r="29.632" class="logoPathNoFill logoPathThin" />
+          <rect x="25.215" y="50.81" width="13.588" height="2.039" class="logoPathFill logoPathThin" />
+          <rect x="25.187" y="12.393" width="13.609" height="2.039" class="logoPathFill logoPathThin" />
+          <rect x="30.925" y="15.216" width="2.202" height="34.837" class="logoPathFill logoPathThin" />
+          <circle cx="18.522" cy="48.03" r="2.357" class="logoPathFill logoPathThick" />
+          <circle cx="45.431" cy="17.456" r="2.396" class="logoPathFill logoPathThick" />
+          <circle cx="45.421" cy="47.98" r="0.781" class="logoPathFill logoPathThick" />
+          <rect x="12.63" y="16.243" width="7.16" height="0.806" class="logoPathFill logoPathThin" />
+          <path d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
+            class="logoPathNoFill logoPathThick" />
+          <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919" class="logoPathNoFill logoPathThick" />
+        </svg>
+      </a>
+    </div>
+
+    <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
+      <p> </p>
+    </div>
+  </header>
+
+  <div id="wrapper">
+
+    <nav class="sidebar-nav" id="sidebar-nav"> <!-- Navigation Side Pannel -->
+      <ul class="sidebar-text" id="primary-navigation">
+
+        <li> <!-- Homepage Nav -->
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="index.html"> Home </a>
+            <button class="dropdown-btn" type="button" aria-controls="Homepage-dropdown" aria-expanded="false"> <i
+                class="icon-angle-right dropdown-icon"></i></button>
+          </div>
+
+          <ul class="dropdown-container" id="Homepage-dropdown">
+            <li><a href="index.html#aboutMe"> About Me </a></li>
+            <li> <a href="index.html#newsReel"> News and Updates </a></li>
+            <li><a href="index.html#education"> Education </a></li>
+            <li><a href="index.html#skillsExperience"> Skills and Experience </a></li>
+          </ul>
+        </li>
+
+        <li> <!-- Academia Nav -->
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia </a>
+            <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown" aria-expanded="true">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Academia-dropdown">
+            <li> <a href="academia_page/academia.html#researchInterests"> Research Interests </a></li>
+            <li> <a href="academia_page/academia.html#publications"> Publications </a></li>
+            <li> <a href="academia_page/academia.html#newsEvents"> News and Events </a></li>
+            <li> <a href="academia_page/academia.html#academicPresentations"> Presentations </a></li>
+            <li> <a href="academia_page/academia.html#teaching"> Teaching </a></li>
+            <li> <a href="academia_page/academia.html#awardsFunding"> Awards and Funding </a></li>
+          </ul>
+        </li>
+
+        <li class="buffer-item"> </li> <!-- Blank Element So Scrolling Shows All Links -->
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="error-style">
+      <div id="finebox">
+        <img src="home_material/404image.jpg" id="thisfine">
+
+        <h1> Error: 404</h1>
+        <p id="finepara">
+          It seems like you're lost! <br>
+          That's ok, just <a href="index.html">click here</a> to return home, or use the navigation menu in
+          the top left.
+        </p>
+      </div>
+
+      <footer id="finefooter">
+        © 2023 Lewis Napper | All rights reserved
+      </footer>
+    </main>
+
+  </div>
 </body>

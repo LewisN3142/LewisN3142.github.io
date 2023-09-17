@@ -2,507 +2,401 @@
 <html lang="en-GB">
 
 <head>
-    <!-- For validation go to validator.w3.org -->
-    <!-- Write readme to do with current sidebar dropdowns and their items -->
-    <!-- Do something with language toggle -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Lewis Napper">
+  <meta name="description" content="Personal Portfolio - Home Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Lewis Napper">
-    <meta name="description" content="Personal Portfolio - Home Page">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title> Lewis Napper - Home </title>
 
-    <title> Lewis Napper - Home </title>
+  <link rel="icon" href="global/img/favicon.ico" type="image/x-icon"> <!-- Favicon -->
 
-    <link rel="icon" href="img/Favicon_Logo.ico" type="image/x-icon">
-    <!-- Page icons from icomoon site -->
-    <link rel="stylesheet" href="font-styles.css" />
-    <link rel="stylesheet" href="main.css" type="text/css">
+  <link rel="stylesheet" href="global/font-styles.css" /> <!-- Icomoon Fonts -->
+  <link rel="stylesheet" href="global/main.css" type="text/css">
+  <link rel="stylesheet" href="home.css" type="text/css">
+  <link rel="stylesheet" href="global/media-query.css" type="text/css">
 
-    <!-- Get jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script src="myScript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- Get JQuery -->
+  <script src="global/script.js"></script>
 </head>
-
-<!-- Website proper-->
 
 <body id="body">
 
-    <!-- Topbar -->
-    <header class="top-nav">
-        <!-- Note ../ means up one level in folder hierarchy (will need to change when make active page instead of test) -->
-
-        <div id="nav-burger-symbol" class="nav-section">
-            <!-- Burger Icon -->
-            <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
-                aria-expanded="false">
-                <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
-                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-                    <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
-                    <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
-                    <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
-                    <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
-                    </path>
-                </svg>
-            </button>
-            <!-- End Icon -->
-        </div>
-        <div id="nav-logo-symbol" class="nav-section">
-            <a href="index.html">
-                <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45"
-                    viewBox="0 0 64 64" version="1.1" xmlns="https://www.w3.org/2000/svg"
-                    xmlns:xlink="https://www.w3.org/1999/xlink" xml:space="preserve"
-                    xmlns:serif="https://www.serif.com/"
-                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
-                    <circle cx="32.231" cy="32.181" r="29.632" style="fill:none;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="25.215" y="50.81" width="13.588" height="2.039"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="25.187" y="12.393" width="13.609" height="2.039"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <rect x="30.925" y="15.216" width="2.202" height="34.837"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <circle cx="18.522" cy="48.03" r="2.357" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <circle cx="45.431" cy="17.456" r="2.396"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <circle cx="45.421" cy="47.98" r="0.781" style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <rect x="12.63" y="16.243" width="7.16" height="0.806"
-                        style="fill:#f8f8f8;stroke:#f8f8f8;stroke-width:1.78px;" />
-                    <path
-                        d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
-                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
-                    <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919"
-                        style="fill:none;stroke:#f8f8f8;stroke-width:2.84px;" />
-                </svg>
-            </a>
-        </div>
-        <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
-            <p> </p>
-        </div>
-
-    </header>
-
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <nav class="sidebar-nav" id="sidebar-nav">
-
-            <ul class="sidebar-text" id="primary-navigation">
-                <!-- Use class 'dropdown-item-current' ONLY for list items of dropdown under current page, to play animation and close dropdown on click. Standard links and dropdown items to other pages need no class or id. -->
-                <li>
-                    <div class="link-with-dropdown">
-                        <a class="link-next-to-dropdown" href="index.html" id="current-page"> Home </a>
-                        <button class="dropdown-btn" type="button" aria-controls="Welcome-dropdown"
-                            aria-expanded="false"> <i class="icon-angle-right dropdown-icon"></i>
-                        </button>
-                    </div>
-
-                    <ul class="dropdown-container" id="Welcome-dropdown">
-
-                        <li><a href="index.html#aboutMe" class="dropdown-item-current">
-                                About Me
-                            </a></li>
-                        <!-- Link to about me section -->
-                        <li> <a href="index.html#newsReel" class="dropdown-item-current"> News
-                                and Updates </a></li>
-                        <!-- Link to rolling news list of latest updates -->
-                        <li><a href="index.html#education" class="dropdown-item-current"> Education </a>
-                        </li>
-                        <!-- Link to education section -->
-                        <li><a href="index.html#skillsExperience" class="dropdown-item-current">
-                                Skills and Experience
-                            </a>
-                        </li>
-                        <!-- Link to about  -->
-
-                    </ul>
-                </li>
-
-                <!--
-                <li>
-                    <a href="../CardsTest/CardsTest.html"> Old HTML Tutorial Info </a>
-                </li>
-                -->
-
-                <li>
-                    <div class="link-with-dropdown">
-                        <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia
-                        </a>
-                        <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown"
-                            aria-expanded="true">
-                            <i class="icon-angle-right dropdown-icon"></i> </button>
-                    </div>
-
-                    <ul class="dropdown-container" id="Academia-dropdown">
-                        <li> <a href="academia_page/academia.html#researchInterests">
-                                Research Interests </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#publications">
-                                Publications </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#newsEvents">
-                                News and Events </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#academicPresentations">
-                                Presentations </a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#teaching">
-                                Teaching</a>
-                        </li>
-                        <li> <a href="academia_page/academia.html#awardsFunding">
-                                Awards and Funding </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="buffer-item"> </li>
-            </ul>
-
-        </nav>
-
-        <!-- Overlay -->
-        <div class="overlay" id="overlay"></div>
-
-        <!-- Page Content-->
-        <main>
-
-            <div class="hero-image">
-                <div class=" hero-text">
-                    <h1>Hey! I'm Lewis Napper</h1>
-                    <h2>Welcome to my Website!</h2>
-                </div>
-            </div>
-
-            <div class="container">
-
-                <div class="section-break" id="aboutMe">
-                    <!-- <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
-                        title="Home Page" alt="house icon">
-
-                        <path
-                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-                    </svg> -->
-                    <div style=height:48px;></div>
-                </div>
-
-                <p style="color:red;">
-                    Please note that this website is currently a work in progress. As such, some content may be missing
-                    or may not function as intended. The page is updated regularly however, so revisit soon to see more
-                    of my work!
-                </p>
-
-                <article>
-
-                    <h2> About Me </h2>
-
-                    <div class="about-row">
-
-                        <div class="about-column-text">
-                            <section class="Review-section About-section">
-
-                                <p class="medium-para">
-                                    Hello, I'm Lewis Napper, a PhD mathematics student from the University of Surrey in
-                                    the United Kingdom. My research focuses on applications of abstract geometry to
-                                    problems in the theory of partial differential equations, fluid dynamics, and
-                                    relativity. Outside of my work in academia, I am an artist and occasional
-                                    programmer, with an interest in game development and computer graphics.
-                                </p>
-                                <p class="medium-para">
-                                    This site is intended to be a showcase of my work and hobbies across various fields,
-                                    acting as a catalogue of my academic career, artistic endeavours, and other
-                                    exploits. Explore to find out more or <a href="general_material/CV_LN.pdf"
-                                        target=" _blank" rel="noopener noreferrer"
-                                        class="local-download under-overlay download-less-padding">
-                                        click here</a> for a PDF of my CV.
-                                </p>
-
-
-                            </section>
-                        </div>
-
-                        <div class="about-column-image">
-                            <img class="img-about" src="img/pupper.jpg" alt="my pet spaniel">
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <div class="section-break" id="newsReel">
-                    <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
-                        title="Home Page" alt="house icon">
-                        <path
-                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-                    </svg>
-                </div>
-
-                <article>
-
-                    <h2> News and Updates </h2>
-                    <p style="color:red;">
-                        Card carousel with lastest additions to website and my work. Maybe link
-                        to a blog page?</p>
-
-                </article>
-
-                <div class="section-break" id="education">
-                    <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
-                        title="Home Page" alt="house icon">
-                        <path
-                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-                    </svg>
-                </div>
-
-                <article>
-
-                    <h2> Education </h2>
-
-                    Below is a list of my formal qualifications from GCSE to PhD level. For further details about the
-                    publications, presentations, and teaching completed during my undergraduate and postgraduate
-                    studies, see my <a href="academia_page/academia.html">Academia Page</a>.
-
-                    <ul>
-                        <li>
-                            <b> PhD Mathematics </b> (2021-<span style="color:red;">2024</span>) <br>
-                            University of Surrey
-
-                            <p class="small-para">
-                                <em> <span style="font-weight: 500;">Supervisors:</span> Dr. Martin Wolf and Prof. Ian
-                                    Roulstone </em> <br>
-                                <em> <span style="font-weight: 500;">Thesis Title:</span> Monge&ndash;Ampère Geometry
-                                    and Vortices </em>
-                            </p>
-
-                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                                aria-controls="PhD_Modules">
-                                <i class="abstract-icon icon-angle-right"></i> Modules and Results
-                            </button>
-
-                            <p class="small-para abstract-container" id="PhD_Modules">
-                                <em>
-                                    100% &ndash; Lie Groups and Lie Algebras <br>
-                                    100% &ndash; String Theory <br>
-                                    96% &ndash; Symplectic Geometry<br>
-                                    88% &ndash; Algebraic Topology <br>
-                                    80% &ndash; Differential Topology and Morse Theory <br>
-                                    73% &ndash; Sheaf Cohomology
-                                </em>
-                            </p>
-                        </li>
-
-                        <li>
-                            <b> MMath Mathematics 1st Class Hons </b> (2017-2021) <br>
-                            University of Surrey
-
-                            <p class="small-para">
-                                <em> <span style="font-weight: 500;">Supervisors:</span> Dr. Alessandro Torrielli and
-                                    Dr. Andrea Prinsloo </em> <br>
-                                <em> <span style="font-weight:500;">Thesis Title:</span> Algebraic Bethe Ansatz for
-                                    su(2) Spin Chains and Beyond </em>
-                            </p>
-
-                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                                aria-controls="MMath_Modules">
-                                <i class="abstract-icon icon-angle-right"></i> Modules and Results
-                            </button>
-
-                            <div class="abstract-container" id="MMath_Modules">
-                                <div class="teach-row">
-                                    <div class="teach-column">
-                                        <section>
-                                            <p class="grades-title">
-                                                <b> Year 1 </b> (93%)
-                                            </p>
-                                            <p class="small-para">
-                                                <em>
-                                                    97% &ndash; Vector Calculus <br>
-                                                    96% &ndash; Probability and Statistics <br>
-                                                    94% &ndash; Classical Dynamics <br>
-                                                    93% &ndash; Algebra <br>
-                                                    93% &ndash; Real Analysis I <br>
-                                                    92% &ndash; Calculus <br>
-                                                    92% &ndash; Professional Skills Development <br>
-                                                    88% &ndash; Linear Algebra
-                                                </em>
-                                            </p>
-                                        </section>
-                                    </div>
-                                    <div class="teach-column">
-                                        <p class="grades-title">
-                                            <b> Year 2 </b> (97%)
-                                        </p>
-                                        <p class="small-para">
-                                            <em>
-                                                100% &ndash; Linear Partial Differential Equations <br>
-                                                99% &ndash; Curves and Surfaces <br>
-                                                99% &ndash; Inviscid Fluid Dynamics <br>
-                                                98% &ndash; Real Analysis II <br>
-                                                97% &ndash; Numerical and Computational Methods <br>
-                                                96% &ndash; Ordinary Differential Equations <br>
-                                                94% &ndash; Groups and Rings <br>
-                                                92% &ndash; Introduction to Complex Analysis
-                                            </em>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="teach-row">
-                                    <div class="teach-column">
-                                        <p class="grades-title">
-                                            <b> Year 3 </b> (98%)
-                                        </p>
-                                        <p class="small-para">
-                                            <em>
-                                                100% &ndash; Introduction to Function Spaces <br>
-                                                99% &ndash; Manifolds and Topology <br>
-                                                98% &ndash; Mathematical Ecology and Epidemiology <br>
-                                                98% &ndash; Matrix Analysis <br>
-                                                95% &ndash; Graphs and Networks <br>
-                                                95% &ndash; Riemannian Geometry <br>
-                                                93% &ndash; Quantum Mechanics <br>
-                                                90% &ndash; Special Relativity and Electrodynamics
-                                            </em>
-                                        </p>
-                                    </div>
-                                    <div class="teach-column">
-                                        <p class="grades-title">
-                                            <b> Year 4 </b> (98%)
-                                        </p>
-                                        <p class="small-para">
-                                            <em>
-                                                100% &ndash; Calculus of Variations <br>
-                                                100% &ndash; Functional Analysis and Partial Differential Equations <br>
-                                                100% &ndash; Representation Theory <br>
-                                                98% &ndash; General Topology <br>
-                                                97% &ndash; Relativistic Quantum Mechanics <br>
-                                                95% &ndash; Advanced Techniques in Mathematics <br>
-                                                <br>
-                                                95% &ndash; Master's Thesis Report
-                                            </em>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <b> A-Levels </b> (2015-2017) <br>
-                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                                aria-controls="ALevel_Results">
-                                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
-                            </button>
-
-                            <div class="abstract-container" id="ALevel_Results">
-                                Mathematics &ndash; A* <br>
-                                Further Mathematics &ndash; A* <br>
-                                Physics &ndash; A* <br>
-                                Biology &ndash; A <br>
-                                Art AS-Level &ndash; A <br>
-                            </div>
-                        </li>
-                        <li>
-                            <b> GCSEs </b> (2012-2015) <br>
-                            <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                                aria-controls="GCSE_Results">
-                                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
-                            </button>
-
-                            <div class="abstract-container" id="GCSE_Results">
-                                <div class="teach-row">
-                                    <div class="teach-column">
-                                        <p class="grades-title"> <b> A* </b> </p>
-                                        <p class="small-para">
-                                            Mathematics <br>
-                                            English Language <br>
-                                            German <br>
-                                            Art and Design <br>
-                                            History <br>
-                                            Biology <br>
-                                            Chemistry <br>
-                                            Physics <br>
-                                            Religious Studies
-                                        </p>
-                                    </div>
-                                    <div class="teach-column">
-                                        <p class="grades-title">
-                                            <b> A </b>
-                                        </p>
-                                        <p class="small-para">
-                                            English Literature <br>
-                                            Media Studies <br>
-                                            Science <br>
-                                        </p>
-                                        <p class="grades-title">
-                                            <b> B </b>
-                                        </p>
-                                        <p class="small-para">
-                                            Physical Education
-                                        </p>
-                                        <p class="grades-title">
-                                            <b> Equivalent Qualifications </b>
-                                        </p>
-                                        <p class="small-para">
-                                            Cambridge National ICT &ndash; D*2 <br>
-                                            FSMQ Additional Mathematics &ndash; A
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                </article>
-
-                <div class="section-break" id="skillsExperience">
-                    <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
-                        title="Home Page" alt="house icon">
-                        <path
-                            d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
-                    </svg>
-                </div>
-
-                <article>
-
-                    <h2> Skills and Experience </h2>
-
-
-                </article>
-
-                <article>
-                    <h2> To Do </h2>
-                    <ul>
-                        <li style="color:red;"> Other pages to appear include:
-                            <ol>
-                                <li> Art Gallery </li>
-                                <li> Clips Page -- Music and Speedruns </li>
-                                <li> Blog Page? For game reviews etc </li>
-                                <li> Code page or link to github on cv page. </li>
-                                <li> contact page </li>
-                            </ol>
-                        </li>
-                        <li>
-                            Add Hero Image
-                        </li>
-                        <li>
-                            Scan old art to add to gallery page
-                        </li>
-                        <li>
-                            Re-record music more clearly
-                        </li>
-                        <li>
-                            Clean up and upload old code to repos
-                        </li>
-                        <li>
-                            New CV
-                        </li>
-                    </ul>
-                </article>
-
-
-            </div>
-            <footer>
-                © 2023 Lewis Napper | All rights reserved
-                <!-- Add in Terms popup -->
-            </footer>
-        </main>
-
+  <header class="top-nav"> <!-- Top Nav Bar -->
+    <div id="nav-burger-symbol" class="nav-section"> <!-- Burger Icon -->
+      <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
+        aria-expanded="false">
+        <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
+          stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
+          <path class="line middle" d="m 50 50 h 47 a 1 1 0 0 0 -94 0"> </path>
+          <path class="line inner-circle" d="m 26.5 26.5 h 47 a 1 1 0 0 1 0 47 a 1 1 0 0 1 0 -47"> </path>
+          <path class="line inner-circle" d="m 73.5 73.5 h -47 a 1 1 0 0 1 0 -47 a 1 1 0 0 1 0 47">
+          </path>
+        </svg>
+      </button>
     </div>
+
+    <div id="nav-logo-symbol" class="nav-section"> <!--My Logo -->
+      <a href="index.html">
+        <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45" viewBox="0 0 64 64"
+          version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+          xml:space="preserve" xmlns:serif="https://www.serif.com/">
+          <circle cx="32.231" cy="32.181" r="29.632" class="logoPathNoFill logoPathThin" />
+          <rect x="25.215" y="50.81" width="13.588" height="2.039" class="logoPathFill logoPathThin" />
+          <rect x="25.187" y="12.393" width="13.609" height="2.039" class="logoPathFill logoPathThin" />
+          <rect x="30.925" y="15.216" width="2.202" height="34.837" class="logoPathFill logoPathThin" />
+          <circle cx="18.522" cy="48.03" r="2.357" class="logoPathFill logoPathThick" />
+          <circle cx="45.431" cy="17.456" r="2.396" class="logoPathFill logoPathThick" />
+          <circle cx="45.421" cy="47.98" r="0.781" class="logoPathFill logoPathThick" />
+          <rect x="12.63" y="16.243" width="7.16" height="0.806" class="logoPathFill logoPathThin" />
+          <path d="M47.841,17.737c-0.866,7.966 -7.622,14.175 -15.816,14.175c-8.781,0 -15.91,-7.129 -15.91,-15.909"
+            class="logoPathNoFill logoPathThick" />
+          <path d="M32.074,31.983c-8.781,0.005 -15.905,7.139 -15.9,15.919" class="logoPathNoFill logoPathThick" />
+        </svg>
+      </a>
+    </div>
+
+    <div id="nav-language-symbol" class="nav-section"> <!-- TBC Language Toggle -->
+      <p> </p>
+    </div>
+  </header>
+
+  <div id="wrapper">
+
+    <nav class="sidebar-nav" id="sidebar-nav"> <!-- Navigation Side Pannel -->
+      <ul class="sidebar-text" id="primary-navigation">
+
+        <li> <!-- Homepage Nav -->
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="index.html" id="current-page"> Home </a>
+            <button class="dropdown-btn" type="button" aria-controls="Homepage-dropdown" aria-expanded="false"> <i
+                class="icon-angle-right dropdown-icon"></i></button>
+          </div>
+
+          <ul class="dropdown-container" id="Homepage-dropdown">
+            <li><a href="index.html#aboutMe" class="dropdown-item-current"> About Me </a></li>
+            <li> <a href="index.html#newsReel" class="dropdown-item-current"> News and Updates </a></li>
+            <li><a href="index.html#education" class="dropdown-item-current"> Education </a></li>
+            <li><a href="index.html#skillsExperience" class="dropdown-item-current"> Skills and Experience </a></li>
+          </ul>
+        </li>
+
+        <li> <!-- Academia Nav -->
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="academia_page/academia.html"> Academia </a>
+            <button class="dropdown-btn" type="button" aria-controls="Academia-dropdown" aria-expanded="true">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Academia-dropdown">
+            <li> <a href="academia_page/academia.html#researchInterests"> Research Interests </a></li>
+            <li> <a href="academia_page/academia.html#publications"> Publications </a></li>
+            <li> <a href="academia_page/academia.html#newsEvents"> News and Events </a></li>
+            <li> <a href="academia_page/academia.html#academicPresentations"> Presentations </a></li>
+            <li> <a href="academia_page/academia.html#teaching"> Teaching </a></li>
+            <li> <a href="academia_page/academia.html#awardsFunding"> Awards and Funding </a></li>
+          </ul>
+        </li>
+
+        <li class="buffer-item"> </li> <!-- Blank Element So Scrolling Shows All Links -->
+      </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div> <!-- Clickable Overlay When Menu Open (Effects Keyboard Focus) -->
+
+    <main>
+
+      <div> <!-- Hero Image Section TBC -->
+        <h1>Hey! I'm Lewis Napper</h1>
+        <h2>Welcome to my Website!</h2>
+      </div>
+
+      <div class="container"> <!-- Container For Page Content -->
+
+        <div class="section-break" id="aboutMe"></div>
+        <p class="redColor">
+          Please note that this website is currently a work in progress. As such, some content may be missing
+          or may not function as intended. The page is updated regularly however, so revisit soon to see more
+          of my work!
+        </p>
+
+        <article> <!-- About Section -->
+          <h2> About Me </h2>
+
+          <div class="about-row">
+            <div class="about-column-text"> <!-- Intro Text -->
+              <section class="Review-section About-section">
+                <p class="medium-para">
+                  Hello, I'm Lewis Napper, a PhD mathematics student from the University of Surrey in
+                  the United Kingdom. My research focuses on applications of abstract geometry to
+                  problems in the theory of partial differential equations, fluid dynamics, and
+                  relativity. Outside of my work in academia, I am an artist and occasional
+                  programmer, with an interest in game development and computer graphics.
+                </p>
+                <p class="medium-para">
+                  This site is intended to be a showcase of my work and hobbies across various fields,
+                  acting as a catalogue of my academic career, artistic endeavours, and other
+                  exploits. Explore to find out more or <a href="home_material/CV_LN.pdf" target=" _blank"
+                    rel="noopener noreferrer" class="local-download under-overlay download-less-padding">
+                    click here</a> for a PDF of my CV.
+                </p>
+              </section>
+            </div>
+
+            <div class="about-column-image"> <!-- Puppy Photo -->
+              <img class="img-about" src="home_material/pupper.jpg" alt="my pet spaniel">
+            </div>
+          </div>
+
+        </article>
+
+        <div class="section-break" id="newsReel">
+          <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+            title="Home Page" alt="house icon">
+            <path
+              d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+          </svg>
+        </div>
+
+        <article> <!-- News Carousel TBC -->
+          <h2> News and Updates </h2>
+          <p class="redColor"> Card carousel with lastest additions to website and my work. Maybe link to a blog page?
+          </p>
+        </article>
+
+        <div class="section-break" id="education">
+          <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+            title="Home Page" alt="house icon">
+            <path
+              d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+          </svg>
+        </div>
+
+        <article> <!-- Education Section  -->
+          <h2> Education </h2>
+          Below is a list of my formal qualifications from GCSE to PhD level. For further details about the
+          publications, presentations, and teaching completed during my undergraduate and postgraduate
+          studies, see my <a href="academia_page/academia.html">Academia Page</a>.
+
+          <ul>
+            <li> <!-- PhD Info -->
+              <b> PhD Mathematics </b> (2021-<span class="redColor">2024</span>)
+              <br> University of Surrey
+              <p class="small-para">
+                <em> <span class="midBold">Supervisors:</span> Dr. Martin Wolf and Prof. Ian Roulstone </em>
+                <br>
+                <em> <span class="midBold">Thesis Title:</span> Monge&ndash;Ampère Geometry and Vortices </em>
+              </p>
+
+              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                aria-controls="PhD_Modules"> <i class="abstract-icon icon-angle-right"></i> Modules and Results
+              </button>
+
+              <p class="small-para abstract-container" id="PhD_Modules"> <!-- Module Dropdown -->
+                <em>
+                  100% &ndash; Lie Groups and Lie Algebras <br>
+                  100% &ndash; String Theory <br>
+                  96% &ndash; Symplectic Geometry<br>
+                  88% &ndash; Algebraic Topology <br>
+                  80% &ndash; Differential Topology and Morse Theory <br>
+                  73% &ndash; Sheaf Cohomology
+                </em>
+              </p>
+            </li>
+
+            <li> <!-- Master's Info -->
+              <b> MMath Mathematics 1st Class Hons </b> (2017-2021) <br>
+              University of Surrey
+              <p class="small-para">
+                <em> <span class="midBold">Supervisors:</span> Dr. Alessandro Torrielli and Dr. Andrea
+                  Prinsloo </em> <br>
+                <em> <span class="midBold">Thesis Title:</span> Algebraic Bethe Ansatz for su(2) Spin Chains
+                  and Beyond </em>
+              </p>
+
+              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                aria-controls="MMath_Modules">
+                <i class="abstract-icon icon-angle-right"></i> Modules and Results
+              </button>
+
+              <div class="abstract-container" id="MMath_Modules"> <!-- Module Dropdown in Columns -->
+
+                <div class="teach-row"> <!-- Top Row -->
+                  <div class="teach-column"> <!-- First Year Modules -->
+                    <section>
+                      <p class="grades-title">
+                        <b> Year 1 </b> (93%)
+                      </p>
+                      <p class="small-para">
+                        <em>
+                          97% &ndash; Vector Calculus <br>
+                          96% &ndash; Probability and Statistics <br>
+                          94% &ndash; Classical Dynamics <br>
+                          93% &ndash; Algebra <br>
+                          93% &ndash; Real Analysis I <br>
+                          92% &ndash; Calculus <br>
+                          92% &ndash; Professional Skills Development <br>
+                          88% &ndash; Linear Algebra
+                        </em>
+                      </p>
+                    </section>
+                  </div>
+
+                  <div class="teach-column"> <!-- Second Year Modules -->
+                    <p class="grades-title">
+                      <b> Year 2 </b> (97%)
+                    </p>
+                    <p class="small-para">
+                      <em>
+                        100% &ndash; Linear Partial Differential Equations <br>
+                        99% &ndash; Curves and Surfaces <br>
+                        99% &ndash; Inviscid Fluid Dynamics <br>
+                        98% &ndash; Real Analysis II <br>
+                        97% &ndash; Numerical and Computational Methods <br>
+                        96% &ndash; Ordinary Differential Equations <br>
+                        94% &ndash; Groups and Rings <br>
+                        92% &ndash; Introduction to Complex Analysis
+                      </em>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="teach-row"> <!-- Second Row -->
+                  <div class="teach-column"> <!-- Third Year Modules -->
+                    <p class="grades-title">
+                      <b> Year 3 </b> (98%)
+                    </p>
+                    <p class="small-para">
+                      <em>
+                        100% &ndash; Introduction to Function Spaces <br>
+                        99% &ndash; Manifolds and Topology <br>
+                        98% &ndash; Mathematical Ecology and Epidemiology <br>
+                        98% &ndash; Matrix Analysis <br>
+                        95% &ndash; Graphs and Networks <br>
+                        95% &ndash; Riemannian Geometry <br>
+                        93% &ndash; Quantum Mechanics <br>
+                        90% &ndash; Special Relativity and Electrodynamics
+                      </em>
+                    </p>
+                  </div>
+
+                  <div class="teach-column"> <!-- Fourth Year Modules -->
+                    <p class="grades-title">
+                      <b> Year 4 </b> (98%)
+                    </p>
+                    <p class="small-para">
+                      <em>
+                        100% &ndash; Calculus of Variations <br>
+                        100% &ndash; Functional Analysis and Partial Differential Equations <br>
+                        100% &ndash; Representation Theory <br>
+                        98% &ndash; General Topology <br>
+                        97% &ndash; Relativistic Quantum Mechanics <br>
+                        95% &ndash; Advanced Techniques in Mathematics <br>
+                        <br>
+                        95% &ndash; Master's Thesis Report
+                      </em>
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li> <!-- A-Level Info -->
+              <b> A-Levels </b> (2015-2017) <br>
+
+              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+              </button>
+
+              <div class="abstract-container" id="ALevel_Results"> <!-- Module Dropdown -->
+                Mathematics &ndash; A* <br>
+                Further Mathematics &ndash; A* <br>
+                Physics &ndash; A* <br>
+                Biology &ndash; A <br>
+                Art AS-Level &ndash; A <br>
+              </div>
+            </li>
+
+            <li> <!-- GCSE Info -->
+              <b> GCSEs </b> (2012-2015) <br>
+
+              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+                aria-controls="GCSE_Results">
+                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+              </button>
+
+              <div class="abstract-container" id="GCSE_Results"> <!-- Module Dropdown in Columns-->
+                <div class="teach-row">
+
+                  <div class="teach-column"> <!-- A* Results -->
+                    <p class="grades-title"> <b> A* </b> </p>
+                    <p class="small-para">
+                      Mathematics <br>
+                      English Language <br>
+                      German <br>
+                      Art and Design <br>
+                      History <br>
+                      Biology <br>
+                      Chemistry <br>
+                      Physics <br>
+                      Religious Studies
+                    </p>
+                  </div>
+
+                  <div class="teach-column"> <!-- Non A* Results -->
+                    <p class="grades-title">
+                      <b> A </b>
+                    </p>
+                    <p class="small-para">
+                      English Literature <br>
+                      Media Studies <br>
+                      Science <br>
+                    </p>
+                    <p class="grades-title">
+                      <b> B </b>
+                    </p>
+                    <p class="small-para">
+                      Physical Education
+                    </p>
+                    <p class="grades-title">
+                      <b> Equivalent Qualifications </b>
+                    </p>
+                    <p class="small-para">
+                      Cambridge National ICT &ndash; D*2 <br>
+                      FSMQ Additional Mathematics &ndash; A
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </article>
+
+        <div class="section-break" id="skillsExperience">
+          <svg xmlns="https://www.w3.org/2000/svg" fill="#f5f5f5" height="48" viewBox="0 0 576 512" width="48"
+            title="Home Page" alt="house icon">
+            <path
+              d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z" />
+          </svg>
+        </div>
+
+        <article>
+          <h2> Skills and Experience </h2>
+
+        </article>
+
+      </div>
+
+      <footer>
+        © 2023 Lewis Napper | All rights reserved
+        <!-- Add in Terms popup -->
+      </footer>
+    </main>
+
+  </div>
 </body>
