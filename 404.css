@@ -12,7 +12,6 @@
 }
 
 #finefooter {
-  position: fixed;
   width: 100vw;
   bottom: 0;
 }
@@ -24,5 +23,6 @@
 /* Stop mobile scroll on 404 page*/
 
 .error-style {
+  position: fixed;
   overflow: hidden;
 }
