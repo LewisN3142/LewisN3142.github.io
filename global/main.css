@@ -422,13 +422,6 @@ main hr {
   padding: 6rem;
 }
 
-/* Stop mobile scroll on 404 page*/
-
-.error-style {
-  position: fixed;
-  overflow: hidden;
-}
-
 /* BODY TEXT FORMATTING */
 
 main h3,
