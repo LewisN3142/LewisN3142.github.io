@@ -20,10 +20,3 @@
 #finepara {
   text-align: center;
 }
-
-/* Stop mobile scroll on 404 page*/
-
-.error-style {
-  position: fixed;
-  overflow: hidden;
-}
