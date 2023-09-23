@@ -48,10 +48,24 @@
 
 /* Module Results Sections */
 .grades-title {
-  margin-top: 0.9rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.25rem;
 }
 
 .midBold {
   font-weight: 500;
+}
+
+/* Skills and Experience lists */
+.compact-list li {
+  margin-bottom: 5px;
+}
+
+.compact-list {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.abstract-less-padding {
+  padding-left: 0.7rem;
 }

@@ -460,6 +460,7 @@ main ul li {
 .Review-section {
   border-radius: 10px;
   padding: 5px 15px;
+  padding-bottom: 10px;
   margin: 15px 5px;
   background-color: var(--background-second-accent);
 }
@@ -494,6 +495,7 @@ button:focus-visible,
   width: 50%;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding: 0.6rem;
 }
 
 .teach-row:after {
@@ -575,6 +577,6 @@ button:focus-visible,
   display: none;
   background-color: var(--background-mid-accent);
   padding: 0.5rem;
-  padding-left: 0.7rem;
+  padding-left: 1.3rem;
   padding-right: 0.7rem;
 }
