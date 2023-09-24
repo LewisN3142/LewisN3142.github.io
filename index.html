@@ -14,8 +14,6 @@
 
   <link rel="stylesheet" href="global/font-styles.css" /> <!-- Icomoon Fonts -->
   <link rel="stylesheet" href="global/main.css" type="text/css">
-  <link rel="stylesheet" href="home.css" type="text/css">
-  <link rel="stylesheet" href="global/media-query.css" type="text/css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- Get JQuery -->
   <script src="global/script.js"></script>
@@ -26,7 +24,7 @@
   <header class="top-nav"> <!-- Top Nav Bar -->
     <div id="nav-burger-symbol" class="nav-section"> <!-- Burger Icon -->
       <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
-        aria-expanded="false">
+        aria-expanded="false" aria-label="open/close main navigation">
         <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
           stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
           <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
@@ -138,9 +136,10 @@
                 <p class="medium-para">
                   This site is intended to be a showcase of my work and hobbies across various fields,
                   acting as a catalogue of my academic career, artistic endeavours, and other
-                  exploits. Explore to find out more or <a href="home_material/CV_LN.pdf" target=" _blank"
-                    rel="noopener noreferrer" class="local-download under-overlay download-less-padding">
-                    click here</a> for a PDF of my CV.
+                  exploits. Explore to find out more or take a look at my <a href="home_material/CV_LN.pdf"
+                    target=" _blank" rel="noopener noreferrer"
+                    class="local-download under-overlay download-less-padding">
+                    CV</a>.
                 </p>
               </section>
             </div>
@@ -178,7 +177,7 @@
           <h2> Education </h2>
           Below is a list of my formal qualifications from GCSE to PhD level. For further details about the
           publications, presentations, and teaching completed during my undergraduate and postgraduate
-          studies, see my <a href="academia_page/academia.html">Academia Page</a>.
+          studies, see my <a href="academia_page/academia.html" class="under-overlay">Academia Page</a>.
 
           <ul>
             <li> <!-- PhD Info -->
@@ -307,6 +306,7 @@
 
             <li> <!-- A-Level Info -->
               <b> A-Levels </b> (2015-2017) <br>
+              3x A* and 1x A at A-Level, plus 1x A at AS-Level <br>
 
               <button class="abstract-link under-overlay" type="button" aria-expanded="false"
                 aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
@@ -325,6 +325,7 @@
 
             <li> <!-- GCSE Info -->
               <b> GCSEs </b> (2012-2015) <br>
+              9x A* (including Mathematics, English, and German), 3x A, and more.<br>
 
               <button class="abstract-link under-overlay" type="button" aria-expanded="false"
                 aria-controls="GCSE_Results">
@@ -398,30 +399,6 @@
           and <span class="redColor"> Clips Page</span>.
 
           <section class="Review-section">
-            <h3> Roles and Activities </h3>
-
-            <ul class="compact-list">
-              <li> 1 week work experience at MatOrtho Orthopaedic Engineering, including SolidWorks CAD training.</li>
-              <li> Member of the Surrey team for the 2018 International WorldQuant Championships, for which I learned
-                WebSim and reached the regional finals.</li>
-              <li> 1st in an introductory module on Computational Fluid Dynamics prior to university </li>
-              <li> Developed presentation and review writing skills during my postgraduate degree and professional
-                skills module.</li>
-              <li> Presented art at the Surrey Youth Voice Awards and at my Sixth Form, where I accompanied the exhibit
-                with instrumental guitar playing. </li>
-              <li> Learned how to solder and draw electronics diagrams in order to build my own analogue guitar pedals.
-              </li>
-              <li> Rebranded the University of Surrey Maths Society by designing new logos, posters, newsletters, and
-                visual fluid simulations (made in SimFlow) to be used at a wide range of advertising and outreach
-                events. </li>
-              <li> Organised academic seminars and staff&ndash;student meetings as Academic Secretary of the University
-                of Surrey Maths Society and supported the smooth operation of film-viewing events as part of the
-                University of Surrey Film Society. </li>
-            </ul>
-
-          </section>
-
-          <section class="Review-section">
             <h3> Software Skills </h3>
             I have experience with a wide range of computer software, including several programming languages.
             Representative software is listed below, along with links to the relevant projects/pages where applicable.
@@ -451,13 +428,13 @@
                   <li> Vanilla JavaScript and JQuery</li>
                 </ul>
               </div>
-
             </div>
 
             <div class="teach-row">
               <div class="teach-column">
                 <p class="grades-title"> <b> Text and Data Processing </b></p>
-                Example documents include the preprints available on my <a href="academia_page/academia.html">Academia
+                Example documents include the preprints available on my <a href="academia_page/academia.html"
+                  class="under-overlay">Academia
                   Page</a>.
                 <ul class="compact-list">
                   <li> Microsoft Office Suite (inc. Excel, Word)</li>
@@ -476,10 +453,31 @@
               </div>
             </div>
           </section>
+
+          <section class="Review-section">
+            <h3> Roles and Activities </h3>
+
+            <ul class="compact-list">
+              <li> 1 week work experience at MatOrtho Orthopaedic Engineering, including SolidWorks CAD training.</li>
+              <li> Member of the Surrey team for the 2018 International WorldQuant Championships, during which I learned
+                WebSim and reached the regional finals.</li>
+              <li> Rebranded the University of Surrey Maths Society by designing new logos, posters, newsletters, and
+                visual fluid simulations (made in SimFlow) to be used at a wide range of advertising and outreach
+                events. </li>
+              <li> Organised academic seminars and staff&ndash;student meetings as Academic Secretary of the University
+                of Surrey Maths Society and supported the smooth operation of film-viewing events as part of the
+                University of Surrey Film Society. </li>
+              <li> Presented art at the Surrey Youth Voice Awards and at my Sixth Form, where I accompanied the exhibit
+                with instrumental guitar playing. </li>
+              <li> Learned how to solder and draw electronics diagrams in order to build my own analogue guitar pedals.
+              </li>
+
+            </ul>
+
+          </section>
         </article>
 
       </div>
-
       <footer>
         © 2023 Lewis Napper | All rights reserved
         <!-- Add in Terms popup -->

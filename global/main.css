@@ -580,3 +580,145 @@ button:focus-visible,
   padding-left: 1.3rem;
   padding-right: 0.7rem;
 }
+
+/* ABOUT SECTION */
+.download-less-padding:before {
+  margin-right: -0.15rem;
+}
+
+.about-column-text {
+  float: left;
+  width: 65%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.about-column-image {
+  float: left;
+  width: 35%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.about-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 1.5rem;
+}
+
+.img-about {
+  border: var(--foreground-default) 2px solid;
+  border-radius: 50%;
+  height: 13.3rem;
+  margin: auto;
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.About-section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#aboutMe {
+  height: 48px;
+}
+
+/* Module Results Sections */
+.grades-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.midBold {
+  font-weight: 500;
+}
+
+/* Skills and Experience lists */
+.compact-list li {
+  margin-bottom: 5px;
+}
+
+.compact-list {
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.abstract-less-padding {
+  padding-left: 0.7rem;
+}
+
+/* 404 Page */
+#finebox {
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
+#thisfine {
+  display: block;
+  width: 50vw;
+  margin: auto;
+}
+
+#finefooter {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+}
+
+#finepara {
+  text-align: center;
+}
+
+/* Media queries for screen width and about image margins  */
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .img-about {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  .img-about {
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 991.5px) {
+  /* Media query for teaching columns */
+  .teach-column {
+    width: 100%;
+  }
+  /* Media query for responsive text/image column */
+  .about-column-text {
+    width: 100%;
+  }
+  .about-column-image {
+    width: 100%;
+  }
+}
