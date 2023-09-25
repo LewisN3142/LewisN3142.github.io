@@ -86,3 +86,70 @@ $(document).ready(function () {
     onFadeOut();
   });
 });
+
+// Card Carousel Buttons etc
+let activeIndex = 0;
+
+const cards = document.getElementsByClassName("card");
+
+// Handler for left arrow
+const handleSliderLeft = () => {
+  // Get index of card to right, left, and two to left
+  const nextIndex =
+    activeIndex + 1 <= cards.length - 1
+      ? activeIndex + 1
+      : 1 + activeIndex - cards.length;
+  const previousIndex =
+    activeIndex - 1 >= 0 ? activeIndex - 1 : cards.length - 1 + activeIndex;
+  const twicePreviousIndex =
+    activeIndex - 2 >= 0 ? activeIndex - 2 : cards.length - 2 + activeIndex;
+
+  const currentCard = document.querySelector(`[data-index="${activeIndex}"]`);
+  const nextCard = document.querySelector(`[data-index="${nextIndex}"]`);
+  const previousCard = document.querySelector(
+    `[data-index="${previousIndex}"]`
+  );
+  const twicePreviousCard = document.querySelector(
+    `[data-index="${twicePreviousIndex}"]`
+  );
+
+  // Change data status of cards
+  currentCard.dataset.status = "activeRight";
+  previousCard.dataset.status = "activeMiddle";
+  nextCard.dataset.status = "inactive";
+  twicePreviousCard.dataset.status = "activeLeft";
+
+  activeIndex = previousIndex;
+};
+
+// Handler for right arrow
+const handleSliderRight = () => {
+  // Get index of card to right, left, and two to right
+  const nextIndex =
+    activeIndex + 1 <= cards.length - 1
+      ? activeIndex + 1
+      : 1 + activeIndex - cards.length;
+  const previousIndex =
+    activeIndex - 1 >= 0 ? activeIndex - 1 : cards.length - 1 + activeIndex;
+  const twiceNextIndex =
+    activeIndex + 2 <= cards.length - 1
+      ? activeIndex + 2
+      : 2 + activeIndex - cards.length;
+
+  const currentCard = document.querySelector(`[data-index="${activeIndex}"]`);
+  const nextCard = document.querySelector(`[data-index="${nextIndex}"]`);
+  const previousCard = document.querySelector(
+    `[data-index="${previousIndex}"]`
+  );
+  const twiceNextCard = document.querySelector(
+    `[data-index="${twiceNextIndex}"]`
+  );
+
+  // Change data status of cards
+  currentCard.dataset.status = "activeLeft";
+  previousCard.dataset.status = "inactive";
+  nextCard.dataset.status = "activeMiddle";
+  twiceNextCard.dataset.status = "activeRight";
+
+  activeIndex = nextIndex;
+};
