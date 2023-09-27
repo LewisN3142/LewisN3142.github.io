@@ -33,7 +33,7 @@ $(document).ready(function () {
     $("#body").removeClass("toggled");
     $("#menu-toggle").removeClass("toggled");
     $("#menu-toggle").attr("aria-expanded", "false");
-    $(".under-overlay").each(function () {
+    $(".under-overlay:not(.link-back-card)").each(function () {
       $(this).removeAttr("tabindex");
     });
   }
@@ -89,11 +89,20 @@ $(document).ready(function () {
 
 // Card Carousel Buttons etc
 let activeIndex = 0;
-
 const cards = document.getElementsByClassName("card");
 
+// Functions to manage accessibility of invisible cards
+function removeCardFromTabFlow(item) {
+  $(item).addClass("link-back-card");
+  $(item).attr("tabindex", "-1");
+}
+function addCardToTabFlow(item) {
+  $(item).removeClass("link-back-card");
+  $(item).removeAttr("tabindex");
+}
+
 // Handler for left arrow
-const handleSliderLeft = () => {
+function handleSliderLeft() {
   // Get index of card to right, left, and two to left
   const nextIndex =
     activeIndex + 1 <= cards.length - 1
@@ -119,11 +128,27 @@ const handleSliderLeft = () => {
   nextCard.dataset.status = "inactive";
   twicePreviousCard.dataset.status = "activeLeft";
 
+  // Make side cards clickable
+  $(nextCard).removeAttr("onclick");
+  $(previousCard).removeAttr("onclick");
+  $(currentCard).attr("onclick", "handleSliderRight()");
+  $(twicePreviousCard).attr("onclick", "handleSliderLeft()");
+
+  // Make sure hidden cards are not tab-able
+  var currentLinks = currentCard.getElementsByTagName("a");
+  for (var i = 0; i < currentLinks.length; i++) {
+    removeCardFromTabFlow(currentLinks[i]);
+  }
+  var newLinks = previousCard.getElementsByTagName("a");
+  for (var i = 0; i < newLinks.length; i++) {
+    addCardToTabFlow(newLinks[i]);
+  }
+
   activeIndex = previousIndex;
-};
+}
 
 // Handler for right arrow
-const handleSliderRight = () => {
+function handleSliderRight() {
   // Get index of card to right, left, and two to right
   const nextIndex =
     activeIndex + 1 <= cards.length - 1
@@ -151,5 +176,21 @@ const handleSliderRight = () => {
   nextCard.dataset.status = "activeMiddle";
   twiceNextCard.dataset.status = "activeRight";
 
+  // Make side cards clickable
+  $(nextCard).removeAttr("onclick");
+  $(previousCard).removeAttr("onclick");
+  $(currentCard).attr("onclick", "handleSliderLeft()");
+  $(twiceNextCard).attr("onclick", "handleSliderRight()");
+
+  // Make sure hidden cards are not tab-able
+  var currentLinks = currentCard.getElementsByTagName("a");
+  for (var i = 0; i < currentLinks.length; i++) {
+    removeCardFromTabFlow(currentLinks[i]);
+  }
+  var newLinks = nextCard.getElementsByTagName("a");
+  for (var i = 0; i < newLinks.length; i++) {
+    addCardToTabFlow(newLinks[i]);
+  }
+
   activeIndex = nextIndex;
-};
+}

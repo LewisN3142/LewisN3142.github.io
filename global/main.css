@@ -437,6 +437,8 @@ main h2 {
 
 main .centered-text {
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 main p {
@@ -495,7 +497,8 @@ button:focus-visible,
   width: 50%;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding: 0.6rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 
 .teach-row:after {
@@ -631,7 +634,7 @@ button:focus-visible,
 
 /* Module Results Sections */
 .grades-title {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   margin-bottom: 0.25rem;
 }
 
@@ -641,12 +644,12 @@ button:focus-visible,
 
 /* Skills and Experience lists */
 .compact-list li {
-  margin-bottom: 5px;
+  margin-bottom: 0.4rem;
 }
 
 .compact-list {
   margin-top: 0.5rem;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .abstract-less-padding {
@@ -698,7 +701,7 @@ button:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 10px;
+  padding: 0px;
   height: 80vh;
   max-height: 800px;
 }
@@ -708,7 +711,7 @@ button:focus-visible,
   max-width: 800px;
   max-height: 600px;
   height: 100%;
-  transform-style: preserve-3d;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -808,7 +811,7 @@ button:focus-visible,
   font-size: 1.02rem;
   line-height: 1.25;
 
-  background-color: #4f4f4f;
+  background-color: #3e3e3e;
   border-radius: 10px;
 }
 
@@ -832,7 +835,7 @@ button:focus-visible,
 
 .slider-navigation {
   display: flex;
-  width: 83%;
+  width: 84%;
 }
 
 .slider-navigation-padding {
@@ -843,9 +846,37 @@ button:focus-visible,
   height: 1rem;
 }
 
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: 0.4s ease;
+
+  background-repeat: no-repeat;
+  border-radius: 0.7rem;
+  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
+    -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
+}
+
+.card[data-status="activeLeft"] * {
+  pointer-events: none;
+}
+
+.card[data-status="activeRight"] * {
+  pointer-events: none;
+}
+
+.card[data-status="inactive"] * {
+  pointer-events: none;
+}
+
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 /* Media queries for screen width and about image margins  */
+
 @media screen and (max-width: 767.5px) {
   .slider-navigation {
     display: flex;
@@ -854,22 +885,6 @@ button:focus-visible,
 }
 
 @media screen and (min-width: 575.5px) {
-  .card {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: 0.4s ease;
-    cursor: pointer;
-
-    background-repeat: no-repeat;
-    border-radius: 0.7rem;
-    box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
-      -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
-  }
-
   .card[data-status="activeMiddle"] {
     transition: 0.4s ease;
     transform: translatex(0) scale(1);
@@ -882,6 +897,8 @@ button:focus-visible,
     transform: translatex(-40%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+
+    cursor: pointer;
   }
 
   .card[data-status="activeRight"] {
@@ -889,6 +906,8 @@ button:focus-visible,
     transform: translatex(40%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+
+    cursor: pointer;
   }
 
   .card[data-status="inactive"] {
@@ -899,26 +918,15 @@ button:focus-visible,
   }
 }
 
-@media screen and (max-width: 575.5px) {
+@media screen and (max-width: 575.4px) {
   .slider-navigation {
     display: flex;
     width: 80%;
   }
 
   .card {
-    position: absolute;
     width: 90%;
-    height: 95%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transition: 0.4s ease;
-    cursor: pointer;
-
-    background-repeat: no-repeat;
-    border-radius: 0.7rem;
-    box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
-      -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
+    height: 97%;
   }
 
   .card[data-status="activeMiddle"] {
