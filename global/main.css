@@ -62,13 +62,12 @@ html {
 :root {
   /* Colour Choices */
   --foreground-default: #f5f5f5;
-  --foreground-active-blue: #75b6ef;
-  --foreground-clicked-blue: #2e85d0;
-  --foreground-visited: #b886de;
-  --background-default: #333;
-  --background-mid-accent: #232323;
-  --background-second-accent: #292929;
-  --background-accent: #181818;
+  --foreground-active-blue: #7cb9ef;
+  --foreground-clicked-blue: #3492e7;
+  --foreground-visited: #b175d9;
+  --background-default: #282828;
+  --background-mid-accent: #202020;
+  --background-accent: #171717;
   --overlay-color: rgba(245, 245, 245, 0.2);
 
   /* Widths and Heights*/
@@ -485,7 +484,7 @@ main a:visited {
   padding: 5px 15px;
   padding-bottom: 10px;
   margin: 20px 5px;
-  background-color: var(--background-second-accent);
+  background-color: var(--background-mid-accent);
 }
 
 .container {
@@ -532,7 +531,7 @@ button:focus-visible,
   border-radius: 10px;
   padding: 5px 15px;
   margin: 20px 10px 20px 10px;
-  background-color: var(--background-second-accent);
+  background-color: var(--background-mid-accent);
 }
 
 .first-column {
@@ -835,8 +834,11 @@ button:focus-visible,
   font-size: 1.02rem;
   line-height: 1.25;
 
-  background-color: #3e3e3e;
+  background-color: var(--background-default);
   border-radius: 10px;
+  border-color: #444;
+  border-width: 3px;
+  border-style: solid;
 }
 
 .card-name {
