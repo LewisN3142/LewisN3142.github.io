@@ -28,9 +28,9 @@ $(document).ready(function () {
   // Code for sidebar and overlay
   function onFadeOut() {
     $("#overlay").fadeOut(250);
+    $("#body").removeClass("toggled");
     $("#wrapper").removeClass("toggled");
     $("#primary-navigation").fadeOut(80);
-    $("#body").removeClass("toggled");
     $("#menu-toggle").removeClass("toggled");
     $("#menu-toggle").attr("aria-expanded", "false");
     $(".under-overlay:not(.link-back-card)").each(function () {
@@ -84,6 +84,36 @@ $(document).ready(function () {
   // JQuery for closing sidebar if element linking to current page clicked
   $(".dropdown-item-current").click(function () {
     onFadeOut();
+  });
+
+  // JQuery for terms and conditions modal
+  $("#modal-button").click(function () {
+    $(".modal").toggleClass("modal-toggled");
+    $(this).attr("aria-expanded", "true");
+    $(this).addClass("modal-toggled");
+    $("#modal-overlay").fadeIn(400);
+    $("#body").addClass("toggled");
+
+    $(".under-modal-overlay").each(function () {
+      $(this).attr("tabindex", "-1");
+    });
+  });
+
+  function onModalClose() {
+    $(".modal").toggleClass("modal-toggled");
+    $("#modal-button").attr("aria-expanded", "false");
+    $("#modal-button").removeClass("modal-toggled");
+    $("#body").removeClass("toggled");
+    $("#modal-overlay").delay(50).fadeOut(250);
+
+    $(".under-modal-overlay:not(.link-back-card)").each(function () {
+      $(this).removeAttr("tabindex");
+    });
+  }
+
+  // Add respective class to any button which closes the modal
+  $(".close-modal").click(function () {
+    onModalClose();
   });
 });
 

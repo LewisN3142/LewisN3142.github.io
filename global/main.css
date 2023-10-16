@@ -69,6 +69,7 @@ html {
   --background-mid-accent: #202020;
   --background-accent: #171717;
   --overlay-color: rgba(245, 245, 245, 0.2);
+  --footer-color: #a2a2a2;
 
   /* Widths and Heights*/
   --topbar-height: 3.5rem;
@@ -81,6 +82,7 @@ html {
   --font-letter-spacing-default: 0.008em;
   --font-word-spacing-default: 0.05em;
   --main-line-height: 1.45;
+  --footnote-font-size: 0.99rem;
 
   /* CSS Animations */
   --logo-pulse-in: all 300ms ease-out;
@@ -92,6 +94,8 @@ html {
   --icon-rotate-speed: rotate 200ms ease-in-out;
   --body-dropdown-speed: all 200ms ease-in-out;
   --logo-scaling: scale(1.12);
+  --reveal-modal-speed: visibility 0s, opacity 0.4s ease-in-out, translate 0.4s;
+  --hide-modal-speed: visibility 0.25s, opacity 0.3s ease-in-out, translate 0.3s;
 
   /* Scrollbars */
   --custom-scrollbar-width: 12px;
@@ -121,11 +125,11 @@ body {
 
 footer {
   background: var(--background-accent);
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
-  color: #a2a2a2;
-  font-size: calc(0.9 * var(--font-size-default));
+  color: var(--footer-color);
+  font-size: var(--footnote-font-size);
 }
 
 .redColor {
@@ -154,8 +158,8 @@ body a {
 
 ::-webkit-scrollbar-thumb {
   border-radius: var(--custom-scrollbar-border-radius);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: var(--foreground-default);
+  box-shadow: inset 0 0 5px 5px var(--foreground-default);
+  border: solid 3px var(--background-accent);
 }
 
 body::-webkit-scrollbar-track-piece:start {
@@ -355,6 +359,113 @@ main hr {
   left: 0;
   right: 0;
   background-color: var(--overlay-color);
+}
+
+/* Modal for terms and conditions */
+.modal-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  border-radius: 0.4rem;
+  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
+    -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
+
+  background-color: var(--background-default);
+}
+
+.modal-title {
+  padding-left: 1rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--overlay-color);
+  overflow: hidden;
+}
+
+.modal-title h2 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.modal-details {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.6rem 0 0.6rem 0;
+}
+
+.modal-details p {
+  font-size: var(--footnote-font-size);
+  margin: 0.4rem 1rem 0.4rem 1rem;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+
+  position: fixed;
+  margin: 10vh auto;
+  z-index: 100;
+
+  width: 500px;
+  max-height: 80vh;
+  height: 100%;
+
+  translate: 0 80%;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: var(--hide-modal-speed);
+  -webkit-transition: var(--hide-modal-speed);
+  -moz-transition: var(--hide-modal-speed);
+  -o-transition: var(--hide-modal-speed);
+}
+
+.modal.modal-toggled {
+  translate: 0%;
+  opacity: 1;
+  visibility: visible;
+
+  transition: var(--reveal-modal-speed);
+  -webkit-transition: var(--reveal-modal-speed);
+  -moz-transition: var(--reveal-modal-speed);
+  -o-transition: var(--reveal-modal-speed);
+}
+
+#modal-overlay {
+  position: fixed;
+  z-index: 15;
+  display: none;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  background-color: var(--overlay-color);
+}
+
+#modal-button {
+  display: inline-block;
+  color: var(--footer-color);
+  cursor: pointer;
+  background: none;
+  font-size: var(--footnote-font-size);
+  border: none;
+  padding: 0 3px;
+}
+
+#modal-button.modal-toggled .abstract-icon {
+  rotate: -90deg;
+  transition: var(--icon-rotate-speed);
 }
 
 /* Sidebar Anchor Link Style */
@@ -953,6 +1064,10 @@ button:focus-visible,
     width: 87%;
   }
 
+  .modal {
+    width: 85vw;
+  }
+
   .card {
     width: 90%;
     height: 97%;
@@ -998,6 +1113,12 @@ button:focus-visible,
   main a:visited:hover {
     color: var(--foreground-visited);
     text-decoration: underline;
+  }
+
+  /* Button in footer */
+
+  .modal-button:hover {
+    color: var(--foreground-clicked-blue);
   }
 
   /* Buttons in card carousel */

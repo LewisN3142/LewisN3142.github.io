@@ -11,11 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="google-site-verification" content="2qjc2BWadhqn2DSYqc06zHNFri4FBXHDMsNucZbjtrU" />
 
-  <title> Lewis Napper - Home </title>
+  <title> Home - Lewis Napper </title>
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any"> <!-- Favicon -->
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/icon.png">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="any"> <!-- Favicon -->
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
   <meta name="theme-color" content="#181818" />
 
   <link rel="stylesheet" href="global/main.css" type="text/css">
@@ -27,10 +27,50 @@
 
 <body id="body">
 
+  <div id="modal-overlay" class="close-modal"> </div>
+  <div class="modal" id="terms-and-conditions">
+    <div class="modal-card">
+      <div class="modal-title">
+        <h2> Terms and Conditions </h2>
+      </div>
+      <div class="modal-details">
+        <p>
+          In what follows, "us" and "we" refer to the author and copyright holder of this website.
+          This website is hosted by Github Pages. By using this website, you accept that your data may be used
+          in-line with Github's <a
+            href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+            rel="noopener noreferrer" class="external-link under-overlay">privacy statement</a>.
+        </p>
+        <p>
+          This website may provide links to other World Wide Web sites and resources. You agree that we are not liable
+          for the content accessed by following these links, nor for their availability or reliability.
+        </p>
+        <p>
+          The information contained within this website is believed to be true and accurate as of the date of
+          publication. We accept no responsibility for losses and/or damages incurred, whether directly or indirectly,
+          resulting from use of this information.
+        </p>
+        <p>
+          Please <a href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+            class="external-link under-overlay under-modal-overlay">contact us</a> if you believe any information herein
+          to be
+          erronious or have issues with links to external material.
+        </p>
+        <p>
+          The material contained within this website is distributed under a
+          CC-BY-NC-SA license. Should you wish to license material under any other terms, or claim copyright to material
+          presented
+          herein, <a href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+            class="external-link under-overlay under-modal-overlay">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <header class="top-nav"> <!-- Top Nav Bar -->
     <div id="nav-burger-symbol" class="nav-section"> <!-- Burger Icon -->
-      <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
-        aria-expanded="false" aria-label="open/close main navigation">
+      <button id="menu-toggle" type="button" class="burger-button under-modal-overlay"
+        aria-controls="primary-navigation" aria-expanded="false" aria-label="open/close main navigation">
         <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
           stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
           <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
@@ -43,7 +83,7 @@
     </div>
 
     <div id="nav-logo-symbol" class="nav-section"> <!--My Logo -->
-      <a href="index.html">
+      <a href="index.html" class="under-modal-overlay">
         <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45" viewBox="0 0 64 64"
           version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
           xml:space="preserve" xmlns:serif="https://www.serif.com/">
@@ -125,8 +165,9 @@
           or may not function as intended. The page is updated regularly however, so revisit soon to see more
           of my work! Should you discover a problem, bug, or error please feel free to file an issue at this website's
           associated <a href="https://github.com/LewisN3142/LewisN3142.github.io/issues" rel="noopener noreferrer"
-            class="external-link under-overlay">Github repository</a> or <a href="mailto:ln00216@surrey.ac.uk"
-            rel="noopener noreferrer" class="external-link under-overlay">email me</a>.
+            class="external-link under-overlay under-modal-overlay">Github repository</a> or <a
+            href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+            class="external-link under-overlay under-modal-overlay">email me</a>.
         </p>
 
         <article> <!-- About Section -->
@@ -146,7 +187,8 @@
                   This site is intended to be a showcase of my work and hobbies across various fields,
                   acting as a catalogue of my academic career, artistic endeavours, and other
                   exploits. Explore to find out more or take a look at my <a href="home_material/CV_Lewis_Napper.pdf"
-                    rel="noopener noreferrer" class="local-download under-overlay download-less-padding">
+                    rel="noopener noreferrer"
+                    class="local-download under-overlay under-modal-overlay download-less-padding">
                     CV</a>.
                 </p>
               </section>
@@ -270,7 +312,8 @@
           <h2> Education </h2>
           Below is a list of my formal qualifications from GCSE to PhD level. For further details about the
           publications, presentations, and teaching completed during my undergraduate and postgraduate
-          studies, see my <a href="academia_page/academia.html" class="under-overlay internal-link">Academia Page</a>.
+          studies, see my <a href="academia_page/academia.html"
+            class="under-overlay under-modal-overlay internal-link">Academia Page</a>.
 
           <ul>
             <li> <!-- PhD Info -->
@@ -282,7 +325,7 @@
                 <em> <span class="midBold">Thesis Title:</span> Monge&ndash;Ampère Geometry and Vortices </em>
               </p>
 
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="PhD_Modules"> <i class="abstract-icon icon-angle-right"></i> Modules and Results
               </button>
 
@@ -308,7 +351,7 @@
                   and Beyond </em>
               </p>
 
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="MMath_Modules">
                 <i class="abstract-icon icon-angle-right"></i> Modules and Results
               </button>
@@ -401,7 +444,7 @@
               <b> A-Levels </b> (2015-2017) <br>
               3x A* and 1x A at A-Level, plus 1x A at AS-Level <br>
 
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
               </button>
 
@@ -420,7 +463,7 @@
               <b> GCSEs </b> (2012-2015) <br>
               9x A* (including Mathematics, English, and German), 3x A, and more.<br>
 
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="GCSE_Results">
                 <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
               </button>
@@ -515,7 +558,7 @@
               <div class="teach-column">
                 <p class="grades-title"> <b> Web Development </b> </p>
                 Visit my <a href="https://github.com/LewisN3142/LewisN3142.github.io" rel="noopener noreferrer"
-                  class="external-link under-overlay">Github</a> to view the code used to
+                  class="external-link under-overlay under-modal-overlay">Github</a> to view the code used to
                 create this site and <span class="redColor"> link TBC </span> for a selection of other projects.
                 <ul class="compact-list">
                   <li> Html </li>
@@ -529,7 +572,7 @@
               <div class="teach-column">
                 <p class="grades-title"> <b> Text and Data Processing </b></p>
                 Example documents include the preprints available on my <a href="academia_page/academia.html"
-                  class="under-overlay internal-link">Academia Page</a>.
+                  class="under-overlay under-modal-overlay internal-link">Academia Page</a>.
                 <ul class="compact-list">
                   <li> Microsoft Office Suite (inc. Excel, Word)</li>
                   <li> LaTeX document software (inc. pdfLaTeX, BibTeX, Biber)</li>
@@ -574,11 +617,17 @@
         </article>
 
       </div>
+
       <footer>
-        © 2023 Lewis Napper | All rights reserved
+        © 2023 Lewis Napper | <button class="under-overlay" id="modal-button" type="button" aria-expanded="false"
+          aria-controls="terms-and-conditions"> <i class="abstract-icon icon-angle-right"></i>
+          Terms &
+          Conditions
+        </button>
         <!-- Add in Terms popup -->
       </footer>
     </main>
 
   </div>
+
 </body>
