@@ -26,10 +26,54 @@
 
 <body id="body">
 
+  <div id="modal-overlay" class="close-modal"> </div>
+  <div class="modal" id="terms-conditions-modal">
+    <div class="modal-card">
+      <div class="modal-title">
+        <h2> Terms and Conditions </h2>
+        <button class="close-modal" id="close-terms-button" type="button" aria-expanded="false"
+          aria-controls="terms-conditions-modal" aria-label="close terms and conditions"> Close<i
+            class="abstract-icon icon-close"></i></button>
+
+      </div>
+      <div class="modal-details">
+        <p>
+          In what follows, "us" and "we" refer to the author and copyright holder of this website.
+          This website is hosted by Github Pages. By using this website, you accept that your data may be used
+          in-line with Github's <a
+            href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+            rel="noopener noreferrer" class="external-link under-overlay">privacy statement</a>.
+        </p>
+        <p>
+          This website may provide links to other World Wide Web sites and resources. You agree that we are not liable
+          for the content accessed by following these links, nor for their availability or reliability.
+        </p>
+        <p>
+          The information contained within this website is believed to be true and accurate as of the date of
+          publication. We accept no responsibility for losses and/or damages incurred, whether directly or indirectly,
+          resulting from use of this information.
+        </p>
+        <p>
+          Please <a href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+            class="external-link under-overlay">contact us</a> if you believe any information herein
+          to be
+          erronious or have issues with links to external material.
+        </p>
+        <p>
+          The material contained within this website is distributed under a
+          CC-BY-NC-SA license. Should you wish to license material under any other terms, or claim copyright to material
+          presented
+          herein, <a href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+            class="external-link under-overlay">contact us</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
   <header class="top-nav"> <!-- Top Nav Bar -->
     <div id="nav-burger-symbol" class="nav-section"> <!-- Burger Icon -->
-      <button id="menu-toggle" type="button" class="burger-button" aria-controls="primary-navigation"
-        aria-expanded="false" aria-label="open/close main navigation">
+      <button id="menu-toggle" type="button" class="burger-button under-modal-overlay"
+        aria-controls="primary-navigation" aria-expanded="false" aria-label="open/close main navigation">
         <svg class="burger-svg" fill="none" viewBox="0 0 100 100" width="45" stroke="var(--foreground-default)"
           stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
           <path class="line middle" d="m 50 50 h -47 a 1 1 0 0 0 94 0"> </path>
@@ -42,7 +86,7 @@
     </div>
 
     <div id="nav-logo-symbol" class="nav-section"> <!--My Logo -->
-      <a href="../index.html">
+      <a href="../index.html" class="under-modal-overlay">
         <svg class="site-logo" alt="Site logo" title="My Personal Logo" width="45" height="45" viewBox="0 0 64 64"
           version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
           xml:space="preserve" xmlns:serif="https://www.serif.com/">
@@ -154,11 +198,11 @@
             <p class="medium-para">
               This work is in collaboration with
               <a href="https://math.univ-angers.fr/~volodya/index_uk.html" rel="noopener noreferrer"
-                class="external-link under-overlay">Volodya Rubtsov</a>
+                class="external-link under-overlay under-modal-overlay">Volodya Rubtsov</a>
               and my supervisors <a href="https://www.surrey.ac.uk/people/martin-wolf" rel="noopener noreferrer"
-                class="external-link under-overlay">Martin Wolf</a> and
+                class="external-link under-overlay under-modal-overlay">Martin Wolf</a> and
               <a href="https://www.surrey.ac.uk/people/ian-roulstone" rel="noopener noreferrer"
-                class="external-link under-overlay">Ian Roulstone</a> as
+                class="external-link under-overlay under-modal-overlay">Ian Roulstone</a> as
               part of my PhD and is currently funded by an
               <abbr title="Science and Technology Facilities Council">STFC</abbr> studentship.
             </p>
@@ -169,9 +213,9 @@
             <p class="medium-para">
               Building on my work under the <abbr title="London Mathematical Society">LMS</abbr>
               undergraduate research bursary <a href="https://www.lms.ac.uk/grants/URBList" rel="noopener noreferrer"
-                class="external-link under-overlay">(URB-18-19-70)</a> with <a
+                class="external-link under-overlay under-modal-overlay">(URB-18-19-70)</a> with <a
                 href="https://www.surrey.ac.uk/people/james-grant" rel="noopener noreferrer"
-                class="external-link under-overlay">James Grant</a>, I
+                class="external-link under-overlay under-modal-overlay">James Grant</a>, I
               am interested in establishing results in the relatively new field of synthetic Lorentzian geometry. The
               fundamental objects of study are Lorentzian pre-length spaces, which are to smooth spacetimes, what metric
               spaces and Alexandrov geometry are to smooth Riemannian manifolds. Such low regularity structures are of
@@ -182,11 +226,11 @@
             <p class="medium-para">
               This work is part of a current collaboration with <a
                 href="https://ufind.univie.ac.at/de/person.html?id=49261" rel="noopener noreferrer"
-                class="external-link under-overlay">Tobias Beran</a>, <a
+                class="external-link under-overlay under-modal-overlay">Tobias Beran</a>, <a
                 href="https://ufind.univie.ac.at/de/person.html?id=114757" rel="noopener noreferrer"
-                class="external-link under-overlay">Felix Rott</a>, and <a
+                class="external-link under-overlay under-modal-overlay">Felix Rott</a>, and <a
                 href="https://www.cardiff.ac.uk/people/view/2634069-harvey-john" rel="noopener noreferrer"
-                class="external-link under-overlay">John Harvey</a>.
+                class="external-link under-overlay under-modal-overlay">John Harvey</a>.
             </p>
           </section>
 
@@ -202,10 +246,10 @@
             <p class="medium-para">
               This work was carried out under the supervision of <a
                 href="https://www.surrey.ac.uk/people/alessandro-torrielli" rel="noopener noreferrer"
-                class="external-link under-overlay">Alessandro Torrielli</a>
+                class="external-link under-overlay under-modal-overlay">Alessandro Torrielli</a>
               and
               <a href="https://www.surrey.ac.uk/people/andrea-prinsloo" rel="noopener noreferrer"
-                class="external-link under-overlay">Andrea Prinsloo</a>.
+                class="external-link under-overlay under-modal-overlay">Andrea Prinsloo</a>.
             </p>
           </section>
 
@@ -232,13 +276,14 @@
               </p>
 
               <a href="https://arxiv.org/abs/2309.12733" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 ArXiv</a>
               |
               <a href="academia_docs/Lorentzian_Toponogov_Paper.pdf" rel="noopener noreferrer"
-                class="local-download under-overlay"> PDF</a>
+                class="local-download under-overlay under-modal-overlay"> PDF</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false" aria-controls="Preprint3">
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
+                aria-controls="Preprint3">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
 
@@ -265,13 +310,14 @@
               </p>
 
               <a href="https://arxiv.org/abs/2302.11615" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 ArXiv</a>
               |
               <a href="academia_docs/Lorentzian_Alexandrov_Paper.pdf" rel="noopener noreferrer"
-                class="local-download under-overlay"> PDF</a>
+                class="local-download under-overlay under-modal-overlay"> PDF</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false" aria-controls="Preprint2">
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
+                aria-controls="Preprint2">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
 
@@ -295,13 +341,14 @@
               </p>
 
               <a href="https://arxiv.org/abs/2302.11604" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 ArXiv</a>
               |
               <a href="academia_docs/Geometry_Vortices_Paper.pdf" rel="noopener noreferrer"
-                class="local-download under-overlay"> PDF</a>
+                class="local-download under-overlay under-modal-overlay"> PDF</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false" ariacontrols="Preprint1">
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
+                ariacontrols="Preprint1">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
 
@@ -343,7 +390,7 @@
                 <em> Supervised by Martin Wolf and Ian Roulstone </em> <br>
               </p>
               <a href="academia_docs/Confirmation_Report.pdf" rel="noopener noreferrer"
-                class="local-download under-overlay"> PDF</a>
+                class="local-download under-overlay under-modal-overlay"> PDF</a>
             </li>
 
             <li> <!-- Master's Thesis -->
@@ -394,11 +441,12 @@
                         application in knot theory, string theory, and differential geometry.
                         <br> <br>
                         <a href="https://mlinmathsandphysics2023.web.ox.ac.uk/home" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/07/19/lewis-napper-attends-summer-school-on-machine-learning-in-physics-at-oxford-university/"
-                          rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                          rel="noopener noreferrer"
+                          class="external-link external-link-list-item under-overlay under-modal-overlay">
                           UoS Blog</a>
                       </p>
                     </div>
@@ -421,7 +469,8 @@
                         London and King's College London.
                         <br> <br>
                         <a href="https://sites.google.com/view/kqofgravitymarch2023/home" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           Event Page</a>
 
                       </p>
@@ -443,15 +492,17 @@
                         Universities of Potsdam and Tübingen. He spoke about "Globalisation of
                         timelike curvature bounds in Lorentzian length
                         spaces" on day two of the event (see <a href="academia.html#academicPresentations"
-                          class="under-overlay link-back-card" tabindex="-1">Presentations</a>).
+                          class="under-overlay under-modal-overlay link-back-card" tabindex="-1">Presentations</a>).
                         <br> <br>
                         <a href="https://www.math.uni-potsdam.de/grworkshop" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/03/12/lewis-napper-speaks-at-two-week-workshop-on-mathematical-general-relativity-in-germany/"
                           rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           UoS Blog</a>
                       </p>
                     </div>
@@ -473,7 +524,8 @@
                         <br> <br>
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/01/29/lewis-napper-passes-phd-confirmation-examination/"
                           rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           UoS Blog</a>
                       </p>
                     </div>
@@ -498,12 +550,14 @@
                         <br> <br>
                         <a href="http://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
                           rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2022/10/02/roberto-donofrio-and-lewis-napper-attend-geometry-programme-at-the-fields-institute-in-canada/"
                           rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           UoS Blog</a>
                       </p>
                     </div>
@@ -527,12 +581,14 @@
                         integrable systems.
                         <br> <br>
                         <a href="https://sites.google.com/view/semps-at-surrey-2022/home" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2022/04/22/andrea-prinsloo-and-alessandro-torrielli-organise-the-2022-south-east-mathematical-physics-seminar-at-surrey/"
                           rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
+                          class="external-link external-link-list-item under-overlay under-modal-overlay link-back-card"
+                          tabindex="-1">
                           UoS Blog</a>
                       </p>
                     </div>
@@ -541,13 +597,15 @@
               </div>
 
               <div class=" slider-navigation">
-                <button class="slider-button slider-button-left under-overlay" type="button" id="carousel-left-button"
-                  aria-controls="cards" onclick="handleSliderLeft()" aria-label="previous card in carousel">
+                <button class="slider-button slider-button-left under-overlay under-modal-overlay" type="button"
+                  id="carousel-left-button" aria-controls="cards" onclick="handleSliderLeft()"
+                  aria-label="previous card in carousel">
                   <i class="icon-angle-left slider-angle slider-angle-left" alt="Previous Event"></i>
                 </button>
                 <div class="slider-navigation-padding"></div>
-                <button class="slider-button slider-button-right under-overlay" type="button" id="carousel-right-button"
-                  aria-controls="cards" onclick="handleSliderRight()" aria-label="next card in carousel">
+                <button class="slider-button slider-button-right under-overlay under-modal-overlay" type="button"
+                  id="carousel-right-button" aria-controls="cards" onclick="handleSliderRight()"
+                  aria-label="next card in carousel">
                   <i class="icon-angle-right slider-angle slider-angle-right" alt="Next Event"></i>
                 </button>
               </div>
@@ -579,12 +637,13 @@
               </p>
 
               <a href="academia_docs/PGR_Conference_Booklet.pdf" rel="noopener noreferrer"
-                class="local-download under-overlay"> Conference Booklet</a>
+                class="local-download under-overlay under-modal-overlay"> Conference Booklet</a>
               |
-              <a href="academia_docs/PGR_Talk.pdf" rel="noopener noreferrer" class="local-download under-overlay">
+              <a href="academia_docs/PGR_Talk.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay">
                 Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="UoS_Presentation1"> <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
 
@@ -613,13 +672,15 @@
               </p>
 
               <a href="https://www.surrey.ac.uk/events/20230224-not-all-ravens-are-writing-desks-introduction-topology-surfaces"
-                rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                rel="noopener noreferrer"
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 Seminar Webpage</a>
               |
-              <a href="academia_docs/TORUS_Talk.pdf" rel="noopener noreferrer" class="local-download under-overlay">
+              <a href="academia_docs/TORUS_Talk.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay">
                 Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="UoS_Presentation2">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -646,13 +707,15 @@
               </p>
 
               <a href="https://www.surrey.ac.uk/events/20230206-monge-ampere-geometry-and-navier-stokes-equations"
-                rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                rel="noopener noreferrer"
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 Seminar Webpage</a>
               |
-              <a href="academia_docs/FSG_Seminar.pdf" rel="noopener noreferrer" class="local-download under-overlay">
+              <a href="academia_docs/FSG_Seminar.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay">
                 Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="UoS_Presentation3">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -683,16 +746,16 @@
               </p>
 
               <a href="" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 UoS Blog</a>
               |
               <a href="" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 Seminar Webpage</a>
               |
-              <a href="" rel="noopener noreferrer" class="local-download under-overlay"> Slides</a>
+              <a href="" rel="noopener noreferrer" class="local-download under-overlay under-modal-overlay"> Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="External_Presentation1">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -711,16 +774,16 @@
               </p>
 
               <a href="" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 UoS Blog</a>
               |
               <a href="" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 Seminar Webpage</a>
               |
-              <a href="" rel="noopener noreferrer" class="local-download under-overlay"> Slides</a>
+              <a href="" rel="noopener noreferrer" class="local-download under-overlay under-modal-overlay"> Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="External_Presentation1">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -739,13 +802,15 @@
               </p>
 
               <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/04/28/lewis-napper-speaks-in-the-mathematical-physics-seminar-at-the-university-of-hertfordshire/"
-                rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                rel="noopener noreferrer"
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 UoS Blog</a>
               |
-              <a href="academia_docs/Herts_Seminar.pdf" rel="noopener noreferrer" class="local-download under-overlay">
+              <a href="academia_docs/Herts_Seminar.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay">
                 Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="External_Presentation1">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -775,17 +840,19 @@
               </p>
 
               <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/03/12/lewis-napper-speaks-at-two-week-workshop-on-mathematical-general-relativity-in-germany/"
-                rel="noopener noreferrer" class="external-link external-link-list-item under-overlay">
+                rel="noopener noreferrer"
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 UoS Blog</a>
               |
               <a href="https://www.math.uni-potsdam.de/grworkshop" rel="noopener noreferrer"
-                class="external-link external-link-list-item under-overlay">
+                class="external-link external-link-list-item under-overlay under-modal-overlay">
                 Workshop Webpage</a>
               |
-              <a href="academia_docs/Globo_Talk.pdf" rel="noopener noreferrer" class="local-download under-overlay">
+              <a href="academia_docs/Globo_Talk.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay">
                 Slides</a>
               |
-              <button class="abstract-link under-overlay" type="button" aria-expanded="false"
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="External_Presentation2">
                 <i class="abstract-icon icon-angle-right"></i> Abstract
               </button>
@@ -824,7 +891,7 @@
                   <li>
                     <b> Graphs and Networks </b> <br> Semester 2 - 2022/23 <br>
                     <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT3043" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -832,7 +899,7 @@
                   <li>
                     <b> Operations Research and Optimisation </b> <br> Semester 2 - 2022/23 <br>
                     <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT2009" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -840,7 +907,7 @@
                   <li>
                     <b> Real Analysis I </b> <br> Semester 1 - 2022/23 <br>
                     <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT1032" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -848,7 +915,7 @@
                   <li>
                     <b> Algebra </b> <br> Semester 1 - 2022/23 <br>
                     <a href="https://catalogue.surrey.ac.uk/2022-3/module/MAT1031" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -856,7 +923,7 @@
                   <li>
                     <b> Manifolds and Topology </b> <br> Semester 1 - 2021/22 <br>
                     <a href="https://catalogue.surrey.ac.uk/2021-2/module/MAT3009" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -864,7 +931,7 @@
                   <li>
                     <b> Probability and Statistics </b> <br> Semester 1 - 2021/22 <br>
                     <a href="https://catalogue.surrey.ac.uk/2021-2/module/MAT1033" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -879,11 +946,11 @@
                   <li>
                     <b> Curves and Surfaces </b> <br> Proof read notes and exercises <br>
                     <a href="https://department-mathematics.pages.surrey.ac.uk/martin-wolf/personal/assets/files/lecture_notes/Curves_and_Surfaces.pdf"
-                      rel="noopener noreferrer" class="external-link  under-overlay">View lecture
+                      rel="noopener noreferrer" class="external-link  under-overlay under-modal-overlay">View lecture
                       notes</a>
                     <br>
                     <a href="https://catalogue.surrey.ac.uk/2023-4/module/MATM054" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -891,11 +958,11 @@
                   <li>
                     <b> Relativistic Quantum Mechanics </b> <br> Proof read notes and exercises<br>
                     <a href="https://department-mathematics.pages.surrey.ac.uk/martin-wolf/personal/assets/files/lecture_notes/Relativistic_Quantum_Mechanics.pdf"
-                      rel="noopener noreferrer" class="external-link  under-overlay">View lecture
+                      rel="noopener noreferrer" class="external-link  under-overlay under-modal-overlay">View lecture
                       notes</a>
                     <br>
                     <a href="https://catalogue.surrey.ac.uk/2021-2/module/MATM054" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -904,7 +971,7 @@
                     <b> Numerical and Computational Methods </b> <br> Proof read exercises and provided MATLAB solutions
                     <br> <span class="redColor"> (Link to Code TBC) </span> <br>
                     <a href="https://catalogue.surrey.ac.uk/2020-1/module/MAT2001" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay"> <em> View
+                      class="external-link external-link-list-item under-overlay under-modal-overlay"> <em> View
                         module catalogue </em>
                     </a>
                   </li>
@@ -917,7 +984,7 @@
                   <li>
                     <b> Probability and Statistics </b> <br> Software: R, R Studio <br> Semester 1 - 2019/20 <br>
                     <a href="https://catalogue.surrey.ac.uk/2019-0/module/MAT1033" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -926,7 +993,7 @@
                     <b> Numerical and Computational Methods </b> <br> Software: MATLAB, Python <br> Semester 2 - 2019/20
                     and 2020/21 <br>
                     <a href="https://catalogue.surrey.ac.uk/2019-0/module/MAT2001" rel="noopener noreferrer"
-                      class="external-link external-link-list-item under-overlay">
+                      class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
                   </li>
@@ -953,8 +1020,8 @@
           <ul>
             <li>
               <b> STFC PhD Studentship 2021-2024 </b>
-              <br> Value: ~£56,000 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Grants_STFC_PhD">
+              <br> Value: ~£56,000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Grants_STFC_PhD">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
@@ -967,15 +1034,16 @@
 
             <li>
               <b> Institut Für Mathematik Participation Grant 2023 </b>
-              <br> Value: €200 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Grants_Wildberg">
+              <br> Value: €200 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Grants_Wildberg">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
               <p class="small-para abstract-container" id="Grants_Wildberg">
                 <em> Funding to attend the Interdisciplinary Junior Scientist <a
                     href="https://www.math.uni-potsdam.de/grworkshop" rel="noopener noreferrer"
-                    class="external-link  under-overlay">Workshop</a> in Mathematical General Relativity in Wildberg,
+                    class="external-link  under-overlay under-modal-overlay">Workshop</a> in Mathematical General
+                  Relativity in Wildberg,
                   Germany, provided by Universität Tübingen and Universität Potsdam. The grant also included
                   accommodation costs not represented in the value. </em>
               </p>
@@ -983,8 +1051,8 @@
 
             <li>
               <b> LMS Early Career Researcher Travel Grant 2022 </b>
-              <br> Value: £500 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Grants_LMS_ECR">
+              <br> Value: £500 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Grants_LMS_ECR">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
@@ -992,10 +1060,11 @@
                 <em>
                   London Mathematical Society funding for travel to the
                   <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
-                    class="external-link under-overlay">Fields Institute</a>,
+                    class="external-link under-overlay under-modal-overlay">Fields Institute</a>,
                   Toronto, Canada to attend a
                   <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
-                    rel="noopener noreferrer" class="external-link under-overlay">Workshop</a> on Mathematical
+                    rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">Workshop</a> on
+                  Mathematical
                   Relativity,
                   Scalar Curvature, and Synthetic
                   Lorentzian Geometry.
@@ -1005,18 +1074,19 @@
 
             <li>
               <b> Fields Institute Participation Grant 2022 </b>
-              <br> Value: CAD$1000 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Grants_Fields">
+              <br> Value: CAD$1000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Grants_Fields">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
               <p class="small-para abstract-container" id="Grants_Fields">
                 <em>
                   Funding from the <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
-                    class="external-link under-overlay">Fields
+                    class="external-link under-overlay under-modal-overlay">Fields
                     Institute</a> to cover travel and subsistence expenses while attending their
                   <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
-                    rel="noopener noreferrer" class="external-link under-overlay">Workshop</a> on Mathematical
+                    rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">Workshop</a> on
+                  Mathematical
                   Relativity,
                   Scalar Curvature, and Synthetic
                   Lorentzian Geometry.
@@ -1026,8 +1096,8 @@
 
             <li>
               <b> LMS Undergraduate Research Bursary 2019 </b>
-              <br> Value: £1440 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Grants_LMS_URB">
+              <br> Value: £1440 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Grants_LMS_URB">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
@@ -1035,7 +1105,7 @@
                 <em>
                   London Mathematical Society funded summer research project <a
                     href="https://www.lms.ac.uk/grants/URBList" rel="noopener noreferrer"
-                    class="external-link under-overlay">(URB-18-19-70)</a>.
+                    class="external-link under-overlay under-modal-overlay">(URB-18-19-70)</a>.
                   Includes matched
                   funding
                   from the University of Surrey.
@@ -1048,8 +1118,8 @@
           <ul>
             <li>
               <b> Surrey Merit Scholarship 2017/18 </b>
-              <br> Value: £2000 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Awards_Surrey_Merit">
+              <br> Value: £2000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Awards_Surrey_Merit">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
@@ -1060,7 +1130,7 @@
                   included free
                   1-year membership to Surrey Sports Park. See the <a
                     href="https://money.surrey.ac.uk/funding/scholarships" rel="noopener noreferrer"
-                    class="external-link under-overlay">University
+                    class="external-link under-overlay under-modal-overlay">University
                     Webpage</a> for more details.
                 </em>
               </p>
@@ -1068,8 +1138,8 @@
 
             <li>
               <b> Mathematics Department Prize for Excellence 2017-2021</b>
-              <br> Value £400 | <button class="abstract-link under-overlay" type="button" aria-expanded="false"
-                aria-controls="Awards_Surrey_Excellence">
+              <br> Value £400 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
+                aria-expanded="false" aria-controls="Awards_Surrey_Excellence">
                 <i class="abstract-icon icon-angle-right"></i> Details
               </button>
 
@@ -1085,8 +1155,12 @@
       </div>
 
       <footer>
-        © 2023 Lewis Napper | All rights reserved
-        <!-- Add in Terms popup -->
+        © 2023 Lewis Napper | <button class="under-overlay under-modal-overlay" id="terms-conditions" type="button"
+          aria-expanded="false" aria-controls="terms-conditions-modal" aria-label="open terms and conditions"> <i
+            class="abstract-icon icon-angle-right"></i>
+          Terms &
+          Conditions
+        </button>
       </footer>
     </main>
 

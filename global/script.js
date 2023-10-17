@@ -87,9 +87,10 @@ $(document).ready(function () {
   });
 
   // JQuery for terms and conditions modal
-  $("#modal-button").click(function () {
+  $("#terms-conditions").click(function () {
     $(".modal").toggleClass("modal-toggled");
     $(this).attr("aria-expanded", "true");
+    $("#close-terms-button").attr("aria-expanded", "true");
     $(this).addClass("modal-toggled");
     $("#modal-overlay").fadeIn(400);
     $("#body").addClass("toggled");
@@ -101,8 +102,9 @@ $(document).ready(function () {
 
   function onModalClose() {
     $(".modal").toggleClass("modal-toggled");
-    $("#modal-button").attr("aria-expanded", "false");
-    $("#modal-button").removeClass("modal-toggled");
+    $("#terms-conditions").attr("aria-expanded", "false");
+    $("#close-terms-button").attr("aria-expanded", "false");
+    $("#terms-conditions").removeClass("modal-toggled");
     $("#body").removeClass("toggled");
     $("#modal-overlay").delay(50).fadeOut(250);
 
