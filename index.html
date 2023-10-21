@@ -162,17 +162,7 @@
       </div>
 
       <div class="container"> <!-- Container For Page Content -->
-
         <div class="section-break" id="aboutMe"></div>
-        <p>
-          Please note that this website is currently a work in progress. As such, some content may be missing
-          or may not function as intended. The page is updated regularly however, so revisit soon to see more
-          of my work! Should you discover a problem, bug, or error please feel free to file an issue at this website's
-          associated <a href="https://github.com/LewisN3142/LewisN3142.github.io/issues" rel="noopener noreferrer"
-            class="external-link under-overlay under-modal-overlay">Github repository</a> or <a
-            href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
-            class="external-link under-overlay under-modal-overlay">email me</a>.
-        </p>
 
         <article> <!-- About Section -->
           <h2> About Me </h2>
@@ -190,7 +180,13 @@
                 <p class="medium-para">
                   This site is intended to be a showcase of my work and hobbies across various fields,
                   acting as a catalogue of my academic career, artistic endeavours, and other
-                  exploits. Explore to find out more or take a look at my <a href="home_material/CV_Lewis_Napper.pdf"
+                  exploits.
+                  Should you discover a problem, bug, or error, please feel free to file an issue on this website's
+                  associated <a href="https://github.com/LewisN3142/LewisN3142.github.io/issues"
+                    rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">Github
+                    repository</a> or <a href="mailto:ln00216@surrey.ac.uk" rel="noopener noreferrer"
+                    class="external-link under-overlay under-modal-overlay">contact me</a>.
+                  Explore to find out more or take a look at my <a href="home_material/CV_Lewis_Napper.pdf"
                     rel="noopener noreferrer"
                     class="local-download under-overlay under-modal-overlay download-less-padding">
                     CV</a>.
@@ -216,69 +212,81 @@
         <article> <!-- News Carousel -->
           <h2> News and Updates </h2>
 
-          <span class="redColor"> Check back soon for a card carousel providing updates on my life and progress on this
-            site! </span>
+          Browse for announcements of upcoming presentations and events, recently added site content, and other news.
 
-          <!--
           <div class="slider-padding"></div>
 
           <div class="card-carousel">
             <div class="slider-container">
               <div class="cards" id="cards">
 
-                <div class="card" id="home0" data-index="0" data-status="activeMiddle" loading="lazy">
+                <div class="card" id="imperial-card" data-index="0" data-status="activeMiddle" loading="lazy">
                   <div>
                     <div class="card-title">
-                      <h3 class="card-name"> Title 1
+                      <h3 class="card-name"> Upcoming Talks
                       </h3>
-                      <p class="card-date"> Location <br> Date </p>
-
+                      <p class="card-date"> Posted: 22nd October 2023 </p>
                       <p class="card-details">
-                        Details
-                        <br> <br>
-                        <a href="" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay">
-                          Link if needed</a>
+                        <b>Title: Monge&ndash;Ampère Equations in Fluid Dynamics and Their Geometry </b> <br>
+                        <span class="midBold">Date:</span> 1st November 2023 <br>
+                        <em><span class="midBold">Series:</span> Junior Analysis Seminar</em> <br>
+                        <em><span class="midBold">Location:</span> Imperial College, London, UK</em>
+                        <br><br>
+                        <a href="https://www.imperial.ac.uk/events/166115/junior-analysis-seminar-lewis-napper-surrey/"
+                          rel="noopener noreferrer"
+                          class="external-link external-link-list-item under-overlay under-modal-overlay">
+                          Seminar Webpage</a>
+                      </p>
+                      <div style="height:0.05rem;"></div>
+                      <p class="card-details">
+                        <b>Title: TBC</b> <br>
+                        <span class="midBold">Date:</span> 21st November 2023 <br>
+                        <em><span class="midBold">Series:</span> Integrable Systems Seminar </em><br>
+                        <em><span class="midBold">Location:</span> Beijing Institute of Mathematical Sciences and
+                          Applications, Beijing, China (via
+                          Zoom)</em>
+                        <br><br>
+                        <a href="https://www.bimsa.cn/newsinfo/797407.html" rel="noopener noreferrer"
+                          class="external-link external-link-list-item under-overlay under-modal-overlay">
+                          Seminar Webpage</a>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="card" id="home1" data-index="1" data-status="activeRight" onclick="handleSliderRight()"
+                <div class="card" id="soon-card" data-index="1" data-status="activeRight" onclick="handleSliderRight()"
                   loading="lazy">
                   <div>
                     <div class="card-title">
-                      <h3 class="card-name"> Title 2
+                      <h3 class="card-name"> New Pages Coming Soon!
                       </h3>
-                      <p class="card-date"> Location <br> Date </p>
+                      <p class="card-date"> Posted: 22nd October 2023 </p>
 
                       <p class="card-details">
-                        Details
-                        <br> <br>
-                        <a href="" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
-                          Link if needed </a>
-
+                        This website is a work in progress and is updated regularly. New pages currently in
+                        the works include: <br><br>
+                        - Art Gallery Page, <br>
+                        - Code Catalogue, <br>
+                        - Clips Page (inc. music and speedruns), <br>
+                        - Blog and Review Page.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="card" id="home2" data-index="2" data-status="activeLeft" onclick="handleSliderLeft()"
-                  loading="lazy">
+                <div class="card" id="complete-card" data-index="2" data-status="activeLeft"
+                  onclick="handleSliderLeft()" loading="lazy">
                   <div>
                     <div class=" card-title">
-                      <h3 class="card-name"> Title 3
+                      <h3 class="card-name"> Academia and Home Pages are Feature&ndash;Complete
                       </h3>
-                      <p class="card-date"> Location <br> Date
-                      </p>
+                      <p class="card-date"> Posted: 22nd October 2023 </p>
 
                       <p class="card-details">
-                        Details
-                        <br> <br>
-                        <a href="" rel="noopener noreferrer"
-                          class="external-link external-link-list-item under-overlay link-back-card" tabindex="-1">
-                          Link if needed</a>
+                        That's right! This home page and my <a href="academia_page/academia.html"
+                          class="under-overlay under-modal-overlay internal-link">Academia Page</a> are now
+                        feature&ndash;complete. There will still be regular updates to page content, including links to
+                        new pages as these become active.
                       </p>
                     </div>
                   </div>
@@ -300,7 +308,6 @@
           </div>
 
           <div class="slider-padding"></div>
-          -->
 
         </article>
 
