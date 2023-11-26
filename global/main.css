@@ -653,6 +653,29 @@ button:focus-visible,
 
 /* Styles applied to body content (currently home and academia, likely any text) */
 
+/* CONTACT FORM STYLING */
+.form-container {
+  margin-left: 1rem;
+  margin-top: 1.5rem;
+}
+
+::placeholder {
+  color: var(--foreground-default);
+  opacity: 0.75;
+}
+
+::-ms-input-placeholder {
+  color: var(--foreground-default);
+  opacity: 0.75;
+}
+
+.form-input {
+  background-color: var(--background-accent);
+  color: var(--foreground-default);
+  border-width: 3px;
+  border-color: var(--foreground-active-blue);
+}
+
 /* COLUMNS FOR TEACHING */
 .teach-column {
   float: left;
@@ -788,6 +811,9 @@ button:focus-visible,
   margin: auto;
   margin-top: 1.2rem;
   margin-bottom: 0.8rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .About-section {
@@ -850,6 +876,10 @@ button:focus-visible,
 
 #soon-card {
   background-image: url("/home_material/villainelle.webp");
+}
+
+#paris-card {
+  background-image: url("../academia_page/academia_images/Paris.webp");
 }
 
 #oxford-card {
