@@ -386,6 +386,10 @@ main hr {
   background-color: var(--background-default);
 }
 
+.modal a:visited {
+  color: var(--foreground-visited);
+}
+
 .modal-title {
   padding: 0.9rem 0.9rem 0.9rem 1rem;
   text-align: left;
@@ -512,6 +516,7 @@ main hr {
 
 #current-page {
   color: var(--foreground-clicked-blue);
+  background-color: var(--background-default);
 }
 
 /* Fade in sidebar text */
@@ -546,6 +551,10 @@ main hr {
 
 /* Button Active Class */
 .active-dropdown {
+  background-color: var(--background-default);
+}
+
+.active-dropdown .dropdown-icon {
   color: var(--foreground-clicked-blue);
   transform: rotate(90deg);
   transition: var(--dropdown-speed);
@@ -654,9 +663,45 @@ button:focus-visible,
 /* Styles applied to body content (currently home and academia, likely any text) */
 
 /* CONTACT FORM STYLING */
+.contact-column-left {
+  float: left;
+  width: 56%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.contact-column-right {
+  float: left;
+  width: 44%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.contact-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-spacer {
+  height: 0.5em;
+}
+
+.privacy-container {
+  margin: 0.5rem;
+}
+
 .form-container {
-  margin-left: 1rem;
-  margin-top: 1.5rem;
+  margin: 0.2rem;
+}
+
+textarea {
+  resize: vertical;
+  box-sizing: border-box;
 }
 
 ::placeholder {
@@ -674,6 +719,19 @@ button:focus-visible,
   color: var(--foreground-default);
   border-width: 3px;
   border-color: var(--foreground-active-blue);
+  margin: 0.2rem;
+
+  font-size: var(--footnote-font-size);
+  font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: var(--font-letter-spacing-default);
+  word-spacing: var(--font-word-spacing-default);
+
+  width: 96%;
+}
+
+.form-submit-button {
+  margin-left: 1rem;
 }
 
 /* COLUMNS FOR TEACHING */
@@ -1280,6 +1338,10 @@ button:focus-visible,
 @media screen and (max-width: 991.5px) {
   /* Media query for teaching columns */
   .teach-column {
+    width: 100%;
+  }
+  .contact-column-left,
+  .contact-column-right {
     width: 100%;
   }
   /* Media query for responsive text/image column */

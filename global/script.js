@@ -61,14 +61,14 @@ $(document).ready(function () {
 
   // JQuery for toggle sub menus
   $(".dropdown-btn").click(function () {
-    if ($(this).find(".dropdown-icon").hasClass("active-dropdown")) {
+    if ($(this).hasClass("active-dropdown")) {
       $(this).attr("aria-expanded", "false");
       $(this).parent().next(".dropdown-container").slideToggle(125);
     } else {
       $(this).attr("aria-expanded", "true");
       $(this).parent().next(".dropdown-container").slideToggle(250);
     }
-    $(this).find(".dropdown-icon").toggleClass("active-dropdown");
+    $(this).toggleClass("active-dropdown");
   });
 
   $(".abstract-link").click(function () {
@@ -116,6 +116,15 @@ $(document).ready(function () {
   // Add respective class to any button which closes the modal
   $(".close-modal").click(function () {
     onModalClose();
+  });
+
+  $("#gform").on("submit", function (e) {
+    $("#gform *").fadeOut(1000);
+    $("#gform")
+      .delay(800)
+      .prepend(
+        "Your message has been sent. We aim to respond within five working days. If you do not hear from us within two weeks, please try again, either via this form or the email link provided. <br>"
+      );
   });
 });
 
