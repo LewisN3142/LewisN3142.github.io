@@ -119,12 +119,8 @@ $(document).ready(function () {
   });
 
   $("#gform").on("submit", function (e) {
-    $("#gform *").fadeOut(1000);
-    $("#gform")
-      .delay(800)
-      .prepend(
-        "Your message has been sent. We aim to respond within five working days. If you do not hear from us within two weeks, please try again, either via this form or the email link provided. <br>"
-      );
+    $("#gform *").fadeOut(300);
+    $("#contact-submitted-text").delay(300).fadeIn(150);
   });
 });
 

@@ -56,7 +56,7 @@
           resulting from use of this information.
         </p>
         <p>
-          Please <a href="contact_page/contact.html" class="under-overlay internal-link">contact us</a> if you believe
+          Please <a href="contact.html" class="under-overlay internal-link">contact us</a> if you believe
           any information herein
           to be
           erronious or have issues with links to external material.
@@ -65,7 +65,7 @@
           The material contained within this website is distributed under a
           CC-BY-NC-SA license. Should you wish to license material under any other terms, or claim copyright to material
           presented
-          herein, <a href="contact_page/contact.html" class="under-overlay internal-link">contact us</a>.
+          herein, <a href="contact.html" class="under-overlay internal-link">contact us</a>.
         </p>
       </div>
     </div>
@@ -167,10 +167,11 @@
         <div class="contact-row">
           <div class="contact-column-left">
 
-            If you have any questions, project proposals, or issues, please contact me using the form below.
+            If you have any questions, project proposals, or issues, please contact us using the form below.
             Alternatively,
-            while the construction of this website is in progress, you can also <a href="mailto:ln00216@surrey.ac.uk"
-              rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">email me</a>.
+            while the construction of this website is in progress, you can also <a
+              href="mailto:lewis.napper@surrey.ac.uk" rel="noopener noreferrer"
+              class="external-link under-overlay under-modal-overlay">email me</a>.
             by contacting us, you agree that your data may be managed in-line with our <button
               class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
               aria-controls="Privacy_Policy" style="margin-left:0.1rem"> <i class="abstract-icon icon-angle-right"></i>
@@ -234,6 +235,7 @@
           <!-- Chrome autofill changes text and background colour of field entries... -->
 
           <div class="contact-column-right">
+
             <div class="form-container" id="form-container">
               <form name="gform" id="gform" enctype="text/plain"
                 action="https://docs.google.com/forms/d/e/1FAIpQLScGXG89xwwVTVN8-IwrF-mNK1PGaQPHumm7ZO2vupoN5epsIg/formResponse?"
@@ -252,23 +254,31 @@
                   class="form-subject form-input under-overlay under-modal-overlay" placeholder="Subject"
                   aria-label="contact subject" required><br>
 
-                <textarea rows="10" cols="120" name="entry.839337160" id="entry.839337160"
+                <textarea rows="10" cols="100" name="entry.839337160" id="entry.839337160"
                   class="form-message form-input under-overlay under-modal-overlay" placeholder="Message"
                   aria-label="contact message" required></textarea><br>
 
-                <input type="submit" value="Submit" class="form-submit-button under-overlay under-modal-overlay"
-                  id="form-submit">
+                <button class="under-overlay under-modal-overlay contact-submit-btn" type="submit"
+                  aria-label="submits contact form"> <i class="abstract-icon icon-link-on-site"></i>
+                  Submit
+                </button>
               </form>
             </div>
-
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+            <section class="teach-section" id="contact-submitted-text">
+              Your message has been sent. We aim to respond within five working days. If you do not hear from us within
+              two weeks,
+              please try again, either via this form or the email link provided. <br>
+            </section>
+
           </div>
         </div>
 
       </div>
 
-      <div style="height:4rem;"></div>
-      <footer id="finefooter">
+      <div class="contact-bottom-spacer"></div>
+      <footer class="finefooter">
         © 2023 Lewis Napper | <button class="under-overlay under-modal-overlay" id="terms-conditions" type="button"
           aria-expanded="false" aria-controls="terms-conditions-modal" aria-label="open terms and conditions"> <i
             class="abstract-icon icon-angle-right"></i>

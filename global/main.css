@@ -662,78 +662,6 @@ button:focus-visible,
 
 /* Styles applied to body content (currently home and academia, likely any text) */
 
-/* CONTACT FORM STYLING */
-.contact-column-left {
-  float: left;
-  width: 56%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
-
-.contact-column-right {
-  float: left;
-  width: 44%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-}
-
-.contact-row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.contact-spacer {
-  height: 0.5em;
-}
-
-.privacy-container {
-  margin: 0.5rem;
-}
-
-.form-container {
-  margin: 0.2rem;
-}
-
-textarea {
-  resize: vertical;
-  box-sizing: border-box;
-}
-
-::placeholder {
-  color: var(--foreground-default);
-  opacity: 0.75;
-}
-
-::-ms-input-placeholder {
-  color: var(--foreground-default);
-  opacity: 0.75;
-}
-
-.form-input {
-  background-color: var(--background-accent);
-  color: var(--foreground-default);
-  border-width: 3px;
-  border-color: var(--foreground-active-blue);
-  margin: 0.2rem;
-
-  font-size: var(--footnote-font-size);
-  font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
-  font-weight: 400;
-  letter-spacing: var(--font-letter-spacing-default);
-  word-spacing: var(--font-word-spacing-default);
-
-  width: 96%;
-}
-
-.form-submit-button {
-  margin-left: 1rem;
-}
-
 /* COLUMNS FOR TEACHING */
 .teach-column {
   float: left;
@@ -832,6 +760,120 @@ textarea {
   padding-right: 0.7rem;
 }
 
+/* CONTACT FORM STYLING */
+.contact-body {
+  min-height: 100vh;
+}
+
+.contact-submit-btn {
+  display: inline-block;
+  color: var(--foreground-active-blue);
+  cursor: pointer;
+  background: none;
+  font-size: var(--footnote-font-size);
+  padding: 1 4px;
+  margin-left: 0.5rem;
+
+  border-color: var(--foreground-active-blue);
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0.145rem;
+  background-color: var(--background-accent);
+
+  text-align: center;
+  justify-content: center;
+}
+
+.contact-column-left {
+  float: left;
+  width: 56%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.contact-column-right {
+  float: left;
+  width: 44%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.contact-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.contact-spacer {
+  height: 0.5em;
+}
+
+.contact-bottom-spacer {
+  height: 4rem;
+}
+
+#contact-submitted-text {
+  display: none;
+
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 0.2rem;
+  background-color: var(--background-mid-accent);
+}
+
+.privacy-container {
+  margin: 0.5rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+}
+
+.form-container {
+  margin: 0.2rem;
+}
+
+textarea {
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: var(--foreground-default);
+  opacity: 0.75;
+}
+
+::-ms-input-placeholder {
+  color: var(--foreground-default);
+  opacity: 0.75;
+}
+
+.form-input {
+  background-color: var(--background-accent);
+  color: var(--foreground-default);
+  border-width: 3px;
+  border-color: var(--foreground-active-blue);
+  margin: 0.2rem;
+
+  font-size: var(--footnote-font-size);
+  font-family: "Segoe UI", -apple-system, system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: var(--font-letter-spacing-default);
+  word-spacing: var(--font-word-spacing-default);
+
+  border-radius: 0.3rem;
+
+  width: 96%;
+}
+
+.form-submit-button {
+  margin-left: 1rem;
+}
+
 /* ABOUT SECTION */
 .download-less-padding:before {
   margin-right: -0.15rem;
@@ -920,7 +962,7 @@ textarea {
   margin: auto;
 }
 
-#finefooter {
+.finefooter {
   position: fixed;
   width: 100vw;
   bottom: 0;
@@ -1248,6 +1290,10 @@ textarea {
   }
 
   /* Modal open and close buttons */
+  .contact-submit-btn:hover {
+    color: var(--foreground-clicked-blue);
+    border-color: var(--foreground-clicked-blue);
+  }
 
   #terms-conditions:hover {
     color: var(--foreground-clicked-blue);
