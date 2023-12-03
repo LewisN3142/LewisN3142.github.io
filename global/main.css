@@ -150,6 +150,7 @@ body a {
   background: none;
   cursor: pointer;
   outline: none;
+  white-space: nowrap;
 }
 
 /* SCROLLBAR STYLES */
@@ -410,6 +411,13 @@ main hr {
   text-align: left;
 }
 
+.terms-icon {
+  font-size: var(--font-size-default);
+  transition: var(--icon-rotate-speed);
+  vertical-align: -0.096rem;
+  margin-right: 0.25em;
+}
+
 #close-terms-button {
   margin: 0.35rem 0.1rem 0 1rem;
   display: inline-block;
@@ -493,7 +501,7 @@ main hr {
   padding: 0 3px;
 }
 
-#terms-conditions.modal-toggled .abstract-icon {
+#terms-conditions.modal-toggled .terms-icon {
   rotate: -90deg;
   transition: var(--icon-rotate-speed);
 }
@@ -728,20 +736,16 @@ button:focus-visible,
 .external-link::before {
   font-family: "icomoon";
   content: "\e902";
-  margin-right: 3px;
+  margin-right: -2px;
   font-size: var(--font-size-default);
   display: inline;
   vertical-align: -0.0954rem;
 }
 
-.external-link-list-item::before {
-  margin-right: -2px;
-}
-
 .internal-link::before {
   font-family: "icomoon";
   content: "\e904";
-  padding-right: 3px;
+  padding-right: 0.2em;
   font-size: var(--font-size-default);
   display: inline;
   vertical-align: -0.0954rem;
