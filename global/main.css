@@ -662,6 +662,22 @@ button:focus-visible,
 
 /* Styles applied to body content (currently home and academia, likely any text) */
 
+/* COLUMNS FOR HOME PAGE */
+.grades-column {
+  float: left;
+  width: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+.grades-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* COLUMNS FOR TEACHING */
 .teach-column {
   float: left;
@@ -672,6 +688,13 @@ button:focus-visible,
   padding-right: 0.6rem;
 }
 
+.teach-column-inner {
+  float: left;
+  width: 50%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .teach-row:after {
   content: "";
   display: table;
@@ -680,13 +703,20 @@ button:focus-visible,
 
 .teach-section {
   border-radius: 10px;
-  padding: 5px 15px;
-  margin: 20px 10px 20px 10px;
+  padding: 0.3rem 0.9rem;
+  margin: 0.6rem;
   background-color: var(--background-mid-accent);
 }
 
-.first-column {
-  margin-bottom: 0px;
+.teach-section-title-outer {
+  margin-bottom: 0.6rem;
+}
+
+.teach-section-inner {
+  border-radius: 10px;
+  padding: 0.3rem 0.9rem;
+  margin: 0.6rem 0 0.6rem 0;
+  background-color: var(--background-mid-accent);
 }
 
 .teach-spacer {
@@ -784,9 +814,16 @@ button:focus-visible,
   justify-content: center;
 }
 
+.contact-section {
+  border-radius: 10px;
+  padding: 5px 15px;
+  margin: 20px 10px 20px 10px;
+  background-color: var(--background-mid-accent);
+}
+
 .contact-column-left {
   float: left;
-  width: 56%;
+  width: 54%;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0.6rem;
@@ -795,7 +832,7 @@ button:focus-visible,
 
 .contact-column-right {
   float: left;
-  width: 44%;
+  width: 46%;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0.6rem;
@@ -844,11 +881,15 @@ textarea {
 
 ::placeholder {
   color: var(--foreground-default);
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
   opacity: 0.75;
 }
 
 ::-ms-input-placeholder {
   color: var(--foreground-default);
+  -moz-opacity: 0.75;
+  -khtml-opacity: 0.75;
   opacity: 0.75;
 }
 
@@ -866,8 +907,11 @@ textarea {
   word-spacing: var(--font-word-spacing-default);
 
   border-radius: 0.3rem;
-
   width: 96%;
+}
+
+.form-input:focus {
+  border-color: var(--foreground-visited);
 }
 
 .form-submit-button {
@@ -1386,6 +1430,21 @@ textarea {
   .teach-column {
     width: 100%;
   }
+
+  .grades-column {
+    width: 100%;
+  }
+
+  .teach-column-inner {
+    width: 100%;
+    margin-bottom: -0.45rem;
+    margin-top: -0.45rem;
+  }
+
+  .column-bottom-list-item {
+    margin-bottom: 0;
+  }
+
   .contact-column-left,
   .contact-column-right {
     width: 100%;
