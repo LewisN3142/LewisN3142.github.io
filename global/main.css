@@ -1068,7 +1068,7 @@ textarea {
   justify-content: center;
   padding: 0px;
   height: 80vh;
-  max-height: 800px;
+  max-height: 600px;
 }
 
 .slider-container {
@@ -1201,10 +1201,6 @@ textarea {
 
 .slider-navigation-padding {
   flex-grow: 1;
-}
-
-.slider-padding {
-  height: 2rem;
 }
 
 .card {
@@ -1401,11 +1397,17 @@ textarea {
   .container {
     max-width: 540px;
   }
+  .slider-padding {
+    height: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
+  }
+  .slider-padding {
+    height: 2rem;
   }
 }
 
@@ -1417,6 +1419,9 @@ textarea {
     margin-top: 4.35rem;
     margin-bottom: 4.15rem;
   }
+  .slider-padding {
+    height: 2rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1426,6 +1431,67 @@ textarea {
   .img-about {
     margin-top: 2.8rem;
     margin-bottom: 2.6rem;
+  }
+  .slider-padding {
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 1510px;
+  }
+  .img-about {
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .card-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    height: 80vh;
+    max-height: 625px;
+  }
+  .slider-container {
+    width: 100%;
+    max-width: 900px;
+    max-height: 600px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    max-width: 1880px;
+  }
+  .img-about {
+    margin-top: 0.3rem;
+    margin-bottom: 0.1rem;
+  }
+  .card-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    height: 80vh;
+    max-height: 645px;
+  }
+  .slider-container {
+    width: 100%;
+    max-width: 1100px;
+    max-height: 620px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
