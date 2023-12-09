@@ -1023,7 +1023,7 @@ textarea {
 /* CARD CAROUSEL */
 
 #soon-card {
-  background-image: url("/home_material/villainelle.webp");
+  background-image: url("/home_material/Villanelle_58x76.webp");
 }
 
 #paris-card {
@@ -1144,6 +1144,10 @@ textarea {
 
 .slider-button-left {
   justify-content: left;
+}
+
+.slider-padding {
+  height: 1.5rem;
 }
 
 .card-title {
@@ -1397,17 +1401,11 @@ textarea {
   .container {
     max-width: 540px;
   }
-  .slider-padding {
-    height: 2rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 720px;
-  }
-  .slider-padding {
-    height: 2rem;
   }
 }
 
@@ -1419,9 +1417,6 @@ textarea {
     margin-top: 4.35rem;
     margin-bottom: 4.15rem;
   }
-  .slider-padding {
-    height: 2rem;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1431,9 +1426,6 @@ textarea {
   .img-about {
     margin-top: 2.8rem;
     margin-bottom: 2.6rem;
-  }
-  .slider-padding {
-    height: 2rem;
   }
 }
 
@@ -1464,6 +1456,9 @@ textarea {
     flex-direction: column;
     align-items: center;
   }
+  #soon-card {
+    background-image: url("/home_material/Villanelle_68x84.webp");
+  }
 }
 
 @media screen and (min-width: 2000px) {
@@ -1492,6 +1487,9 @@ textarea {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+  #soon-card {
+    background-image: url("/home_material/Villanelle_68x84.webp");
   }
 }
 
