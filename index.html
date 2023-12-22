@@ -161,11 +161,20 @@
 
       <div> <!-- Hero Image Section TBC -->
         <h1>Hey! I'm Lewis Napper</h1>
-        <h2>Welcome to my Website!</h2>
       </div>
 
       <div class="container"> <!-- Container For Page Content -->
-        <div class="section-break" id="aboutMe"></div>
+        <h2>Welcome to my Website!</h2>
+
+        <div class="section-break banjo-container">
+          <button class="banjo-button under-overlay under-modal-overlay" value="Play Audio">
+            <span> Rare Employees Click Here (Sound On!) </span>
+            <audio src="DS3_Clip.wav" id="banjoAudio"></audio>
+          </button>
+        </div>
+
+        <div class="section-break" id="aboutMe">
+        </div>
 
         <article> <!-- About Section -->
           <h2> About Me </h2>
@@ -181,7 +190,7 @@
                   programmer, with an interest in game development and computer graphics.
                 </p>
                 <p class="medium-para">
-                  This site is intended to be a showcase of my work and hobbies across various fields,
+                  This site is a showcase of my work and hobbies across various fields,
                   acting as a catalogue of my academic career, artistic endeavours, and other
                   exploits.
                   Should you discover a problem, bug, or error, please feel free to file an issue on this website's
@@ -254,14 +263,29 @@
                       </h3>
                       <p class="card-date"> Posted: 22nd October 2023 </p>
 
-                      <p class="card-details">
-                        This website is a work in progress and is updated regularly. New pages currently in
-                        the works include: <br><br>
-                        - Art Gallery Page, <br>
-                        - Code Catalogue, <br>
-                        - Clips Page (inc. music and speedruns), <br>
-                        - Blog and Review Page.
-                      </p>
+                      <div class="card-details">
+                        <p class="medium-para">
+                          This website is a work in progress and is updated regularly. New pages currently in
+                          the works include:
+                        </p>
+                        <ul class="compact-list">
+                          <li>
+                            Art Gallery Page,
+                          </li>
+                          <li>
+                            Code Catalogue,
+                          </li>
+                          <li>
+                            Video Game Page (including speedruns, glitches, etc)
+                          </li>
+                          <li>
+                            Music Page (including covers and original recordings)
+                          </li>
+                          <li>
+                            Blog Page
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -269,7 +293,7 @@
                 <div class="card" id="complete-card" data-index="2" data-status="activeLeft"
                   onclick="handleSliderLeft()" loading="lazy">
                   <div>
-                    <div class=" card-title">
+                    <div class="card-title">
                       <h3 class="card-name"> Academia and Home Pages are Feature&ndash;Complete
                       </h3>
                       <p class="card-date"> Posted: 22nd October 2023 </p>
@@ -285,7 +309,7 @@
                 </div>
               </div>
 
-              <div class=" slider-navigation">
+              <div class="slider-navigation">
                 <button class="slider-button slider-button-left under-overlay" type="button" id="carousel-left-button"
                   aria-controls="cards" onclick="handleSliderLeft()" aria-label="previous card in carousel">
                   <i class="icon-angle-left slider-angle slider-angle-left" alt="Previous Event"></i>
@@ -323,9 +347,9 @@
               <b> PhD Mathematics </b> (2021-<span class="redColor">2024</span>)
               <br> University of Surrey
               <p class="small-para">
-                <em> <span class="midBold">Supervisors:</span> Dr. Martin Wolf and Prof. Ian Roulstone </em>
+                <em class="midBold">Supervisors:</em> Dr. Martin Wolf and Prof. Ian Roulstone
                 <br>
-                <em> <span class="midBold">Thesis Title:</span> Monge&ndash;Ampère Geometry and Vortices </em>
+                <em class="midBold">Thesis Title:</em> Monge&ndash;Ampère Geometry and Vortices
               </p>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
@@ -348,10 +372,10 @@
               <b> MMath Mathematics 1st Class Hons </b> (2017-2021) <br>
               University of Surrey
               <p class="small-para">
-                <em> <span class="midBold">Supervisors:</span> Dr. Alessandro Torrielli and Dr. Andrea
-                  Prinsloo </em> <br>
-                <em> <span class="midBold">Thesis Title:</span> Algebraic Bethe Ansatz for su(2) Spin Chains
-                  and Beyond </em>
+                <em class="midBold">Supervisors:</em> Dr. Alessandro Torrielli and Dr. Andrea
+                Prinsloo. </em> <br>
+                <em class="midBold">Thesis Title:</em> Algebraic Bethe Ansatz for su(2) Spin Chains
+                and Beyond.
               </p>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
@@ -364,23 +388,21 @@
 
                 <div class="grades-row"> <!-- Top Row -->
                   <div class="grades-column"> <!-- First Year Modules -->
-                    <section>
-                      <p class="grades-title">
-                        <b> Year 1 </b> (93%)
-                      </p>
-                      <p class="small-para">
-                        <em>
-                          97% &ndash; Vector Calculus <br>
-                          96% &ndash; Probability and Statistics <br>
-                          94% &ndash; Classical Dynamics <br>
-                          93% &ndash; Algebra <br>
-                          93% &ndash; Real Analysis I <br>
-                          92% &ndash; Calculus <br>
-                          92% &ndash; Professional Skills Development <br>
-                          88% &ndash; Linear Algebra
-                        </em>
-                      </p>
-                    </section>
+                    <p class="grades-title">
+                      <b> Year 1 </b> (93%)
+                    </p>
+                    <p class="small-para">
+                      <em>
+                        97% &ndash; Vector Calculus <br>
+                        96% &ndash; Probability and Statistics <br>
+                        94% &ndash; Classical Dynamics <br>
+                        93% &ndash; Algebra <br>
+                        93% &ndash; Real Analysis I <br>
+                        92% &ndash; Calculus <br>
+                        92% &ndash; Professional Skills Development <br>
+                        88% &ndash; Linear Algebra
+                      </em>
+                    </p>
                   </div>
 
                   <div class="grades-column"> <!-- Second Year Modules -->
@@ -439,19 +461,19 @@
                     </p>
                   </div>
                 </div>
-
               </div>
+
             </li>
 
             <li> <!-- A-Level Info -->
               <b> A-Levels </b> (2015-2017) <br>
-              3x A* and 1x A at A-Level, plus 1x A at AS-Level <br>
+              3x A* and 1x A at A-Level, plus 1x A at AS-Level. <br>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
               </button>
 
-              <div class="abstract-container" id="ALevel_Results"> <!-- Module Dropdown -->
+              <p class="small-para abstract-container" id="ALevel_Results"> <!-- Module Dropdown -->
                 <em>
                   Mathematics &ndash; A* <br>
                   Further Mathematics &ndash; A* <br>
@@ -459,12 +481,12 @@
                   Biology &ndash; A <br>
                   Art AS-Level &ndash; A
                 </em>
-              </div>
+              </p>
             </li>
 
             <li> <!-- GCSE Info -->
               <b> GCSEs </b> (2012-2015) <br>
-              9x A* (including Mathematics, English, and German), 3x A, and more.<br>
+              9x A* (including Mathematics, English, and German), 3x A, and more. <br>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="GCSE_Results">
@@ -517,6 +539,7 @@
 
                 </div>
               </div>
+
             </li>
           </ul>
 

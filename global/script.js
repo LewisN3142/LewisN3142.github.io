@@ -25,6 +25,12 @@ $(document).ready(function () {
   }
   touchResponsive();
 
+  // Array of youtube videos
+  const youtubeVideos = [
+    "https://www.youtube-nocookie.com/embed/gl8woxgskpk?si=KfwK3Plrbl34ObcO&rel=0&modest-branding=1&mute=1",
+    "https://www.youtube-nocookie.com/embed/UdXt0zCdXx0?si=Lbiwp3kXuC9BLUmh&rel=0&modest-branding=1&mute=1",
+  ];
+
   // Code for sidebar and overlay
   function onFadeOut() {
     $("#overlay").fadeOut(250);
@@ -121,6 +127,39 @@ $(document).ready(function () {
   $("#gform").on("submit", function (e) {
     $("#gform *").fadeOut(300);
     $("#contact-submitted-text").delay(300).fadeIn(150);
+  });
+
+  // Code that manages the banjo button
+  var banjoAudio = document.getElementById("banjoAudio");
+
+  function banjoButtonUnpress() {
+    $(".banjo-button").each(function () {
+      $(this).removeClass("banjo-button-pressed");
+      banjoAudio.pause();
+    });
+  }
+
+  $(".banjo-button").click(function () {
+    if ($(this).hasClass("banjo-button-pressed")) {
+    } else {
+      $(this).addClass("banjo-button-pressed");
+      banjoAudio.currentTime = 0;
+      banjoAudio.play();
+      setTimeout(() => {
+        banjoButtonUnpress();
+      }, 3000);
+    }
+  });
+
+  // Code that loads in youtube videos - edit so different wrappers load different youtube videos in
+  // Do so by having data on each iframe which is read and then access that entry in array of urls
+  $(".youtube-thumb-wrapper").click(function () {
+    $(this).attr("aria-expanded", "true");
+    var $iframe = $(this).parent().parent().parent().next(".youtube-video");
+    var $dataIndex = $(this).attr("data-video-number");
+    $iframe.attr("src", youtubeVideos[$dataIndex]);
+    $iframe.addClass("youtube-video-loaded");
+    $iframe.show();
   });
 });
 

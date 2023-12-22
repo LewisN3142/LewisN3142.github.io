@@ -12,11 +12,11 @@ html {
 /* ICOMOON FONTS */
 @font-face {
   font-family: "icomoon";
-  src: url("icons/icomoon.eot?t4p9uf");
-  src: url("icons/icomoon.eot?t4p9uf#iefix") format("embedded-opentype"),
-    url("icons/icomoon.ttf?t4p9uf") format("truetype"),
-    url("icons/icomoon.woff?t4p9uf") format("woff"),
-    url("icons/icomoon.svg?t4p9uf#icomoon") format("svg");
+  src: url("icons/icomoon.eot?yio5wn");
+  src: url("icons/icomoon.eot?yio5wn#iefix") format("embedded-opentype"),
+    url("icons/icomoon.ttf?yio5wn") format("truetype"),
+    url("icons/icomoon.woff?yio5wn") format("woff"),
+    url("icons/icomoon.svg?yio5wn#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -46,6 +46,9 @@ html {
   vertical-align: -0.03rem;
 }
 
+.icon-link-off-site:before {
+  content: "\e902";
+}
 .icon-link-on-site:before {
   content: "\e904";
 }
@@ -61,6 +64,22 @@ html {
 }
 .icon-open-in-new:before {
   content: "\e902";
+  color: #f5f5f5;
+}
+.icon-instagram:before {
+  content: "\ea92";
+  color: #f5f5f5;
+}
+.icon-youtube:before {
+  content: "\ea9d";
+  color: #f5f5f5;
+}
+.icon-github:before {
+  content: "\eab0";
+  color: #f5f5f5;
+}
+.icon-linkedin:before {
+  content: "\eac9";
   color: #f5f5f5;
 }
 
@@ -85,6 +104,7 @@ html {
   --font-size-sidebar: 1.05rem;
   --sidebar-line-height: 1;
   --font-size-default: 1.1rem;
+  --font-size-icons: 1.2rem;
   --font-letter-spacing-default: 0.008em;
   --font-word-spacing-default: 0.05em;
   --main-line-height: 1.45;
@@ -759,6 +779,65 @@ button:focus-visible,
   vertical-align: -0.096rem;
 }
 
+/* Socials Links */
+.social-link {
+  margin: 0.3rem;
+
+  display: inline-block;
+  color: var(--foreground-active-blue);
+  cursor: pointer;
+  background: none;
+  font-size: var(--footnote-font-size);
+  padding: 0.1rem 0.3rem;
+
+  border-color: var(--foreground-active-blue);
+  border-radius: 1rem;
+  border-style: solid;
+  border-width: 0.145rem;
+  background-color: var(--background-accent);
+
+  text-align: center;
+  justify-content: center;
+}
+
+.social-link:visited {
+  color: var(--foreground-active-blue);
+}
+
+.linkedin-link::before {
+  font-family: "icomoon";
+  content: "\eac9";
+  font-size: var(--font-size-icons);
+  display: inline;
+  vertical-align: -0.15rem;
+  margin-left: 0.25rem;
+}
+
+.instagram-link::before {
+  font-family: "icomoon";
+  content: "\ea92";
+  font-size: var(--font-size-icons);
+  display: inline;
+  vertical-align: -0.15rem;
+  margin-left: 0.25rem;
+}
+
+.youtube-link::before {
+  font-family: "icomoon";
+  content: "\ea9d";
+  font-size: var(--font-size-icons);
+  display: inline;
+  vertical-align: -0.15rem;
+}
+
+.github-link::before {
+  font-family: "icomoon";
+  content: "\eab0";
+  font-size: var(--font-size-icons);
+  display: inline;
+  vertical-align: -0.15rem;
+}
+
 /* ABSTRACT DROPDOWN */
 .abstract-link {
   display: inline-block;
@@ -922,6 +1001,12 @@ textarea {
   margin-left: 1rem;
 }
 
+.social-buttons {
+  justify-content: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
 /* ABOUT SECTION */
 .download-less-padding:before {
   margin-right: -0.15rem;
@@ -986,11 +1071,16 @@ textarea {
 /* Skills and Experience lists */
 .compact-list li {
   margin-bottom: 0.6rem;
+  text-align: left;
 }
 
 .compact-list {
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .abstract-less-padding {
@@ -1234,6 +1324,128 @@ textarea {
   pointer-events: none;
 }
 
+/* Rare Custom Button (Guh Huh!) */
+.banjo-button {
+  display: inline-block;
+  align-self: center;
+  text-align: center;
+
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background-color: red;
+
+  font-weight: 100;
+  font-size: var(--font-size-default);
+  text-shadow: 0 3px 1px rgba(122, 17, 8, 0.8);
+  box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35); /* Inner and outer shadows */
+  text-transform: uppercase;
+  transition: 0.4s all ease-in;
+}
+
+.banjo-button span {
+  position: relative;
+}
+
+.banjo-button-pressed {
+  padding-top: 3px;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 rgb(183, 0, 0), 0 8px 6px rgba(0, 0, 0, 0.45);
+}
+
+.banjo-container {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Code for youtube videos */
+.youtube-title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.youtube-video {
+  aspect-ratio: 16/9;
+  width: 0%;
+  margin-left: 10%;
+}
+
+.youtube-video-loaded {
+  width: 80%;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.youtube-column-text {
+  float: left;
+  width: 70%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.youtube-column-image {
+  float: left;
+  width: 30%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.youtube-row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-bottom: 0.5rem;
+}
+
+.Youtube-section {
+  padding-right: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.youtube-thumb {
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  margin: auto;
+
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 15px;
+  border-color: var(--foreground-active-blue);
+  vertical-align: middle;
+}
+
+.youtube-thumb-wrapper {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  top: 30%;
+  position: relative;
+  background: none;
+  border: none;
+}
+
+.youtube-thumb-caption {
+  text-align: center;
+  margin-top: 5px;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  font-size: var(--footnote-font-size);
+
+  color: var(--foreground-active-blue);
+}
+
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 /* Media queries for screen width and about image margins  */
@@ -1242,6 +1454,12 @@ textarea {
   .slider-navigation {
     display: flex;
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 527px) and (min-width: 403px) {
+  .instagram-link {
+    margin-left: 0;
   }
 }
 
@@ -1335,6 +1553,28 @@ textarea {
   main a:visited:hover {
     color: var(--foreground-visited);
     text-decoration: underline;
+  }
+
+  .youtube-thumb-wrapper:hover .youtube-thumb-caption {
+    color: var(--foreground-clicked-blue);
+  }
+
+  .youtube-thumb-wrapper:hover .youtube-thumb {
+    border-color: var(--foreground-clicked-blue);
+  }
+
+  .social-link:hover {
+    color: var(--foreground-clicked-blue);
+    border-color: var(--foreground-clicked-blue);
+    text-decoration: none;
+  }
+
+  .social-buttons a:hover {
+    color: var(--foreground-clicked-blue);
+  }
+
+  .social-buttons a:visited:hover {
+    color: var(--foreground-clicked-blue);
   }
 
   /* Modal open and close buttons */
@@ -1501,6 +1741,18 @@ textarea {
 
   .grades-column {
     width: 100%;
+  }
+
+  .youtube-column-text {
+    width: 100%;
+  }
+
+  .youtube-column-image {
+    width: 100%;
+  }
+
+  .Youtube-section {
+    padding-right: 5px;
   }
 
   .teach-column-inner {
