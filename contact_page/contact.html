@@ -148,6 +148,22 @@
           </ul>
         </li>
 
+        <li> <!-- Games Nav -->
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="../games_page/video_games.html"> Gaming Stuff </a>
+            <button class="dropdown-btn" type="button" aria-controls="Games-dropdown" aria-expanded="false">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Games-dropdown">
+            <li> <a href="../games_page/video_games.html#gameplay"> Gameplay </a></li>
+            <li> <a href="../games_page/video_games.html#speedrunTech"> Speedrun Tech </a>
+            </li>
+            <li> <a href="../games_page/video_games.html#bugsGlitches"> Bugs and Glitches
+              </a></li>
+          </ul>
+        </li>
+
         <li> <!-- Contact Nav -->
           <a href="contact_page/contact.html" id="current-page"> Contact Me </a>
         </li>
@@ -168,7 +184,25 @@
           <div class="contact-column-left">
             If you have any questions, project proposals, or issues, please contact me using the form on this page or <a
               href="mailto:lewis.napper@surrey.ac.uk" rel="noopener noreferrer"
-              class="external-link under-overlay under-modal-overlay"> Email Me</a> directly.
+              class="external-link under-overlay under-modal-overlay"> Email Me</a> directly. You can also find me on:
+            <div class="social-buttons">
+              <a href="https://www.youtube.com/@lewisnapper"
+                class="social-link youtube-link under-overlay under-modal-overlay" rel="noopener noreferrer">
+                Youtube
+              </a>
+              <a href="https://github.com/LewisN3142/" class="social-link github-link under-overlay under-modal-overlay"
+                rel="noopener noreferrer">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/lewis-napper-222711298/"
+                class="social-link linkedin-link under-overlay under-modal-overlay" rel="noopener noreferrer">
+                LinkedIn
+              </a>
+              <a href="https://www.instagram.com/lewis.napper/"
+                class="social-link instagram-link under-overlay under-modal-overlay" rel="noopener noreferrer">
+                Instagram
+              </a>
+            </div>
             By contacting me, you agree that your data may be managed in-line with our <button
               class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
               aria-controls="Privacy_Policy" style="margin-left:0.1rem"> <i class="abstract-icon icon-angle-right"></i>
@@ -218,29 +252,6 @@
                 ask us to restrict the processing of your personal information at any stage. You can remove your
                 consent to us storing communications at any time, by contacting us once more with your request.
               </p>
-            </div>
-
-            <div class="contact-spacer"></div>
-
-            <!-- To do: split into two sub-columns and stack on top of each other when screen too narrow (check using inspector). Also, style these to look and act the same as the submit button on this page... -->
-            You can also find me on:
-            <div class="social-buttons">
-              <a href="https://www.youtube.com/@lewisnapper"
-                class="social-link youtube-link under-overlay under-modal-overlay" rel="noopener noreferrer">
-                Youtube
-              </a>
-              <a href="https://github.com/LewisN3142/" class="social-link github-link under-overlay under-modal-overlay"
-                rel="noopener noreferrer">
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/lewis-napper-222711298/"
-                class="social-link linkedin-link under-overlay under-modal-overlay" rel="noopener noreferrer">
-                LinkedIn
-              </a>
-              <a href="https://www.instagram.com/lewis.napper/"
-                class="social-link instagram-link under-overlay under-modal-overlay" rel="noopener noreferrer">
-                Instagram
-              </a>
             </div>
 
             <div class="contact-spacer"></div>
@@ -296,7 +307,7 @@
       </div>
 
       <div class="contact-bottom-spacer"></div>
-      <footer class="finefooter">
+      <footer class="contactfooter">
         © 2023 Lewis Napper | <button class="under-overlay under-modal-overlay" id="terms-conditions" type="button"
           aria-expanded="false" aria-controls="terms-conditions-modal" aria-label="open terms and conditions"> <i
             class="terms-icon icon-angle-right"></i>Terms &

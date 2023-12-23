@@ -122,6 +122,7 @@ html {
   --logo-scaling: scale(1.12);
   --reveal-modal-speed: visibility 0s, opacity 0.4s ease-in-out, translate 0.4s;
   --hide-modal-speed: visibility 0.25s, opacity 0.3s ease-in-out, translate 0.3s;
+  --load-youtube-iframe: all 200ms ease-in-out;
 
   /* Scrollbars */
   --custom-scrollbar-width: 12px;
@@ -933,7 +934,7 @@ button:focus-visible,
 }
 
 .contact-bottom-spacer {
-  height: 4rem;
+  height: 1.5rem;
 }
 
 #contact-submitted-text {
@@ -1005,6 +1006,8 @@ textarea {
   justify-content: center;
   text-align: center;
   padding: 0.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 /* ABOUT SECTION */
@@ -1104,6 +1107,9 @@ textarea {
   position: fixed;
   width: 100vw;
   bottom: 0;
+}
+
+.contactfooter {
 }
 
 #finepara {
@@ -1374,12 +1380,22 @@ textarea {
   aspect-ratio: 16/9;
   width: 0%;
   margin-left: 10%;
+
+  -webkit-transition: var(--load-youtube-iframe);
+  -moz-transition: var(--load-youtube-iframe);
+  -o-transition: var(--load-youtube-iframe);
+  transition: var(--load-youtube-iframe);
 }
 
 .youtube-video-loaded {
   width: 80%;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
+
+  -webkit-transition: var(--load-youtube-iframe);
+  -moz-transition: var(--load-youtube-iframe);
+  -o-transition: var(--load-youtube-iframe);
+  transition: var(--load-youtube-iframe);
 }
 
 .youtube-column-text {
@@ -1421,6 +1437,8 @@ textarea {
   border-radius: 15px;
   border-color: var(--foreground-active-blue);
   vertical-align: middle;
+
+  color: var(--foreground-active-blue);
 }
 
 .youtube-thumb-wrapper {
@@ -1432,6 +1450,7 @@ textarea {
   position: relative;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .youtube-thumb-caption {
@@ -1561,6 +1580,7 @@ textarea {
 
   .youtube-thumb-wrapper:hover .youtube-thumb {
     border-color: var(--foreground-clicked-blue);
+    color: var(--foreground-clicked-blue);
   }
 
   .social-link:hover {
@@ -1656,6 +1676,11 @@ textarea {
   .img-about {
     margin-top: 4.35rem;
     margin-bottom: 4.15rem;
+  }
+  .contactfooter {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
   }
 }
 

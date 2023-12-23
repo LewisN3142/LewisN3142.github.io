@@ -146,32 +146,6 @@
           </ul>
         </li>
 
-        <li> <!-- Code Nav -->
-          <div class="link-with-dropdown">
-            <a class="link-next-to-dropdown" href="../code_page/code_catalogue.html"> Code Catalogue </a>
-            <button class="dropdown-btn" type="button" aria-controls="Code-dropdown" aria-expanded="false">
-              <i class="icon-angle-right dropdown-icon"></i> </button>
-          </div>
-
-          <ul class="dropdown-container" id="Code-dropdown">
-            <li> <a href="../code_page/code_catalogue.html#codeOverview"> Overview </a></li>
-            <li> <a href="../code_page/code_catalogue.html#teachingMaterial"> Teaching Material </a></li>
-            <li> <a href="../code_page/code_catalogue.html#webDevelopment"> Web Development </a></li>
-            <li> <a href="../code_page/code_catalogue.html#gameDevelopment"> Game Development </a></li>
-            <li> <a href="../code_page/code_catalogue.html#otherProjects"> Other </a></li>
-          </ul>
-        </li>
-
-        <li> <!-- Gallery Nav -->
-          <a href="../gallery_page/art_gallery.html"> Art Gallery </a>
-          <!-- Convert into dropdown if you want pre-filtered results-->
-        </li>
-
-        <li> <!-- Music Nav -->
-          <a href="../music_page/my_music.html"> Music </a>
-          <!-- Convert into dropdown if you want pre-filtered results-->
-        </li>
-
         <li> <!-- Games Nav -->
           <div class="link-with-dropdown">
             <a class="link-next-to-dropdown" href="video_games.html" id="current-page"> Gaming Stuff </a>
@@ -184,11 +158,6 @@
             <li> <a href="video_games.html#speedrunTech" class="dropdown-item-current"> Speedrun Tech </a></li>
             <li> <a href="video_games.html#bugsGlitches" class="dropdown-item-current"> Bugs and Glitches </a></li>
           </ul>
-        </li>
-
-        <li> <!-- Blog Nav -->
-          <a href="../blog_page/blog.html"> Blog </a>
-          <!-- Convert into dropdown if you want pre-filtered results-->
         </li>
 
         <li> <!-- Contact Nav -->
@@ -207,7 +176,6 @@
         <h1> Gaming Stuff </h1>
       </div>
       <div class="container">
-
         <div class="section-break" id="gameplay">
           <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
             title="Video Games" alt="gamepad icon">
@@ -218,8 +186,8 @@
 
         <article> <!-- General Gameplay Section -->
           <h2> Gameplay </h2>
-          <p class="medium-para">
-            bla bla intro text
+          <p class="medium-para redColor">
+            bla bla intro text - link to youtube either here or before this section...
           </p>
 
           <div class="contact-spacer"></div>
@@ -242,7 +210,7 @@
                   data-video-number="0">
                   <img class="youtube-thumb" src="games_images/Returnal_Phrike_Thumb.webp" loading="lazy"
                     alt="Returnal Thumbnail">
-                  <p class="youtube-thumb-caption"> Click to load video </p>
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
                 </button>
               </div>
             </div>
@@ -256,8 +224,8 @@
           <section class="Review-section Youtube-section">
             <div class="youtube-row">
               <div class="youtube-column-text">
-                <h3 class="youtube-title"> Sifu &ndash; Above The Skyscrapers in 4 Hits </h3>
-                <p class="medium-para">
+                <h3 class="youtube-title"> Sifu &ndash; Above The Skyscrapers Gold Stamp in 4 Hits </h3>
+                <p class="medium-para redColor">
                   Bla bla about Sifu
                 </p>
               </div>
@@ -268,7 +236,7 @@
                   data-video-number="1">
                   <img class="youtube-thumb" src="games_images/Sifu_Skyscraper_Thumb.webp" loading="lazy"
                     alt="Sifu Skyscraper Thumbnail">
-                  <p class="youtube-thumb-caption"> Click to load video </p>
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
                 </button>
               </div>
             </div>
@@ -278,6 +246,32 @@
             title="YouTube video player" frameborder="0"
             allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
             loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> The Last of Us Part II &ndash; Brute Headshot </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="TLOU2_Headshot_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="13">
+                  <img class="youtube-thumb" src="games_images/TLOU_Headshot_Thumb.webp" loading="lazy"
+                    alt="The Last of Us 2 Headshot Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="TLOU2_Headshot_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading=" lazy">
+          </iframe>
 
         </article>
 
@@ -293,6 +287,296 @@
         <article> <!-- Speedrun Section -->
           <h2> Speedrun Tech </h2>
 
+          <p class="medium-para redColor">
+            bla bla intro text
+          </p>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Ghostrunner Demo &ndash; An Awakening in 1:27.15 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Ghostrunner_Demo_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="2">
+                  <img class="youtube-thumb" src="games_images/Ghostrunner_Demo_Thumb.webp" loading="lazy"
+                    alt="Ghostrunner Demo Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Ghostrunner_Demo_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Ghostrunner 2 &ndash; Full Demo in 6:07.97 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Ghostrunner_2_Demo_Youtube_Video" aria-expanded="false"
+                  aria-label="Opens Youtube Player" data-video-number="3">
+                  <img class="youtube-thumb" src="games_images/Ghostrunner_2_Thumb.webp" loading="lazy"
+                    alt="Ghostrunner 2 Demo Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Ghostrunner_2_Demo_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Astro's Playroom &ndash; Climbing Run in 20.01 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Astro_Climbing_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="4">
+                  <img class="youtube-thumb" src="games_images/Astro_Climbing_Thumb.webp" loading="lazy"
+                    alt="Astro Climbing Run Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Astro_Climbing_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Astro's Playroom &ndash; Hopping Run in 26.80 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Astro_Hopping_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="5">
+                  <img class="youtube-thumb" src="games_images/Astro_Hopping_Thumb.webp" loading="lazy"
+                    alt="Astro Hopping Run Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Astro_Hopping_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Astro's Playroom &ndash; Jetpack Run in 37.73 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Astro_Jetpack_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="6">
+                  <img class="youtube-thumb" src="games_images/Astro_Jetpack_Thumb.webp" loading="lazy"
+                    alt="Astro Jetpack Run Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Astro_Jetpack_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Astro's Playroom &ndash; Rolling Run in 32.86 </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Astro_Rolling_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="7">
+                  <img class="youtube-thumb" src="games_images/Astro_Rolling_Thumb.webp" loading="lazy"
+                    alt="Astro Rolling Run Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Astro_Rolling_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen
+            loading="lazy"></iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Bloodborne &ndash; Sewer Skip (PS4 - Unedited) </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Bloodborne_Sewer_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="8">
+                  <img class="youtube-thumb" src="games_images/Bloodborne_Sewer_Thumb.webp" loading="lazy"
+                    alt="Bloodborne Sewer Skip Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Bloodborne_Sewer_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading="lazy">
+          </iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Bloodborne &ndash; Old Yharnam Skip (PS4 - Unedited) </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Bloodborne_Old_Yharnam_Youtube_Video" aria-expanded="false"
+                  aria-label="Opens Youtube Player" data-video-number="9">
+                  <img class="youtube-thumb" src="games_images/Bloodborne_Old_Yharnam_Thumb.webp" loading="lazy"
+                    alt="Bloodborne Old Yharnam Skip Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Bloodborne_Old_Yharnam_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading="lazy">
+          </iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Bloodborne &ndash; Hut Skip (PS4 - Unedited) </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Bloodborne_Hut_Youtube_Video" aria-expanded="false" aria-label="Opens Youtube Player"
+                  data-video-number="10">
+                  <img class="youtube-thumb" src="games_images/Bloodborne_Hut_Thumb.webp" loading="lazy"
+                    alt="Bloodborne Hut Skip Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Bloodborne_Hut_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading="lazy">
+          </iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Bloodborne &ndash; Yahar'gul Skip (PS4 - Unedited) </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Bloodborne_Yahargul_Youtube_Video" aria-expanded="false"
+                  aria-label="Opens Youtube Player" data-video-number="11">
+                  <img class="youtube-thumb" src="games_images/Bloodborne_Yahargul_Thumb.webp" loading="lazy"
+                    alt="Bloodborne Yahargul Skip Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Bloodborne_Yahargul_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading="lazy">
+          </iframe>
+
+          <section class="Review-section Youtube-section">
+            <div class="youtube-row">
+              <div class="youtube-column-text">
+                <h3 class="youtube-title"> Bloodborne &ndash; Nightmare Frontier Skip (PS4 - Loads Cut) </h3>
+                <p class="medium-para redColor">
+                  bla bla bla
+                </p>
+              </div>
+              <div class="youtube-column-image">
+                <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+                <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                  aria-controls="Bloodborne_Nightmare_Frontier_Youtube_Video" aria-expanded="false"
+                  aria-label="Opens Youtube Player" data-video-number="12">
+                  <img class="youtube-thumb" src="games_images/Bloodborne_Nightmare_Thumb.webp" loading="lazy"
+                    alt="Bloodborne Nightmare Frontier Skip Thumbnail">
+                  <p class="youtube-thumb-caption"> Click to load video below </p>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <iframe id="Bloodborne_Nightmare_Frontier_Youtube_Video"
+            class="youtube-video under-overlay under-modal-overlay" src title="YouTube video player" frameborder="0"
+            allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading="lazy">
+          </iframe>
+
         </article>
 
         <div class="section-break" id="bugsGlitches">
@@ -307,6 +591,88 @@
         <article> <!-- Glitches Section -->
           <h2> Bugs and Glitches </h2>
         </article>
+
+        <p class="medium-para redColor">
+          bla bla
+        </p>
+
+        <section class="Review-section Youtube-section">
+          <div class="youtube-row">
+            <div class="youtube-column-text">
+              <h3 class="youtube-title"> Atomic Heart &ndash; Doors Are Just A Suggestion </h3>
+              <p class="medium-para redColor">
+                bla bla bla
+              </p>
+            </div>
+            <div class="youtube-column-image">
+              <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+              <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                aria-controls="Atomic_Heart_Glitch_1_Youtube_Video" aria-expanded="false"
+                aria-label="Opens Youtube Player" data-video-number="14">
+                <img class="youtube-thumb" src="games_images/Atomic_Glitch1_Thumb.webp" loading="lazy"
+                  alt="Atomic Heart Glitch 1 Thumbnail">
+                <p class="youtube-thumb-caption"> Click to load video below </p>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <iframe id="Atomic_Heart_Glitch_1_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading=" lazy">
+        </iframe>
+
+        <section class="Review-section Youtube-section">
+          <div class="youtube-row">
+            <div class="youtube-column-text">
+              <h3 class="youtube-title"> Ghostrunner &ndash; Walls Are Just A Suggestion </h3>
+              <p class="medium-para redColor">
+                bla bla bla
+              </p>
+            </div>
+            <div class="youtube-column-image">
+              <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+              <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                aria-controls="Ghostrunner_Glitch_1_Youtube_Video" aria-expanded="false"
+                aria-label="Opens Youtube Player" data-video-number="15">
+                <img class="youtube-thumb" src="games_images/Ghostrunner_Glitch1_Thumb.webp" loading="lazy"
+                  alt="Ghostrunner Glitch 1 Thumbnail">
+                <p class="youtube-thumb-caption"> Click to load video below </p>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <iframe id="Ghostrunner_Glitch_1_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading=" lazy">
+        </iframe>
+
+        <section class="Review-section Youtube-section">
+          <div class="youtube-row">
+            <div class="youtube-column-text">
+              <h3 class="youtube-title"> God of War Ragnarök &ndash; No Door? But There Must Be A Way Inside! </h3>
+              <p class="medium-para redColor">
+                bla bla bla
+              </p>
+            </div>
+            <div class="youtube-column-image">
+              <span style="height:100%; display: inline-block; vertical-align: middle;"></span>
+              <button class="youtube-thumb-wrapper under-modal-overlay under-overlay"
+                aria-controls="GoW_Ragnarok_Glitch_1_Youtube_Video" aria-expanded="false"
+                aria-label="Opens Youtube Player" data-video-number="16">
+                <img class="youtube-thumb" src="games_images/GoW_Ragnarok_Glitch1_Thumb.webp" loading="lazy"
+                  alt="God of War Ragnarök Glitch 1 Thumbnail">
+                <p class="youtube-thumb-caption"> Click to load video below </p>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <iframe id="GoW_Ragnarok_Glitch_1_Youtube_Video" class="youtube-video under-overlay under-modal-overlay" src
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen loading=" lazy">
+        </iframe>
 
       </div>
 
