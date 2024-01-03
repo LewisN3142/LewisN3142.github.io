@@ -144,8 +144,8 @@ $(document).ready(function () {
     $("#contact-submitted-text").delay(300).fadeIn(150);
   });
 
-  // Code that manages the banjo button
-  var banjoAudio = document.getElementById("banjoAudio");
+  // Code that manages the banjo button audio
+  /* var banjoAudio = document.getElementById("banjoAudio");
 
   function banjoButtonUnpress() {
     $(".banjo-button").each(function () {
@@ -165,6 +165,7 @@ $(document).ready(function () {
       }, 3000);
     }
   });
+  */
 
   // Code that loads in youtube videos - edit so different wrappers load different youtube videos in
   // Do so by having data on each iframe which is read and then access that entry in array of urls

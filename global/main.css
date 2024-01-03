@@ -1109,9 +1109,6 @@ textarea {
   bottom: 0;
 }
 
-.contactfooter {
-}
-
 #finepara {
   text-align: center;
 }
@@ -1331,6 +1328,7 @@ textarea {
 }
 
 /* Rare Custom Button (Guh Huh!) */
+/* 
 .banjo-button {
   display: inline-block;
   align-self: center;
@@ -1348,7 +1346,7 @@ textarea {
   font-weight: 100;
   font-size: var(--font-size-default);
   text-shadow: 0 3px 1px rgba(122, 17, 8, 0.8);
-  box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35); /* Inner and outer shadows */
+  box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35);
   text-transform: uppercase;
   transition: 0.4s all ease-in;
 }
@@ -1369,6 +1367,7 @@ textarea {
   align-items: center;
   text-align: center;
 }
+*/
 
 /* Code for youtube videos */
 .youtube-title {
