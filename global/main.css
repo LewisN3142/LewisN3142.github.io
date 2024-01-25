@@ -396,7 +396,7 @@ main hr {
   overflow: hidden;
   position: absolute;
   width: 100%;
-  height: 100%;
+  max-height: 80vh;
   left: 0;
   right: 0;
   margin: auto;
@@ -459,8 +459,8 @@ main hr {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  margin: 0;
-  padding: 0.6rem 0 0.6rem 0;
+  margin: 0 0 1rem 0;
+  padding: 0.6rem 0 0 0;
 }
 
 .modal-details p {
@@ -478,7 +478,6 @@ main hr {
   z-index: 100;
 
   width: 500px;
-  max-height: 80vh;
   height: 100%;
 
   translate: 0 70%;
@@ -947,9 +946,7 @@ button:focus-visible,
 }
 
 .privacy-container {
-  margin: 0.5rem;
-  margin-left: 0.7rem;
-  margin-right: 0.7rem;
+  margin: 0.5rem 0.7rem 1.5rem 0.7rem;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
 }
@@ -1015,6 +1012,10 @@ textarea {
   margin-right: -0.15rem;
 }
 
+.about-spacer {
+  height: 1.5rem;
+}
+
 .about-column-text {
   float: left;
   width: 65%;
@@ -1037,7 +1038,11 @@ textarea {
   content: "";
   display: table;
   clear: both;
-  margin-bottom: 1.5rem;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
 }
 
 .img-about {
@@ -1132,6 +1137,10 @@ textarea {
 }
 
 #confirmation-card {
+  background-image: url("../academia_page/academia_images/Surrey.webp");
+}
+
+#surrey-PGR-card {
   background-image: url("../academia_page/academia_images/Surrey.webp");
 }
 
@@ -1408,7 +1417,7 @@ textarea {
   float: left;
   width: 30%;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 1rem;
 }
 
 .youtube-row:after {
@@ -1416,6 +1425,17 @@ textarea {
   display: table;
   clear: both;
   margin-bottom: 0.5rem;
+}
+
+.youtube-row {
+  display: flex;
+  align-items: center;
+}
+
+.youtube-player-padding {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .Youtube-section {
@@ -1775,6 +1795,10 @@ textarea {
     width: 100%;
   }
 
+  .youtube-row {
+    display: block;
+  }
+
   .Youtube-section {
     padding-right: 5px;
   }
@@ -1787,6 +1811,10 @@ textarea {
 
   .column-bottom-list-item {
     margin-bottom: 0;
+  }
+
+  .about-row {
+    display: block;
   }
 
   .contact-column-left,

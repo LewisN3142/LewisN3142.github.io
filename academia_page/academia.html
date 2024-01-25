@@ -446,7 +446,29 @@
             <div class="slider-container">
               <div class="cards" id="cards">
 
-                <div class="card" id="paris-card" data-index="0" data-status="activeMiddle" loading="lazy">
+                <div class="card" id="surrey-PGR-card" data-index="0" data-status="activeMiddle" loading="lazy">
+                  <div>
+                    <div class="card-title">
+                      <h3 class="card-name"> Surrey Maths and Physics PGR Conference
+                      </h3>
+                      <p class="card-date"> University of Surrey, UK <br> 16th January 2024 </p>
+
+                      <p class="card-details">
+                        Lewis Napper attended the second annual Maths and Physics <abbr
+                          title="Postgraduate Research">PGR</abbr> Conference at the University of Surrey, where talks
+                        covered topics such as the movement and interactions of badger populations, the causes of
+                        gravitational waves, and variational problems on manifolds.
+                        <br> <br>
+                        <a href="https://twitter.com/SurreyMathsPhys" rel="noopener noreferrer"
+                          class="external-link under-overlay under-modal-overlay">
+                          UoS Twitter</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card" id="paris-card" data-index="1" data-status="activeRight" loading="lazy"
+                  onclick="handleSliderRight()">
                   <div>
                     <div class="card-title">
                       <h3 class="card-name"> Géométrie Différentielle et Mécanique Research Network Meeting
@@ -458,23 +480,25 @@
                         'Géométrie Différentielle et Mécanique' French Research Network (CNRS GDR-GDM), held in the
                         international conference centre at the University of Sorbonne. Lewis
                         spoke in a session on the 23rd November (see <a href="academia.html#academicPresentations"
-                          class="under-overlay under-modal-overlay internal-link">Presentations</a>
+                          class="under-overlay under-modal-overlay internal-link link-back-card"
+                          tabindex="-1">Presentations</a>
                         below).
                         <br> <br>
                         <a href="https://gdr-gdm.univ-lr.fr/paris-2023/index.php?page=home&lang=fr"
-                          rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">
+                          rel="noopener noreferrer"
+                          class="external-link under-overlay under-modal-overlay link-back-card" tabindex="-1">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/11/26/lewis-napper-visits-paris-sorbonne-and-speaks-at-a-conference-on-differential-geometry-and-mechanics/"
-                          rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">
+                          rel="noopener noreferrer"
+                          class="external-link under-overlay under-modal-overlay link-back-card" tabindex="-1">
                           UoS Blog</a>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="card" id="oxford-card" data-index="1" data-status="activeRight"
-                  onclick="handleSliderRight()" loading="lazy">
+                <div class="card" id="oxford-card" data-index="2" data-status="inactive" loading="lazy">
                   <div>
                     <div class="card-title">
                       <h3 class="card-name">Summer School on Machine Learning in Mathematical
@@ -491,7 +515,7 @@
                         application in knot theory, string theory, and differential geometry.
                         <br> <br>
                         <a href="https://mlinmathsandphysics2023.web.ox.ac.uk/home" rel="noopener noreferrer"
-                          class="external-link under-overlay under-modal-overlay">
+                          class="external-link under-overlay under-modal-overlay link-back-card" tabindex="-1">
                           Event Page</a>
                         |
                         <a href="https://blogs.surrey.ac.uk/mathsresearch/2023/07/19/lewis-napper-attends-summer-school-on-machine-learning-in-physics-at-oxford-university/"
@@ -503,7 +527,7 @@
                   </div>
                 </div>
 
-                <div class="card" id="lms-card" data-index="2" data-status="inactive" loading="lazy">
+                <div class="card" id="lms-card" data-index="3" data-status="inactive" loading="lazy">
                   <div>
                     <div class="card-title">
                       <h3 class="card-name"> Kings and Queens of Gravity Workshop
@@ -520,13 +544,12 @@
                         <a href="https://sites.google.com/view/kqofgravitymarch2023/home" rel="noopener noreferrer"
                           class="external-link under-overlay under-modal-overlay link-back-card" tabindex="-1">
                           Event Page</a>
-
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="card" id="wildberg-card" data-index="3" data-status="inactive" loading="lazy">
+                <div class="card" id="wildberg-card" data-index="4" data-status="inactive" loading="lazy">
                   <div>
                     <div class="card-title">
                       <h3 class="card-name">Interdisciplinary Junior Scientist Workshop on
@@ -556,7 +579,7 @@
                   </div>
                 </div>
 
-                <div class="card" id="confirmation-card" data-index="4" data-status="inactive" loading="lazy">
+                <div class="card" id="confirmation-card" data-index="5" data-status="inactive" loading="lazy">
                   <div>
                     <div class="card-title">
                       <h3 class="card-name">PhD Confirmation Viva
@@ -578,7 +601,7 @@
                   </div>
                 </div>
 
-                <div class="card" id="fields-card" data-index="5" data-status="inactive" loading="lazy">
+                <div class="card" id="fields-card" data-index="6" data-status="inactive" loading="lazy">
                   <div>
                     <div class=" card-title">
                       <h3 class="card-name">Workshop on Mathematical Relativity, Scalar Curvature,
@@ -608,7 +631,7 @@
                   </div>
                 </div>
 
-                <div class="card" id="semps-card" data-index="6" data-status="activeLeft" onclick="handleSliderLeft()"
+                <div class="card" id="semps-card" data-index="7" data-status="activeLeft" onclick="handleSliderLeft()"
                   loading="lazy">
                   <div>
                     <div class=" card-title">
@@ -1023,8 +1046,8 @@
               <div class="teach-column-inner">
                 <ul>
                   <li>
-                    <b> Vector Calculus </b> <br> Semester 2 - 2023/24 <br>
-                    <a href="https://catalogue.surrey.ac.uk/2023-4/module/MAT1005" rel="noopener noreferrer"
+                    <b> Linear Algebra </b> <br> Semester 2 - 2023/24 <br>
+                    <a href="https://catalogue.surrey.ac.uk/2023-4/module/MAT1034" rel="noopener noreferrer"
                       class="external-link external-link-list-item under-overlay under-modal-overlay">
                       <em> View module catalogue </em>
                     </a>
@@ -1332,7 +1355,7 @@
       </div>
 
       <footer>
-        © 2023 Lewis Napper | <button class="under-overlay under-modal-overlay" id="terms-conditions" type="button"
+        &copy; 2024 Lewis Napper | <button class="under-overlay under-modal-overlay" id="terms-conditions" type="button"
           aria-expanded="false" aria-controls="terms-conditions-modal" aria-label="open terms and conditions"> <i
             class="terms-icon icon-angle-right"></i>Terms &
           Conditions
