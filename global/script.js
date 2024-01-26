@@ -12,7 +12,7 @@ $(document).ready(function () {
         )
       )
         check = true;
-    })(navigator.userAgent || navigator.vendor || window.opera);
+    })(navigator.userAgent || window.opera);
     return check;
   }
 
@@ -95,11 +95,41 @@ $(document).ready(function () {
   $(".abstract-link").click(function () {
     if ($(this).hasClass("abstract-toggled")) {
       $(this).attr("aria-expanded", "false");
+      if ($(this).hasClass("privacy-link")) {
+        $(this)
+          .next(".abstract-container")
+          .children()
+          .children("#close-privacy-button")
+          .attr("aria-expanded", "false");
+      }
     } else {
       $(this).attr("aria-expanded", "true");
+      if ($(this).hasClass("privacy-link")) {
+        $(this)
+          .next(".abstract-container")
+          .children()
+          .children("#close-privacy-button")
+          .attr("aria-expanded", "true");
+      }
     }
     $(this).next(".abstract-container").slideToggle(200);
     $(this).toggleClass("abstract-toggled");
+  });
+
+  // JQuery for privacy
+  $("#close-privacy-button").click(function () {
+    $(this).parent().parent(".abstract-container").slideToggle(200);
+    $(this)
+      .parent()
+      .parent(".abstract-container")
+      .prev(".abstract-link")
+      .toggleClass("abstract-toggled");
+    $(this)
+      .parent()
+      .parent(".abstract-container")
+      .prev(".abstract-link")
+      .attr("aria-expanded", "false");
+    $(this).attr("aria-expanded", "false");
   });
 
   // JQuery for closing sidebar if element linking to current page clicked

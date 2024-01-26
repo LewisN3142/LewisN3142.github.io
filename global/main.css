@@ -654,10 +654,9 @@ main a:visited {
 }
 
 .Review-section {
-  border-radius: 10px;
-  padding: 5px 15px;
-  padding-bottom: 10px;
-  margin: 20px 5px;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.9rem 0.6rem 0.9rem;
+  margin: 1.2rem 0.3rem;
   background-color: var(--background-mid-accent);
 }
 
@@ -674,6 +673,7 @@ a:focus-visible,
 button:focus-visible,
 #menu-toggle:focus-visible,
 #close-terms-button:focus-visible,
+#close-privacy-button:focus-visible,
 #terms-conditions:focus-visible,
 .sidebar-nav .sidebar-text li a:focus-visible {
   border: 2px solid white;
@@ -684,7 +684,8 @@ button:focus-visible,
 #wrapper button:focus-visible,
 #menu-toggle:focus-visible,
 #terms-conditions:focus-visible,
-#close-terms-button:focus-visible {
+#close-terms-button:focus-visible,
+#close-privacy-button:focus-visible {
   outline: none;
 }
 
@@ -949,6 +950,27 @@ button:focus-visible,
   margin: 0.5rem 0.7rem 1.5rem 0.7rem;
   padding-left: 0.3rem;
   padding-right: 0.3rem;
+}
+
+.close-privacy-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+#close-privacy-button {
+  margin: 0rem 1rem 0.5rem 1rem;
+  display: inline-block;
+  justify-content: flex-end;
+  flex-grow: 1;
+  align-self: right;
+  align-items: right;
+  text-align: right;
+  cursor: pointer;
+  font-size: var(--footnote-font-size);
+  color: var(--foreground-active-blue);
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .form-container {
@@ -1439,9 +1461,7 @@ textarea {
 }
 
 .Youtube-section {
-  padding-right: 0;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 0.5rem 0.3rem 0.5rem 0.9rem;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
@@ -1632,6 +1652,11 @@ textarea {
     text-decoration: underline;
   }
 
+  #close-privacy-button:hover {
+    color: var(--foreground-clicked-blue);
+    text-decoration: underline;
+  }
+
   /* Buttons in card carousel */
   .slider-button:hover {
     border-color: var(--foreground-clicked-blue);
@@ -1800,7 +1825,7 @@ textarea {
   }
 
   .Youtube-section {
-    padding-right: 5px;
+    padding-right: 0.9rem;
   }
 
   .teach-column-inner {
