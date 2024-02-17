@@ -653,6 +653,10 @@ main a:visited {
   color: var(--foreground-visited);
 }
 
+.medium-para.abstract-last-para {
+  margin-bottom: 0;
+}
+
 .Review-section {
   border-radius: 0.6rem;
   padding: 0.3rem 0.9rem 0.6rem 0.9rem;
@@ -668,12 +672,18 @@ main a:visited {
   margin-left: auto;
 }
 
+.youtube-para {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
 /* FOCUS VISIBLE ACCESSIBILITY */
 a:focus-visible,
 button:focus-visible,
 #menu-toggle:focus-visible,
 #close-terms-button:focus-visible,
-#close-privacy-button:focus-visible,
+.close-abstract-button:focus-visible,
 #terms-conditions:focus-visible,
 .sidebar-nav .sidebar-text li a:focus-visible {
   border: 2px solid white;
@@ -685,7 +695,7 @@ button:focus-visible,
 #menu-toggle:focus-visible,
 #terms-conditions:focus-visible,
 #close-terms-button:focus-visible,
-#close-privacy-button:focus-visible {
+.close-abstract-button:focus-visible {
   outline: none;
 }
 
@@ -859,6 +869,7 @@ button:focus-visible,
   font-size: var(--font-size-default);
   transition: var(--icon-rotate-speed);
   vertical-align: -0.096rem;
+  margin-right: 0.3rem;
 }
 
 .abstract-link.abstract-toggled .abstract-icon {
@@ -952,13 +963,13 @@ button:focus-visible,
   padding-right: 0.3rem;
 }
 
-.close-privacy-bar {
+.close-abstract-bar {
   display: flex;
   flex-direction: row;
 }
 
-#close-privacy-button {
-  margin: 0rem 1rem 0.5rem 1rem;
+.close-abstract-button {
+  margin: 0rem 0.3rem 0.3rem 1rem;
   display: inline-block;
   justify-content: flex-end;
   flex-grow: 1;
@@ -1077,6 +1088,7 @@ textarea {
   text-align: center;
   justify-content: center;
   align-items: center;
+  line-height: 200px;
 }
 
 .About-section {
@@ -1652,7 +1664,7 @@ textarea {
     text-decoration: underline;
   }
 
-  #close-privacy-button:hover {
+  .close-abstract-button:hover {
     color: var(--foreground-clicked-blue);
     text-decoration: underline;
   }
@@ -1671,6 +1683,7 @@ textarea {
   /* dropdowns for abstract */
   .abstract-link:hover {
     color: var(--foreground-clicked-blue);
+    text-decoration: underline;
   }
 
   /* Logo in top bar */

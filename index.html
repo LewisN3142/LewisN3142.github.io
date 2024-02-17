@@ -379,19 +379,27 @@
               </p>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="PhD_Modules"> <i class="abstract-icon icon-angle-right"></i> Modules and Results
+                aria-controls="PhD_Modules"> <i class="abstract-icon icon-angle-right"></i>Modules and Results
               </button>
 
-              <p class="small-para abstract-container" id="PhD_Modules"> <!-- Module Dropdown -->
-                <em>
-                  100% &ndash; Lie Groups and Lie Algebras <br>
-                  100% &ndash; String Theory <br>
-                  96% &ndash; Symplectic Geometry<br>
-                  88% &ndash; Algebraic Topology <br>
-                  80% &ndash; Differential Topology and Morse Theory <br>
-                  73% &ndash; Sheaf Cohomology
-                </em>
-              </p>
+
+              <div class="abstract-container" id="PhD_Modules"> <!-- Module Dropdown -->
+                <p class="small-para abstract-last-para">
+                  <em>
+                    100% &ndash; Lie Groups and Lie Algebras <br>
+                    100% &ndash; String Theory <br>
+                    96% &ndash; Symplectic Geometry<br>
+                    88% &ndash; Algebraic Topology <br>
+                    80% &ndash; Differential Topology and Morse Theory <br>
+                    73% &ndash; Sheaf Cohomology
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-PhD-button"
+                    type="button" aria-expanded="false" aria-controls="PhD_Modules"
+                    aria-label="close PhD modules">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- Master's Info -->
@@ -406,7 +414,7 @@
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="MMath_Modules">
-                <i class="abstract-icon icon-angle-right"></i> Modules and Results
+                <i class="abstract-icon icon-angle-right"></i>Modules and Results
               </button>
 
               <div class="abstract-container abstract-less-padding" id="MMath_Modules">
@@ -487,6 +495,11 @@
                     </p>
                   </div>
                 </div>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-MMath-button"
+                    type="button" aria-expanded="false" aria-controls="MMath_Modules"
+                    aria-label="close MMath modules">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
               </div>
 
             </li>
@@ -496,18 +509,25 @@
               3x A* and 1x A at A-Level, plus 1x A at AS-Level. <br>
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+                aria-controls="ALevel_Results"> <i class="abstract-icon icon-angle-right"></i>Subjects and Grades
               </button>
 
-              <p class="small-para abstract-container" id="ALevel_Results"> <!-- Module Dropdown -->
-                <em>
-                  Mathematics &ndash; A* <br>
-                  Further Mathematics &ndash; A* <br>
-                  Physics &ndash; A* <br>
-                  Biology &ndash; A <br>
-                  Art AS-Level &ndash; A
-                </em>
-              </p>
+              <div class="abstract-container" id="ALevel_Results">
+                <p class="small-para abstract-last-para"> <!-- Module Dropdown -->
+                  <em>
+                    Mathematics &ndash; A* <br>
+                    Further Mathematics &ndash; A* <br>
+                    Physics &ndash; A* <br>
+                    Biology &ndash; A <br>
+                    Art AS-Level &ndash; A
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-ALevel-button"
+                    type="button" aria-expanded="false" aria-controls="ALevel_Results"
+                    aria-label="close A Level results">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- GCSE Info -->
@@ -516,7 +536,7 @@
 
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="GCSE_Results">
-                <i class="abstract-icon icon-angle-right"></i> Subjects and Grades
+                <i class="abstract-icon icon-angle-right"></i>Subjects and Grades
               </button>
 
               <div class="abstract-container abstract-less-padding" id="GCSE_Results">
@@ -563,6 +583,11 @@
                     </p>
                   </div>
 
+                </div>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-GCSE-button"
+                    type="button" aria-expanded="false" aria-controls="GCSE_Results"
+                    aria-label="close GCSE results">Close<i class="abstract-icon icon-close"></i></button>
                 </div>
               </div>
 

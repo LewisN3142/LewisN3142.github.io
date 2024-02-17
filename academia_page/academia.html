@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Lewis Napper">
+  <meta name="title" content="Lewis Napper">
   <meta name="description"
     content="Welcome to the personal portfolio of Lewis Napper! This page showcases his research applying abstract geometry to problems in mathematical physics, including fluid dynamics and general relativity. Explore the site to find out more!">
   <meta name=" robots" content="max-snippet:320, noodp, noydir">
@@ -230,6 +231,24 @@
             </p>
           </section>
 
+          <section class="Review-section"> <!-- Aperiodic Tilings -->
+            <h3> Cellular Automata on Aperiodic Monotiles </h3>
+            <p class="medium-para">
+              Inspired by the discovery of the first aperiodic monotile (or Einstein tile), I have also recently begun
+              investigating the properties of cellular automata such as Conway's Game of Life and Langton's Ants on
+              aperiodic tilings of the Euclidean plane. It is known that on a regular grid, both of these exemplary
+              automata are Turing complete and sustain computation, however aperiodic tilings do not admit translational
+              symmetry, hence it remains to be seen whether the same is true for these automata on aperiodic tilings. We
+              aim to produce simulations of these automata in code, before investigating the problem mathematically.
+            </p>
+
+            <p class="medium-para">
+              This work is in collaboration with <a href="https://www.gabbay.org.uk/" rel="noopener noreferrer"
+                class="external-link under-overlay under-modal-overlay"> Jamie Gabbay</a> from the University of
+              Heriot-Watt.
+            </p>
+          </section>
+
           <section class="Review-section"> <!-- Lorentzian Length Spaces -->
             <h3> Synthetic Lorentizan Geometry and Globalisation of Curvature Bounds </h3>
             <p class="medium-para">
@@ -246,9 +265,8 @@
             </p>
 
             <p class="medium-para">
-              This work is part of a current collaboration with <a
-                href="https://ufind.univie.ac.at/de/person.html?id=49261" rel="noopener noreferrer"
-                class="external-link under-overlay under-modal-overlay"> Tobias Beran</a>, <a
+              This work is part of a collaboration with <a href="https://ufind.univie.ac.at/de/person.html?id=49261"
+                rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Tobias Beran</a>, <a
                 href="https://ufind.univie.ac.at/de/person.html?id=114757" rel="noopener noreferrer"
                 class="external-link under-overlay under-modal-overlay"> Felix Rott</a>, and <a
                 href="https://www.cardiff.ac.uk/people/view/2634069-harvey-john" rel="noopener noreferrer"
@@ -305,23 +323,29 @@
                 class="local-download under-overlay under-modal-overlay"> PDF</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="Preprint3">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="Preprint3"> <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="Preprint3">
-                <em> In the synthetic geometric setting introduced by Kunzinger and Sämann, we present an analogue of
-                  Toponogov's Globalisation Theorem which applies to Lorentzian length spaces with lower (timelike)
-                  curvature bounds. Our approach utilises a "cat's cradle" construction akin to that which appears in
-                  several proofs in the metric setting. On the road to our main result, we also provide a lemma
-                  regarding the subdivision of triangles in spaces with a local lower curvature bound and a synthetic
-                  Lorentzian version of the Lebesgue Number Lemma. Several properties of time functions and the null
-                  distance on globally hyperbolic Lorentzian length spaces are also highlighted. We conclude by
-                  presenting several applications of our results, including versions of the Bonnet&ndash;Myers
-                  Theorem and Splitting Theorem to Lorentzian length spaces with local lower curvature bounds, as well
-                  as discussion of stability of curvature bounds under Gromov&ndash;Hausdorff convergence.
-                </em>
-              </p>
+              <div class="abstract-container" id="Preprint3">
+                <p class="small-para abstract-last-para">
+                  <em> In the synthetic geometric setting introduced by Kunzinger and Sämann, we present an analogue of
+                    Toponogov's Globalisation Theorem which applies to Lorentzian length spaces with lower (timelike)
+                    curvature bounds. Our approach utilises a "cat's cradle" construction akin to that which appears in
+                    several proofs in the metric setting. On the road to our main result, we also provide a lemma
+                    regarding the subdivision of triangles in spaces with a local lower curvature bound and a synthetic
+                    Lorentzian version of the Lebesgue Number Lemma. Several properties of time functions and the null
+                    distance on globally hyperbolic Lorentzian length spaces are also highlighted. We conclude by
+                    presenting several applications of our results, including versions of the Bonnet&ndash;Myers
+                    Theorem and Splitting Theorem to Lorentzian length spaces with local lower curvature bounds, as well
+                    as discussion of stability of curvature bounds under Gromov&ndash;Hausdorff convergence.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-preprint3-button"
+                    type="button" aria-expanded="false" aria-controls="Preprint3"
+                    aria-label="close preprint abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- Alexandrov Globalization -->
@@ -340,19 +364,29 @@
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="Preprint2">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="Preprint2">
-                <em> We present several key results for Lorentzian pre-length spaces with global timelike curvature
-                  bounds. Most significantly, we construct a Lorentzian analogue to Alexandrov's Patchwork, thus proving
-                  that suitably nice Lorentzian pre-length spaces with local upper timelike curvature bound also satisfy
-                  a corresponding global upper bound. Additionally, for spaces with global lower bound on their timelike
-                  curvature, we provide a Bonnet&ndash;Myers style result, constraining their finite diameter.
-                  Throughout, we make the natural comparisons to the metric case, concluding with a discussion of
-                  potential applications and ongoing work.
-                </em>
-              </p>
+              <div class="abstract-container" id="Preprint2">
+                <p class="small-para abstract-last-para">
+                  <em> We present several key results for Lorentzian pre-length spaces with global timelike curvature
+                    bounds. Most significantly, we construct a Lorentzian analogue to Alexandrov's Patchwork, thus
+                    proving
+                    that suitably nice Lorentzian pre-length spaces with local upper timelike curvature bound also
+                    satisfy
+                    a corresponding global upper bound. Additionally, for spaces with global lower bound on their
+                    timelike
+                    curvature, we provide a Bonnet&ndash;Myers style result, constraining their finite diameter.
+                    Throughout, we make the natural comparisons to the metric case, concluding with a discussion of
+                    potential applications and ongoing work.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-Preprint2-button"
+                    type="button" aria-expanded="false" aria-controls="Preprint2"
+                    aria-label="close preprint abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- MA Equations -->
@@ -371,7 +405,7 @@
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 ariacontrols="Preprint1">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
               <div class="abstract-container" id="Preprint1">
@@ -387,7 +421,7 @@
                   </em>
                 </p>
 
-                <p class="small-para">
+                <p class="small-para abstract-last-para">
                   <em> Using our definition of a (higher) Monge&ndash;Ampère structure, we study an associated metric on
                     the cotangent bundle together with its pull-back to the (higher) Lagrangian submanifold. The
                     signatures of these metrics are dictated by the relationship between vorticity and rate-of-strain,
@@ -400,6 +434,11 @@
                     solutions from the perspective of (higher) symplectic reduction.
                   </em>
                 </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-Preprint1-button"
+                    type="button" aria-expanded="false" aria-controls="Preprint1"
+                    aria-label="close preprint abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
               </div>
             </li>
           </ul>
@@ -709,21 +748,31 @@
                 Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="UoS_Presentation1"> <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="UoS_Presentation3"> <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="UoS_Presentation1">
-                <em> For partial differential equations of Monge-Ampère type, it has been shown that solutions
-                  correspond to Lagrangian submanifolds of the associated phase space. Building from the observation
-                  that the Poisson equation for the pressure of an incompressible, two-dimensional, Navier-Stokes flow
-                  is a Monge-Ampère equation, this talk introduces a framework for studying fluid dynamics using
-                  properties of the aforementioned submanifolds. In particular, it is noted that such a submanifold may
-                  be equipped with a metric whose signature acts as a diagnostic for the dominance of vorticity and
-                  strain. We provide an illustrative example in two dimensions and probe the motivational question:
-                  ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher dimensions and
-                  some open questions.
-                </em>
-              </p>
+              <div class="abstract-container" id="UoS_Presentation3">
+                <p class="small-para abstract-last-para">
+                  <em> For partial differential equations of Monge-Ampère type,
+                    it has been shown that solutions
+                    correspond to Lagrangian submanifolds of the associated phase space. Building from the observation
+                    that the Poisson equation for the pressure of an incompressible, two-dimensional, Navier-Stokes flow
+                    is a Monge-Ampère equation, this talk introduces a framework for studying fluid dynamics using
+                    properties of the aforementioned submanifolds. In particular, it is noted that such a submanifold
+                    may
+                    be equipped with a metric whose signature acts as a diagnostic for the dominance of vorticity and
+                    strain. We provide an illustrative example in two dimensions and probe the motivational question:
+                    ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher dimensions and
+                    some open questions.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-UoS-Presentation3-button" type="button" aria-expanded="false"
+                    aria-controls="UoS_Presentation3" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- Ravens Presentation -->
@@ -746,20 +795,30 @@
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
                 aria-controls="UoS_Presentation2">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="UoS_Presentation2">
-                <em> In the tale Alice in Wonderland, Lewis Carroll asks "Why is a raven like a writing desk?" With this
-                  open question in mind, we provide a short pedagogical introduction to the topology of surfaces,
-                  touching on the notions of orientability, open and closed surfaces, and curvature. Most of our
-                  attention will be paid to the concept of genus, which is loosely described by the number of holes a
-                  closed surface has. Following some illustrative examples, we shall apply the theory to the question at
-                  hand, conclusively stating conditions under which a writing desk is topologically equivalent to a
-                  raven. Given time, we shall relate these ideas to current research into fluid dynamics, space-times,
-                  and string theory.
-                </em>
-              </p>
+              <div class="abstract-container" id="UoS_Presentation2">
+                <p class="small-para abstract-last-para">
+                  <em> In the tale Alice in Wonderland, Lewis Carroll asks "Why is a raven like a writing desk?" With
+                    this
+                    open question in mind, we provide a short pedagogical introduction to the topology of surfaces,
+                    touching on the notions of orientability, open and closed surfaces, and curvature. Most of our
+                    attention will be paid to the concept of genus, which is loosely described by the number of holes a
+                    closed surface has. Following some illustrative examples, we shall apply the theory to the question
+                    at
+                    hand, conclusively stating conditions under which a writing desk is topologically equivalent to a
+                    raven. Given time, we shall relate these ideas to current research into fluid dynamics, space-times,
+                    and string theory.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-UoS-Presentation2-button" type="button" aria-expanded="false"
+                    aria-controls="UoS_Presentation2" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- FSG Seminar -->
@@ -779,22 +838,31 @@
                 Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="UoS_Presentation3">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="UoS_Presentation1">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="UoS_Presentation3">
-                <em> For partial differential equations of Monge-Ampère type, it has been shown that solutions
-                  correspond to Lagrangian submanifolds of the associated phase space. Building from the observation
-                  that the Poisson equation for the pressure of an incompressible, two-dimensional, Navier-Stokes flow
-                  is a Monge-Ampère equation, this talk introduces a framework for studying fluid dynamics using
-                  properties of the aforementioned submanifolds. In particular, it is noted that such a submanifold may
-                  be equipped with a metric whose signature acts as a diagnostic for the dominance of vorticity and
-                  strain. We provide an illustrative example in two dimensions and probe the motivational question:
-                  ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher dimensions and
-                  some open questions.
-                </em>
-              </p>
+              <div class="abstract-container" id="UoS_Presentation1">
+                <p class="small-para abstract-last-para">
+                  <em> For partial differential equations of Monge-Ampère type, it has been shown that solutions
+                    correspond to Lagrangian submanifolds of the associated phase space. Building from the observation
+                    that the Poisson equation for the pressure of an incompressible, two-dimensional, Navier-Stokes flow
+                    is a Monge-Ampère equation, this talk introduces a framework for studying fluid dynamics using
+                    properties of the aforementioned submanifolds. In particular, it is noted that such a submanifold
+                    may
+                    be equipped with a metric whose signature acts as a diagnostic for the dominance of vorticity and
+                    strain. We provide an illustrative example in two dimensions and probe the motivational question:
+                    ‘What is a vortex?’ We conclude with comments on extensions to fluid flows in higher dimensions and
+                    some open questions.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-UoS-Presentation1-button" type="button" aria-expanded="false"
+                    aria-controls="UoS_Presentation1" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
           </ul>
 
@@ -821,25 +889,35 @@
                 class="local-download under-overlay under-modal-overlay"> Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="External_Presentation1">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="External_Presentation5">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="External_Presentation1">
-                <em> In this short primer to the paper 'Monge&ndash;Ampère Geometry and Vortices,' we recap the concepts
-                  of Monge&ndash;Ampère equations and their associated structures, before applying them to the Poisson
-                  equation for the pressure arising from the Navier&ndash;Stokes equations under the assumptions of
-                  incompressibility and inhomogeneity of density. In particular, we show that the associated
-                  Lychagin&ndash;Rubtsov metric on the phase space of the
-                  flow encodes the Laplacian of pressure, while the pull-back of this metric to a Lagrangian
-                  submanifold (which represents a solution of the origina parital differential equation) has
-                  eigenvalues
-                  and signature determined by the dominance of vorticity and strain. We conclude with comments on how
-                  this setup generalises to a framework which is both spatially covariant and multisymplectic in nature
-                  in higher dimensions, and infer a
-                  Weiss&ndash;Okubo criterion for fluid flows on an arbitrary Riemannian manifold.
-                </em>
-              </p>
+              <div class="abstract-container" id="External_Presentation5">
+                <p class="small-para abstract-last-para">
+                  <em> In this short primer to the paper 'Monge&ndash;Ampère Geometry and Vortices,' we recap the
+                    concepts
+                    of Monge&ndash;Ampère equations and their associated structures, before applying them to the Poisson
+                    equation for the pressure arising from the Navier&ndash;Stokes equations under the assumptions of
+                    incompressibility and inhomogeneity of density. In particular, we show that the associated
+                    Lychagin&ndash;Rubtsov metric on the phase space of the
+                    flow encodes the Laplacian of pressure, while the pull-back of this metric to a Lagrangian
+                    submanifold (which represents a solution of the origina parital differential equation) has
+                    eigenvalues
+                    and signature determined by the dominance of vorticity and strain. We conclude with comments on how
+                    this setup generalises to a framework which is both spatially covariant and multisymplectic in
+                    nature
+                    in higher dimensions, and infer a
+                    Weiss&ndash;Okubo criterion for fluid flows on an arbitrary Riemannian manifold.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-External-Presentation5-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation5" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- BIMSA Talk -->
@@ -863,11 +941,11 @@
                 class="local-download under-overlay under-modal-overlay"> Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="External_Presentation1">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="External_Presentation4">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <div class="abstract-container" id="External_Presentation1">
+              <div class="abstract-container" id="External_Presentation4">
                 <p class="medium-para">
                   <em>
                     The Poisson equation for the pressure of a homoheneous, incompressible Navier&ndash;Stokes flow is a
@@ -877,7 +955,7 @@
                     perspective of (multi-)symplectic geometry.
                   </em>
                 </p>
-                <p class="medium-para">
+                <p class="medium-para abstract-last-para">
                   <em>
                     While reviewing the geometry of Monge&ndash;Ampère equations presented by Rubtsov, D'Onofrio, and
                     Roulstone in earlier seminars of this series, we demonstrate how an associated metric on the phase
@@ -888,6 +966,12 @@
                     interpreted in terms of the geometric and topological properties of vortices.
                   </em>
                 </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-External-Presentation4-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation4" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
               </div>
             </li>
 
@@ -910,11 +994,11 @@
                 class="local-download under-overlay under-modal-overlay"> Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="External_Presentation1">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="External_Presentation3">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <div class="abstract-container" id="External_Presentation1">
+              <div class="abstract-container" id="External_Presentation3">
                 <p class="medium-para">
                   <em> The Poisson equation for the pressure of a homogeneous, incompressible Navier&ndash;Stokes flow
                     is a
@@ -942,7 +1026,7 @@
                   </em>
                 </p>
 
-                <p class="medium-para">
+                <p class="medium-para abstract-last-para">
                   <em>
                     Note: This talk is intended as an introduction to Monge&ndash;Ampère geometry as a tool for studying
                     PDEs, using Navier&ndash;Stokes flows as a case study. While some knowledge of differential geometry
@@ -950,6 +1034,12 @@
                     the relevant concepts introduced as we proceed.
                   </em>
                 </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-External-Presentation3-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation3" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
               </div>
             </li>
 
@@ -969,24 +1059,35 @@
                 Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="External_Presentation1">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="External_Presentation2">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="External_Presentation1">
-                <em> Partial differential equations of Monge&ndash;Ampère type have been shown to correspond to specific
-                  choices of differential form on the associated phase space. Furthermore, Lagrangian submanifolds of
-                  said space may be viewed as a generalisation of solutions to a Monge&ndash;Ampère equation. Building
-                  from the observation that the Poisson equation for the pressure of an incompressible, two-dimensional,
-                  Navier&ndash;Stokes flow can be presented as an equation of Monge&ndash;Ampère type, this talk
-                  introduces a framework for studying fluid dynamics using properties of the aforementioned
-                  submanifolds. In particular, it is noted that such a submanifold may be equipped with a metric whose
-                  signature acts as a diagnostic for the dominance of vorticity and strain. We discuss how this approach
-                  may be extended to fluid flows on an arbitrary Riemannian manifold and to higher dimensions, through
-                  the use of higher (categorified) symplectic geometry. We conclude with some comments on how this
-                  facilitates symmetry reductions and some open questions.
-                </em>
-              </p>
+              <div class="abstract-container" id="External_Presentation2">
+                <p class="small-para abstract-last-para">
+                  <em> Partial differential equations of Monge&ndash;Ampère type have been shown to correspond to
+                    specific
+                    choices of differential form on the associated phase space. Furthermore, Lagrangian submanifolds of
+                    said space may be viewed as a generalisation of solutions to a Monge&ndash;Ampère equation. Building
+                    from the observation that the Poisson equation for the pressure of an incompressible,
+                    two-dimensional,
+                    Navier&ndash;Stokes flow can be presented as an equation of Monge&ndash;Ampère type, this talk
+                    introduces a framework for studying fluid dynamics using properties of the aforementioned
+                    submanifolds. In particular, it is noted that such a submanifold may be equipped with a metric whose
+                    signature acts as a diagnostic for the dominance of vorticity and strain. We discuss how this
+                    approach
+                    may be extended to fluid flows on an arbitrary Riemannian manifold and to higher dimensions, through
+                    the use of higher (categorified) symplectic geometry. We conclude with some comments on how this
+                    facilitates symmetry reductions and some open questions.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-External-Presentation2-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation2" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li> <!-- Wildberg Talk -->
@@ -1010,19 +1111,28 @@
                 Slides</a>
               |
               <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
-                aria-controls="External_Presentation2">
-                <i class="abstract-icon icon-angle-right"></i> Abstract
+                aria-controls="External_Presentation1">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
               </button>
 
-              <p class="small-para abstract-container" id="External_Presentation2">
-                <em> Inspired by results from metric geometry, we discuss the globalisation of timelike curvature bounds
-                  in Lorentzian pre-length space framework of Kunzinger and Sämann. In particular, utilising the
-                  formulation of curvature bounds in terms of triangle comparison, we present a Lorentzian analogue of
-                  the Alexandrov patchwork construction for spaces with curvature bounded above. We conclude with a
-                  summary of ongoing work on the corresponding problem for Lorentzian pre-length spaces with curvature
-                  bounded below. Should time permit, we will also discuss ideas for applications.
-                </em>
-              </p>
+              <div class="abstract-container" id="External_Presentation1">
+                <p class="small-para abstract-last-para">
+                  <em> Inspired by results from metric geometry, we discuss the globalisation of timelike curvature
+                    bounds
+                    in Lorentzian pre-length space framework of Kunzinger and Sämann. In particular, utilising the
+                    formulation of curvature bounds in terms of triangle comparison, we present a Lorentzian analogue of
+                    the Alexandrov patchwork construction for spaces with curvature bounded above. We conclude with a
+                    summary of ongoing work on the corresponding problem for Lorentzian pre-length spaces with curvature
+                    bounded below. Should time permit, we will also discuss ideas for applications.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-External-Presentation1-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation1" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
           </ul>
         </article>
@@ -1222,95 +1332,130 @@
               <b> STFC PhD Studentship 2021-2024 </b>
               <br> Value: ~£56,000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Grants_STFC_PhD">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Grants_STFC_PhD">
-                <em> Science and Technology Facilities Council funding for a 3-year PhD, researching the
-                  Monge&ndash;Ampère Geometry of Vortices. The grant total includes the UKRI annual
-                  stipend and a £3000 travel grant. </em>
-              </p>
+              <div class="abstract-container" id="Grants_STFC_PhD">
+                <p class="small-para abstract-last-para">
+                  <em> Science and Technology Facilities Council funding for a 3-year PhD, researching the
+                    Monge&ndash;Ampère Geometry of Vortices. The grant total includes the UKRI annual
+                    stipend and a £3000 travel grant. </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-STFC-Grant-button"
+                    type="button" aria-expanded="false" aria-controls="Grants_STFC_PhD"
+                    aria-label="close grants abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li>
               <b> Institut Für Mathematik Participation Grant 2023 </b>
               <br> Value: €200 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Grants_Wildberg">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Grants_Wildberg">
-                <em> Funding to attend the Interdisciplinary Junior Scientist <a
-                    href="https://www.math.uni-potsdam.de/grworkshop" rel="noopener noreferrer"
-                    class="external-link  under-overlay under-modal-overlay"> Workshop</a> in Mathematical General
-                  Relativity in Wildberg,
-                  Germany, provided by Universität Tübingen and Universität Potsdam. The grant also included
-                  accommodation costs not represented in the value. </em>
-              </p>
+              <div class="abstract-container" id="Grants_Wildberg">
+                <p class="small-para abstract-last-para">
+                  <em> Funding to attend the Interdisciplinary Junior Scientist <a
+                      href="https://www.math.uni-potsdam.de/grworkshop" rel="noopener noreferrer"
+                      class="external-link  under-overlay under-modal-overlay"> Workshop</a> in Mathematical General
+                    Relativity in Wildberg,
+                    Germany, provided by Universität Tübingen and Universität Potsdam. The grant also included
+                    accommodation costs not represented in the value. </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-Wildberg-Grant-button" type="button" aria-expanded="false" aria-controls="Grants_Wildberg"
+                    aria-label="close grants abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li>
               <b> LMS Early Career Researcher Travel Grant 2022 </b>
               <br> Value: £500 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Grants_LMS_ECR">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Grants_LMS_ECR">
-                <em>
-                  London Mathematical Society funding for travel to the
-                  <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
-                    class="external-link under-overlay under-modal-overlay"> Fields Institute</a>,
-                  Toronto, Canada to attend a
-                  <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
-                    rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Workshop</a> on
-                  Mathematical
-                  Relativity,
-                  Scalar Curvature, and Synthetic
-                  Lorentzian Geometry.
-                </em>
-              </p>
+              <div class="abstract-container" id="Grants_LMS_ECR">
+                <p class="small-para abstract-last-para">
+                  <em>
+                    London Mathematical Society funding for travel to the
+                    <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
+                      class="external-link under-overlay under-modal-overlay"> Fields Institute</a>,
+                    Toronto, Canada to attend a
+                    <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
+                      rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Workshop</a> on
+                    Mathematical
+                    Relativity,
+                    Scalar Curvature, and Synthetic
+                    Lorentzian Geometry.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-LMS-Grant-button"
+                    type="button" aria-expanded="false" aria-controls="Grants_LMS_ECR"
+                    aria-label="close grants abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li>
               <b> Fields Institute Participation Grant 2022 </b>
               <br> Value: CAD$1000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Grants_Fields">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Grants_Fields">
-                <em>
-                  Funding from the <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
-                    class="external-link under-overlay under-modal-overlay"> Fields
-                    Institute</a> to cover travel and subsistence expenses while attending their
-                  <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
-                    rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Workshop</a> on
-                  Mathematical
-                  Relativity,
-                  Scalar Curvature, and Synthetic
-                  Lorentzian Geometry.
-                </em>
-              </p>
+              <div class="abstract-container" id="Grants_Fields">
+                <p class="small-para abstract-last-para">
+                  <em>
+                    Funding from the <a href="https://www.fields.utoronto.ca/" rel="noopener noreferrer"
+                      class="external-link under-overlay under-modal-overlay"> Fields
+                      Institute</a> to cover travel and subsistence expenses while attending their
+                    <a href="https://www.fields.utoronto.ca/activities/22-23/nonsmooth-relativity"
+                      rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Workshop</a> on
+                    Mathematical
+                    Relativity,
+                    Scalar Curvature, and Synthetic
+                    Lorentzian Geometry.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-Fields-Grant-button"
+                    type="button" aria-expanded="false" aria-controls="Grants_Fields"
+                    aria-label="close grants abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li>
               <b> LMS Undergraduate Research Bursary 2019 </b>
               <br> Value: £1440 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Grants_LMS_URB">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Grants_LMS_URB">
-                <em>
-                  London Mathematical Society funded summer research project <a
-                    href="https://www.lms.ac.uk/grants/URBList" rel="noopener noreferrer"
-                    class="external-link under-overlay under-modal-overlay"> (URB-18-19-70)</a>.
-                  Includes matched
-                  funding
-                  from the University of Surrey.
-                </em>
-              </p>
+              <div class="abstract-container" id="Grants_LMS_URB">
+                <p class="small-para abstract-last-para">
+                  <em>
+                    London Mathematical Society funded summer research project <a
+                      href="https://www.lms.ac.uk/grants/URBList" rel="noopener noreferrer"
+                      class="external-link under-overlay under-modal-overlay"> (URB-18-19-70)</a>.
+                    Includes matched
+                    funding
+                    from the University of Surrey.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-LMS-ECR-Grant-button" type="button" aria-expanded="false" aria-controls="Grants_LMS_URB"
+                    aria-label="close grants abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
           </ul>
 
@@ -1320,34 +1465,49 @@
               <b> Surrey Merit Scholarship 2017/18 </b>
               <br> Value: £2000 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Awards_Surrey_Merit">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Awards_Surrey_Merit">
-                <em>
-                  Scholarship awarded to undergraduate students enrolling at the University of Surrey
-                  who achieve exceptional A-level grades (A*AA or above). The scholarship also
-                  included free
-                  1-year membership to Surrey Sports Park. See the <a
-                    href="https://money.surrey.ac.uk/funding/scholarships" rel="noopener noreferrer"
-                    class="external-link under-overlay under-modal-overlay"> University
-                    Webpage</a> for more details.
-                </em>
-              </p>
+              <div class="abstract-container" id="Awards_Surrey_Merit">
+                <p class="small-para abstract-last-para">
+                  <em>
+                    Scholarship awarded to undergraduate students enrolling at the University of Surrey
+                    who achieve exceptional A-level grades (A*AA or above). The scholarship also
+                    included free
+                    1-year membership to Surrey Sports Park. See the <a
+                      href="https://money.surrey.ac.uk/funding/scholarships" rel="noopener noreferrer"
+                      class="external-link under-overlay under-modal-overlay"> University
+                      Webpage</a> for more details.
+                  </em>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button" id="close-Surrey-Award-button"
+                    type="button" aria-expanded="false" aria-controls="Awards_Surrey_Merit"
+                    aria-label="close awards abstract">Close<i class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
 
             <li>
               <b> Mathematics Department Prize for Excellence 2017-2021</b>
               <br> Value £400 | <button class="abstract-link under-overlay under-modal-overlay" type="button"
                 aria-expanded="false" aria-controls="Awards_Surrey_Excellence">
-                <i class="abstract-icon icon-angle-right"></i> Details
+                <i class="abstract-icon icon-angle-right"></i>Details
               </button>
 
-              <p class="small-para abstract-container" id="Awards_Surrey_Excellence">
-                <em> Four times winner of the Mathematics Department Prize for Excellence at the
+              <div class="abstract-container" id="Awards_Surrey_Excellence">
+                <p class="small-para abstract-last-para" <em> Four times winner of the Mathematics Department Prize for
+                  Excellence at the
                   University of Surrey, awarded for the best performance in each year of an
                   undergraduate/ master's degree. </em>
-              </p>
+                </p>
+                <div class="close-abstract-bar">
+                  <button class="under-modal-overlay under-overlay close-abstract-button"
+                    id="close-Excellence-Award-button" type="button" aria-expanded="false"
+                    aria-controls="Awards_Surrey_Excellence" aria-label="close awards abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
             </li>
           </ul>
         </article>

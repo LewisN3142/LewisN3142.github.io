@@ -95,29 +95,25 @@ $(document).ready(function () {
   $(".abstract-link").click(function () {
     if ($(this).hasClass("abstract-toggled")) {
       $(this).attr("aria-expanded", "false");
-      if ($(this).hasClass("privacy-link")) {
-        $(this)
-          .next(".abstract-container")
-          .children()
-          .children("#close-privacy-button")
-          .attr("aria-expanded", "false");
-      }
+      $(this)
+        .next(".abstract-container")
+        .children()
+        .children(".close-abstract-button")
+        .attr("aria-expanded", "false");
     } else {
       $(this).attr("aria-expanded", "true");
-      if ($(this).hasClass("privacy-link")) {
-        $(this)
-          .next(".abstract-container")
-          .children()
-          .children("#close-privacy-button")
-          .attr("aria-expanded", "true");
-      }
+      $(this)
+        .next(".abstract-container")
+        .children()
+        .children(".close-abstract-button")
+        .attr("aria-expanded", "true");
     }
     $(this).next(".abstract-container").slideToggle(200);
     $(this).toggleClass("abstract-toggled");
   });
 
   // JQuery for privacy
-  $("#close-privacy-button").click(function () {
+  $(".close-abstract-button").click(function () {
     $(this).parent().parent(".abstract-container").slideToggle(200);
     $(this)
       .parent()
