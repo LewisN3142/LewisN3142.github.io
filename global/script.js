@@ -193,8 +193,6 @@ $(document).ready(function () {
   });
   */
 
-  // Code that loads in youtube videos - edit so different wrappers load different youtube videos in
-  // Do so by having data on each iframe which is read and then access that entry in array of urls
   $(".youtube-thumb-wrapper").click(function () {
     $(this).attr("aria-expanded", "true");
     var $iframe = $(this).parent().parent().parent().next(".youtube-video");
