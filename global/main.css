@@ -1159,8 +1159,16 @@ textarea {
   background-image: url("/home_material/Villanelle_58x76.webp");
 }
 
+#cardiff-card {
+  background-image: url("../academia_page/academia_images/Cardiff.webp");
+}
+
 #paris-card {
   background-image: url("../academia_page/academia_images/Paris.webp");
+}
+
+#paris-card-home {
+  background-image: url("/academia_page/academia_images/Paris.webp");
 }
 
 #oxford-card {
