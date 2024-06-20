@@ -1183,10 +1183,6 @@ textarea {
   background-image: url("../academia_page/academia_images/Wildberg.webp");
 }
 
-#confirmation-card {
-  background-image: url("../academia_page/academia_images/Surrey.webp");
-}
-
 #surrey-PGR-card {
   background-image: url("../academia_page/academia_images/Surrey.webp");
 }
@@ -1825,6 +1821,9 @@ textarea {
   }
   #soon-card {
     background-image: url("/home_material/Villanelle_68x84.webp");
+  }
+  #hades-card {
+    background-image: url("/home_material/hades_card_tall.webp");
   }
 }
 
