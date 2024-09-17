@@ -1175,6 +1175,10 @@ textarea {
   background-image: url("/academia_page/academia_images/Paris.webp");
 }
 
+#rochelle-card {
+  background-image: url("/academia_page/academia_images/Rochelle.webp");
+}
+
 #oxford-card {
   background-image: url("../academia_page/academia_images/Oxford.webp");
 }
