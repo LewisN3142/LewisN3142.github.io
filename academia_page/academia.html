@@ -20,8 +20,7 @@
 
   <link rel="stylesheet" href="../global/main.css" type="text/css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Get JQuery -->
-  <script> window.jQuery || document.write('<script src="../global/jquery-3.7.1.min.js"><\/script>'); </script>
+  <script src="../global/jquery.min.js"></script>
   <script src="../global/script.js"></script>
 </head>
 
@@ -770,6 +769,18 @@
                   aria-label="previous card in carousel">
                   <i class="icon-angle-left slider-angle slider-angle-left" alt="Previous Event"></i>
                 </button>
+                <div class="slider-navigation-padding"></div>
+                <div class="slider-dots">
+                  <button class="slider-dot-single slider-dot-selected" data-dots="0" onclick="onDotClick(0)"></button>
+                  <button class="slider-dot-single" data-dots="1" onclick="onDotClick(1)"></button>
+                  <button class="slider-dot-single" data-dots="2" onclick="onDotClick(2)"></button>
+                  <button class="slider-dot-single" data-dots="3" onclick="onDotClick(3)"></button>
+                  <button class="slider-dot-single" data-dots="4" onclick="onDotClick(4)"></button>
+                  <button class="slider-dot-single" data-dots="5" onclick="onDotClick(5)"></button>
+                  <button class="slider-dot-single" data-dots="6" onclick="onDotClick(6)"></button>
+                  <button class="slider-dot-single" data-dots="7" onclick="onDotClick(7)"></button>
+                  <button class="slider-dot-single" data-dots="8" onclick="onDotClick(8)"></button>
+                </div>
                 <div class="slider-navigation-padding"></div>
                 <button class="slider-button slider-button-right under-overlay under-modal-overlay" type="button"
                   id="carousel-right-button" aria-controls="cards" onclick="handleSliderRight()"

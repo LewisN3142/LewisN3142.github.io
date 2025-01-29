@@ -170,29 +170,6 @@ $(document).ready(function () {
     $("#contact-submitted-text").delay(300).fadeIn(150);
   });
 
-  // Code that manages the banjo button audio
-  /* var banjoAudio = document.getElementById("banjoAudio");
-
-  function banjoButtonUnpress() {
-    $(".banjo-button").each(function () {
-      $(this).removeClass("banjo-button-pressed");
-      banjoAudio.pause();
-    });
-  }
-
-  $(".banjo-button").click(function () {
-    if ($(this).hasClass("banjo-button-pressed")) {
-    } else {
-      $(this).addClass("banjo-button-pressed");
-      banjoAudio.currentTime = 0;
-      banjoAudio.play();
-      setTimeout(() => {
-        banjoButtonUnpress();
-      }, 3000);
-    }
-  });
-  */
-
   $(".youtube-thumb-wrapper").click(function () {
     $(this).attr("aria-expanded", "true");
     var $iframe = $(this).parent().parent().parent().next(".youtube-video");
@@ -263,6 +240,8 @@ function handleSliderLeft() {
     addCardToTabFlow(newLinks[i]);
   }
 
+  $(`*[data-dots="${activeIndex}"]`).removeClass("slider-dot-selected");
+  $(`*[data-dots="${previousIndex}"]`).addClass("slider-dot-selected");
   activeIndex = previousIndex;
 }
 
@@ -311,5 +290,25 @@ function handleSliderRight() {
     addCardToTabFlow(newLinks[i]);
   }
 
+  $(`*[data-dots="${activeIndex}"]`).removeClass("slider-dot-selected");
+  $(`*[data-dots="${nextIndex}"]`).addClass("slider-dot-selected");
   activeIndex = nextIndex;
+}
+
+function onDotClick(number) {
+  const cardsDifference =
+    number - activeIndex >= 0
+      ? number - activeIndex
+      : number - activeIndex + cards.length;
+  const LeftOrRight = cards.length * 0.5;
+
+  if (cardsDifference > LeftOrRight) {
+    for (i = 0; i < cards.length - cardsDifference; i++) {
+      handleSliderLeft();
+    }
+  } else {
+    for (i = 0; i < cardsDifference; i++) {
+      handleSliderRight();
+    }
+  }
 }

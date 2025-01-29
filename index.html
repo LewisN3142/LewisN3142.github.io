@@ -21,8 +21,8 @@
 
   <link rel="stylesheet" href="global/main.css" type="text/css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Get JQuery -->
-  <script> window.jQuery || document.write('<script src="global/jquery-3.7.1.min.js"><\/script>'); </script>
+  <!-- Get JQuery and Slick -->
+  <script src="global/jquery.min.js"></script>
   <script src="global/script.js"></script>
 </head>
 
@@ -183,15 +183,6 @@
       <div class="container"> <!-- Container For Page Content -->
         <h2>Welcome to my Website!</h2>
 
-        <!--
-        <div class="section-break banjo-container">
-          <button class="banjo-button under-overlay under-modal-overlay" value="Play Audio">
-            <span> Rare Employees Click Here (Sound On!) </span>
-            <audio src="Guh_Huh.wav" id="banjoAudio"></audio>
-          </button>
-        </div>
-        -->
-
         <div class="section-break" id="aboutMe">
         </div>
 
@@ -263,17 +254,13 @@
                     <div class="card-title">
                       <h3 class="card-name"> Upcoming Talks and Visits
                       </h3>
-                      <p class="card-date"> Updated: 21st November 2024 </p>
+                      <p class="card-date"> Updated: 29th January 2025 </p>
 
                       <div class="card-details">
                         <ul class="compact-list">
                           <li>
-                            <b> University of Surrey, UK </b> <em> (28th January 2025) </em> <br>
-                            Synthetic Geometry, Curvature, and Comparison. <br>
-                            Part of the 3rd annual maths PGR conference.
-                          </li>
-                          <li>
-                            <b> University of Arizona/Toronto (Online) </b> <em> (TBC) </em> <br>
+                            <b> University of Arizona/Toronto (Online) </b> <br>
+                            <em> (4th March 2025) </em> <br>
                             Monge&ndash;Ampère Geometry and Vortices. <br>
                             Part of the Hamiltonian systems seminar series.
                           </li>
@@ -384,6 +371,14 @@
                   aria-controls="cards" onclick="handleSliderLeft()" aria-label="previous card in carousel">
                   <i class="icon-angle-left slider-angle slider-angle-left" alt="Previous Event"></i>
                 </button>
+                <div class="slider-navigation-padding"></div>
+                <div class="slider-dots">
+                  <button class="slider-dot-single slider-dot-selected" data-dots="0" id="card-0-button"
+                    onclick="onDotClick(0)"></button>
+                  <button class="slider-dot-single" id="card-1-button" data-dots="1" onclick="onDotClick(1)"></button>
+                  <button class="slider-dot-single" id="card-2-button" data-dots="2" onclick="onDotClick(2)"></button>
+                  <button class="slider-dot-single" id="card-3-button" data-dots="3" onclick="onDotClick(3)"></button>
+                </div>
                 <div class="slider-navigation-padding"></div>
                 <button class="slider-button slider-button-right under-overlay" type="button" id="carousel-right-button"
                   aria-controls="cards" onclick="handleSliderRight()" aria-label="next card in carousel">

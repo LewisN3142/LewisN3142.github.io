@@ -1356,6 +1356,37 @@ textarea {
   flex-grow: 1;
 }
 
+.slider-dots {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slider-dot-single {
+  position: relative;
+  display: block;
+
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 0.6rem;
+  margin: 0 0.3rem;
+  padding: 0;
+
+  color: var(--foreground-active-blue);
+  border-color: var(--foreground-active-blue);
+  background-color: var(--foreground-active-blue);
+
+  cursor: pointer;
+}
+
+.slider-dot-selected {
+  color: var(--foreground-clicked-blue);
+  border-color: var(--foreground-clicked-blue);
+  background-color: var(--foreground-clicked-blue);
+}
+
 .card {
   position: absolute;
   width: 60%;
@@ -1382,48 +1413,6 @@ textarea {
 .card[data-status="inactive"] * {
   pointer-events: none;
 }
-
-/* Rare Custom Button (Guh Huh!) */
-/* 
-.banjo-button {
-  display: inline-block;
-  align-self: center;
-  text-align: center;
-
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  color: white;
-  background-color: red;
-
-  font-weight: 100;
-  font-size: var(--font-size-default);
-  text-shadow: 0 3px 1px rgba(122, 17, 8, 0.8);
-  box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35);
-  text-transform: uppercase;
-  transition: 0.4s all ease-in;
-}
-
-.banjo-button span {
-  position: relative;
-}
-
-.banjo-button-pressed {
-  padding-top: 3px;
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 rgb(183, 0, 0), 0 8px 6px rgba(0, 0, 0, 0.45);
-}
-
-.banjo-container {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-*/
 
 /* Code for youtube videos */
 .youtube-title {
@@ -1536,7 +1525,7 @@ textarea {
 @media screen and (max-width: 767.5px) {
   .slider-navigation {
     display: flex;
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -1691,6 +1680,12 @@ textarea {
     -moz-transition: var(--logo-pulse-in);
     -o-transition: var(--logo-pulse-in);
     transition: var(--logo-pulse-in);
+  }
+
+  .slider-dot-single:hover {
+    border-color: var(--foreground-clicked-blue);
+    color: var(--foreground-clicked-blue);
+    background-color: var(--foreground-clicked-blue);
   }
 
   /* dropdowns for abstract */

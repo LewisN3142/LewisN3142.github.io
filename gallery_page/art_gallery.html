@@ -20,8 +20,9 @@
 
   <link rel="stylesheet" href="../global/main.css" type="text/css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Get JQuery -->
-  <script> window.jQuery || document.write('<script src="../global/jquery-3.7.1.min.js"><\/script>'); </script>
+  <!-- Get JQuery and Slick -->
+  <script src="../global/jquery.min.js"></script>
+
   <script src="../global/script.js"></script>
 </head>
 
@@ -148,29 +149,8 @@
           </ul>
         </li>
 
-        <li> <!-- Code Nav -->
-          <div class="link-with-dropdown">
-            <a class="link-next-to-dropdown" href="../code_page/code_catalogue.html"> Code Catalogue </a>
-            <button class="dropdown-btn" type="button" aria-controls="Code-dropdown" aria-expanded="false">
-              <i class="icon-angle-right dropdown-icon"></i> </button>
-          </div>
-
-          <ul class="dropdown-container" id="Code-dropdown">
-            <li> <a href="../code_page/code_catalogue.html#codeOverview"> Overview </a></li>
-            <li> <a href="../code_page/code_catalogue.html#teachingMaterial"> Teaching Material </a></li>
-            <li> <a href="../code_page/code_catalogue.html#webDevelopment"> Web Development </a></li>
-            <li> <a href="../code_page/code_catalogue.html#gameDevelopment"> Game Development </a></li>
-            <li> <a href="../code_page/code_catalogue.html#otherProjects"> Other </a></li>
-          </ul>
-        </li>
-
         <li> <!-- Gallery Nav -->
           <a href="art_gallery.html" id="current-page"> Art Gallery </a>
-          <!-- Convert into dropdown if you want pre-filtered results-->
-        </li>
-
-        <li> <!-- Music Nav -->
-          <a href="../music_page/my_music.html"> Music </a>
           <!-- Convert into dropdown if you want pre-filtered results-->
         </li>
 
@@ -186,11 +166,6 @@
             <li> <a href="../games_page/video_games.html#speedrunTech"> Speedruns and Skips </a></li>
             <li> <a href="../games_page/video_games.html#bugsGlitches"> Bugs and Glitches </a></li>
           </ul>
-        </li>
-
-        <li> <!-- Blog Nav -->
-          <a href="../blog_page/blog.html"> Blog </a>
-          <!-- Convert into dropdown if you want pre-filtered results-->
         </li>
 
         <li> <!-- Contact Nav -->
@@ -211,19 +186,6 @@
       <div class="container">
 
         <div class="section-break" id=" ">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 512 512"
-            title="Art Gallery" alt="paint palette icon">
-            <path
-              d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
-          </svg>
-        </div>
-
-        <article> <!-- Section 1 name -->
-          <h2> Section 1 </h2>
-          Probably no section if no dropdown in nav (maybe add filter functionality...)
-        </article>
-
-        <div class="section-break" id=" ">
           <!-- update id to next article name if section added to dropdown -->
           <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 512 512"
             title="Art Gallery" alt="paint palette icon">
@@ -232,28 +194,16 @@
           </svg>
         </div>
 
-        <article> <!-- Name of section 2 -->
-          <h2> Section 2 </h2>
-
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, dolore quidem sequi distinctio nam
-          voluptatum magni quibusdam vero nemo libero, fugiat sint facere sunt ipsam quas esse alias quisquam saepe
-          nesciunt voluptatem. Repudiandae nam omnis, reiciendis et nisi officia deserunt voluptates accusamus magnam
-          autem impedit provident repellendus odio minima necessitatibus eum tempora temporibus. Cumque, eaque corrupti
-          nostrum explicabo amet corporis harum perspiciatis ad animi, ab neque quod quae quis vero temporibus ullam
-          repellendus? Eum, quibusdam quo quia dolore doloremque non? Cumque cum expedita quo accusantium animi alias
-          atque minus sequi! Consequuntur omnis corporis sit commodi in aliquid. Cupiditate exercitationem possimus
-          ullam iure consectetur iusto debitis a nobis vero. Ut nam tempore illum id deleniti, ipsa, ratione, sed
-          quibusdam eligendi amet nisi earum iure obcaecati. Dignissimos natus nemo cum! Possimus sunt iste ullam
-          explicabo nemo, nesciunt nam quae aliquam numquam modi minima commodi obcaecati a, saepe quam ex, itaque
-          maiores praesentium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, ducimus distinctio. Hic
-          laborum maiores voluptate fugit iure ut tempore doloremque. Unde ratione, quod maxime esse neque ex mollitia
-          minima qui adipisci labore commodi aliquam delectus numquam voluptate tenetur eius suscipit quia eos eveniet
-          porro cumque? Commodi reprehenderit numquam corrupti vel sit soluta necessitatibus tempora tempore!
-          Dignissimos nemo corporis illum eveniet laboriosam. Saepe possimus quo odit! Voluptatibus molestiae eius ad,
-          facilis quasi officia suscipit consectetur blanditiis consequatur illum provident ducimus quisquam explicabo
-          vel beatae, reiciendis debitis ut. Culpa itaque dicta consectetur qui facilis, magni eaque officiis, accusamus
-          inventore aperiam, tenetur facere!
+        <article> <!-- Section 1 name -->
+          <h2> About The Gallery </h2>
+          <section class="Review-section About-section">
+            <p class="medium-para">
+              <span class="redColor"> Add in preamble and explain filtering system. Filter for photo, digital,
+                traditional, medium, fanart...</span>
+            </p>
+          </section>
         </article>
+
       </div>
 
       <footer> <!-- Remove finefooter when content over 1 page. -->
