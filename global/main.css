@@ -1349,7 +1349,7 @@ textarea {
 
 .slider-navigation {
   display: flex;
-  width: 84%;
+  width: 86%;
 }
 
 .slider-navigation-padding {
@@ -1368,23 +1368,31 @@ textarea {
   position: relative;
   display: block;
 
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 0.6rem;
-  margin: 0 0.3rem;
+  margin: 0 0.3rem 0 0.3rem;
   padding: 0;
 
   color: var(--foreground-active-blue);
   border-color: var(--foreground-active-blue);
   background-color: var(--foreground-active-blue);
 
+  transition: 0.4s ease;
+
   cursor: pointer;
 }
 
 .slider-dot-selected {
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 0.2rem 0 0.2rem;
+
   color: var(--foreground-clicked-blue);
   border-color: var(--foreground-clicked-blue);
   background-color: var(--foreground-clicked-blue);
+
+  transition: 0.4s ease;
 }
 
 .card {
@@ -1525,7 +1533,7 @@ textarea {
 @media screen and (max-width: 767.5px) {
   .slider-navigation {
     display: flex;
-    width: 90%;
+    width: 95%;
   }
 }
 
