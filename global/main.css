@@ -1378,7 +1378,7 @@ textarea {
   border-color: var(--foreground-active-blue);
   background-color: var(--foreground-active-blue);
 
-  transition: 0.4s ease;
+  transition: 0.2s ease;
 
   cursor: pointer;
 }
@@ -1392,7 +1392,7 @@ textarea {
   border-color: var(--foreground-clicked-blue);
   background-color: var(--foreground-clicked-blue);
 
-  transition: 0.4s ease;
+  transition: 0.2s ease;
 }
 
 .card {
