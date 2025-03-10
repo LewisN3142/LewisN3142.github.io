@@ -734,6 +734,16 @@ button:focus-visible,
   margin-bottom: 0px;
 }
 
+.awards-column-1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.awards-column-2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .teach-row:after {
   content: "";
   display: table;
@@ -1155,6 +1165,10 @@ textarea {
 
 /* CARD CAROUSEL */
 
+#nightreign-card {
+  background-image: url("/home_material/nightreign.webp");
+}
+
 #soon-card {
   background-image: url("/home_material/Villanelle_58x76.webp");
 }
@@ -1169,6 +1183,10 @@ textarea {
 
 #paris-card {
   background-image: url("../academia_page/academia_images/Paris.webp");
+}
+
+#vienna-card {
+  background-image: url("../academia_page/academia_images/vienna.webp");
 }
 
 #paris-card-home {
@@ -1319,9 +1337,9 @@ textarea {
   font-size: 1.02rem;
   line-height: 1.25;
 
-  background-color: var(--background-default);
+  background-color: rgba(30, 30, 30, 0.7);
   border-radius: 10px;
-  border-color: #444;
+  border-color: #4a4a4a;
   border-width: 3px;
   border-style: solid;
 }
@@ -1797,6 +1815,9 @@ textarea {
   #soon-card {
     background-image: url("/home_material/Villanelle_68x84.webp");
   }
+  #nightreign-card {
+    background-image: url("/home_material/nightreign_tall.webp");
+  }
 }
 
 @media screen and (min-width: 2000px) {
@@ -1832,6 +1853,9 @@ textarea {
   #hades-card {
     background-image: url("/home_material/hades_card_tall.webp");
   }
+  #nightreign-card {
+    background-image: url("/home_material/nightreign_tall.webp");
+  }
 }
 
 @media screen and (max-width: 991.5px) {
@@ -1863,6 +1887,14 @@ textarea {
   .teach-column-inner {
     width: 100%;
     margin-bottom: -0.45rem;
+    margin-top: -0.45rem;
+  }
+
+  .awards-column-1 {
+    margin-bottom: -0.45rem;
+  }
+
+  .awards-column-2 {
     margin-top: -0.45rem;
   }
 
