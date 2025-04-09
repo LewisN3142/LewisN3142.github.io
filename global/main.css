@@ -1268,7 +1268,7 @@ textarea {
   margin: auto;
   transition: 0.4s ease;
 
-  border-radius: 0.7rem;
+  border-radius: 10px;
   box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
     -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
 
