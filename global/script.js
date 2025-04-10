@@ -25,27 +25,6 @@ $(document).ready(function () {
   }
   touchResponsive();
 
-  // Array of youtube videos
-  const youtubeVideos = [
-    "https://www.youtube-nocookie.com/embed/gl8woxgskpk?si=KfwK3Plrbl34ObcO",
-    "https://www.youtube-nocookie.com/embed/UdXt0zCdXx0?si=Lbiwp3kXuC9BLUmh",
-    "https://www.youtube-nocookie.com/embed/COfr4pO0xhQ?si=ObKivNDG64PEqd8f",
-    "https://www.youtube-nocookie.com/embed/89ecHE_GG0k?si=N98Qx_eNgZvrgRiM",
-    "https://www.youtube-nocookie.com/embed/60e2DCMoeoA?si=2DXNYMXpE6iqvxWO",
-    "https://www.youtube-nocookie.com/embed/rZR0UTPrJ24?si=yVzznREq54MbhYT9",
-    "https://www.youtube-nocookie.com/embed/PkDWMIyObCU?si=6D6WarGe0vYrRsdK",
-    "https://www.youtube-nocookie.com/embed/K9DEszNY6IU?si=6_fNK1mqJgPqqi9I",
-    "https://www.youtube-nocookie.com/embed/U0X1DeYR4uo?si=N2MDmRK2E5N3FAMD",
-    "https://www.youtube-nocookie.com/embed/MRs7N0meki8?si=ChOPdk55MESVkMhZ",
-    "https://www.youtube-nocookie.com/embed/wXBImOHn-kI?si=EiHPODa0Xzszb7P1",
-    "https://www.youtube-nocookie.com/embed/KrmJYDkSSYs?si=pELZR0kSKcc4AIXW",
-    "https://www.youtube-nocookie.com/embed/xErWYscdks0?si=RiUIh7YNmmH1wHaY",
-    "https://www.youtube-nocookie.com/embed/9afZQmuEDZg?si=EnZ8KiPIBHNCCqbh",
-    "https://www.youtube-nocookie.com/embed/1fI4LjS3LHA?si=qeIX0A6t4bDxbZzg",
-    "https://www.youtube-nocookie.com/embed/SW9R0oJLPYY?si=hKE80GcEzq6I-dAd",
-    "https://www.youtube-nocookie.com/embed/v5ERm5jDzXU?si=p7wW1dNrNy8Yi8LY",
-  ];
-
   // Code for sidebar and overlay
   function onFadeOut() {
     $("#overlay").fadeOut(250);
@@ -173,10 +152,9 @@ $(document).ready(function () {
   $(".youtube-thumb-wrapper").click(function () {
     $(this).attr("aria-expanded", "true");
     var $iframe = $(this).parent().parent().parent().next(".youtube-video");
-    var $dataIndex = $(this).attr("data-video-number");
     $iframe.attr(
       "src",
-      youtubeVideos[$dataIndex] + "&rel=0&modest-branding=1&mute=1"
+      $(this).attr("data-video-number") + "&rel=0&modest-branding=1&mute=1"
     );
     $iframe.addClass("youtube-video-loaded");
     $iframe.show();
