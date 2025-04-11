@@ -144,7 +144,7 @@ $(document).ready(function () {
     onModalClose();
   });
 
-  $("#gform").on("submit", function (e) {
+  $("#gform").on("submit", function () {
     $("#gform *").fadeOut(300);
     $("#contact-submitted-text").delay(300).fadeIn(150);
   });
