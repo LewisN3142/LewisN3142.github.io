@@ -1363,7 +1363,7 @@ textarea {
   transition: 0.2s ease;
 }
 
-.cards {
+.card[data-status="activeMiddle"]* {
   touch-action: manipulation;
 }
 

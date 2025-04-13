@@ -15,7 +15,6 @@ $(document).ready(function () {
     })(navigator.userAgent || window.opera);
     return check;
   }
-  touchCheck();
 
   function touchResponsive() {
     if (touchCheck() == true) {
