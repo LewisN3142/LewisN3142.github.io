@@ -292,6 +292,7 @@ function onDotClick(number) {
 }
 
 // Neaten up code below and make simpler where possible. Perhaps put in add and remove listener for touchmove within touchstart?
+// Add threshold for swipe and make relative to screen size what counts as horizontal.
 window.addEventListener("DOMContentLoaded", (event) => {
   const cardsElement = document.getElementById("cards");
   if (cardsElement) {
@@ -311,14 +312,12 @@ function getTouches(evt) {
 }
 
 function handleTouchStart(evt) {
-  evt.preventDefault();
   const firstTouch = getTouches(evt)[0];
   xDown = firstTouch.clientX;
   yDown = firstTouch.clientY;
 }
 
 function handleTouchMove(evt) {
-  evt.preventDefault();
   if (!xDown || !yDown) {
     return;
   }
@@ -330,11 +329,12 @@ function handleTouchMove(evt) {
   var yDiff = yDown - yUp;
 
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    evt.preventDefault();
     /*most significant*/
     if (xDiff > 0) {
-      handleSliderLeft();
-    } else {
       handleSliderRight();
+    } else {
+      handleSliderLeft();
     }
   } else {
   }
