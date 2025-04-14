@@ -330,6 +330,7 @@ function handleTouchMove(event) {
     } else {
     }
   } else {
+    event.preventDefault();
   }
 
   // Reset values
@@ -337,7 +338,7 @@ function handleTouchMove(event) {
   yDown = null;
 
   // Remove handler for memory efficiency
-  document
-    .getElementById("cards")
-    .removeEventListener("touchmove", handleTouchMove);
+  // document
+  //   .getElementById("cards")
+  //   .removeEventListener("touchmove", handleTouchMove);
 }
