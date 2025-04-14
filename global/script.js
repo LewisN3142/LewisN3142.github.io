@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // Make site responsive to touch --- check on phone once launched, if not then delete
+  // Make site responsive to mobile (touch sliders, adjust for no scroll bar)
   function touchCheck() {
     let check = false;
     (function (a) {
@@ -21,6 +21,14 @@ $(document).ready(function () {
       $("#nav-burger-symbol").css("flex-basis", "calc(48% - 22.5px)");
     } else {
       $("#nav-burger-symbol").css("flex-basis", "calc(48% - 28.5px)");
+    }
+    if (document.getElementById("cards")) {
+      var xDown = null;
+      var yDown = null;
+
+      document
+        .getElementById("cards")
+        .addEventListener("touchstart", handleTouchStart, false);
     }
   }
   touchResponsive();
@@ -291,54 +299,45 @@ function onDotClick(number) {
   }
 }
 
-// Neaten up code below and make simpler where possible. Perhaps put in add and remove listener for touchmove within touchstart?
-// Add threshold for swipe and make relative to screen size what counts as horizontal.
-window.addEventListener("DOMContentLoaded", (event) => {
-  const cardsElement = document.getElementById("cards");
-  if (cardsElement) {
-    cardsElement.addEventListener("touchstart", handleTouchStart, false);
-    cardsElement.addEventListener("touchmove", handleTouchMove, false);
-  }
-});
+// Functions for swipe on card carousel
+function handleTouchStart(event) {
+  xDown = event.touches[0].clientX;
+  yDown = event.touches[0].clientY;
 
-var xDown = null;
-var yDown = null;
+  pageWidth = window.innerWidth || document.body.clientWidth;
+  threshold = Math.max(1, Math.floor(0.01 * pageWidth));
 
-function getTouches(evt) {
-  return (
-    evt.touches || // browser API
-    evt.originalEvent.touches
-  ); // jQuery
+  document
+    .getElementById("cards")
+    .addEventListener("touchmove", handleTouchMove, false);
 }
 
-function handleTouchStart(evt) {
-  const firstTouch = getTouches(evt)[0];
-  xDown = firstTouch.clientX;
-  yDown = firstTouch.clientY;
-}
-
-function handleTouchMove(evt) {
+function handleTouchMove(event) {
   if (!xDown || !yDown) {
     return;
   }
 
-  var xUp = evt.touches[0].clientX;
-  var yUp = evt.touches[0].clientY;
-
-  var xDiff = xDown - xUp;
-  var yDiff = yDown - yUp;
+  var xDiff = xDown - event.touches[0].clientX;
+  var yDiff = yDown - event.touches[0].clientY;
 
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
-    evt.preventDefault();
-    /*most significant*/
-    if (xDiff > 0) {
+    event.preventDefault();
+    // Check if side swipe and direction
+    if (xDiff > threshold) {
       handleSliderRight();
-    } else {
+    } else if (xDiff < -1 * threshold) {
       handleSliderLeft();
+    } else {
     }
   } else {
   }
-  /* reset values */
+
+  // Reset values
   xDown = null;
   yDown = null;
+
+  // Remove handler for memory efficiency
+  document
+    .getElementById("cards")
+    .removeEventListener("touchmove", handleTouchMove);
 }
