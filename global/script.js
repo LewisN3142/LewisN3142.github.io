@@ -121,35 +121,58 @@ $(document).ready(function () {
   });
 
   // JQuery for terms and conditions modal
-  $("#terms-conditions").click(function () {
-    $(".modal").toggleClass("modal-toggled");
-    $(this).attr("aria-expanded", "true");
-    $("#close-terms-button").attr("aria-expanded", "true");
-    $(this).addClass("modal-toggled");
+  function onOverlayOpen() {
     $("#modal-overlay").fadeIn(400);
     $("#body").addClass("toggled");
-
     $(".under-modal-overlay").each(function () {
       $(this).attr("tabindex", "-1");
     });
-  });
+  }
 
-  function onModalClose() {
-    $(".modal").toggleClass("modal-toggled");
-    $("#terms-conditions").attr("aria-expanded", "false");
-    $("#close-terms-button").attr("aria-expanded", "false");
-    $("#terms-conditions").removeClass("modal-toggled");
+  function onOverlayClose() {
     $("#body").removeClass("toggled");
     $("#modal-overlay").delay(50).fadeOut(250);
-
     $(".under-modal-overlay:not(.link-back-card)").each(function () {
       $(this).removeAttr("tabindex");
     });
   }
 
-  // Add respective class to any button which closes the modal
+  // Control modal for terms and conditions
+  $("#terms-conditions").click(function () {
+    $(".modal").addClass("modal-toggled");
+    $(this).attr("aria-expanded", "true");
+    $("#close-terms-button").attr("aria-expanded", "true");
+    $(this).addClass("modal-toggled");
+    onOverlayOpen();
+  });
+
   $(".close-modal").click(function () {
-    onModalClose();
+    $(".modal").removeClass("modal-toggled");
+    $("#terms-conditions").attr("aria-expanded", "false");
+    $("#close-terms-button").attr("aria-expanded", "false");
+    $("#terms-conditions").removeClass("modal-toggled");
+    onOverlayClose();
+  });
+
+  // Repurpose modal for gallery page
+  $(".close-gallery-modal").click(function () {
+    $(".gallery-modal").delay(300).removeClass("modal-toggled");
+    $("#gallery-modal-img").attr("src", null);
+    // Remove modal-toggled from gallery-thumb-wrapper...
+    onOverlayClose();
+  });
+
+  $(".gallery-thumb-wrapper").click(function () {
+    $(".gallery-modal").addClass("modal-toggled");
+    $("#gallery-modal-img").attr(
+      "src",
+      "/gallery_page/gallery_images/" + $(this).attr("data-lightbox") + ".webp"
+    );
+    $(this).addClass("modal-toggled");
+    onOverlayOpen();
+    // aria-expanded .gallery-thumb-wrapper, #close-gallery-modal-button, .gallery-modal
+    // Add code to filter the gallery and links to menu for pre-filtered selection and add text
+    // Add buttons to move through images, neaten css, generate html through json also?
   });
 
   $("#gform").on("submit", function () {
@@ -313,6 +336,7 @@ function handleTouchStart(event) {
 }
 
 function handleTouchMove(event) {
+  // Prevent firing if values null (i.e. no previous touchStart)
   if (!xDown || !yDown) {
     return;
   }
@@ -321,8 +345,10 @@ function handleTouchMove(event) {
   var yDiff = yDown - event.touches[0].clientY;
 
   if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    // Prevents vertical scrolling in same motion as horizontal
+    // Lifetime of listener (and prevent) is until touchEnd
     event.preventDefault();
-    // Check if side swipe and direction
+    // Check for side swipe and direction
     if (xDiff > threshold) {
       handleSliderRight();
     } else if (xDiff < -1 * threshold) {
@@ -330,14 +356,11 @@ function handleTouchMove(event) {
     } else {
     }
   } else {
+    // Normal scroll behaviour if more y than x
   }
 
-  // Reset values
+  // Set values null -- otherwise, fires repeatedly within stroke
+  // N.B. removing listener unlocks vertical motion within stroke but prevents repeat swiping within stroke
   xDown = null;
   yDown = null;
-
-  // Remove handler for memory efficiency
-  // document
-  //  .getElementById("cards")
-  //  .removeEventListener("touchmove", handleTouchMove);
 }
