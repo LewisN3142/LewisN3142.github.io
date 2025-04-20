@@ -156,9 +156,9 @@ $(document).ready(function () {
 
   // Repurpose modal for gallery page
   $(".close-gallery-modal").click(function () {
+    $(".gallery-thumb-wrapper").removeClass("modal-toggled");
     $(".gallery-modal").delay(300).removeClass("modal-toggled");
     $("#gallery-modal-img").attr("src", null);
-    // Remove modal-toggled from gallery-thumb-wrapper...
     onOverlayClose();
   });
 
@@ -172,7 +172,7 @@ $(document).ready(function () {
     onOverlayOpen();
     // aria-expanded .gallery-thumb-wrapper, #close-gallery-modal-button, .gallery-modal
     // Add code to filter the gallery and links to menu for pre-filtered selection and add text
-    // Add buttons to move through images, neaten css, generate html through json also?
+    // Add code for buttons, generate html through json also?
   });
 
   $("#gform").on("submit", function () {

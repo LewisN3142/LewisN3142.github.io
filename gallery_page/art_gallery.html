@@ -33,7 +33,7 @@
   <div class="modal" id="terms-conditions-modal">
     <div class="modal-title">
       <h2> Terms and Conditions </h2>
-      <button class="close-modal" id="close-terms-button" type="button" aria-expanded="false"
+      <button class="close-modal modal-button" id="close-terms-button" type="button" aria-expanded="false"
         aria-controls="terms-conditions-modal" aria-label="close terms and conditions"> Close<i
           class="abstract-icon icon-close"></i></button>
     </div>
@@ -70,17 +70,22 @@
   </div>
 
   <div class="gallery-modal">
-    <div class="modal-title modal-title-gallery">
-      <button class="close-gallery-modal" id="close-gallery-modal-button" type="button" aria-expanded="false"
-        aria-controls="gallery-modal" aria-label="close selected gallery image"> Close<i
-          class="abstract-icon icon-close"></i></button>
-    </div>
     <img id="gallery-modal-img" src="" loading="lazy" alt="">
-    <p>
+    <p class="redColor">
       Some text describing the image goes here. Need to add margins, reduce text size, and enable scrolling vertically
       if text overflows.
     </p>
-  </div>
+    <div class="modal-title modal-title-gallery">
+      <button class="modal-button" id="previous-gallery-modal-button" type="button" aria-expanded="false"
+        aria-controls="gallery-modal" aria-label="get previous gallery image"> Back<i
+          class="abstract-icon icon-angle-left gallery-angle"></i></button>
+      <button class="modal-button" id="next-gallery-modal-button" type="button" aria-expanded="false"
+        aria-controls="gallery-modal" aria-label="get next gallery image"> Next<i
+          class="abstract-icon icon-angle-right gallery-angle"></i></button>
+      <button class="modal-button close-gallery-modal" id="close-gallery-modal-button" type="button"
+        aria-expanded="false" aria-controls="gallery-modal" aria-label="close selected gallery image"> Close<i
+          class="abstract-icon icon-close"></i></button>
+    </div>
   </div>
 
   <header class="top-nav"> <!-- Top Nav Bar -->

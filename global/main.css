@@ -404,6 +404,11 @@ main hr {
   flex-direction: row;
 }
 
+.gallery-modal > .modal-title {
+  border-top: 1px solid var(--overlay-color);
+  justify-content: space-around;
+}
+
 .modal-title h2 {
   margin: 0;
   font-weight: 400;
@@ -422,34 +427,31 @@ main hr {
   margin-right: 0.25em;
 }
 
-#close-terms-button,
-#close-gallery-modal-button {
-  margin: 0.35rem 0.1rem 0 1rem;
+.modal-button {
+  margin: 0.15rem 0.1rem 0 1rem;
   display: inline-block;
   justify-content: flex-end;
   align-self: center;
   align-items: center;
   text-align: center;
   cursor: pointer;
-  font-size: var(--font-size-default);
+  font-size: var(--footnote-font-size);
   color: var(--foreground-active-blue);
   background: none;
   border: none;
   padding: 0;
 }
 
-.modal-title-gallery {
-  padding: 0.3rem;
+.close-abstract-button {
+  margin: 0.25rem 0.3rem 0.3rem 1rem;
+  flex-grow: 1;
+  align-self: right;
+  align-items: right;
+  text-align: right;
 }
 
-#close-gallery-modal-button {
-  border-radius: 0.4rem;
-  box-shadow: 8px 0px 5px -7px rgba(0, 0, 0, 0.3),
-    -8px 0px 5px -7px rgba(0, 0, 0, 0.3);
-  background-color: var(--background-default);
-  padding: 3px;
-  margin: 0;
-  margin-left: auto;
+.modal-title-gallery {
+  padding: 0.3rem;
 }
 
 .modal-details {
@@ -540,6 +542,8 @@ main hr {
   max-width: 80vw;
   max-height: 60vh;
   object-fit: contain;
+
+  border-radius: 0.5rem;
 }
 
 .gallery-modal p {
@@ -548,6 +552,7 @@ main hr {
   margin: 0;
   padding: 0.5rem;
   padding-top: 0.3rem;
+  font-size: var(--footnote-font-size);
 }
 
 #modal-overlay {
@@ -731,10 +736,8 @@ main a:visited {
 a:focus-visible,
 button:focus-visible,
 #menu-toggle:focus-visible,
-#close-terms-button:focus-visible,
-.close-abstract-button:focus-visible,
+.modal-button:focus-visible,
 #terms-conditions:focus-visible,
-#close-gallery-modal-button:focus-visible,
 .sidebar-nav .sidebar-text li a:focus-visible {
   border: 2px solid white;
   border-radius: 5px;
@@ -744,9 +747,7 @@ button:focus-visible,
 #wrapper button:focus-visible,
 #menu-toggle:focus-visible,
 #terms-conditions:focus-visible,
-#close-terms-button:focus-visible,
-#close-gallery-modal-button:focus-visible,
-.close-abstract-button:focus-visible {
+.modal-button:focus-visible {
   outline: none;
 }
 
@@ -1029,22 +1030,6 @@ button:focus-visible,
   flex-direction: row;
 }
 
-.close-abstract-button {
-  margin: 0rem 0.3rem 0.3rem 1rem;
-  display: inline-block;
-  justify-content: flex-end;
-  flex-grow: 1;
-  align-self: right;
-  align-items: right;
-  text-align: right;
-  cursor: pointer;
-  font-size: var(--footnote-font-size);
-  color: var(--foreground-active-blue);
-  background: none;
-  border: none;
-  padding: 0;
-}
-
 .form-container {
   margin: 0.2rem;
 }
@@ -1270,6 +1255,10 @@ textarea {
 
 .slider-angle-right {
   margin-right: -1.5px;
+}
+
+.gallery-angle {
+  margin: 0rem 0.2rem;
 }
 
 .slider-button:active {
@@ -1719,13 +1708,7 @@ textarea {
     text-decoration: underline;
   }
 
-  #close-terms-button:hover,
-  #close-gallery-modal-button:hover {
-    color: var(--foreground-clicked-blue);
-    text-decoration: underline;
-  }
-
-  .close-abstract-button:hover {
+  .modal-button:hover {
     color: var(--foreground-clicked-blue);
     text-decoration: underline;
   }
