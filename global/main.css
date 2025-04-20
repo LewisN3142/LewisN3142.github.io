@@ -520,6 +520,7 @@ main hr {
 #gallery-modal p {
   border-top: 1px solid var(--overlay-color);
   overflow-y: auto;
+  overflow-x: hidden;
   margin: 0;
   padding: 0.5rem;
   padding-top: 0.3rem;
@@ -654,6 +655,7 @@ main hr {
 main h3,
 main p {
   text-align: left;
+  word-break: break-all;
 }
 
 main h1,
@@ -1582,7 +1584,7 @@ textarea {
     width: 87%;
   }
 
-  .modal {
+  #terms-conditions-modal {
     width: 85vw;
     max-width: 450px;
   }
