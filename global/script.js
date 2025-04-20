@@ -139,7 +139,7 @@ $(document).ready(function () {
 
   // Control modal for terms and conditions
   $("#terms-conditions").click(function () {
-    $(".modal").addClass("modal-toggled");
+    $("#terms-conditions-modal").addClass("modal-toggled");
     $(this).attr("aria-expanded", "true");
     $("#close-terms-button").attr("aria-expanded", "true");
     $(this).addClass("modal-toggled");
@@ -147,7 +147,7 @@ $(document).ready(function () {
   });
 
   $(".close-modal").click(function () {
-    $(".modal").removeClass("modal-toggled");
+    $("#terms-conditions-modal").removeClass("modal-toggled");
     $("#terms-conditions").attr("aria-expanded", "false");
     $("#close-terms-button").attr("aria-expanded", "false");
     $("#terms-conditions").removeClass("modal-toggled");
@@ -157,13 +157,13 @@ $(document).ready(function () {
   // Repurpose modal for gallery page
   $(".close-gallery-modal").click(function () {
     $(".gallery-thumb-wrapper").removeClass("modal-toggled");
-    $(".gallery-modal").delay(300).removeClass("modal-toggled");
-    $("#gallery-modal-img").attr("src", null);
+    $("#gallery-modal").removeClass("modal-toggled");
     onOverlayClose();
   });
 
   $(".gallery-thumb-wrapper").click(function () {
-    $(".gallery-modal").addClass("modal-toggled");
+    $("#gallery-modal-img").attr("src", null);
+    $("#gallery-modal").addClass("modal-toggled");
     $("#gallery-modal-img").attr(
       "src",
       "/gallery_page/gallery_images/" + $(this).attr("data-lightbox") + ".webp"

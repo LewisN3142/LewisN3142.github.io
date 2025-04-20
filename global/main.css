@@ -391,6 +391,55 @@ main hr {
 
 /* Modal for terms and conditions */
 
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  position: fixed;
+
+  max-height: 80vh;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: var(--hide-modal-speed);
+  -webkit-transition: var(--hide-modal-speed);
+  -moz-transition: var(--hide-modal-speed);
+  -o-transition: var(--hide-modal-speed);
+
+  border-radius: 0.5rem;
+  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
+    -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
+  background-color: var(--background-default);
+
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal.modal-toggled {
+  translate: 0%;
+  opacity: 1;
+  visibility: visible;
+
+  transition: var(--reveal-modal-speed);
+  -webkit-transition: var(--reveal-modal-speed);
+  -moz-transition: var(--reveal-modal-speed);
+  -o-transition: var(--reveal-modal-speed);
+}
+
+#gallery-modal {
+  z-index: 80;
+  max-width: 80vw;
+}
+
+#terms-conditions-modal {
+  z-index: 100;
+  width: 500px;
+  overflow: hidden;
+}
+
 .modal a:visited {
   color: var(--foreground-visited);
 }
@@ -404,9 +453,10 @@ main hr {
   flex-direction: row;
 }
 
-.gallery-modal > .modal-title {
+#gallery-modal > .modal-title {
   border-top: 1px solid var(--overlay-color);
   justify-content: space-around;
+  padding: 0.3rem;
 }
 
 .modal-title h2 {
@@ -418,13 +468,6 @@ main hr {
   align-self: center;
   align-items: center;
   text-align: left;
-}
-
-.terms-icon {
-  font-size: var(--font-size-default);
-  transition: var(--icon-rotate-speed);
-  vertical-align: -0.096rem;
-  margin-right: 0.25em;
 }
 
 .modal-button {
@@ -450,10 +493,6 @@ main hr {
   text-align: right;
 }
 
-.modal-title-gallery {
-  padding: 0.3rem;
-}
-
 .modal-details {
   align-items: left;
   display: flex;
@@ -469,90 +508,27 @@ main hr {
   margin: 0.4rem 1rem 0.4rem 1rem;
 }
 
-.modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-
-  position: fixed;
-  margin: 5vh auto auto auto;
-  z-index: 100;
-
-  width: 500px;
-  max-height: 80vh;
-  overflow: hidden;
-
-  opacity: 0;
-  visibility: hidden;
-
-  transition: var(--hide-modal-speed);
-  -webkit-transition: var(--hide-modal-speed);
-  -moz-transition: var(--hide-modal-speed);
-  -o-transition: var(--hide-modal-speed);
-
-  border-radius: 0.5rem;
-  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
-    -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
-  background-color: var(--background-default);
-}
-
-.gallery-modal.modal-toggled,
-.modal.modal-toggled {
-  translate: 0%;
-  opacity: 1;
-  visibility: visible;
-
-  transition: var(--reveal-modal-speed);
-  -webkit-transition: var(--reveal-modal-speed);
-  -moz-transition: var(--reveal-modal-speed);
-  -o-transition: var(--reveal-modal-speed);
-}
-
-.gallery-thumb-wrapper.modal-toggled > .gallery-thumb {
-  border-color: var(--foreground-clicked-blue);
-  color: var(--foreground-clicked-blue);
-}
-
-.gallery-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-
-  position: fixed;
-  margin: auto;
-  z-index: 80;
-
-  top: 50%;
-  transform: translateY(-50%);
-  max-height: 80vh;
-  max-width: 80vw;
-
-  visibility: hidden;
-  opacity: 0;
-
-  border-radius: 0.5rem;
-  box-shadow: 15px 0px 8px -10px rgba(0, 0, 0, 0.3),
-    -15px 0px 8px -10px rgba(0, 0, 0, 0.3);
-  background-color: var(--background-default);
-}
-
-.gallery-modal img {
+#gallery-modal img {
   max-width: 80vw;
   max-height: 60vh;
   object-fit: contain;
 
-  border-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
-.gallery-modal p {
+#gallery-modal p {
   border-top: 1px solid var(--overlay-color);
   overflow-y: auto;
   margin: 0;
   padding: 0.5rem;
   padding-top: 0.3rem;
   font-size: var(--footnote-font-size);
+}
+
+.gallery-thumb-wrapper.modal-toggled > .gallery-thumb {
+  border-color: var(--foreground-clicked-blue);
+  color: var(--foreground-clicked-blue);
 }
 
 #modal-overlay {
@@ -573,6 +549,13 @@ main hr {
   font-size: var(--footnote-font-size);
   border: none;
   padding: 0 3px;
+}
+
+.terms-icon {
+  font-size: var(--font-size-default);
+  transition: var(--icon-rotate-speed);
+  vertical-align: -0.096rem;
+  margin-right: 0.25em;
 }
 
 #terms-conditions.modal-toggled .terms-icon {
@@ -711,13 +694,6 @@ main a:visited {
   margin-bottom: 0;
 }
 
-.Review-section {
-  border-radius: 0.6rem;
-  padding: 0.3rem 0.9rem 0.6rem 0.9rem;
-  margin: 1.2rem 0.3rem;
-  background-color: var(--background-mid-accent);
-}
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -786,12 +762,8 @@ button:focus-visible,
   margin-bottom: 0px;
 }
 
+.awards-column-2,
 .awards-column-1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.awards-column-2 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -800,6 +772,13 @@ button:focus-visible,
   content: "";
   display: table;
   clear: both;
+}
+
+.Review-section {
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.9rem 0.6rem 0.9rem;
+  margin: 1.2rem 0.3rem;
+  background-color: var(--background-mid-accent);
 }
 
 .teach-section {
@@ -871,6 +850,11 @@ button:focus-visible,
 
   text-align: center;
   justify-content: center;
+}
+
+.contact-submit-btn {
+  padding: 1 4px;
+  margin-left: 0.5rem;
 }
 
 .social-link:visited {
@@ -950,25 +934,6 @@ button:focus-visible,
 /* CONTACT FORM STYLING */
 .contact-body {
   min-height: 100vh;
-}
-
-.contact-submit-btn {
-  display: inline-block;
-  color: var(--foreground-active-blue);
-  cursor: pointer;
-  background: none;
-  font-size: var(--footnote-font-size);
-  padding: 1 4px;
-  margin-left: 0.5rem;
-
-  border-color: var(--foreground-active-blue);
-  border-radius: 1rem;
-  border-style: solid;
-  border-width: 0.145rem;
-  background-color: var(--background-accent);
-
-  text-align: center;
-  justify-content: center;
 }
 
 .contact-section {
@@ -1695,12 +1660,6 @@ textarea {
 
   .social-buttons a:visited:hover {
     color: var(--foreground-clicked-blue);
-  }
-
-  /* Modal open and close buttons */
-  .contact-submit-btn:hover {
-    color: var(--foreground-clicked-blue);
-    border-color: var(--foreground-clicked-blue);
   }
 
   #terms-conditions:hover {
