@@ -455,6 +455,7 @@ main hr {
 
 #gallery-modal > .modal-title {
   border-top: 1px solid var(--overlay-color);
+  border-bottom: none;
   justify-content: space-around;
   padding: 0.3rem;
 }

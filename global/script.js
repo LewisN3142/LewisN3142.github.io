@@ -154,25 +154,66 @@ $(document).ready(function () {
     onOverlayClose();
   });
 
-  // Repurpose modal for gallery page
   $(".close-gallery-modal").click(function () {
     $(".gallery-thumb-wrapper").removeClass("modal-toggled");
     $("#gallery-modal").removeClass("modal-toggled");
+
+    $(".gallery-thumb-wrapper").attr("aria-expanded", "false");
+    $("#close-gallery-modal-button").attr("aria-expanded", "false");
+    $("#next-gallery-modal-button").attr("aria-expanded", "false");
+    $("#previous-gallery-modal-button").attr("aria-expanded", "false");
+
     onOverlayClose();
   });
 
   $(".gallery-thumb-wrapper").click(function () {
     $("#gallery-modal-img").attr("src", null);
-    $("#gallery-modal").addClass("modal-toggled");
     $("#gallery-modal-img").attr(
       "src",
-      "/gallery_page/gallery_images/" + $(this).attr("data-lightbox") + ".webp"
+      "/gallery_page/gallery_images/" + $(this).attr("id") + ".webp"
     );
+    $("#gallery-modal-img").attr("data-lightbox", $(this).attr("id"));
     $(this).addClass("modal-toggled");
+    $("#gallery-modal").addClass("modal-toggled");
+
+    $(".gallery-thumb-wrapper").attr("aria-expanded", "true");
+    $("#close-gallery-modal-button").attr("aria-expanded", "true");
+    $("#next-gallery-modal-button").attr("aria-expanded", "true");
+    $("#previous-gallery-modal-button").attr("aria-expanded", "true");
+
     onOverlayOpen();
-    // aria-expanded .gallery-thumb-wrapper, #close-gallery-modal-button, .gallery-modal
-    // Add code to filter the gallery and links to menu for pre-filtered selection and add text
-    // Add code for buttons, generate html through json also?
+    // add aria-controls, alt, aria-label etc to thumbs
+    // Add code to filter the gallery and links to menu for pre-filtered selection and add text -- make sure buttons work with filter
+    // Generate html through json also?
+  });
+
+  // Automatically find id of first and last thumbnails and use these instead of "BITD_Digital" etc
+  const firstGalleryImage = document.querySelectorAll(
+    ".gallery-thumb-wrapper:first-child"
+  );
+  const lastGalleryImage = document.querySelectorAll(
+    ".gallery-thumb-wrapper:last-child"
+  );
+
+  // Code for next and previous buttons
+  $("#previous-gallery-modal-button").click(function () {
+    var currentLightbox = $("#gallery-modal-img");
+    if (currentLightbox.attr("data-lightbox") != firstGalleryImage) {
+      $(".gallery-thumb-wrapper").removeClass("modal-toggled");
+      $("#" + currentLightbox.attr("data-lightbox"))
+        .prev(".gallery-thumb-wrapper")
+        .click();
+    }
+  });
+
+  $("#next-gallery-modal-button").click(function () {
+    var currentLightbox = $("#gallery-modal-img");
+    if (currentLightbox.attr("data-lightbox") != lastGalleryImage) {
+      $(".gallery-thumb-wrapper").removeClass("modal-toggled");
+      $("#" + currentLightbox.attr("data-lightbox"))
+        .next(".gallery-thumb-wrapper")
+        .click();
+    }
   });
 
   $("#gform").on("submit", function () {
@@ -185,7 +226,9 @@ $(document).ready(function () {
     var $iframe = $(this).parent().parent().parent().next(".youtube-video");
     $iframe.attr(
       "src",
-      $(this).attr("data-video-number") + "&rel=0&modest-branding=1&mute=1"
+      "https://www.youtube-nocookie.com/embed/" +
+        $(this).attr("data-video-number") +
+        "&rel=0&modest-branding=1&mute=1"
     );
     $iframe.addClass("youtube-video-loaded");
     $iframe.show();
