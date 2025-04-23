@@ -20,10 +20,6 @@
 
   <link rel="stylesheet" href="../global/main.css" type="text/css">
 
-  <!-- Get JQuery and Slick -->
-  <script src="../global/jquery.min.js"></script>
-
-  <script src="../global/script.js"></script>
 </head>
 
 <body id="body">
@@ -71,7 +67,7 @@
 
   <div class="modal" id="gallery-modal">
     <img id="gallery-modal-img" src="" loading="lazy" alt="">
-    <p class="redColor">
+    <p class="redColor" id="gallery-modal-description">
       Some text describing the image goes here. Need to add margins, reduce text size, and enable scrolling vertically
       if text overflows.
     </p>
@@ -223,119 +219,11 @@
         <span class="youtube-player-padding"></span>
 
 
-        <div class="masonry-container">
+        <div class="masonry-container" id="masonry-container">
 
           <!-- Populating these buttons with Javascript and JSON would probably be more efficient, since they follow a template and the gallery uses JS anyway. Try this when implementing modal text. -->
 
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="BITD_Digital">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/BITD_Digital_200px.webp"
-              srcset="/gallery_page/gallery_images/BITD_Digital_300px.webp 300w, /gallery_page/gallery_images/BITD_Digital_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="BITD_Pen">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/BITD_Pen_200px.webp"
-              srcset="/gallery_page/gallery_images/BITD_Pen_300px.webp 300w, /gallery_page/gallery_images/BITD_Pen_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Slaine">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Slaine_200px.webp"
-              srcset="/gallery_page/gallery_images/Slaine_300px.webp 300w, /gallery_page/gallery_images/Slaine_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Foxes_Digital">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Foxes_Digital_200px.webp"
-              srcset="/gallery_page/gallery_images/Foxes_Digital_300px.webp 300w, /gallery_page/gallery_images/Foxes_Digital_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Foxes_Watercolour">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Foxes_Watercolour_200px.webp"
-              srcset="/gallery_page/gallery_images/Foxes_Watercolour_300px.webp 300w, /gallery_page/gallery_images/Foxes_Watercolour_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Byrnison">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Byrnison_200px.webp"
-              srcset="/gallery_page/gallery_images/Byrnison_300px.webp 300w, /gallery_page/Byrnison_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Breakquest_Pen">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Breakquest_Pen_200px.webp"
-              srcset="/gallery_page/gallery_images/Breakquest_Pen_300px.webp 300w, /gallery_page/Breakquest_Pen_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Breakquest_Watercolour">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Breakquest_Watercolour_200px.webp"
-              srcset="/gallery_page/gallery_images/Breakquest_Watercolour_300px.webp 300w, /gallery_page/Breakquest_Watercolour_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Croc_Monochrome">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Croc_Monochrome_200px.webp"
-              srcset="/gallery_page/gallery_images/Croc_Monochrome_300px.webp 300w, /gallery_page/Croc_Monochrome_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Croc_Sepia">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Croc_Sepia_200px.webp"
-              srcset="/gallery_page/gallery_images/Croc_Sepia_300px.webp 300w, /gallery_page/Croc_Sepia_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Gargoyle">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Gargoyle_200px.webp"
-              srcset="/gallery_page/gallery_images/Gargoyle_300px.webp 300w, /gallery_page/Gargoyle_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Hellblade_Monochrome">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Hellblade_Monochrome_200px.webp"
-              srcset="/gallery_page/gallery_images/Hellblade_Monochrome_300px.webp 300w, /gallery_page/Hellblade_Monochrome_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Hellblade_Pen">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Hellblade_Pen_200px.webp"
-              srcset="/gallery_page/gallery_images/Hellblade_Pen_300px.webp 300w, /gallery_page/Hellblade_Pen_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Neverwinter_Mice_Digital">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Neverwinter_Mice_Digital_200px.webp"
-              srcset="/gallery_page/gallery_images/Neverwinter_Mice_Digital_300px.webp 300w, /gallery_page/Neverwinter_Mice_Digital_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-          <button class="gallery-thumb-wrapper under-modal-overlay under-overlay" aria-controls="" aria-expanded="false"
-            aria-label="" id="Neverwinter_Mice_Pen">
-            <img class="gallery-thumb" src="/gallery_page/gallery_images/Neverwinter_Mice_Pen_200px.webp"
-              srcset="/gallery_page/gallery_images/Neverwinter_Mice_Pen_300px.webp 300w, /gallery_page/Neverwinter_Mice_Pen_200px.webp 200w"
-              sizes="(min-width: 300px) 300px, 200px" loading="lazy" alt="">
-          </button>
-
-
         </div>
-
-
 
       </div>
 
@@ -349,5 +237,10 @@
     </main>
 
   </div>
+
+  <!-- Get JQuery -->
+  <script src="../global/jquery.min.js"></script>
+  <script src="art_gallery.js"></script>
+  <script src="../global/script.js"></script>
 
 </body>

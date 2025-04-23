@@ -414,8 +414,7 @@ main hr {
   background-color: var(--background-default);
 
   margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 10vh;
 }
 
 .modal.modal-toggled {
@@ -432,6 +431,10 @@ main hr {
 #gallery-modal {
   z-index: 80;
   max-width: 80vw;
+}
+
+#gallery-modal > .modal-title > button {
+  margin-bottom: 0.15rem;
 }
 
 #terms-conditions-modal {
@@ -454,10 +457,9 @@ main hr {
 }
 
 #gallery-modal > .modal-title {
-  border-top: 1px solid var(--overlay-color);
   border-bottom: none;
-  justify-content: space-around;
   padding: 0.3rem;
+  margin: auto;
 }
 
 .modal-title h2 {
@@ -474,7 +476,6 @@ main hr {
 .modal-button {
   margin: 0.15rem 0.1rem 0 1rem;
   display: inline-block;
-  justify-content: flex-end;
   align-self: center;
   align-items: center;
   text-align: center;
@@ -484,6 +485,11 @@ main hr {
   background: none;
   border: none;
   padding: 0;
+}
+
+#previous-gallery-modal-button,
+#next-gallery-modal-button {
+  margin-right: 1rem;
 }
 
 .close-abstract-button {
@@ -520,6 +526,7 @@ main hr {
 
 #gallery-modal p {
   border-top: 1px solid var(--overlay-color);
+  border-bottom: 1px solid var(--overlay-color);
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0;
@@ -656,7 +663,6 @@ main hr {
 main h3,
 main p {
   text-align: left;
-  word-break: break-all;
 }
 
 main h1,
