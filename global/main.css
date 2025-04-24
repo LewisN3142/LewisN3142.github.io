@@ -429,7 +429,7 @@ main hr {
 }
 
 #gallery-modal {
-  z-index: 80;
+  z-index: 100;
   max-width: 80vw;
 }
 
@@ -1733,29 +1733,29 @@ textarea {
 
 /* Media queries for screen width and about image margins  */
 @media screen and (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-  .masonry-container {
+  .container,
+  .masonry-container,
+  #gallery-modal,
+  #gallery-modal > img {
     max-width: 540px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-  .masonry-container {
+  .container,
+  .masonry-container,
+  #gallery-modal,
+  #gallery-modal > img {
     max-width: 720px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-  .masonry-container {
-    max-width: 992px;
+  .container,
+  .masonry-container,
+  #gallery-modal,
+  #gallery-modal > img {
+    max-width: 900px;
   }
   .img-about {
     margin-top: 4.35rem;
@@ -1769,10 +1769,10 @@ textarea {
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-  .masonry-container {
+  .container,
+  .masonry-container,
+  #gallery-modal,
+  #gallery-modal > img {
     max-width: 1140px;
   }
   .img-about {
@@ -1782,7 +1782,9 @@ textarea {
 }
 
 @media screen and (min-width: 1600px) {
-  .container {
+  .container,
+  #gallery-modal,
+  #gallery-modal > img {
     max-width: 1510px;
   }
   .masonry-container {
@@ -1811,7 +1813,9 @@ textarea {
 }
 
 @media screen and (min-width: 2000px) {
-  .container {
+  .container,
+  #gallery-modal,
+  #gallery-modal > img {
     max-width: 1880px;
   }
   .masonry-container {
