@@ -434,7 +434,10 @@ main hr {
 }
 
 #gallery-modal > .modal-title > button {
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #terms-conditions-modal {
@@ -485,11 +488,6 @@ main hr {
   background: none;
   border: none;
   padding: 0;
-}
-
-#previous-gallery-modal-button,
-#next-gallery-modal-button {
-  margin-right: 1rem;
 }
 
 .close-abstract-button {
@@ -1451,18 +1449,15 @@ textarea {
 .youtube-row {
   display: flex;
   align-items: center;
+  padding: 0.5rem 0.3rem 0.5rem 0.9rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 .youtube-player-padding {
   height: 100%;
   display: inline-block;
   vertical-align: middle;
-}
-
-.Youtube-section {
-  padding: 0.5rem 0.3rem 0.5rem 0.9rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
 }
 
 .youtube-thumb {
@@ -1489,6 +1484,10 @@ textarea {
   background: none;
   border: none;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .youtube-thumb-caption {
@@ -1863,9 +1862,6 @@ textarea {
 
   .youtube-row {
     display: block;
-  }
-
-  .Youtube-section {
     padding-right: 0.9rem;
   }
 

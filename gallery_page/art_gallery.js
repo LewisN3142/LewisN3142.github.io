@@ -1,15 +1,4 @@
 $(document).ready(function () {
-  function descriptionAnchor(link, label) {
-    var newAnchor = document.createElement("a");
-
-    var linkText = document.createTextNode(label);
-    newAnchor.appendChild(linkText);
-
-    newAnchor.setAttribute("rel", "noopener noreferrer");
-    newAnchor.setAttribute("class", "external-link under-overlay");
-    newAnchor.setAttribute("href", "https://" + link);
-  }
-
   const gallery_table = [
     {
       name: "BITD_Digital",
@@ -60,57 +49,57 @@ $(document).ready(function () {
         "A pencil sketch of Lee Scoresby (Lin Manuel Miranda), his daemon the hare Hester, and the panserbjørn Iorek Byrnison from the TV series His Dark Materials, based on the book series of the same name by Philip Pullman. By using a technical pencil and varied line weights, I was able to mimic the textures of materials such as fur and wool.",
     },
     {
-      name: "Breakquest_Pen",
+      name: "Breakquest_Watercolour",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_fanart gallery_pen gallery_watercolour",
       description: "",
     },
     {
-      name: "Breakquest_Watercolour",
+      name: "Breakquest_Pen",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_fanart gallery_pen",
       description: "",
     },
     {
       name: "Croc_Monochrome",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pencil gallery_pen gallery_trade",
       description: "",
     },
     {
       name: "Croc_Sepia",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pencil gallery_pen gallery_trade",
       description: "",
     },
     {
       name: "Gargoyle",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_acrylic",
       description: "",
     },
     {
       name: "Hellblade_Monochrome",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pen gallery_fanart",
       description: "",
     },
     {
       name: "Hellblade_Pen",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pen gallery_fanart",
       description: "",
     },
     {
       name: "Neverwinter_Mice_Digital",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pen gallery_fanart gallery_digital",
       description: "",
     },
     {
       name: "Neverwinter_Mice_Pen",
       alt_text: "",
-      filter_tags: "",
+      filter_tags: "gallery_pen gallery_fanart",
       description: "",
     },
   ];
@@ -119,37 +108,36 @@ $(document).ready(function () {
   var description_map = new Map();
   gallery_table.forEach(addGalleryImage);
 
-  function addGalleryImage(item) {
-    var newButton = document.createElement("button");
-    newButton.setAttribute(
-      "class",
-      "gallery-thumb-wrapper under-modal-overlay under-overlay"
-    );
-    newButton.setAttribute("aria-controls", "gallery-modal");
-    newButton.setAttribute("aria-expanded", "false");
-    newButton.setAttribute(
-      "aria-label",
-      "Open high resolution version of image" + item.name
-    );
-    newButton.setAttribute("id", item.name);
+  function createElement(type, props) {
+    var element = document.createElement(type);
+    for (var prop in props) {
+      element.setAttribute(prop, props[prop]);
+    }
+    return element;
+  }
 
-    var newImage = document.createElement("img");
-    newImage.setAttribute("class", "gallery-thumb " + item.filter_tags);
-    newImage.setAttribute(
-      "src",
-      "/gallery_page/gallery_images/" + item.name + "_200px.webp"
-    );
-    newImage.setAttribute(
-      "srcset",
-      "/gallery_page/gallery_images/" +
+  function addGalleryImage(item) {
+    var newButton = createElement("button", {
+      class: "gallery-thumb-wrapper under-modal-overlay under-overlay",
+      "aria-controls": "gallery-modal",
+      "aria-expanded": "false",
+      "aria-label": "Open high resolution version of image" + item.name,
+      id: item.name,
+    });
+
+    var newImage = createElement("img", {
+      class: "gallery-thumb " + item.filter_tags,
+      src: "/gallery_page/gallery_images/" + item.name + "_200px.webp",
+      srcset:
+        "/gallery_page/gallery_images/" +
         item.name +
         "_300px.webp 300w, /gallery_page/gallery_images/" +
         item.name +
-        "_200px.webp 200w"
-    );
-    newImage.setAttribute("sizes", "(min-width: 300px) 300px, 200px");
-    newImage.setAttribute("loading", "lazy");
-    newImage.setAttribute("alt", item.alt_text);
+        "_200px.webp 200w",
+      sizes: "(min-width: 300px) 300px, 200px",
+      loading: "lazy",
+      alt: item.alt_text,
+    });
 
     description_map.set(item.name, item.description);
 
@@ -245,4 +233,4 @@ $(document).ready(function () {
 
 // Code for filter (add and remove hidden class to classlist)
 // Modify next and back arrows to only go to next image without hidden class
-// Add in alt_text, filter_tags, aria_label
+// Add in alt_text, aria_label

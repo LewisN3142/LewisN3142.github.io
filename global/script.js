@@ -33,6 +33,32 @@ $(document).ready(function () {
   }
   touchResponsive();
 
+  // Generate dots for card carousel
+  const dotContainer = document.getElementById("slider-dots");
+  const numCards = cards.length;
+
+  function createElement(type, props) {
+    var element = document.createElement(type);
+    for (var prop in props) {
+      element.setAttribute(prop, props[prop]);
+    }
+    return element;
+  }
+
+  for (let i = 0; i < numCards; i++) {
+    var newButton = createElement("button", {
+      class: "slider-dot-single under-overlay under-modal-overlay",
+      "data-dots": i,
+      onclick: "onDotClick(" + i + ")",
+      "aria-controls": "cards",
+      "aria-label": "jump to card " + (i + 1) + " in carousel",
+    });
+    if (i === 0) {
+      newButton.classList.add("slider-dot-selected");
+    }
+    dotContainer.appendChild(newButton);
+  }
+
   // Code for sidebar and overlay
   function onFadeOut() {
     $("#overlay").fadeOut(250);
@@ -158,19 +184,6 @@ $(document).ready(function () {
   $("#gform").on("submit", function () {
     $("#gform *").fadeOut(300);
     $("#contact-submitted-text").delay(300).fadeIn(150);
-  });
-
-  $(".youtube-thumb-wrapper").click(function () {
-    $(this).attr("aria-expanded", "true");
-    var $iframe = $(this).parent().parent().parent().next(".youtube-video");
-    $iframe.attr(
-      "src",
-      "https://www.youtube-nocookie.com/embed/" +
-        $(this).attr("data-video-number") +
-        "&rel=0&modest-branding=1&mute=1"
-    );
-    $iframe.addClass("youtube-video-loaded");
-    $iframe.show();
   });
 });
 
