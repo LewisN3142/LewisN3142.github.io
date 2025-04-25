@@ -19,17 +19,31 @@ $(document).ready(function () {
   function touchResponsive() {
     if (touchCheck() == true) {
       $("#nav-burger-symbol").css("flex-basis", "calc(48% - 22.5px)");
+      console.log("true");
+      if (document.getElementById("cards")) {
+        var xDown = null;
+        var yDown = null;
+
+        document
+          .getElementById("cards")
+          .addEventListener("touchstart", handleTouchStart, { passive: false });
+      }
     } else {
       $("#nav-burger-symbol").css("flex-basis", "calc(48% - 28.5px)");
     }
-    if (document.getElementById("cards")) {
-      var xDown = null;
-      var yDown = null;
-
-      document
-        .getElementById("cards")
-        .addEventListener("touchstart", handleTouchStart, false);
-    }
+    document.addEventListener("keydown", (event) => {
+      var sliderContainer = document.getElementById("slider-container");
+      if (sliderContainer !== null && sliderContainer.querySelector(":hover")) {
+        switch (event.key) {
+          case "ArrowLeft":
+            handleSliderLeft();
+            break;
+          case "ArrowRight":
+            handleSliderRight();
+            break;
+        }
+      }
+    });
   }
   touchResponsive();
 
@@ -327,7 +341,7 @@ function handleTouchStart(event) {
 
   document
     .getElementById("cards")
-    .addEventListener("touchmove", handleTouchMove, false);
+    .addEventListener("touchmove", handleTouchMove, { passive: false });
 }
 
 function handleTouchMove(event) {
