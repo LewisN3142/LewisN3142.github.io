@@ -434,10 +434,10 @@ main hr {
 }
 
 #gallery-modal > .modal-title > button {
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
   margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 #terms-conditions-modal {
@@ -451,7 +451,6 @@ main hr {
 }
 
 .modal-title {
-  padding: 0.9rem 0.9rem 0.9rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--overlay-color);
   overflow: hidden;
@@ -463,6 +462,7 @@ main hr {
   border-bottom: none;
   padding: 0.3rem;
   margin: auto;
+  height: 2rem;
 }
 
 .modal-title h2 {
@@ -1839,6 +1839,15 @@ textarea {
 
   .gallery-thumb {
     width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #gallery-modal {
+    bottom: 5vh;
+  }
+  #gallery-modal > .modal-title {
+    height: 2.5rem;
   }
 }
 
