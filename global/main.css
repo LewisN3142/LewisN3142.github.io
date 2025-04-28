@@ -493,9 +493,7 @@ main hr {
 }
 
 .close-abstract-button {
-  margin: 0.25rem 0.25rem 0.35rem 0.5rem;
-  display: flex;
-  float: right;
+  margin: 0.4rem 0.25rem 0.25rem 0.5rem;
 }
 
 .modal-details {
@@ -1904,6 +1902,7 @@ textarea {
   }
   #gallery-modal > .modal-title {
     height: 2.5rem;
+    min-height: 2.5rem;
   }
 }
 
