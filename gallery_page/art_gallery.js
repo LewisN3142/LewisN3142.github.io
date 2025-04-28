@@ -102,6 +102,24 @@ $(document).ready(function () {
       filter_tags: "gallery_pen gallery_fanart",
       description: "",
     },
+    {
+      name: "Jakub",
+      alt_text: "",
+      filter_tags: "gallery_pencil gallery_portrait",
+      description: "",
+    },
+    {
+      name: "Layton_Switch",
+      alt_text: "",
+      filter_tags: "gallery_fanart gallery_digital",
+      description: "",
+    },
+    {
+      name: "Trunchbull",
+      alt_text: "",
+      filter_tags: "gallery_pen gallery_fanart",
+      description: "",
+    },
   ];
 
   // Loop through table, generate map, generate html for page
@@ -118,7 +136,10 @@ $(document).ready(function () {
 
   function addGalleryImage(item) {
     var newButton = createElement("button", {
-      class: "gallery-thumb-wrapper under-modal-overlay under-overlay",
+      class:
+        "gallery-thumb-wrapper under-modal-overlay under-overlay " +
+        item.filter_tags +
+        " ",
       "aria-controls": "gallery-modal",
       "aria-expanded": "false",
       "aria-label": "Open high resolution version of image" + item.name,
@@ -126,7 +147,7 @@ $(document).ready(function () {
     });
 
     var newImage = createElement("img", {
-      class: "gallery-thumb " + item.filter_tags,
+      class: "gallery-thumb ",
       src: "/gallery_page/gallery_images/" + item.name + "_200px.webp",
       srcset:
         "/gallery_page/gallery_images/" +
@@ -186,31 +207,29 @@ $(document).ready(function () {
     $("#previous-gallery-modal-button").attr("aria-expanded", "true");
   });
 
-  // Automatically find id of first and last thumbnails (without invisible class)
-  const firstGalleryImage = document.querySelectorAll(
-    ".gallery-thumb-wrapper:first-child"
-  );
-  const lastGalleryImage = document.querySelectorAll(
-    ".gallery-thumb-wrapper:last-child"
-  );
-
   // Code for next and previous buttons (edit to only move between non-invisible)
   $("#previous-gallery-modal-button").click(function () {
     var currentLightbox = $("#gallery-modal-img");
+    var firstGalleryImage = document.querySelectorAll(
+      ".gallery-thumb-wrapper:not(.gallery-image-hidden):first-child"
+    );
     if (currentLightbox.attr("data-lightbox") != firstGalleryImage) {
       $(".gallery-thumb-wrapper").removeClass("modal-toggled");
       $("#" + currentLightbox.attr("data-lightbox"))
-        .prev(".gallery-thumb-wrapper")
+        .prevAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
         .click();
     }
   });
 
   $("#next-gallery-modal-button").click(function () {
     var currentLightbox = $("#gallery-modal-img");
+    var lastGalleryImage = document.querySelectorAll(
+      ".gallery-thumb-wrapper:not(.gallery-image-hidden):last-child"
+    );
     if (currentLightbox.attr("data-lightbox") != lastGalleryImage) {
       $(".gallery-thumb-wrapper").removeClass("modal-toggled");
       $("#" + currentLightbox.attr("data-lightbox"))
-        .next(".gallery-thumb-wrapper")
+        .nextAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
         .click();
     }
   });
@@ -226,8 +245,54 @@ $(document).ready(function () {
         case "ArrowRight":
           $("#next-gallery-modal-button").click();
           break;
+        case "Escape":
+          $(".close-gallery-modal").click();
       }
     }
+  });
+
+  // Add code to generate buttons here
+
+  $(".gallery-filter-button").click(function () {
+    $(this).children("i").toggleClass("icon-checkbox-unchecked");
+    $(this).children("i").toggleClass("icon-checkbox-checked");
+    $(this).toggleClass("toggled");
+
+    var activeButtons = [];
+    $(".gallery-filter-button").each(function () {
+      if ($(this).hasClass("toggled")) {
+        activeButtons.push($(this).attr("id"));
+      }
+    });
+    switch (activeButtons.length == 0) {
+      case true:
+        $(".gallery-thumb-wrapper").removeClass("gallery-image-hidden");
+        break;
+      case false:
+        var classCheck = "." + activeButtons.join(".");
+        $(".gallery-thumb-wrapper").each(function () {
+          switch ($(this).filter(classCheck).length === 0) {
+            case false:
+              $(this).removeClass("gallery-image-hidden");
+              break;
+            case true:
+              $(this).addClass("gallery-image-hidden");
+              break;
+          }
+        });
+        break;
+    }
+  });
+
+  $("#clear-filters-button").click(function () {
+    $(".gallery-filter-button").removeClass("toggled");
+    $(".gallery-filter-button")
+      .children("i")
+      .removeClass("icon-checkbox-checked");
+    $(".gallery-filter-button")
+      .children("i")
+      .addClass("icon-checkbox-unchecked");
+    $(".gallery-thumb-wrapper").removeClass("gallery-image-hidden");
   });
 });
 

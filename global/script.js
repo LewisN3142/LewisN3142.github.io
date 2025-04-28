@@ -19,7 +19,6 @@ $(document).ready(function () {
   function touchResponsive() {
     if (touchCheck() == true) {
       $("#nav-burger-symbol").css("flex-basis", "calc(48% - 22.5px)");
-      console.log("true");
       if (document.getElementById("cards")) {
         var xDown = null;
         var yDown = null;

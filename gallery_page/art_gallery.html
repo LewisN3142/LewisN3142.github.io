@@ -197,15 +197,6 @@
       </div>
       <div class="container">
 
-        <div class="section-break" id=" ">
-          <!-- update id to next article name if section added to dropdown -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 512 512"
-            title="Art Gallery" alt="paint palette icon">
-            <path
-              d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
-          </svg>
-        </div>
-
         <article> <!-- Section 1 name -->
           <h2> About The Gallery </h2>
           <section class="Review-section About-section">
@@ -217,15 +208,81 @@
               Click on a thumbnail to view a high resolution verson of
               the image and information about its creation. These high-res images can be navigated between using the
               "next" and "back"
-              buttons. <span class="redColor"> The gallery can be filtered using the boxes below if you are looking for
-                a specific type of artwork. </span>
+              buttons. The gallery can be filtered using the menu below if you are looking for
+              a specific type of artwork.
             </p>
           </section>
+
+          <div class="section-break" id="gallery_start" style="margin-top:1rem">
+            <!-- update id to next article name if section added to dropdown -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 512 512"
+              title="Art Gallery" alt="paint palette icon">
+              <path
+                d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+            </svg>
+          </div>
+
+          <div class="gallery-filter-bar-container">
+            <button class="abstract-link under-overlay under-modal-overlay privacy-link" type="button"
+              aria-expanded="false" aria-controls="filters-menu" id="filter-open"> <i
+                class="abstract-icon icon-angle-right"></i>Filters<i class="icon-filters"
+                style="display:flex; float:right;"></i>
+            </button>
+
+            <div class="abstract-container privacy-container" id="filters-menu">
+              <div class="filter-columns">
+                <!-- Filters here -->
+                <button class="modal-button under-modal-overlay under-overlay gallery-filter-button" id="gallery_pen"
+                  type="checkbox" aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="filters gallery according to text"><i
+                    class="abstract-icon icon-checkbox-unchecked"></i>Pen
+                </button>
+                <br>
+                <button class="modal-button under-modal-overlay under-overlay gallery-filter-button"
+                  id="gallery_digital" type="checkbox" aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="filters gallery according to text"><i
+                    class="abstract-icon icon-checkbox-unchecked"></i>Digital
+                </button>
+                <br>
+                <button class="modal-button under-modal-overlay under-overlay gallery-filter-button" id="gallery_fanart"
+                  type="checkbox" aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="filters gallery according to text"><i
+                    class="abstract-icon icon-checkbox-unchecked"></i>Fan-art
+                </button>
+                <br>
+                <button class="modal-button under-modal-overlay under-overlay gallery-filter-button" id="gallery_trade"
+                  type="checkbox" aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="filters gallery according to text"><i
+                    class="abstract-icon icon-checkbox-unchecked"></i>Art-trade
+                </button>
+                <br>
+                <button class="modal-button under-modal-overlay under-overlay gallery-filter-button"
+                  id="gallery_watercolour" type="checkbox" aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="filters gallery according to text"><i
+                    class="abstract-icon icon-checkbox-unchecked"></i>Watercolour
+                </button>
+
+              </div>
+
+              <div class="close-abstract-bar">
+                <button class="modal-button under-modal-overlay under-overlay" id="clear-filters-button" type="button"
+                  aria-expanded="false" aria-controls="masonry-container"
+                  aria-label="clear filters and reveal all images" style="margin-left:0.5rem;">Clear<i
+                    class="abstract-icon icon-clear"></i>
+                </button>
+                <div style="flex-grow:1;"></div>
+                <button class="under-modal-overlay under-overlay close-abstract-button modal-button"
+                  id="close-filters-button" type="button" aria-expanded="false" aria-controls="filters-menu"
+                  aria-label="close filters menu">Close<i class="abstract-icon icon-close"></i></button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="masonry-container" id="masonry-container"> </div>
+
+
         </article>
-
-        <span class="youtube-player-padding"></span>
-        <div class="masonry-container" id="masonry-container"> </div>
-
       </div>
 
       <footer> <!-- Remove finefooter when content over 1 page. -->
