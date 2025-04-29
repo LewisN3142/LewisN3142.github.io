@@ -84,9 +84,7 @@ html {
 }
 .icon-filters:before {
   content: "\e992";
-  margin-right: -1rem;
   font-size: var(--font-size-default);
-  vertical-align: -0.096rem;
   margin-right: 0.3rem;
 }
 .icon-clear:before {
@@ -1556,7 +1554,7 @@ textarea {
   text-align: left;
 }
 
-.filter-columns {
+#filter-columns {
   columns: 200px 4;
   gap: 1rem;
   margin: auto;
