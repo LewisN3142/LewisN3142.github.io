@@ -35,7 +35,7 @@ const gallery_table = [
     filter_tags: "gallery_Watercolour gallery_Pen gallery_Art-Trade",
     description:
       'My part of an art-share with the amazing <a href="https://www.instagram.com/flash_psd/" rel="noopener noreferrer" class="external-link under-overlay"> John Gordon</a>, where we each drew a piece based on a list of criteria provided by the other artist! My prompt was "Vulpus Rex" or "King of the Foxes" and the piece consists of a pen outline, watercolour shading, and lighting effects in Adobe Photoshop.',
-    height: "125.81",
+    height: "125.8",
   },
   {
     name: "Foxes_Watercolour",
@@ -44,7 +44,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen gallery_Art-Trade",
     description:
       'My part of an art-share with the amazing <a href="https://www.instagram.com/flash_psd/" rel="noopener noreferrer" class="external-link under-overlay"> John Gordon</a>, where we each drew a piece based on a list of criteria provided by the other artist! My prompt was "Vulpus Rex" or "King of the Foxes." This image is of the base pen layer, on textured paper, which was later painted with watercolour.',
-    height: "129.07",
+    height: "129.06",
   },
   {
     name: "Byrnison",
@@ -60,14 +60,14 @@ const gallery_table = [
     alt_text: "",
     filter_tags: "gallery_Fan-Art gallery_Pen gallery_Watercolour",
     description: "",
-    height: "213.66",
+    height: "213.65",
   },
   {
     name: "Breakquest_Pen",
     alt_text: "",
     filter_tags: "gallery_Fan-Art gallery_Pen",
     description: "",
-    height: "214.31",
+    height: "214.3",
   },
   {
     name: "Croc_Monochrome",
@@ -102,21 +102,21 @@ const gallery_table = [
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
-    height: "280.02",
+    height: "280.01",
   },
   {
     name: "Neverwinter_Mice_Digital",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art gallery_Digital",
     description: "",
-    height: "122.56",
+    height: "122.55",
   },
   {
     name: "Neverwinter_Mice_Pen",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
-    height: "125.16",
+    height: "125.15",
   },
   {
     name: "Jakub",
@@ -188,7 +188,6 @@ $(document).ready(function () {
     description_map.set(item.name, item.description);
     newButton.appendChild(newImage);
     masonryContainer.appendChild(newButton);
-    //document.getElementById(item.name).appendChild(newImage);
   }
 
   // Add filter option checkbox to list
