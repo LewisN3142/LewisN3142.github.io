@@ -8,6 +8,7 @@ const gallery_table = [
     filter_tags: "gallery_Watercolour gallery_Pen gallery_Fan-Art",
     description:
       'Fan art of the table-top role-playing group <a href="https://www.oxventure.com/" rel="noopener noreferrer" class="external-link under-overlay"> Oxventure</a>\'s playthrough of Blades in the Dark, with each cast member drawn as their character. Based on original designs by <a href="https://www.instagram.com/themarvelousmrc" rel="noopener noreferrer" class="external-link under-overlay"> Colin Craker</a>, with linework completed in pen, colours in watercolor, and lighting effects using Affinity Photo.',
+    height: "143.39",
   },
   {
     name: "BITD_Pen",
@@ -16,6 +17,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description:
       'Fan art of the table-top role-playing group <a href="https://www.oxventure.com/" rel="noopener noreferrer" class="external-link under-overlay"> Oxventure</a>\'s playthrough of Blades in the Dark, with each cast member drawn as their character. Based on original designs by <a href="https://www.instagram.com/themarvelousmrc" rel="noopener noreferrer" class="external-link under-overlay"> Colin Craker</a>. This image is of the base pen layer, on textured paper, which was later painted in watercolour.',
+    height: "150.54",
   },
   {
     name: "Slaine",
@@ -24,6 +26,7 @@ const gallery_table = [
     filter_tags: "gallery_Digital gallery_Fan-Art",
     description:
       "My entry into the 2000AD Art Stars competition in 2020! Inspired by Clint Langley's design of Sláine, Lord of Misrule, this piece was my first time going from sketch to full render digitally, working mostly in Paint Tool Sai, before moving into Adobe Photoshop to add lighting and colour filters.",
+    height: "142.74",
   },
   {
     name: "Foxes_Digital",
@@ -32,6 +35,7 @@ const gallery_table = [
     filter_tags: "gallery_Watercolour gallery_Pen gallery_Art-Trade",
     description:
       'My part of an art-share with the amazing <a href="https://www.instagram.com/flash_psd/" rel="noopener noreferrer" class="external-link under-overlay"> John Gordon</a>, where we each drew a piece based on a list of criteria provided by the other artist! My prompt was "Vulpus Rex" or "King of the Foxes" and the piece consists of a pen outline, watercolour shading, and lighting effects in Adobe Photoshop.',
+    height: "125.81",
   },
   {
     name: "Foxes_Watercolour",
@@ -40,6 +44,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen gallery_Art-Trade",
     description:
       'My part of an art-share with the amazing <a href="https://www.instagram.com/flash_psd/" rel="noopener noreferrer" class="external-link under-overlay"> John Gordon</a>, where we each drew a piece based on a list of criteria provided by the other artist! My prompt was "Vulpus Rex" or "King of the Foxes." This image is of the base pen layer, on textured paper, which was later painted with watercolour.',
+    height: "129.07",
   },
   {
     name: "Byrnison",
@@ -48,87 +53,101 @@ const gallery_table = [
     filter_tags: "gallery_Fan-Art gallery_Pencil",
     description:
       "A pencil sketch of Lee Scoresby (Lin Manuel Miranda), his daemon the hare Hester, and the panserbjørn Iorek Byrnison from the TV series His Dark Materials, based on the book series of the same name by Philip Pullman. By using a technical pencil and varied line weights, I was able to mimic the textures of materials such as fur and wool.",
+    height: "248.14",
   },
   {
     name: "Breakquest_Watercolour",
     alt_text: "",
     filter_tags: "gallery_Fan-Art gallery_Pen gallery_Watercolour",
     description: "",
+    height: "213.66",
   },
   {
     name: "Breakquest_Pen",
     alt_text: "",
     filter_tags: "gallery_Fan-Art gallery_Pen",
     description: "",
+    height: "214.31",
   },
   {
     name: "Croc_Monochrome",
     alt_text: "",
     filter_tags: "gallery_Pencil gallery_Pen gallery_Art-Trade",
     description: "",
+    height: "136.23",
   },
   {
     name: "Croc_Sepia",
     alt_text: "",
     filter_tags: "gallery_Pencil gallery_Pen gallery_Art-Trade",
     description: "",
+    height: "136.23",
   },
   {
     name: "Gargoyle",
     alt_text: "",
     filter_tags: "gallery_Acrylic",
     description: "",
+    height: "198.69",
   },
   {
     name: "Hellblade_Monochrome",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
+    height: "244.89",
   },
   {
     name: "Hellblade_Pen",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
+    height: "280.02",
   },
   {
     name: "Neverwinter_Mice_Digital",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art gallery_Digital",
     description: "",
+    height: "122.56",
   },
   {
     name: "Neverwinter_Mice_Pen",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
+    height: "125.16",
   },
   {
     name: "Jakub",
     alt_text: "",
     filter_tags: "gallery_Pencil gallery_Portrait",
     description: "",
+    height: "153.8",
   },
   {
     name: "Layton_Switch",
     alt_text: "",
     filter_tags: "gallery_Fan-Art gallery_Digital",
     description: "",
+    height: "155.75",
   },
   {
     name: "Trunchbull",
     alt_text: "",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
+    height: "247.49",
   },
 ];
 
 $(document).ready(function () {
-  // Loop through table, generate map, generate html for page
+  // Loop through table, generate map, generate set for filters, generate html for page
   var description_map = new Map();
   var filter_set = new Set();
   var masonryContainer = document.getElementById("masonry-container");
   var filterColumns = document.getElementById("filter-columns");
+
   gallery_table.forEach(addGalleryImage);
   var filter_array = Array.from(filter_set).sort();
   filter_array.forEach(addFilterButton);
@@ -141,6 +160,7 @@ $(document).ready(function () {
     return element;
   }
 
+  // Add image from table to gallery as button
   function addGalleryImage(item) {
     var newButton = createElement("button", {
       class:
@@ -154,15 +174,9 @@ $(document).ready(function () {
     });
 
     var newImage = createElement("img", {
-      class: "gallery-thumb ",
-      src: "/gallery_page/gallery_images/" + item.name + "_200px.webp",
-      srcset:
-        "/gallery_page/gallery_images/" +
-        item.name +
-        "_300px.webp 300w, /gallery_page/gallery_images/" +
-        item.name +
-        "_200px.webp 200w",
-      sizes: "(min-width: 300px) 300px, 200px",
+      height: item.height,
+      class: "gallery-thumb lazyload",
+      "data-src": "/gallery_page/gallery_images/" + item.name + "_200px.webp",
       loading: "lazy",
       alt: item.alt_text,
     });
@@ -172,11 +186,12 @@ $(document).ready(function () {
     });
 
     description_map.set(item.name, item.description);
-
     newButton.appendChild(newImage);
     masonryContainer.appendChild(newButton);
+    //document.getElementById(item.name).appendChild(newImage);
   }
 
+  // Add filter option checkbox to list
   function addFilterButton(filterName) {
     // Construct id, aria label, and inner html from filterName
     var filterNameGalleryless = filterName.split("_")[1];

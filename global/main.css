@@ -86,6 +86,7 @@ html {
   content: "\e992";
   font-size: var(--font-size-default);
   margin-right: 0.3rem;
+  margin-top: 0.1rem;
 }
 .icon-clear:before {
   content: "\e9ac";
@@ -1480,21 +1481,19 @@ textarea {
   width: 200px;
   border-style: solid;
   border-width: 3px;
-  border-radius: 15px;
-
   border-color: var(--foreground-active-blue);
-  color: var(--foreground-active-blue);
+  border-radius: 15px;
 }
 
 .gallery-thumb-wrapper {
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 
   margin: auto;
-  margin-bottom: 1rem;
-
-  display: inline-block;
+  margin-bottom: 0.5rem;
+  break-inside: avoid;
 }
 
 #gallery-modal {
@@ -1561,8 +1560,9 @@ textarea {
 }
 
 .masonry-container {
-  columns: 200px 4;
-  gap: 1rem;
+  column-count: 4;
+  column-width: 200px;
+  column-gap: 1rem;
   text-align: center;
   width: 85%;
   margin: auto;
@@ -1585,6 +1585,18 @@ textarea {
   color: var(--foreground-clicked-blue);
 }
 
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 500ms;
+}
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
 /* Media queries for screen width and about image margins  */
