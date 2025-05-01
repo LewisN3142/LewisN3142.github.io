@@ -57,87 +57,185 @@ const gallery_table = [
   },
   {
     name: "Breakquest_Watercolour",
-    alt_text: "",
+    alt_text:
+      "Six humanoids and a cat stand in group-photo style. The three in the foreground are a human, a purple tiefling with ram's horns, and a warforged robot made of steel plate with leather belts. In the background are a goth elf (Shadar-Kai), a human wearing glasses, and an orc wearing an animal skull helmet and holding a gold bedpan aloft. The image is in watercolour and pen, with a caption reading `The BreakQuest Club.'",
     filter_tags: "gallery_Fan-Art gallery_Pen gallery_Watercolour",
-    description: "",
+    description:
+      'Fan art of the short-lived yet outstanding original iteration of the DnD group <a href="https://www.youtube.com/playlist?list=PLTZXfIDHhP2u29vBGJjhR_Z4kPFB9WeWB" rel="noopener noreferrer" class="external-link under-overlay"> The BreakQuest Club</a> featuring then members of the Dicebreaker and Eurogamer YouTube channels, drawn as their characters in the campaign. The linework was completed in pen and coloured using watercolour. By painting in darker shades on one side of the pen lines than the other, both texture and contrast could be created.',
     height: "213.65",
   },
   {
     name: "Breakquest_Pen",
-    alt_text: "",
+    alt_text:
+      "Six humanoids and a cat stand in group-photo style. The three in the foreground are a human, a purple tiefling with ram's horns, and a warforged robot made of steel plate with leather belts. In the background are a goth elf (Shadar-Kai), a human wearing glasses, and an orc wearing an animal skull helmet and holding a gold bedpan aloft. The image is a pen base which was later watercoloured and which has a caption reading `The BreakQuest Club.'",
     filter_tags: "gallery_Fan-Art gallery_Pen",
-    description: "",
+    description:
+      'Fan art of the short-lived yet outstanding original iteration of the DnD group <a href="https://www.youtube.com/playlist?list=PLTZXfIDHhP2u29vBGJjhR_Z4kPFB9WeWB" rel="noopener noreferrer" class="external-link under-overlay"> The BreakQuest Club</a> featuring then members of the Dicebreaker and Eurogamer YouTube channels, drawn as their characters in the campaign. This image is of the base pen layer which was later painted in watercolour.',
     height: "214.3",
   },
   {
     name: "Croc_Monochrome",
-    alt_text: "",
+    alt_text:
+      "A reptilian humanoid in medieval traveller's garb (a hooded cloak with leather wrist wraps and shoulder plating) holds a staff and casts a messenger magpie into the air. Behind them is a broken tree and a covered wagon with bags in front. The image is a pencil drawing on grey paper.",
     filter_tags: "gallery_Pencil gallery_Pen gallery_Art-Trade",
-    description: "",
+    description:
+      'My part of an art-share with the wonderful <a href="https://www.instagram.com/triantafillia.vassou/" rel="noopener noreferrer" class="external-link under-overlay"> Triantafillia Vassou</a>, where we each drew a piece based on a shared prompt, namely "lizardling rogue with avian familiar." For my part, I took inspiration from the lizardling raiders in the Neverwinter Nights series and drew one sending off a messenger magpie after finding a trader caravan in the woods.',
     height: "136.23",
   },
   {
     name: "Croc_Sepia",
-    alt_text: "",
+    alt_text:
+      "A reptilian humanoid in medieval traveller's garb (a hooded cloak with leather wrist wraps and shoulder plating) holds a staff and casts a messenger magpie into the air. Behind them is a broken tree and a covered wagon with bags in front. The image is a pencil drawing with a sepia tint.",
     filter_tags: "gallery_Pencil gallery_Pen gallery_Art-Trade",
-    description: "",
+    description:
+      'My part of an art-share with the wonderful <a href="https://www.instagram.com/triantafillia.vassou/" rel="noopener noreferrer" class="external-link under-overlay"> Triantafillia Vassou</a>, where we each drew a piece based on a shared prompt, namely "lizardling rogue with avian familiar." For my part, I took inspiration from the lizardling raiders in the Neverwinter Nights series and drew one sending off a messenger magpie after finding a trader caravan in the woods. The sepia filter was added to make the piece feel like an in-universe sketch.',
     height: "136.23",
   },
   {
     name: "Gargoyle",
-    alt_text: "",
+    alt_text:
+      "A mossy stone grotesque (read: gargoyle) sits perched on a spherical fence-post top, with its tail wrapped around the post itself. In the background is a modern day building from a housing estate. This picture is an acrylic painting.",
     filter_tags: "gallery_Acrylic",
-    description: "",
+    description:
+      "This from-life painting of a grotesque (read: gargoyle) was completed in acrylic on an approximately A1 piece of paper as a centrepiece for my A-level art exhibition. Working at such a large scale in a medium I'm not confident in was a challenge, but I learned a lot from layering shades of green and brown to generate texture and contrast the red tiles on the house in the background.",
     height: "198.69",
   },
   {
     name: "Hellblade_Monochrome",
-    alt_text: "",
+    alt_text:
+      "A pen illustration of three figures. In the center is a female, pictish warrior with braided hair, a scarred face, and sleeveless fur jerkin. On the left of her is a shirtless man covered in barbs and holding a longsword, his body is covered in wooden barbs, his head wrapped in a sack, and dried blood down his chest. On the right, is a bony figure with a bird skull head, feather head-dress, and leather rags. The background is shadows.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
     height: "244.89",
   },
   {
     name: "Hellblade_Pen",
-    alt_text: "",
+    alt_text:
+      "A pen illustration of three figures. In the center is a female, pictish warrior with braided hair, a scarred face, and sleeveless fur jerkin. On the left of her is a shirtless man covered in barbs and holding a longsword, his body is covered in wooden barbs, his head wrapped in a sack, and dried blood down his chest. On the right, is a bony figure with a bird skull head, feather head-dress, and leather rags.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
     height: "280.01",
   },
   {
     name: "Neverwinter_Mice_Digital",
-    alt_text: "",
+    alt_text:
+      "An ink drawing of four rodent warriors - a squirrel with an acorn helmet, a stocky gerbil with an axe, a mouse with long ears and light medieval armour, all lead by a mouse in robes, holding a torch aloft.",
     filter_tags: "gallery_Pen gallery_Fan-Art gallery_Digital",
     description: "",
     height: "122.55",
   },
   {
     name: "Neverwinter_Mice_Pen",
-    alt_text: "",
+    alt_text:
+      "A drawing of four rodent warriors - a squirrel with an acorn helmet, a stocky gerbil with an axe, a mouse with long ears and light medieval armour, all lead by a mouse in robes, holding a torch aloft. The image shows the pen base drawing which was later inked to add shading.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
     height: "125.15",
   },
   {
-    name: "Jakub",
-    alt_text: "",
-    filter_tags: "gallery_Pencil gallery_Portrait",
+    name: "Mouseguard1",
+    alt_text:
+      "A murine warrior in a hooded cloak pushes his short sword into the ground in front of him. He appears to be leaving a farmhouse with a windmill, which rests on the plains behind him. This image is a pen drawing.",
+    filter_tags: "gallery_Pen gallery_Fan-Art",
     description: "",
+    height: "140",
+  },
+  {
+    name: "Mouseguard2",
+    alt_text:
+      "A pair of mouse-like warriors, one wearing a cloak and belt, the other in hooded robes, standing back to back in a field. The first mouse is holding a short sword and the second holds a cane. This image is a pen drawing.",
+    filter_tags: "gallery_Pen gallery_Fan-Art",
+    description: "",
+    height: "114",
+  },
+  {
+    name: "Jakub",
+    alt_text:
+      "A man with a striped, short-sleeved shirt and short hair plays an electric guitar in-front of the silhouette of an industrial building with several chimneys and gantries. The image is a pencil drawing and has the setlist of a concert on the right-hand side.",
+    filter_tags: "gallery_Pencil gallery_Portrait",
+    description:
+      "A portrait of guitarist Jakub Zytecki, drawn in celebration of the first performance of his solo EPs 'Ladder Head' and 'Feather Bed' in the UK at the Islington Assembly Hall in 2018. For this piece, I used biro pen to draw in the folds in clothes, boundaries of objects, and other dark areas, building out the overall details with pencil around these. By erasing portions of pencil, dappled lighting could then be created on the shirt for example.",
     height: "153.8",
   },
   {
     name: "Layton_Switch",
-    alt_text: "",
+    alt_text:
+      "A young boy wearing a blue suit and cap, with a red bow-tie is sitting on the ground playing on a Nintendo Switch. A man in a dark suit and top hat sits next to him, playing on another console, but peering over the boy's shoulder. This image is a cartoon illustration.",
     filter_tags: "gallery_Fan-Art gallery_Digital",
-    description: "",
+    description:
+      'A piece of digital fan art of Professor Layton and his charge Luke, drawn to celebrate the announcement of <a href="https://www.layton.jp/jouki/en/" rel="noopener noreferrer" class="external-link under-overlay"> Professor Layton and The New World of Steam</a> on Nintendo Switch (the webpage found by following the link has a puzzle to be solved). This illustration also proved to be a good test piece for Affinity Photo.',
     height: "155.75",
   },
   {
     name: "Trunchbull",
-    alt_text: "",
+    alt_text:
+      "A brutish woman with wide shoulders and hair pulled into a tight bun stares menacingly at the viewer. She wears a suit jacket, skirt, long socks, and shoes double knotted with bows. A wavy handwritten caption identifies her as Miss Trunchbull. This image is a cartoon ink illustration.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
+    description:
+      'An ink caricature of the character Miss Trunchbull from the Roald Dahl book "Matilda." This piece drew inspiration from the characterisation in both the 1996 film of the same name and the musical scored by Tim Minchin, in addition to <a href="https://quentinblake.com/" rel="noopener noreferrer" class="external-link under-overlay"> Quentin Blake</a>\'s illustrations.',
     height: "247.49",
+  },
+  {
+    name: "Astro",
+    alt_text:
+      "A small robot, styled like an astronaut with an aerial on their helmet, bounds across the image. They have a billowing blue cape behind them and three-fingered hands, like a claw machine. This picture is a drawing in pen and pencil.",
+    filter_tags: "gallery_Pencil gallery_Pen gallery_Fan-Art",
+    description:
+      'Fan art of the Sony mascot character <a href="https://www.teamasobi.com/games/astro-bot" rel="noopener noreferrer" class="external-link under-overlay"> Astro Bot</a>, created by Team Asobi. This piece was created shortly after I played Astro\'s Playroom and was made as part of a series of artworks to hang on my door in university halls, to highlight my interests and make my room more welcoming.',
+  },
+  {
+    name: "PennJillette",
+    alt_text:
+      "A shoulders up portrait of a bespectacled man with a ponytail and short beard, concentrated at the chin. He is wearing a suit and tie and smiles at the viewer. This image is an acrylic painting.",
+    filter_tags: "gallery_Acrylic gallery_Portrait gallery_Penn",
+    description:
+      "An acrylic painting of magician Penn Jillette (part of a pair with the portrait of Teller) completed during my A-level studies. The focus of this piece was on using weight of line and the texture of paint to build out the shapes and forms. The painting was completed on black paper to aid in generating contrast and encourage working with lighter shades, quite different to my usual style.",
+    height: "248",
+  },
+  {
+    name: "Teller",
+    alt_text:
+      "A shoulders up portrait of a man with his head in a performative bird cage. The cage only has four bars and the man smiles from within. He is wearing a suit and tie, and has a receeding hairline. This image is an acrylic painting.",
+    filter_tags: "gallery_Acrylic gallery_Portrait",
+    description:
+      "An acrylic painting of the magician Teller (part of a pair with the portrait of Penn Jillette) completed during my A-level studies. The focus of this piece was on using weight of line and the texture of paint to build out the shapes and forms. The painting was completed on black paper to aid in generating contrast and encourage working with lighter shades, quite different to my usual style.",
+    height: "250",
+  },
+  {
+    name: "Poppy_Acrylic",
+    alt_text:
+      "A ceramic poppy sits in a grassy field, the sunlight glistening on the polished surface.",
+    filter_tags: "gallery_Acrylic",
+    description:
+      "An acrylic painting of one of the ceramic poppies from the `Blood Swept Lands and Seas of Red' installation at the Tower of London in 2014. The display was the work of Paul Cummins and Tom Piper, created to commemorate 100 years since the start of World War I.",
+    height: "179",
+  },
+  {
+    name: "Moebius_Greece",
+    alt_text:
+      "A pen drawing of a young waitress standing by a tree, watching a seagull flying across the landscape beyond the hotel gates. Flowers grow by the base of the tree and there is a swimming pool nearby.",
+    filter_tags: "gallery_Pen",
+    description:
+      "An artwork drawn while I was on holiday in Greece, using the croquis style and inspired by the work of Milo Manara. This piece was an exercise in producing the most amount of clarity with the fewest number of lines and with very little in the way of pencil under-drawing.",
+    height: "176",
+  },
+  {
+    name: "Jocat",
+    alt_text:
+      "A medieval bard wearing a red, feather-tipped fez leans against a grey brick wall, while reading from a book. Scraps of paper fly out from between the book's pages and float towards a cartoony fantasy castle in the background. The caption to this watercolour painting reads `Have you heard the good word of sword and shield?' ",
+    filter_tags: "gallery_Pen gallery_Fan-Art gallery_Watercolour",
+    description:
+      'Fan art of the YouTube creator <a href="https://www.jocat.net/" rel="noopener noreferrer" class="external-link under-overlay"> JoCat</a>\'s DnD character. This piece was drawn as part of a submission to join their art team and was made by following their reference sheet, to demonstrate that I was capable of following a style guide.  ',
+    height: "105",
+  },
+  {
+    name: "Icy_Tabs",
+    alt_text:
+      "A man made of ice, wearing jeans, a jumper, and a cape, stands atop a cresting hill, fending off shadow like figures with a long halberd. The encroaching figures have googly eyes and swarm like zombies. The piece is captioned with the text `TABZ: icycaress'.",
+    filter_tags: "gallery_Fan-Art gallery_Watercolour gallery_Pen",
+    description:
+      'A watercolour painting f YouTube creator <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a> completed for their birthday. The piece was inspired by IcyCaress\' playthrough of "Totally Accurate Battle Zombielator" and based on the original character design by <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>. The composition is loosely based on the cover of the 1993 game DOOM.',
+    height: "274",
   },
 ];
 
@@ -171,6 +269,7 @@ $(document).ready(function () {
       "aria-expanded": "false",
       "aria-label": "Open high resolution version of image" + item.name,
       id: item.name,
+      draggable: "false",
     });
 
     var newImage = createElement("img", {
@@ -179,6 +278,7 @@ $(document).ready(function () {
       "data-src": "/gallery_page/gallery_images/" + item.name + "_200px.webp",
       loading: "lazy",
       alt: item.alt_text,
+      draggable: "false",
     });
 
     item.filter_tags.split(" ").forEach(function (filterName) {
