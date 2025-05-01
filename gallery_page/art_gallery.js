@@ -105,7 +105,8 @@ const gallery_table = [
     alt_text:
       "A pen illustration of three figures. In the center is a female, pictish warrior with braided hair, a scarred face, and sleeveless fur jerkin. On the left of her is a shirtless man covered in barbs and holding a longsword, his body is covered in wooden barbs, his head wrapped in a sack, and dried blood down his chest. On the right, is a bony figure with a bird skull head, feather head-dress, and leather rags. The background is shadows.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
+    description:
+      " 'Even in darkness the wonder and beauty of the wrld never leaves. It's always there, just waiting to be seen again.' A pen illustration of Senua from the game Hellblade: Senua's Sacrifice, alongside the first two bosses from the game &ndash; the fire giant Surtr and the God of illusion Valravn the raven, with the background digitally edited to black for increased contrast.",
     height: "244.89",
   },
   {
@@ -113,7 +114,8 @@ const gallery_table = [
     alt_text:
       "A pen illustration of three figures. In the center is a female, pictish warrior with braided hair, a scarred face, and sleeveless fur jerkin. On the left of her is a shirtless man covered in barbs and holding a longsword, his body is covered in wooden barbs, his head wrapped in a sack, and dried blood down his chest. On the right, is a bony figure with a bird skull head, feather head-dress, and leather rags.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
+    description:
+      'A pen illustration of Senua from the game Hellblade: Senua\'s Sacrifice, alongside the first two bosses from the game &ndash; the fire giant Surtr and the God of illusion Valravn the raven. The story of the pictish warrior Senua\'s journey through Helheim as she battles with psychosis is a masterpiece, with the combination of visceral and detailed combat, whispers of the fates, glimpses of Galena, and poignant depiction of Senua\'s anxiety making it one of my favourite pieces of media. The fact that this piece was shared by both actress <a href="https://www.instagram.com/melinajuergensofficial/" rel="noopener noreferrer" class="external-link under-overlay"> Melina Juergens</a> and the Ninja Theory accounts on social media was just the icing on the cake.',
     height: "280.01",
   },
   {
@@ -121,7 +123,8 @@ const gallery_table = [
     alt_text:
       "An ink drawing of four rodent warriors - a squirrel with an acorn helmet, a stocky gerbil with an axe, a mouse with long ears and light medieval armour, all lead by a mouse in robes, holding a torch aloft.",
     filter_tags: "gallery_Pen gallery_Fan-Art gallery_Digital",
-    description: "",
+    description:
+      'A fan art crossover between <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a>\'s Mouse Guard series and the 3rd edition DnD game Neverwinter Nights, with characters from the former taking poses from the key art of the latter. This piece was lined using drawing pens then inked using fude brush pens and water. A final, digital pass was added in order to get the lighting just right.',
     height: "122.55",
   },
   {
@@ -129,24 +132,27 @@ const gallery_table = [
     alt_text:
       "A drawing of four rodent warriors - a squirrel with an acorn helmet, a stocky gerbil with an axe, a mouse with long ears and light medieval armour, all lead by a mouse in robes, holding a torch aloft. The image shows the pen base drawing which was later inked to add shading.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
+    description:
+      'A fan art crossover between <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a>\'s Mouse Guard series and the 3rd edition DnD game Neverwinter Nights, with characters from the former taking poses from the key art of the latter. This image is the third in a series of Mouse Guard pieces using fude pen, which was later inked and digitally edited to mimic the Neverwinter Nights key art style.',
     height: "125.15",
-  },
-  {
-    name: "Mouseguard1",
-    alt_text:
-      "A murine warrior in a hooded cloak pushes his short sword into the ground in front of him. He appears to be leaving a farmhouse with a windmill, which rests on the plains behind him. This image is a pen drawing.",
-    filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
-    height: "140",
   },
   {
     name: "Mouseguard2",
     alt_text:
       "A pair of mouse-like warriors, one wearing a cloak and belt, the other in hooded robes, standing back to back in a field. The first mouse is holding a short sword and the second holds a cane. This image is a pen drawing.",
     filter_tags: "gallery_Pen gallery_Fan-Art",
-    description: "",
+    description:
+      'The second in a series of artworks inspired by the comic book series Mouse Guard, which I created while learning to use a fude brush pen. At the time I was working on this piece, news had just broken that Wes Ball and Vance Kovacs\' <a href="https://www.youtube.com/watch?v=XWHPhc2xNNU" rel="noopener noreferrer" class="external-link under-overlay"> Mouse Guard film</a> had unfortunately been cancelled. Credits go to <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a> for the original character designs.',
     height: "114",
+  },
+  {
+    name: "Mouseguard1",
+    alt_text:
+      "A murine warrior in a hooded cloak pushes his short sword into the ground in front of him. He appears to be leaving a farmhouse with a windmill, which rests on the plains behind him. This image is a pen drawing.",
+    filter_tags: "gallery_Pen gallery_Fan-Art",
+    description:
+      'The first in a series of artworks inspired by the comic book series Mouse Guard, which I created while learning to use a fude brush pen. At the time I was working on this piece, news had just broken that Wes Ball and Vance Kovacs\' <a href="https://www.youtube.com/watch?v=XWHPhc2xNNU" rel="noopener noreferrer" class="external-link under-overlay"> Mouse Guard film</a> had unfortunately been cancelled. Credits go to <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a> for the original character designs.',
+    height: "140",
   },
   {
     name: "Jakub",
