@@ -189,8 +189,10 @@ body a {
   background: none;
   cursor: pointer;
   outline: none;
-  word-wrap: break-word;
+
   white-space: normal;
+  word-break: break-word;
+  flex-wrap: wrap;
 }
 
 /* SCROLLBAR STYLES */

@@ -143,7 +143,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description:
       'The second in a series of artworks inspired by the comic book series Mouse Guard, which I created while learning to use a fude brush pen. At the time I was working on this piece, news had just broken that Wes Ball and Vance Kovacs\' <a href="https://www.youtube.com/watch?v=XWHPhc2xNNU" rel="noopener noreferrer" class="external-link under-overlay"> Mouse Guard film</a> had unfortunately been cancelled. Credits go to <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a> for the original character designs.',
-    height: "114",
+    height: "111.79",
   },
   {
     name: "Mouseguard1",
@@ -188,6 +188,7 @@ const gallery_table = [
     filter_tags: "gallery_Pencil gallery_Pen gallery_Fan-Art",
     description:
       'Fan art of the Sony mascot character <a href="https://www.teamasobi.com/games/astro-bot" rel="noopener noreferrer" class="external-link under-overlay"> Astro Bot</a>, created by Team Asobi. This piece was created shortly after I played Astro\'s Playroom and was made as part of a series of artworks to hang on my door in university halls, to highlight my interests and make my room more welcoming.',
+    height: "151",
   },
   {
     name: "PennJillette",
@@ -235,13 +236,131 @@ const gallery_table = [
     height: "105",
   },
   {
+    name: "Mathsoc_Adverts",
+    alt_text:
+      "A trio of pictures drawn in pen, showing anthropomorphised deer and horses enjoying a university lifestyle. The first piece shows a student and chaperone at a pub, the second a lecturer teaching maths, and the third a pair of students eating burgers at a barbecue.",
+    filter_tags: "gallery_Pen",
+    description:
+      "A series of three pieces completed as part of my work as academic secretary of the University of Surrey's maths society, for use in advertising events. The compositions are based on photos from actual events and the characters are drawn in the style of the series `Bojack Horseman,' which was popular at the time.",
+    height: "84",
+  },
+  {
     name: "Icy_Tabs",
     alt_text:
       "A man made of ice, wearing jeans, a jumper, and a cape, stands atop a cresting hill, fending off shadow like figures with a long halberd. The encroaching figures have googly eyes and swarm like zombies. The piece is captioned with the text `TABZ: icycaress'.",
     filter_tags: "gallery_Fan-Art gallery_Watercolour gallery_Pen",
     description:
-      'A watercolour painting f YouTube creator <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a> completed for their birthday. The piece was inspired by IcyCaress\' playthrough of "Totally Accurate Battle Zombielator" and based on the original character design by <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>. The composition is loosely based on the cover of the 1993 game DOOM.',
+      'A watercolour painting of YouTube creator <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a>, inspired by IcyCaress\' playthrough of "Totally Accurate Battle Zombielator" and based on the original character design by <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>. The composition is loosely based on the cover of the 1993 game DOOM.',
     height: "274",
+  },
+  {
+    name: "Icy_Colour",
+    alt_text:
+      "An ink portrait of a man made of ice, dressed in a heavy hunting jacket, white t-shirt, and ski goggles standing in the shadows. The figure is frowning and has cracks on his face, as if he has seen combat. The image has been digitally coloured.",
+    filter_tags: "gallery_Pen gallery_Digital gallery_Fan-Art",
+    description:
+      'A portrait of YouTube creator <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a>, completed for their birthday and for a time, their profile picture on Twitter and Discord. The character is based on an original designby <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>, drawn here in the style of the video game "Darkwood." This picture was drawn in pen and ink, then edited to add colour and lighting using Photoshop Elements.',
+    height: "204",
+  },
+  {
+    name: "Icy_Monochrome",
+    alt_text:
+      "An ink portrait of a man made of ice, dressed in a heavy hunting jacket, white t-shirt, and ski goggles standing in the shadows. The figure is frowning and has cracks on his face, as if he has seen combat.",
+    filter_tags: "gallery_Pen gallery_Fan-Art",
+    description:
+      'A portrait of YouTube creator <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a>, completed for their birthday and for a time, their profile picture on Twitter and Discord. The character is based on an original designby <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>, drawn here in the style of the video game "Darkwood." This picture shows the base layer, drawn in pen and ink, which was subsequently coloured in Photoshop Elements.',
+    height: "204",
+  },
+  {
+    name: "Peanut_Pen",
+    alt_text:
+      "An illustration of three figures in the style of a sitcom poster. The hypothetical sitcom has the title 'Peanut!' and the poster shows a man wearing a leather jacket and headphones, as well as a man made of ice in ski-goggles and a jumper, being hugged by a rounded mannequin, which is smiling. The two men look nervous and the ice man is visibly sweating.",
+    filter_tags: "gallery_Pen gallery_Fan-Art",
+    description:
+      'Fan art of YouTube creators <a href="https://www.youtube.com/user/IcyCaress" rel="noopener noreferrer" class="external-link under-overlay"> IcyCaress</a> and <a href="https://www.youtube.com/@IGP" rel="noopener noreferrer" class="external-link under-overlay"> IGP</a>\'s playthrough of the game "SCP Containment Breach." During the playthrough, the duo gave SCP-173 the nickname "peanut" due to its shape, which inspired the sitcom feel of this piece. The caricatures of IGP (left) and Icycaress (right) are based on original designs by <a href="https://www.instagram.com/floating_megane/" rel="noopener noreferrer" class="external-link under-overlay"> Floating Megane</a>.',
+    height: "218",
+  },
+  {
+    name: "Gundyr",
+    alt_text:
+      "A figure in plate armour stands in the centre of a ruined amphitheatre, holding a halberd. A snake like pustule grows from his shoulder and bears its pointed teeth. There are small gravestones around the edge of the arena.",
+    filter_tags: "gallery_Pencil gallery_Pen gallery_Fan-Art",
+    description:
+      "Fan art of the tutorial boss Iudex Gundyr from Dark Souls 3, drawn in pen and pencil. This piece was one of the first full page illustrations in a sketchbook gifted to me for my birthday by my university friends and housemates.",
+    height: "135",
+  },
+  {
+    name: "Sekiro_Digital",
+    alt_text:
+      "A schematic illustration of a prosthetic arm weapon called the `weighted ball,' drawn from two perspectives (palm side up and palm side down). The arm is made of a series of metal and bone bars, joined by ropes. A long reel of rope, wrapped around the arm, is attached to a heavy ball, which is held in the hand and can be thrown.",
+    filter_tags:
+      "gallery_Digital gallery_Fan-Art gallery_Pen gallery_Watercolour",
+    description:
+      'My submission for <a href="https://www.youtube.com/vaatividya" rel="noopener noreferrer" class="external-link under-overlay"> VaatiVidya</a>\'s Sekiro Prosthetic Weapon <a href="https://www.youtube.com/watch?app=desktop&v=m68K1bupM9Q&t=1148s" rel="noopener noreferrer" class="external-link under-overlay"> Art Competition</a>. The challenge was to develop an original design for a weapon which could be incorporated into the game &ndash; This image was completed in pen and watercolour then digitally tweaked and came with a series of supplementary sketches illustrating the weapon\'s use.',
+    height: "113",
+  },
+  {
+    name: "Passenger_Pencil",
+    alt_text:
+      "A side profile of a man with short hair and a beard, wearing a canvas shirt with a button-down collar. This image is a pencil drawing. Several lines in the background symbolise the wind and a caption identifies the man as the musician Passenger.",
+    filter_tags: "gallery_Pencil gallery_Portrait",
+    description:
+      "A pencil sketch of indie musician Passenger (most well known for `Let Her Go') which I drew during a long car ride the day after seeing him support Ed Sheeran on the 2015 Multiply tour. The fast, short pencil strokes are a consequence of the unorthodox drawing location, but manage to successfully depict the form and texture of his face and shirt.",
+    height: "247",
+  },
+  {
+    name: "Prince_Pen",
+    alt_text:
+      "A portrait of the musician Prince, completed in marker pen. He has his hair in an afro and is wearing a suit jacket and open shirt with a wide collar.",
+    filter_tags: "gallery_Pen gallery_Portrait",
+    description:
+      "Beginning with a scribble made by one of my university coursemates, this piece coalesced into a portrait of the musician Prince, lined in pen and coloured using Sharpie marker. This drawing is part of a series of `complete the scribble' images I created during a a pub-quiz in the first year of my undergraduate degree.",
+    height: "198",
+  },
+  {
+    name: "The_Mask",
+    alt_text:
+      "An acrylic painting of a man wearing a yellow suit and wide-brimmed hat. The hat has a feather in the band and the man's face is obscured by a grimacing green mask. His face is tilted slightly towards the floor, as if to obscure the mask from view.",
+    filter_tags: "gallery_Acrylic gallery_Portrait gallery_Fan-Art",
+    description:
+      "Another piece that began with a scribble drawn by one of my university coursemates, this piece depicts Jim Carrey's character in the 1994 film `The Mask.' As I had the final result in mind from the offset, a fairly minimal amount of under-drawing was necessary, with the bulk of the image being completed acrylic paint.",
+    height: "240",
+  },
+  {
+    name: "Gandalf",
+    alt_text:
+      "A pencil portrait of an old, wizard-like figure wearing a tall, sagging, wide-brimmed hat. He is smoking a long pipe and has a thick, bushy beard.",
+    filter_tags: "gallery_Pencil gallery_Fan-Art",
+    description:
+      "A quick pencil sketch of Gandalf from The Lord of the Rings, drawn in order to practice speed, texture, and shading with a new technical pencil.",
+    height: "274",
+  },
+  {
+    name: "Hyenas",
+    alt_text:
+      "Pencil sketches of the heads and flanks of four hyena. The creatures are drawn from various angles, with three of the hyena having their mouths open and the fourth chewing on a carcass.",
+    filter_tags: "gallery_Pencil",
+    description:
+      "A series of pencil sketches of hyenas, inspired by both the cast of the West End performance of The Lion King and the daemon of Gerard Bonneville in Philip Pullman's `La Belle Sauvage.' The dynamic facial expressions of these animals made them really fun to draw!",
+    height: "156",
+  },
+  {
+    name: "Horses",
+    alt_text:
+      "Pencil and pen sketches of the horses in an equestrian show called Son Martorellet. There are two full-body illustrations of horses, one rearing up on its hind legs and carrying a rider, the other cantering, as well as separate drawings of the rider and the horse's head.",
+    filter_tags: "gallery_Pencil gallery_Pen",
+    description:
+      'This piece is a series of observational drawings of performing horses from the equestrian show at <a href="https://www.sonmartorellet.com/en/home/" rel="noopener noreferrer" class="external-link under-overlay"> Son Martorellet</a> in Menorca, which I visited during a tour of the island on holiday. I am very grateful to the performers for letting me watch them train and make reference materials.',
+    height: "141",
+  },
+  {
+    name: "PT_Phone",
+    alt_text:
+      "An ink drawing of an old landline phone with a coiled cord joining the handset to the base. The phone sits on a plain countertop in a dark corner and the german text `glaubte ich ein telephon zu hören' is superimposed over the image.",
+    filter_tags: "gallery_Pen gallery_Fan-Art gallery_Digital",
+    description:
+      "This picture is based on Hideo Kojima's playable teaser for Silent Hills, namely P.T. Having followed the mystery of 7780s Studio at the time of its release, the tense horror of the game has stuck with me and provided inspiration for the Inktober 2019 prompt `ring.' The german text translates to `I thought I heard a phone.' ",
+    height: "229",
   },
 ];
 
