@@ -143,7 +143,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen gallery_Fan-Art",
     description:
       'The second in a series of artworks inspired by the comic book series Mouse Guard, which I created while learning to use a fude brush pen. At the time I was working on this piece, news had just broken that Wes Ball and Vance Kovacs\' <a href="https://www.youtube.com/watch?v=XWHPhc2xNNU" rel="noopener noreferrer" class="external-link under-overlay"> Mouse Guard film</a> had unfortunately been cancelled. Credits go to <a href="https://www.mouseguard.net/" rel="noopener noreferrer" class="external-link under-overlay"> David Petersen</a> for the original character designs.',
-    height: "111.79",
+    height: "114.29",
   },
   {
     name: "Mouseguard1",
@@ -242,7 +242,7 @@ const gallery_table = [
     filter_tags: "gallery_Pen",
     description:
       "A series of three pieces completed as part of my work as academic secretary of the University of Surrey's maths society, for use in advertising events. The compositions are based on photos from actual events and the characters are drawn in the style of the series `Bojack Horseman,' which was popular at the time.",
-    height: "84",
+    height: "84.03",
   },
   {
     name: "Icy_Tabs",
