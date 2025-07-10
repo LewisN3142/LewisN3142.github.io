@@ -196,8 +196,8 @@
             <div class="about-column-text"> <!-- Intro Text -->
               <section class="Review-section About-section">
                 <p class="medium-para">
-                  Hello, I'm Lewis Napper, a PhD mathematics student from the University of Surrey in
-                  the United Kingdom. My research focuses on applications of abstract geometry to
+                  Hello, I'm Lewis Napper, a mathematics researcher (formerly University of Surrey) based in the United
+                  Kingdom. My research focuses on applications of abstract geometry to
                   problems in the theory of partial differential equations, fluid dynamics, and
                   relativity. Outside of my work in academia, I am an artist and occasional
                   programmer, with an interest in game development and computer graphics.
@@ -278,8 +278,43 @@
                 </div>
               </div>
 
-              <div class="card" data-index="1" data-status="activeRight" onclick="handleSliderRight()"
-                draggable="false">
+              <div class="card" data-index="1" data-status="activeRight" draggable="false"
+                onclick="handleSliderRight()">
+                <div class="card-image-wrapper">
+                  <img class="card-image"
+                    srcset="/home_material/finals.webp 935w, /home_material/finals_tall.webpp 710w"
+                    sizes="(min-width: 1600px) 900px, 750px" src="/home_material/finals_tall.webp" loading="lazy"
+                    alt="Background is the cover art for the game The Finals, depicting a figure in combat gear wearing a plastic mask on the top of their head, while holding a briefcase and pistol."
+                    style="right:0; left:auto;" />
+                </div>
+                <div class="card-text-wrapper">
+                  <h3 class="card-name"> Network Testing and Game Challenges</h3>
+                  <p class="card-date"> Updated: 9th July 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      Over the last three months, I have been invited to take part in beta/network testing for both <a
+                        href="https://www.voidbreakergame.com/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Void/Breaker</a>, created by Daniel Stubbington (previously The
+                      Entropy Centre), <a href="https://store.steampowered.com/app/2272540/FBC_Firebreak/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> FBC: Firebreak</a>, developed by Remedy Entertainment and set in the
+                      Control Universe.
+                    </p>
+                    <p class="medium-para">
+                      I have also taken part in a 10 person <a href="https://archipelago.gg/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Archipelago</a> randomizer challenge, where goal items are mixed across several
+                      people's games, and briefly attained #6 in the EU and #22 worldwide in <a
+                        href="https://www.reachthefinals.com/"
+                        class="under-modal-overlay under-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> The Finals</a> game mode Power Shift.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-index="2" data-status="inactive" draggable="false">
                 <div class="card-image-wrapper">
                   <img class="card-image"
                     srcset="/home_material/nightreign_tall.webp 935w, /home_material/nightreign.webp 710w"
@@ -287,24 +322,26 @@
                     alt="Background is the cover art to the game Elden Ring: Nightreign, depicting a figure on a battlefield, holding a magic staff." />
                 </div>
                 <div class="card-text-wrapper">
-                  <h3 class="card-name"> Elden Ring Nightreign Network Test </h3>
+                  <h3 class="card-name"> Elden Ring: Nightreign Network Test </h3>
                   <p class="card-date"> Updated: 10th March 2025 </p>
-                  <p class="card-details">
-                    I was recently invited to take part in the console network test for <a
-                      href="https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign/network-test"
-                      class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                      tabindex="-1"> Nightreign</a>, a spin-off of Elden Ring developed by
-                    <a href="https://www.fromsoftware.jp/ww/"
-                      class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                      tabindex="-1"> Fromsoftware</a>. Across six sessions, I teamed up
-                    with pairs of players and
-                    endeavoured to beat the Night Lord, while keeping an eye out for bugs, glitches, and balance
-                    issues.
-                  </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      I was recently invited to take part in the console network test for <a
+                        href="https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign/network-test"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Nightreign</a>, a spin-off of Elden Ring developed by
+                      <a href="https://www.fromsoftware.jp/ww/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Fromsoftware</a>. Across six sessions, I teamed up
+                      with pairs of players on PS5 and
+                      endeavoured to beat the Night Lord, while keeping an eye out for bugs, glitches, and balance
+                      issues.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="card" data-index="2" data-status="inactive" draggable="false">
+              <div class="card" data-index="3" data-status="inactive" draggable="false">
                 <div class="card-image-wrapper">
                   <img class="card-image"
                     srcset="/home_material/hades_card_tall.webp 935w, /home_material/hades_card.webp 714w"
@@ -312,26 +349,28 @@
                     alt="Background is the cover art of the game Hades II, depicting the goddess Melinoe holding a dagger and sickle in front of a glowing summoning circle." />
                 </div>
                 <div class="card-text-wrapper">
-                  <h3 class="card-name"> Hades II Bug Testing </h3>
-                  <p class="card-date"> Updated: 26th April 2024 </p>
-                  <p class="card-details">
-                    I am currently taking part in the Early Access period for
-                    <a href="https://www.supergiantgames.com/"
-                      class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                      tabindex="-1"> Supergiant
-                      Games</a>' next masterpiece, <a href="https://store.steampowered.com/app/1145350/Hades_II/"
-                      class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                      tabindex="-1">
-                      Hades II</a>. As part of the game's continued development,
-                    Supergiant Games have included a bug
-                    report tool, which allows players to provide QA feedback. Issues resolved following my reports
-                    include: delayed dialogue, enemies spawning out of bounds, persistent visual effects, and
-                    inaccesible doorways.
-                  </p>
+                  <h3 class="card-name"> Hades II QA Testing </h3>
+                  <p class="card-date"> Updated: 10th March 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      I am currently taking part in the Early Access period for
+                      <a href="https://www.supergiantgames.com/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Supergiant
+                        Games</a>' next masterpiece, <a href="https://store.steampowered.com/app/1145350/Hades_II/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1">
+                        Hades II</a>. As part of the game's continued development,
+                      Supergiant Games have included a bug
+                      report tool, which allows players to provide QA feedback. Issues resolved following my reports
+                      include: delayed dialogue, enemies spawning out of bounds, persistent visual effects, and
+                      inaccesible doorways.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="card" data-index="3" data-status="activeLeft" onclick="handleSliderLeft()" draggable="false">
+              <div class="card" data-index="4" data-status="activeLeft" onclick="handleSliderLeft()" draggable="false">
                 <div class="card-image-wrapper">
                   <img class="card-image" src="/academia_page/academia_images/Surrey.webp" loading="lazy"
                     alt="Background is a photograph of the University of Surrey on a sunny day. The image shows a tall, boat-shaped building surrounded by bright green grass and trees just starting to lose their leaves." />
@@ -344,10 +383,11 @@
                       This website is a work in progress and is updated regularly. This home page, my <a
                         href="academia_page/academia.html"
                         class="under-overlay under-modal-overlay internal-link link-back-card" tabindex="-1">Academia
-                        Page</a>, <a href="contact_page/contact.html"
-                        class="under-overlay internal-link link-back-card">Contact
+                        Page</a>, <a href="contact_page/contact.html" class="under-overlay internal-link link-back-card"
+                        tabindex="-1">Contact
                         Page</a>, <a href="gallery_page/art_gallery.html"
-                        class="under-overlay under-modal-overlay internal-link link-back-card">Gallery Page</a>, and my
+                        class="under-overlay under-modal-overlay internal-link link-back-card" tabindex="-1">Gallery
+                        Page</a>, and my
                       <a href="games_page/video_games.html"
                         class="under-overlay under-modal-overlay internal-link link-back-card" tabindex="-1">Games
                         Stuff Page</a> are now
