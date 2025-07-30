@@ -362,6 +362,15 @@ const gallery_table = [
       "This picture is based on Hideo Kojima's playable teaser for Silent Hills, namely P.T. Having followed the mystery of 7780s Studio at the time of its release, the tense horror of the game has stuck with me and provided inspiration for the Inktober 2019 prompt `ring.' The german text translates to `I thought I heard a phone.' ",
     height: "229",
   },
+  {
+    name: "RaThumbnail1",
+    alt_text:
+      "A man in a fancy-dress crocodile hat and bat wings, otherwise wearing army fatigues, stands to the right of the image, throwing a knife into the air. The background is covered by a thick fog, but computer code is breaking through in the top right corner. A caption reads '2 throwing knives, 2000 hours, my journey.'",
+    filter_tags: "gallery_Digital gallery_Youtube-Thumbnail",
+    description:
+      "This piece was the first in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the bottom left). The character shown on the right is their player character, with the remainder of the assets being sourced from in-game and Embark's studio press-kit.",
+    height: "113",
+  },
 ];
 
 $(document).ready(function () {
