@@ -371,6 +371,15 @@ const gallery_table = [
       "This piece was the first in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the bottom left). The character shown on the right is their player character, with the remainder of the assets being sourced from in-game and Embark's studio press-kit.",
     height: "113",
   },
+  {
+    name: "RaThumbnail2",
+    alt_text:
+      "A man in military fatigues and a stetson levitates above crowd who are grasping at his legs. He is being pulled into the air by one of a fleet of UFOs. The background is covered by a light fog, with the lights of the spacecraft reflecting around the figure. A caption reads 'The Ascension.'",
+    filter_tags: "gallery_Digital gallery_Youtube-Thumbnail",
+    description:
+      "This piece was the second in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the bottom left). The character shown on the left is their player character, rising above a crowd of other competitors during the alien invasion event. The remainder of the assets used were sourced in-game and from Embark's studio press-kit.",
+    height: "113",
+  },
 ];
 
 $(document).ready(function () {
