@@ -486,6 +486,11 @@ $(document).ready(function () {
       "/gallery_page/gallery_images/" + $(this).attr("id") + ".webp"
     );
     $("#gallery-modal-img").attr("data-lightbox", $(this).attr("id"));
+    $("#gallery-modal-img").attr(
+      "alt",
+      "Large scale version of thumbnail image which was selected. " +
+        $(this).children(":first").attr("alt")
+    );
 
     document.getElementById("gallery-modal-description").innerHTML =
       description_map.get($(this).attr("id"));
@@ -497,33 +502,46 @@ $(document).ready(function () {
     $("#close-gallery-modal-button").attr("aria-expanded", "true");
     $("#next-gallery-modal-button").attr("aria-expanded", "true");
     $("#previous-gallery-modal-button").attr("aria-expanded", "true");
+
+    var currentLightbox = $("#gallery-modal-img");
+    var firstGalleryImage = document
+      .querySelectorAll(
+        ".gallery-thumb-wrapper:not(.gallery-image-hidden):first-child"
+      )
+      .item(0).id;
+    var lastGalleryImage = document
+      .querySelectorAll(
+        ".gallery-thumb-wrapper:not(.gallery-image-hidden):last-child"
+      )
+      .item(0).id;
+
+    if (currentLightbox.attr("data-lightbox") != firstGalleryImage) {
+      $("#previous-gallery-modal-button").removeClass("end-button");
+    } else {
+      $("#previous-gallery-modal-button").addClass("end-button");
+    }
+    if (currentLightbox.attr("data-lightbox") != lastGalleryImage) {
+      $("#next-gallery-modal-button").removeClass("end-button");
+    } else {
+      $("#next-gallery-modal-button").addClass("end-button");
+    }
   });
 
-  // Code for next and previous buttons (edit to only move between non-invisible)
+  // Code for next and previous buttons
   $("#previous-gallery-modal-button").click(function () {
     var currentLightbox = $("#gallery-modal-img");
-    var firstGalleryImage = document.querySelectorAll(
-      ".gallery-thumb-wrapper:not(.gallery-image-hidden):first-child"
-    );
-    if (currentLightbox.attr("data-lightbox") != firstGalleryImage) {
-      $(".gallery-thumb-wrapper").removeClass("modal-toggled");
-      $("#" + currentLightbox.attr("data-lightbox"))
-        .prevAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
-        .click();
-    }
+    $(".gallery-thumb-wrapper").removeClass("modal-toggled");
+    $("#" + currentLightbox.attr("data-lightbox"))
+      .prevAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
+      .click();
   });
 
   $("#next-gallery-modal-button").click(function () {
     var currentLightbox = $("#gallery-modal-img");
-    var lastGalleryImage = document.querySelectorAll(
-      ".gallery-thumb-wrapper:not(.gallery-image-hidden):last-child"
-    );
-    if (currentLightbox.attr("data-lightbox") != lastGalleryImage) {
-      $(".gallery-thumb-wrapper").removeClass("modal-toggled");
-      $("#" + currentLightbox.attr("data-lightbox"))
-        .nextAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
-        .click();
-    }
+    $(".gallery-thumb-wrapper").removeClass("modal-toggled");
+    $("#" + currentLightbox.attr("data-lightbox"))
+      .nextAll(".gallery-thumb-wrapper:not(.gallery-image-hidden):lt(1)")
+      .click();
   });
 
   const galleryModal = document.getElementById("gallery-modal");
@@ -587,7 +605,3 @@ $(document).ready(function () {
     $(".gallery-thumb-wrapper").removeClass("gallery-image-hidden");
   });
 });
-
-// Code for filter (add and remove hidden class to classlist)
-// Modify next and back arrows to only go to next image without hidden class
-// Add in alt_text, aria_label
