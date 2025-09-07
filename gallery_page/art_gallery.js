@@ -380,6 +380,15 @@ const gallery_table = [
       "This piece was the second in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the top right). The character shown on the left is their player character, rising above a crowd of other competitors during the alien invasion event. The remainder of the assets used were sourced in-game and from Embark's studio press-kit.",
     height: "113",
   },
+  {
+    name: "RaThumbnail3",
+    alt_text:
+      "Three soldiers stand in formation in a city street, an explosion going off behind them and a yellow box containing money flying through the air. One figure wears military fatigues, one a cowboy hat and mask, and the third a santa outfit. Tags identify them as 'Player', 'RaSaevireYT' and 'LightsGoBoom.YT.' A caption reads 'Powershift Goes Ranked Episode 1.'",
+    filter_tags: "gallery_Digital gallery_Youtube-Thumbnail",
+    description:
+      "This piece was the third in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the top right) and the first in the series `Powershift goes ranked' where top seed Powershift players attempt to reign victorious in the Ranked game mode. In this episode RaSaevire was joined by two other members of team POWER: Player and LightsGoBoom, with the figures shown being their player characters. The remainder of the assets used were sourced in-game and from Embark's studio press-kit.",
+    height: "113",
+  },
 ];
 
 $(document).ready(function () {
