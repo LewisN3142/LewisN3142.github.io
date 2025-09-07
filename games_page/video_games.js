@@ -9,7 +9,7 @@ const videos_table = [
     description: [
       "Back in September of 2022, while playing Returnal on PS5 for the first time, I finally made it to Phrike, the boss of the initial biome. Despite never having seen the boss before, my first attempt ended up being a zero damage run! Unfortunately, it wasn't quite a no-hit run as I was knocked over by a melee attack about half way through the fight. This game is stunning and so fun to play!",
     ],
-    filter_tags: "games_Type:-Challenges",
+    filter_tags: "games_Type-Challenges",
   },
   {
     title: "Sifu &ndash; Above The Skyscrapers Gold Stamp in 4 Hits",
@@ -19,7 +19,7 @@ const videos_table = [
     description: [
       "Following the release of Sifu's final update for the Arenas Expansion in September 2023, I began working my way through the Tiger Arena Challenges. This clip in particular comes from a gold stamp run of the 'Above the Skyscrapers' arena, in which one has to beat waves of enemies while remaining below age 33 (i.e. without dying) in order to get all three regular stamps and do so while being hit fewer than 6 times in order to obtain the gold stamps.",
     ],
-    filter_tags: "games_Type:-Challenges",
+    filter_tags: "games_Type-Challenges",
   },
   {
     title:
@@ -30,7 +30,7 @@ const videos_table = [
     description: [
       "The title really says it all! I was surprised that I actually made this shot, let alone that it insta-killed the brute. This was my second run through this area of the game, so I wasn't exactly caught by surprise when the enemy appeared, however my previous attempt absolutely chewed through my resources as I ran around the interior of the shop. This run through was a lot more efficient!",
     ],
-    filter_tags: "games_Type:-Clips",
+    filter_tags: "games_Type-Clips",
   },
   {
     title: "Ghostrunner Demo &ndash; An Awakening in 1:27.15",
@@ -40,7 +40,7 @@ const videos_table = [
     description: [
       "This is a single-level in-bounds speedrun of the first stage from the Ghostrunner demo, namely 'An Awakening,' completed on PS4 in May of 2021. The route used was my own, based on the world record at the time, with a couple of the extended dashing tricks (like the air ground dash) replaced with more straightforward, yet slower, routing. As the in-game timer and death counter did not correctly display during the run, this attempt could not be submitted to the leaderboards.",
     ],
-    filter_tags: "games_Game:-Ghostrunner games_Type:-Speedruns",
+    filter_tags: "games_Game-Ghostrunner games_Type-Speedruns",
   },
   {
     title: "Ghostrunner 2 &ndash; Full Demo in 6:07.97",
@@ -50,7 +50,7 @@ const videos_table = [
     description: [
       "Here is a speedrun of the full demo for Ghostrunner 2, completed in September of 2023 on PS5. Having messed around with running the demo for the first Ghostrunner game during the COVID19 pandemic, I just had to pick this up after it was announced. There is one trick I do not go for at 2:22 in the video, which involves doing a super jump off a ledge to skip having to set up the fan stored in the side room. I couldn't make the skip consistent at the time, but a little practice would probably make it viable.",
     ],
-    filter_tags: "games_Game:-Ghostrunner games_Type:-Speedruns",
+    filter_tags: "games_Game-Ghostrunner games_Type-Speedruns",
   },
   {
     title: "Astro's Playroom &ndash; Climbing Run in 20.01",
@@ -60,7 +60,7 @@ const videos_table = [
     description: [
       "My attempt at speedrunning the Climbing Run challenge from Astro's Playroom on PS5 from September of 2021. This challenge utilised the adaptive trigger technology of the Dualsense and involved pressing the triggers at speed to climb a wall, where some of the rocks were fragile and would break if you pressed too hard. At the time this was recorded, I was grinding low times in all of the Network Speed Run challenges and reached 213th place globally.",
     ],
-    filter_tags: "games_Game:-Astros-Playroom games_Type:-Speedruns",
+    filter_tags: "games_Game-Astros-Playroom games_Type-Speedruns",
   },
   {
     title: "Astro's Playroom &ndash; Hopping Run in 26.80",
@@ -70,7 +70,7 @@ const videos_table = [
     description: [
       "My attempt at speedrunning the Hopping Run challenge from Astro's Playroom on PS5 from September of 2021. Much of the challenge involved pressing/releasing the adaptive triggers to jump at the earliest opportunity upon landing and turning while doing so. Note, this run was re-timed by myself, since the recording did not include the challenge end-card. As such, the time is only approximate and likely an over-estimate.",
     ],
-    filter_tags: "games_Game:-Astros-Playroom games_Type:-Speedruns",
+    filter_tags: "games_Game-Astros-Playroom games_Type-Speedruns",
   },
   {
     title: "Astro's Playroom &ndash; Jetpack Run in 37.73",
@@ -80,7 +80,7 @@ const videos_table = [
     description: [
       "My attempt at speedrunning the Jetpack Run challenge from Astro's Playroom on PS5 from September of 2021. Again this run utilises the adaptive triggers combined with motion controls to guide Astro-bot through a fixed course, with the player attempting to avoid obstacles and take corners as tightly as possible.",
     ],
-    filter_tags: "games_Game:-Astros-Playroom games_Type:-Speedruns",
+    filter_tags: "games_Game-Astros-Playroom games_Type-Speedruns",
   },
   {
     title: "Astro's Playroom &ndash; Rolling Run in 32.86",
@@ -90,7 +90,7 @@ const videos_table = [
     description: [
       "My attempt at speedrunning the Rolling Run challenge from Astro's Playroom from September of 2021. Unlike the other challenges shown above, this one uses the trackpad to steer a rolling ball along a course, while the haptic feedback simulates the textures of surfaces such as mud and metal. Rhythm and steering are again the most important factors for this challenge.",
     ],
-    filter_tags: "games_Game:-Astros-Playroom games_Type:-Speedruns",
+    filter_tags: "games_Game-Astros-Playroom games_Type-Speedruns",
   },
   {
     title: "Bloodborne &ndash; Sewer Skip (PS4 &ndash; Unedited)",
@@ -100,7 +100,7 @@ const videos_table = [
     description: [
       "In this clip, I demonstrate Sewer Skip from Bloodborne &ndash; a speedrun skip used to skip the sewers of Central Yharnam. This is done by jumping onto a railing above the sewers and walking along until you can drop off at the end and land on the bridge by the shortcut. In this clip I miss the fence and choose to reload, since when I touch the top of the fence on the way past, the game sets that as my last 'stable ground,' the place where the player is positioned when the game reloads.",
     ],
-    filter_tags: "games_Game:-Bloodborne games_Type:-Speedrun-Skips",
+    filter_tags: "games_Game-Bloodborne games_Type-Speedrun-Skips",
   },
   {
     title: "Bloodborne &ndash; Old Yharnam Skip (PS4 &ndash; Unedited)",
@@ -110,7 +110,7 @@ const videos_table = [
     description: [
       "Here I demonstrate Old Yharnam Skip from Bloodborne &ndash; a speedrun skip used to reach the Blood Starved Beast boss without traversing the bulk of Old Yharnam (this also avoids Hunder Djura). We do this by abusing player jump height to clear the fence at the start of the area and get out of bounds. The rooftops have very little collision, but by carefully moving along the pieces that do, we can reach the street below. Note that the traversable regions do not match the parts of the roof that render in.",
     ],
-    filter_tags: "games_Game:-Bloodborne games_Type:-Speedrun-Skips",
+    filter_tags: "games_Game-Bloodborne games_Type-Speedrun-Skips",
   },
   {
     title: "Bloodborne &ndash; Hut Skip (PS4 &ndash; Unedited)",
@@ -121,7 +121,7 @@ const videos_table = [
       "This clip is a demonstration of Hut Skip from Bloodborne &ndash; a speedrun skip used to bypass the middle section of the Forbidden Woods area. We do this by rolling off a rock to clip out of bounds, traversing through out of bounds while avoiding objects without collision, and climbing onto a second stack of rocks. From here, careful camera positioning using an R1 attack lines us up with the corner of the hut, allowing us to roll onto an invisible wall that runs along the side of the building. We can then roll into the hut, since the wall does not have collision this high up.",
       "The second part of this glitch abuses the collision of the wooden beams in the lift shaft inside the hut &ndash; we can land half way down (taking a little fall damage) and then drop to the bottom where we can then proceed to fight the Shadows of Yharnam.",
     ],
-    filter_tags: "games_Game:-Bloodborne games_Type:-Speedrun-Skips",
+    filter_tags: "games_Game-Bloodborne games_Type-Speedrun-Skips",
   },
   {
     title: "Bloodborne &ndash; Yahar'gul Skip (PS4 &ndash; Unedited)",
@@ -132,7 +132,7 @@ const videos_table = [
       "Now we have a demonstration of Yahar'gul Skip from Bloodborne &ndash; a speedrun skip used to reach The One Reborn shortly after entering the area. This skip is characterised by the poor collision of the fence shown at the beginning of the clip &ndash; with the correct angle and enough speed, you can just walk straight through it!",
       "The setup used here makes the skip more consistent, since there are enemies off-camera targeting the player. We transform the Saw Cleaver, backstep, transform attack, and then use a charged R2 in order to clip through the fence. This ensures that we make it through and puts us far enough forward that we land on solid ground on the other side, rather than falling into the building.",
     ],
-    filter_tags: "games_Game:-Bloodborne games_Type:-Speedrun-Skips",
+    filter_tags: "games_Game-Bloodborne games_Type-Speedrun-Skips",
   },
   {
     title: "Bloodborne &ndash; Nightmare Frontier Skip (PS4 &ndash; Loads Cut)",
@@ -142,7 +142,7 @@ const videos_table = [
     description: [
       "Finally in this series, we have a demonstration of Nightmare Frontier Skip from Bloodborne &ndash; a speedrun skip used to reach the Amygdala boss fight directly from the Nightmare Frontier lantern, via the shortcut lift. We do this by falling down the lift shaft and bouncing off a ledge, setting that as stable ground. We then quit-out (loading screens have been cut here) and when we load back in, we are on the ledge, far enough down the lift shaft that we no longer die due to fall damage when we jump down. An emote is used to line up the initial fall and time the quit-out.",
     ],
-    filter_tags: "games_Game:-Bloodborne games_Type:-Speedrun-Skips",
+    filter_tags: "games_Game-Bloodborne games_Type-Speedrun-Skips",
   },
   {
     title: "Atomic Heart &ndash; Doors Are Just A Suggestion",
@@ -152,7 +152,7 @@ const videos_table = [
     description: [
       "Here's a glitch from Atomic Heart on PS5 I stumbled across during a casual playthrough. I'm not entirely sure what the trigger is yet, but in some circumstances, the player character can walk through a closed door as if it were not there at all. It doesn't appear to work on every door (but could be useful for bypassing puzzle locks) and in this clip it seems to be related to using the scanner and closing a door at the same time. More testing required...",
     ],
-    filter_tags: "games_Type:-Glitches",
+    filter_tags: "games_Type-Glitches",
   },
   {
     title: "Ghostrunner &ndash; Walls Are Just A Suggestion",
@@ -162,7 +162,7 @@ const videos_table = [
     description: [
       "This clip shows a glitch I encountered while learning the in-bounds speedrun route of the Ghostrunner level 'An Awakening.' Attempting to wall run on the steel beam structure on the corner of a wall causes the player character to get stuck in the collision and clip out of bounds, before falling to the kill-plane below. Unfortunately, the glitch isn't too useful for out-of-bounds runs as the current route skips this section of the level, but could be a useful back-up strategy for marathons.",
     ],
-    filter_tags: "games_Game:-Ghostrunner games_Type:-Glitches",
+    filter_tags: "games_Game-Ghostrunner games_Type-Glitches",
   },
   {
     title:
@@ -174,7 +174,7 @@ const videos_table = [
       "This glitch is an interesting one! While playing God of War Ragnarök on PS5, I noticed that one of the crawlspaces, which was meant to be obstructed by a Draupnir spear point, was already interactible, as if a check hadn't been run. As a result, Kratos and Freya were both able to enter the crawlspace while it was blocked. I didn't pass through fully in-case the game became soft-locked, but managed to get Freya stuck inside.",
       "In the middle of the clip there is a slight hitching (originally much longer but edited for time) which suggests the code caught an error &ndash; I had several of these incidents towards the end of the game, presumably due to the amount of data the game was reading/writing, though this was on a very early patch so is likely now resolved.",
     ],
-    filter_tags: "games_Type:-Glitches",
+    filter_tags: "games_Type-Glitches",
   },
 ];
 
@@ -272,7 +272,8 @@ $(document).ready(function () {
   function addFilterButton(filterName) {
     // Construct id, aria label, and inner html from filterName
     var filterNameGalleryless = filterName.split("_")[1];
-    var filterNameWords = filterNameGalleryless.replace(/-/g, " ");
+    var filterNameColon = filterNameGalleryless.replace("-", ": ");
+    var filterNameWords = filterNameColon.split(" ")[1].replace(/-/g, " ");
 
     var newIcon = createElement("i", {
       class: "abstract-icon icon-checkbox-unchecked",
@@ -288,7 +289,7 @@ $(document).ready(function () {
     });
 
     newButton.appendChild(newIcon);
-    newButton.innerHTML += filterNameWords;
+    newButton.innerHTML += filterNameColon;
     filterColumns.appendChild(newButton);
     filterColumns.appendChild(createElement("br", {}));
   }
