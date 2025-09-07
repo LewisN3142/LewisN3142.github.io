@@ -1386,7 +1386,9 @@ textarea {
 .youtube-video {
   aspect-ratio: 16/9;
   width: 0%;
+  height: 0%;
   margin-left: 10%;
+  visibility: hidden;
 
   -webkit-transition: var(--load-youtube-iframe);
   -moz-transition: var(--load-youtube-iframe);
@@ -1398,6 +1400,7 @@ textarea {
   width: 80%;
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
+  visibility: visible;
 
   -webkit-transition: var(--load-youtube-iframe);
   -moz-transition: var(--load-youtube-iframe);

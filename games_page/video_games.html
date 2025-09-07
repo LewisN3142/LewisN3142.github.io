@@ -147,17 +147,7 @@
         </li>
 
         <li> <!-- Games Nav -->
-          <div class="link-with-dropdown">
-            <a class="link-next-to-dropdown" href="video_games.html" id="current-page"> Gaming Stuff </a>
-            <button class="dropdown-btn" type="button" aria-controls="Games-dropdown" aria-expanded="false">
-              <i class="icon-angle-right dropdown-icon"></i> </button>
-          </div>
-
-          <ul class="dropdown-container" id="Games-dropdown">
-            <li> <a href="video_games.html#gameplay" class="dropdown-item-current"> Gameplay </a></li>
-            <li> <a href="video_games.html#speedrunTech" class="dropdown-item-current"> Speedruns and Skips </a></li>
-            <li> <a href="video_games.html#bugsGlitches" class="dropdown-item-current"> Bugs and Glitches </a></li>
-          </ul>
+          <a href="video_games.html" id="current-page"> Gaming Stuff </a>
         </li>
 
         <li> <!-- Contact Nav -->
@@ -176,71 +166,66 @@
         <h1> Gaming Stuff </h1>
       </div>
       <div class="container">
-        <div class="section-break" id="gameplay">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
-            title="Video Games" alt="gamepad icon">
-            <path
-              d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
-          </svg>
-        </div>
 
-        <article id="Gameplay_Article"> <!-- General Gameplay Section -->
-          <h2> Gameplay </h2>
-          <p class="medium-para youtube-para">
-            This page compiles clips and screenshots from my playthroughs of various videogames, from glitches I have
-            found or replicated, to speedruns and challenge attempts. These videos may also be found on my <a
-              href="https://www.youtube.com/@lewisnapper" rel="noopener noreferrer"
-              class="external-link under-overlay under-modal-overlay"> Youtube Channel</a>.
-          </p>
-          <p class="medium-para youtube-para">
-            Below is a selection of clips of general gameplay, including challenge attempts, no-hit runs, and other cool
-            or funny moments that did not fit elsewhere.
-          </p>
+        <article> <!-- Section 1 name -->
+          <h2> About This Page </h2>
+          <section class="Review-section About-section">
+            <p class="medium-para youtube-para">
+              This page compiles clips and screenshots from my playthroughs of various videogames, including challenges
+              such as no-hit attempts, glitches I have found and replicated, and speedruns. While I do not often get
+              time to grind for lower times, my best attemps and any interesting skips that I learn will be collected
+              here, alongside discussion of any unintentional interactions exploited.
+            </p>
+            <p class="medium-para youtube-para">
+              Each section includes a discussion of the clip alongside a thumbnail which can be clicked to load the
+              corresponding video. These videos may also be found on my <a href="https://www.youtube.com/@lewisnapper"
+                rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Youtube Channel</a>.
+              The page can be filtered using the menu below if you are searching for a specific game or video type.
+            </p>
+            <p class="medium-para youtube-para">
+              Note that this collection is not intended as a critique of the developers, rather as a resource for those
+              who want to learn a little more about how glitches occur and how speedrun skips are found (most often by
+              accident)!
+            </p>
+          </section>
 
+          <div class="section-break" id="gallery_start" style="margin-top:1rem">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
+              title="Video Games" alt="gamepad icon">
+              <path
+                d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
+            </svg>
+          </div>
         </article>
 
-        <div class="section-break" id="speedrunTech">
-          <!-- update id to next article name if section added to dropdown -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
-            title="Video Games" alt="gamepad icon">
-            <path
-              d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
-          </svg>
+        <div class="gallery-filter-bar-container">
+          <button class="abstract-link under-overlay under-modal-overlay privacy-link" type="button"
+            aria-expanded="false" aria-controls="filters-menu" id="filter-open"> <i
+              class="abstract-icon icon-angle-right"></i>Filters<i class="icon-filters"
+              style="display:flex; float:right;"></i>
+          </button>
+
+          <div class="abstract-container privacy-container" id="filters-menu">
+            <div id="filter-columns">
+              <!-- Filters here -->
+            </div>
+
+            <div class="close-abstract-bar">
+              <button class="modal-button under-modal-overlay under-overlay" id="clear-filters-button" type="button"
+                aria-expanded="false" aria-controls="masonry-container" aria-label="clear filters and reveal all images"
+                style="margin-left:0.5rem;">Clear<i class="abstract-icon icon-clear"></i>
+              </button>
+              <div style="flex-grow:1;"></div>
+              <button class="under-modal-overlay under-overlay close-abstract-button modal-button"
+                id="close-filters-button" type="button" aria-expanded="false" aria-controls="filters-menu"
+                aria-label="close filters menu">Close<i class="abstract-icon icon-close"></i></button>
+            </div>
+          </div>
         </div>
 
-        <article id="Speedrun_Article"> <!-- Speedrun Section -->
-          <h2> Speedruns and Skips </h2>
+        <div id="games-article">
 
-          <p class="medium-para youtube-para">
-            Moving on from more general gameplay, here is a collection of clips of speedrun attempts and tech that I
-            have managed to replicate. While I do not often get time to practice for lower times, my best attempts and
-            any interesting skips that I learn will be collected here.
-          </p>
-
-        </article>
-
-        <div class="section-break" id="bugsGlitches">
-          <!-- update id to next article name if section added to dropdown -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
-            title="Video Games" alt="gamepad icon">
-            <path
-              d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
-          </svg>
         </div>
-
-        <article id="Glitches_Article"> <!-- Glitches Section -->
-          <h2> Bugs and Glitches </h2>
-
-
-          <p class="medium-para youtube-para">
-            While playing games for dozens, if not hundreds, of hours, you're bound to find some bugs and glitches. This
-            section compiles and provides a brief discussion of those glitches which I thought especially intersting,
-            from
-            missing collision to unintentional interactions. Note that this collection is not intended as a critique of
-            the developers, rather as a resource for those who want to learn a little more about how glitches occur and
-            how speedrun skips are found (most often by accident)!
-          </p>
-        </article>
 
       </div>
 

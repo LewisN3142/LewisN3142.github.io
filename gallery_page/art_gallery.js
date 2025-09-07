@@ -570,8 +570,6 @@ $(document).ready(function () {
     }
   });
 
-  // Add code to generate buttons here
-
   $(".gallery-filter-button").click(function () {
     $(this).children("i").toggleClass("icon-checkbox-unchecked");
     $(this).children("i").toggleClass("icon-checkbox-checked");
