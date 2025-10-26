@@ -147,8 +147,18 @@
         </li>
 
         <li> <!-- Games Nav -->
-          <a href="video_games.html" id="current-page"> Gaming Stuff </a>
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="video_games.html" id="current-page"> Gaming Stuff </a>
+            <button class="dropdown-btn" type="button" aria-controls="Gaming-dropdown" aria-expanded="false">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Gaming-dropdown">
+            <li> <a href="video_games.html#playtests" class="dropdown-item-current"> Playtesting </a></li>
+            <li> <a href="video_games.html#clips_gallery" class="dropdown-item-current"> Clips Gallery </a></li>
+          </ul>
         </li>
+
 
         <li> <!-- Contact Nav -->
           <a href="../contact_page/contact.html"> Contact Me </a>
@@ -171,31 +181,207 @@
           <h2> About This Page </h2>
           <section class="Review-section About-section">
             <p class="medium-para youtube-para">
-              This page compiles clips and screenshots from my playthroughs of various videogames, including challenges
-              such as no-hit attempts, glitches I have found and replicated, and speedruns. While I do not often get
+              This page compiles my adventures in the world of videogames, cataloguing games I have played casually, as
+              well as those I have been invited to playtest, through early-access or beta-testing schemes.
+              In addition, I also actively take part in videogame challenge running, with clips of my exploits detailed
+              in the gallery below. Here you will find clips of glitches I have discovered/replicated, speedruns of
+              individual levels, and challenge run attempts, for example no-hit runs. While I do not often get
               time to grind for lower times, my best attemps and any interesting skips that I learn will be collected
               here, alongside discussion of any unintentional interactions exploited.
             </p>
+          </section>
+        </article>
+
+        <div class="section-break" id="playtests" style="margin-top:1rem">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
+            title="Video Games" alt="gamepad icon">
+            <path
+              d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
+          </svg>
+        </div>
+
+        <article>
+          <h2> Playtest Experience </h2>
+
+          <div class="slider-padding"></div>
+
+          <div id="slider-container">
+            <div class="cards" id="cards">
+
+              <div class="card" data-index="0" data-status="activeMiddle" draggable="false">
+                <div class="card-image-wrapper">
+                  <img class="card-image" src="games_images/valormortis.webp" loading="lazy"
+                    alt="Background is an image of Napoleon as a giant fantasy warlock figure, the left side of his face decomposed into a montrous mesh of flesh. A soldier kneels before him and a shadowy army looms behind." />
+                </div>
+                <div class="card-text-wrapper">
+                  <h3 class="card-name"> Crashout Crew and Valor Mortis</h3>
+                  <p class="card-date"> Updated: 18th October 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      This month, I have been taking part in the demo for <a
+                        href="https://store.steampowered.com/app/3583210/Crashout_Crew/"
+                        class="under-overay under-modal-overlay external-link" rel="noopener noreferrer"> Crashout
+                        Crew</a>, the new order-fulfillment
+                      multiplayer game by <a href="https://aggrocrab.com/"
+                        class="under-overay under-modal-overlay external-link" rel="noopener noreferrer"> Aggro
+                        Crab</a>. While testing out the game, I also filed a bug report concerning
+                      input issues with controllers using SteamInput, where forward was permanently pressed.
+                    </p>
+                    <p class="medium-para">
+                      I was also invited to take part in the closed alpha for <a
+                        href="https://store.steampowered.com/app/2828710/Valor_Mortis/"
+                        class="under-overay under-modal-overlay external-link" rel="noopener noreferrer"> Valor
+                        Mortis</a> by <a href="https://omlgames.com/en/home/"
+                        class="under-overay under-modal-overlay external-link" rel="noopener noreferrer"> One More
+                        Level</a> (Ghostrunner), a souls-like set during a fantasy version of the Napoleonic war. While
+                      the overall vibe and style is immaculate, there are still performance issues
+                      (likely memory leakage) at this stage, causing the game to crash if the player dies multiple
+                      times. It is also possible to get stuck in enemy hitboxes, among other issues, which will
+                      hopefully be resolved by launch.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-index="1" data-status="activeRight" draggable="false"
+                onclick="handleSliderRight()">
+                <div class="card-image-wrapper">
+                  <img class="card-image" src="games_images/BF6.webp" loading="lazy" alt="" />
+                </div>
+                <div class="card-text-wrapper">
+                  <h3 class="card-name"> Battlefield 6</h3>
+                  <p class="card-date"> Updated: 10th August 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      On the 7th August, I was invited by EA to take part in the Early Access part of the
+                      <a href="https://www.ea.com/games/battlefield/battlefield-6/news/battlefield-6-open-beta-twitch-drops"
+                        class="under-overay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Battlefield 6 Open Beta</a>. During this time, I tested for network, weapon
+                      balance, and implementation issues. Based on player feedback, the overpowered nature of the
+                      shotguns was toned down and some of the blindingy bright bloom in certain portions of maps was
+                      removed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-index="2" data-status="inactive" draggable="false">
+                <div class="card-image-wrapper">
+                  <img class="card-image" src="games_images/fbcFirebreak.webp" loading="lazy" alt="" />
+                </div>
+                <div class="card-text-wrapper">
+                  <h3 class="card-name"> Void/Breaker and FBC: Firebreak</h3>
+                  <p class="card-date"> Updated: 9th July 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      Over the last three months, I have been invited to take part in network testing for both <a
+                        href="https://www.voidbreakergame.com/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Void/Breaker</a>, created by Daniel Stubbington (previously The
+                      Entropy Centre), and <a href="https://store.steampowered.com/app/2272540/FBC_Firebreak/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1">
+                        FBC: Firebreak</a>, developed by Remedy Entertainment and set in the
+                      Control Universe.
+                    </p>
+                    <p class="medium-para">
+                      As part of this task, I provided feedback on game balance, connectivity issues, and implementation
+                      bugs. For
+                      example, in the Void/Breaker test, it was possible to get stuck in the ground when dashing onto a
+                      platform, losing all player control except for jumping, which you could do infinitely. As far as I
+                      am aware, this has been
+                      resolved in the current version of the game.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card" data-index="3" data-status="activeLeft" onclick="handleSliderLeft()" draggable="false">
+                <div class="card-image-wrapper">
+                  <img class="card-image"
+                    srcset="/home_material/nightreign_tall.webp 935w, /home_material/nightreign.webp 710w"
+                    sizes="(min-width: 1600px) 900px, 750px" src="/home_material/nightreign.webp" loading="lazy"
+                    alt="Background is the cover art to the game Elden Ring: Nightreign, depicting a figure on a battlefield, holding a magic staff." />
+                </div>
+                <div class="card-text-wrapper">
+                  <h3 class="card-name"> Elden Ring: Nightreign and Hades II</h3>
+                  <p class="card-date"> Updated: 10th March 2025 </p>
+                  <div class="card-details">
+                    <p class="medium-para">
+                      I was recently invited to take part in the console network test for <a
+                        href="https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign/network-test"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Nightreign</a>, a spin-off of Elden Ring, developed by <a
+                        href="https://www.fromsoftware.jp/ww/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Fromsoftware</a>. Across six sessions, I teamed up with pairs of players on PS5
+                      and endeavoured to beat the Night Lord, while keeping an eye out for bugs, glitches, and balance
+                      issues.
+                    </p>
+                    <p class="medium-para">
+                      I have also been taking part in the Early Access period for
+                      <a href="https://www.supergiantgames.com/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1"> Supergiant
+                        Games</a>' next masterpiece, <a href="https://store.steampowered.com/app/1145350/Hades_II/"
+                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
+                        tabindex="-1">
+                        Hades II</a>. As part of the game's continued development, I have been providing QA feedback via
+                      the included bug report tool, prompting the resolution of issues including: delayed dialogue,
+                      enemies spawning out of bounds, persistent visual effects, and
+                      inaccesible doorways.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-navigation">
+              <button class="slider-button slider-button-left under-overlay under-modal-overlay" type="button"
+                id="carousel-left-button" aria-controls="cards" onclick="handleSliderLeft()"
+                aria-label="previous card in carousel">
+                <i class="icon-angle-left slider-angle slider-angle-left" alt="Previous Event"></i>
+              </button>
+              <div class="slider-navigation-padding"></div>
+              <div class="slider-dots" id="slider-dots">
+              </div>
+              <div class="slider-navigation-padding"></div>
+              <button class="slider-button slider-button-right under-overlay under-modal-overlay" type="button"
+                id="carousel-right-button" aria-controls="cards" onclick="handleSliderRight()"
+                aria-label="next card in carousel">
+                <i class="icon-angle-right slider-angle slider-angle-right" alt="Next Event"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="slider-padding"></div>
+
+
+        </article>
+
+        <div class="section-break" id="clips_gallery" style="margin-top:1rem">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
+            title="Video Games" alt="gamepad icon">
+            <path
+              d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
+          </svg>
+        </div>
+
+        <article>
+          <h2> Clip Gallery </h2>
+          <section>
             <p class="medium-para youtube-para">
-              Each section includes a discussion of the clip alongside a thumbnail which can be clicked to load the
+              Below is a gallery of clips of my gameplay across a wide collection of games, from Astro's Playroom to
+              Sifu. The clips range from cool gameplay moments, to glitches, speedruns, and challenge runs.
+              Each post includes a discussion of the clip alongside a thumbnail which can be clicked to load the
               corresponding video. These videos may also be found on my <a href="https://www.youtube.com/@lewisnapper"
                 rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay"> Youtube Channel</a>.
               The page can be filtered using the menu below if you are searching for a specific game or video type.
-            </p>
-            <p class="medium-para youtube-para">
               Note that this collection is not intended as a critique of the developers, rather as a resource for those
               who want to learn a little more about how glitches occur and how speedrun skips are found (most often by
               accident)!
             </p>
           </section>
-
-          <div class="section-break" id="gallery_start" style="margin-top:1rem">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#f5f5f5" height="48" width="48" viewBox="0 0 640 512"
-              title="Video Games" alt="gamepad icon">
-              <path
-                d="M192 64C86 64 0 150 0 256S86 448 192 448H448c106 0 192-86 192-192s-86-192-192-192H192zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24v32h32c13.3 0 24 10.7 24 24s-10.7 24-24 24H216v32c0 13.3-10.7 24-24 24s-24-10.7-24-24V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h32V200z" />
-            </svg>
-          </div>
         </article>
 
         <div class="gallery-filter-bar-container">

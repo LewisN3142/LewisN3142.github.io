@@ -510,6 +510,7 @@ main hr {
   margin: 0 0 1rem 0;
   padding: 0.6rem 0 0 0;
   max-height: 65vh;
+  border-bottom: 1px solid var(--overlay-color);
 }
 
 .modal-details p {
@@ -718,11 +719,29 @@ button:focus-visible,
 /* COLUMNS FOR HOME PAGE */
 .grades-column {
   float: left;
-  width: 50%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  width: 48%;
+
+  margin: 0.3rem;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  background-color: var(--background-accent);
+}
+
+.grades-padding {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+
+.grades-row {
+  display: flex;
+  justify-content: center;
+}
+
+.single-grade-block {
+  margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  background-color: var(--background-accent);
 }
 
 .grades-row:after {
@@ -913,8 +932,6 @@ button:focus-visible,
   display: none;
   background-color: var(--background-mid-accent);
   padding: 0.5rem;
-  padding-left: 1.3rem;
-  padding-right: 0.7rem;
 }
 
 /* CONTACT FORM STYLING */
@@ -973,7 +990,7 @@ button:focus-visible,
 .privacy-container {
   margin: 0.5rem 0.7rem 0.75rem 0.7rem;
   overflow-y: auto;
-  padding: 0.4rem 0.3rem 0 0.3rem;
+  padding: 0.6rem 0.7rem 0.2rem 0.7rem;
   max-height: 65vh;
 }
 
@@ -1123,10 +1140,6 @@ textarea {
 
 .underline {
   text-decoration: underline;
-}
-
-.abstract-less-padding {
-  padding-left: 0.7rem;
 }
 
 /* 404 Page */
@@ -1289,7 +1302,7 @@ textarea {
   border-style: solid;
 
   overflow: auto;
-  max-height: 80%;
+  max-height: 78%;
 }
 
 .card-name {
@@ -1514,6 +1527,10 @@ textarea {
 #gallery-modal {
   z-index: 100;
   max-width: 80vw;
+}
+
+#gallery-modal-img {
+  background-color: var(--background-accent);
 }
 
 #gallery-modal > .modal-title > button {
@@ -1931,7 +1948,17 @@ img.lazyload:not([src]) {
   }
 
   .grades-column {
-    width: 100%;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grades-padding {
+    padding: 0;
+  }
+
+  .grades-row {
+    display: block;
   }
 
   .youtube-column-text {

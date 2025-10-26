@@ -167,7 +167,16 @@
         </li>
 
         <li> <!-- Games Nav -->
-          <a href="../games_page/video_games.html"> Gaming Stuff </a>
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="../games_page/video_games.html"> Gaming Stuff </a>
+            <button class="dropdown-btn" type="button" aria-controls="Gaming-dropdown" aria-expanded="false">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Gaming-dropdown">
+            <li> <a href="../games_page/video_games.html#playtests"> Playtesting </a></li>
+            <li> <a href="../games_page/video_games.html#clips_gallery"> Clips Gallery </a></li>
+          </ul>
         </li>
 
         <li> <!-- Contact Nav -->

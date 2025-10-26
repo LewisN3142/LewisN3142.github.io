@@ -151,7 +151,16 @@
         </li>
 
         <li> <!-- Games Nav -->
-          <a href="games_page/video_games.html"> Gaming Stuff </a>
+          <div class="link-with-dropdown">
+            <a class="link-next-to-dropdown" href="games_page/video_games.html"> Gaming Stuff </a>
+            <button class="dropdown-btn" type="button" aria-controls="Gaming-dropdown" aria-expanded="false">
+              <i class="icon-angle-right dropdown-icon"></i> </button>
+          </div>
+
+          <ul class="dropdown-container" id="Gaming-dropdown">
+            <li> <a href="games_page/video_games.html#playtests"> Playtesting </a></li>
+            <li> <a href="games_page/video_games.html#clips_gallery"> Clips Gallery </a></li>
+          </ul>
         </li>
 
         <li> <!-- Contact Nav -->
@@ -276,32 +285,29 @@
                     style="right:0; left:auto;" />
                 </div>
                 <div class="card-text-wrapper">
-                  <h3 class="card-name"> Network Testing and Game Challenges</h3>
-                  <p class="card-date"> Updated: 9th July 2025 </p>
+                  <h3 class="card-name"> Games Modding and Network Testing</h3>
+                  <p class="card-date"> Updated: 25th October 2025 </p>
                   <div class="card-details">
                     <p class="medium-para">
-                      Over the last three months, I have been invited to take part in beta/network testing for both <a
-                        href="https://www.voidbreakergame.com/"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Void/Breaker</a>, created by Daniel Stubbington (previously The
-                      Entropy Centre), <a href="https://store.steampowered.com/app/2272540/FBC_Firebreak/"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> FBC: Firebreak</a>, developed by Remedy Entertainment and set in the
-                      Control Universe.
-                    </p>
-                    <p class="medium-para">
-                      I have also recently begun contributing code to the cross-game randomizer <a
+                      Over the last three months, I have begun contributing code to the cross-game randomizer <a
                         href="https://archipelago.gg/"
                         class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Archipelago</a>, where goal items are mixed across several people's games, after
-                      taking part in the challenge myself. In particular, I have been working on <a
-                        href="https://github.com/LewisN3142/Autos-Archipelagos/tree/ACTBranch/worlds/another_crab"
+                        tabindex="-1">
+                        Archipelago</a>, where goal items are mixed across several people's games, after
+                      taking part in the challenge myself. In particular, I have been working on the randomization logic
+                      for <a href="https://github.com/LewisN3142/Autos-Archipelagos/tree/ACTBranch/worlds/another_crab"
                         class="under-modal-overlay under-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Another Crab's
-                        Treasure</a>.
+                        tabindex="-1">
+                        Another Crab's
+                        Treasure</a>, ensuring the challenge accounts for speedrun strategies.
                     </p>
                     <p class="medium-para">
-                      I also briefly attained #6 in the EU and #22 worldwide in <a
+                      At the invitation of the developers, I have additionally been taking part in beta/network testing
+                      for a
+                      wide range of games in this time, including Hades II, Elden Ring: Nightreign, and Valor Mortis,
+                      see my <a href="/games_page/video_games.html#playtests"
+                        class="under-overlay under-modal-overlay internal-link link-back-card" tabindex="-1"> Games
+                        Page</a>. I also briefly attained #6 in the EU and #22 worldwide in <a
                         href="https://www.reachthefinals.com/"
                         class="under-modal-overlay under-overlay external-link link-back-card" rel="noopener noreferrer"
                         tabindex="-1"> The
@@ -311,63 +317,7 @@
                 </div>
               </div>
 
-              <div class="card" data-index="2" data-status="inactive" draggable="false">
-                <div class="card-image-wrapper">
-                  <img class="card-image"
-                    srcset="/home_material/nightreign_tall.webp 935w, /home_material/nightreign.webp 710w"
-                    sizes="(min-width: 1600px) 900px, 750px" src="/home_material/nightreign.webp" loading="lazy"
-                    alt="Background is the cover art to the game Elden Ring: Nightreign, depicting a figure on a battlefield, holding a magic staff." />
-                </div>
-                <div class="card-text-wrapper">
-                  <h3 class="card-name"> Elden Ring: Nightreign Network Test </h3>
-                  <p class="card-date"> Updated: 10th March 2025 </p>
-                  <div class="card-details">
-                    <p class="medium-para">
-                      I was recently invited to take part in the console network test for <a
-                        href="https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign/network-test"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Nightreign</a>, a spin-off of Elden Ring developed by
-                      <a href="https://www.fromsoftware.jp/ww/"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Fromsoftware</a>. Across six sessions, I teamed up
-                      with pairs of players on PS5 and
-                      endeavoured to beat the Night Lord, while keeping an eye out for bugs, glitches, and balance
-                      issues.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card" data-index="3" data-status="inactive" draggable="false">
-                <div class="card-image-wrapper">
-                  <img class="card-image"
-                    srcset="/home_material/hades_card_tall.webp 935w, /home_material/hades_card.webp 714w"
-                    sizes="(min-width: 1600px) 900px, 750px" src="/home_material/hades_card.webp" loading="lazy"
-                    alt="Background is the cover art of the game Hades II, depicting the goddess Melinoe holding a dagger and sickle in front of a glowing summoning circle." />
-                </div>
-                <div class="card-text-wrapper">
-                  <h3 class="card-name"> Hades II QA Testing </h3>
-                  <p class="card-date"> Updated: 10th March 2025 </p>
-                  <div class="card-details">
-                    <p class="medium-para">
-                      I am currently taking part in the Early Access period for
-                      <a href="https://www.supergiantgames.com/"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1"> Supergiant
-                        Games</a>' next masterpiece, <a href="https://store.steampowered.com/app/1145350/Hades_II/"
-                        class="under-overlay under-modal-overlay external-link link-back-card" rel="noopener noreferrer"
-                        tabindex="-1">
-                        Hades II</a>. As part of the game's continued development,
-                      Supergiant Games have included a bug
-                      report tool, which allows players to provide QA feedback. Issues resolved following my reports
-                      include: delayed dialogue, enemies spawning out of bounds, persistent visual effects, and
-                      inaccesible doorways.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card" data-index="4" data-status="activeLeft" onclick="handleSliderLeft()" draggable="false">
+              <div class="card" data-index="2" data-status="activeLeft" onclick="handleSliderLeft()" draggable="false">
                 <div class="card-image-wrapper">
                   <img class="card-image" src="/academia_page/academia_images/Surrey.webp" loading="lazy"
                     alt="Background is a photograph of the University of Surrey on a sunny day. The image shows a tall, boat-shaped building surrounded by bright green grass and trees just starting to lose their leaves." />
@@ -472,7 +422,7 @@
 
 
               <div class="abstract-container" id="PhD_Modules"> <!-- Module Dropdown -->
-                <p class="small-para abstract-last-para">
+                <p class="small-para abstract-last-para single-grade-block">
                   <em>
                     100% &ndash; Lie Groups and Lie Algebras <br>
                     100% &ndash; String Theory <br>
@@ -506,7 +456,7 @@
                 <i class="abstract-icon icon-angle-right"></i>Modules and Results
               </button>
 
-              <div class="abstract-container abstract-less-padding" id="MMath_Modules">
+              <div class="abstract-container" id="MMath_Modules">
                 <!-- Module Dropdown in Columns -->
 
                 <div class="grades-row"> <!-- Top Row -->
@@ -603,7 +553,7 @@
               </button>
 
               <div class="abstract-container" id="ALevel_Results">
-                <p class="small-para abstract-last-para"> <!-- Module Dropdown -->
+                <p class="small-para abstract-last-para single-grade-block"> <!-- Module Dropdown -->
                   <em>
                     Mathematics &ndash; A* <br>
                     Further Mathematics &ndash; A* <br>
@@ -630,7 +580,7 @@
                 <i class="abstract-icon icon-angle-right"></i>Subjects and Grades
               </button>
 
-              <div class="abstract-container abstract-less-padding" id="GCSE_Results">
+              <div class="abstract-container" id="GCSE_Results">
                 <!-- Module Dropdown in Columns-->
                 <div class="grades-row">
 
@@ -659,9 +609,12 @@
                       <em>
                         English Literature <br>
                         Media Studies <br>
-                        Science <br> <br>
+                        Science
                       </em>
                     </p>
+                  </div>
+
+                  <div class="grades-column">
                     <p class="grades-title">
                       <b> Other Equivalent Qualifications </b>
                     </p>
@@ -709,11 +662,16 @@
 
 
           <section class="Review-section">
-            <h3> Software Skills </h3>
-            I have experience with a wide range of computer software, including several programming languages.
-            Representative software is listed below, along with links to the relevant projects/pages where applicable.
+            <h3 class="grades-padding"> Software Skills </h3>
+            <p class="grades-padding" style="margin-bottom:1rem; margin-top:1rem;">I have experience
+              with a wide range of
+              computer software,
+              including several
+              programming languages.
+              Representative software is listed below, along with links to the relevant projects/pages where applicable.
+            </p>
 
-            <div class="grades-row">
+            <div class=" grades-row">
               <div class="grades-column">
                 <p class="grades-title"> <b> Programming Languages </b></p>
                 Please see my <a href="https://github.com/LewisN3142/LewisN3142.github.io" rel="noopener noreferrer"
@@ -764,7 +722,8 @@
               <div class="grades-column">
                 <p class="grades-title"> <b> Art Software </b></p>
                 See my <a href="gallery_page/art_gallery.html"
-                  class="under-overlay under-modal-overlay internal-link">Gallery Page</a> for examples of both my
+                  class="under-overlay under-modal-overlay internal-link">Gallery
+                  Page</a> for examples of both my
                 digital and traditional art.
                 <ul class="compact-list">
                   <li> Adobe Photoshop </li>

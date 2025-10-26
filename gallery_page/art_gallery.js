@@ -389,6 +389,24 @@ const gallery_table = [
       "This piece was the third in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the top right) and the first in the series `Powershift goes ranked' where top seed Powershift players attempt to reign victorious in the Ranked game mode. In this episode RaSaevire was joined by two other members of team POWER: Player and LightsGoBoom, with the figures shown being their player characters. The remainder of the assets used were sourced in-game and from Embark's studio press-kit.",
     height: "113",
   },
+  {
+    name: "RaThumbnail4",
+    alt_text:
+      "Two ruby encrusted throwing knives are displayed balanced on their points, next to a medal reading 'S8?' The front knife has '#1' etched into the blade. A caption reads 'Season 7 Montage: Ready For Ruby.'",
+    filter_tags: "gallery_Digital gallery_Youtube-Thumbnail",
+    description:
+      "This piece was the fourth in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a>. The image shows a pair of throwing knives from the game, colour and texture edited to appear as if they are a reward for achieving Ruby rank in the ranked mode of the 8th season.",
+    height: "113",
+  },
+  {
+    name: "RaThumbnail5",
+    alt_text:
+      "A man with gold-plated skin wearing a back tank-top stands with crossed arms in front of a raging explosion, the fire seemingly emitting from his hands. He has several metal chains on his forearms. The background is covered in thick smoke, the edges lit by the fire. A caption reads 'The Finals: Rise or Fall Full Video.",
+    filter_tags: "gallery_Digital gallery_Youtube-Thumbnail",
+    description:
+      "This piece was the fifth in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the bottom left). The character shown on the right is their player character, walking away from an explosion, caused by their chaos. The fire asset was taken from a screenshot of Armoured Core 6, while the smoke was taken from Embark's studio press-kit.",
+    height: "113",
+  },
 ];
 
 $(document).ready(function () {
