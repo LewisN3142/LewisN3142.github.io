@@ -407,6 +407,33 @@ const gallery_table = [
       "This piece was the fifth in a series of thumbnails completed for the youtuber <a href='https://www.youtube.com/@Rasaevire' rel='noopener noreferrer' class='external-link under-overlay'> RaSaevire</a>, based around the game <a href='https://www.reachthefinals.com/'  class='under-overlay external-link' rel='noopener noreferrer'> The Finals</a> (logo shown in the bottom left). The character shown on the right is their player character, walking away from an explosion, caused by their chaos. The fire asset was taken from a screenshot of Armoured Core 6, while the smoke was taken from Embark's studio press-kit.",
     height: "113",
   },
+  {
+    name: "ClairObscure_Pencil",
+    alt_text:
+      "A pencil drawing showing three fantasy characters celebrating Christmas. A monkey-like creature with mechanical joints wears a christmas hat and armour fashioned from wood and string. He holds a candy cane and sits on a pile of wrapped gifts. A large cloth creature cheers in the background while a small anthropomorphised paintbrush constructs a sign reading 'Merry Christmas.'",
+    filter_tags: "gallery_Pencil gallery_Fan-Art",
+    description:
+      "Fan art of the fantastic game <a href='https://www.expedition33.com/' rel='noopener noreferrer' class='external-link under-overlay'> Clair Obscur: Expedition 33</a>, drawn as part of my annual Christmas tradition of showcasing a piece of media I've enjoyed each year, with this piece being drawn to celebrate the end of 2025. The characters who feature in the image are (top to bottom): Esquie, Monoco, and Noco.",
+    height: "229",
+  },
+  {
+    name: "Jinx_Pencil",
+    alt_text:
+      "A pencil portrait of a young woman wearing a leather vest and choker. Her fringe covers her left eye, with the remainder of her hair pulled into a ponytail on the right side of the drawing. Text on the left of the image is rounded and reads 'Powder,' while the text on the right of the image is sharp and says 'Jinx.'",
+    filter_tags: "gallery_Pencil gallery_Fan-Art gallery_Portrait",
+    description:
+      "A pencil portrait of the character Jinx from <a href='https://forticheprod.com/' rel='noopener noreferrer' class='external-link under-overlay'> Fortiche Productions'</a> standout animation Arcane. The image was drawn to show some of the subtle facial details which characterise both the Jinx and Powder personas.",
+    height: "200",
+  },
+  {
+    name: "Mcbess_Pen",
+    alt_text:
+      "A pen drawing containing a wide range of characters and ideas collaged into a single piece. The core of the image is a short glass containing both a drink and a swimming pool. Rubber ducks, slides, and a small boat can be seen in the liquid. A collection of flowers and mushrooms surround the glass, with a pair of women lounging amongst them. Ravioli with legs wander across the front of the scene.",
+    filter_tags: "gallery_Pen",
+    description:
+      "A piece inspired by the rubberhose art style of <a href='https://mcbess.com/' rel='noopener noreferrer' class='external-link under-overlay'> Mcbess</a>, incorporating characters from their work as part of the bands The Dead Pirates and Mcbaise, as well as the clothing brand The Dudes. With many thanks to a dear friend and some fortuitous circumstances, I had the opportunity to show the staff at The Dudes Lisbon this piece as it was being finished.",
+    height: "262",
+  },
 ];
 
 $(document).ready(function () {
@@ -510,13 +537,13 @@ $(document).ready(function () {
 
     $("#gallery-modal-img").attr(
       "src",
-      "/gallery_page/gallery_images/" + $(this).attr("id") + ".webp"
+      "/gallery_page/gallery_images/" + $(this).attr("id") + ".webp",
     );
     $("#gallery-modal-img").attr("data-lightbox", $(this).attr("id"));
     $("#gallery-modal-img").attr(
       "alt",
       "Large scale version of thumbnail image which was selected. " +
-        $(this).children(":first").attr("alt")
+        $(this).children(":first").attr("alt"),
     );
 
     document.getElementById("gallery-modal-description").innerHTML =
@@ -533,12 +560,12 @@ $(document).ready(function () {
     var currentLightbox = $("#gallery-modal-img");
     var firstGalleryImage = document
       .querySelectorAll(
-        ".gallery-thumb-wrapper:not(.gallery-image-hidden):first-child"
+        ".gallery-thumb-wrapper:not(.gallery-image-hidden):first-child",
       )
       .item(0).id;
     var lastGalleryImage = document
       .querySelectorAll(
-        ".gallery-thumb-wrapper:not(.gallery-image-hidden):last-child"
+        ".gallery-thumb-wrapper:not(.gallery-image-hidden):last-child",
       )
       .item(0).id;
 
