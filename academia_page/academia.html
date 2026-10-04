@@ -1339,6 +1339,70 @@
           <h2> Presentations </h2>
 
           <ul>
+            <li>
+              <b> Interpolation, Numerical Weather Prediction, and Some Points n Between</b>
+              <p class="small-para">
+                <em> RMetS Annual Conferences (7th July 2026) <br> University of Exeter, UK.</em>
+              </p>
+
+              <a href="https://www.rmets.org/conference/early-career-and-student-conference-2026"
+                rel="noopener noreferrer" class="external-link under-overlay under-modal-overlay">
+                Conference Webpage</a>
+              |
+              <a href="academia_docs/RMets_Talk.pdf" rel="noopener noreferrer"
+                class="local-download under-overlay under-modal-overlay"> Slides</a>
+              |
+              <button class="abstract-link under-overlay under-modal-overlay" type="button" aria-expanded="false"
+                aria-controls="External-Presentation12">
+                <i class="abstract-icon icon-angle-right"></i>Abstract
+              </button>
+
+              <div class="abstract-container" id="External-Presentation12">
+                <p class="medium-para">
+                  When programming a simulation of a physical system, as in NWP, it is common to begin with an initial
+                  state consisting of
+                  variable values on a grid, such as a lat-long grid on a sphere. Given "on-grid" values, we may also
+                  wish to utilise
+                  values of the variables at intermediate points within the grid cells. For example, we may wish to move
+                  to a higher
+                  resolution or differently shaped grid.
+                </p>
+                <p class="medium-para">
+                  This talk begins with a brief overview of interpolation - a family of methods for finding the values
+                  of variables at
+                  these intermediate points - taking barycentric interpolation as our reference. We demonstrate that
+                  these methods depend
+                  on two known quantities (the "on-grid" values and the geometry of the underlying grid). Furthermore,
+                  while barycentric
+                  interpolation is unique for triangular cells, this is not the case for higher order polygons, where
+                  the most naïve
+                  approach would depend on a choice of subdivision into triangles. We also observe that barycentric
+                  interpolation is
+                  unaware of the curvature of the geometry on which the grid lives; in particular, the scheme assumes
+                  that all cells are
+                  flat and a curved surface (a key aspect of the global model!) would be faceted by the process.
+                </p>
+                <p class="medium-para abstract-last-para">
+                  With this in mind, we showcase the existence of a family of generalised interpolation schemes,
+                  specifically the
+                  spherical mean-value (SMV) scheme, which is more well suited to interpolating on spherical polygons
+                  and approximates
+                  spherical harmonics to a higher degree of accuracy than barycentric interpolation. While this scheme
+                  has previously been
+                  applied in the context of computer graphics, we close with a more computationally tractable
+                  formulation and its
+                  implementation in the open-source repository Atlas.
+                </p>
+                <div class="close-abstract-bar">
+                  <div style="flex-grow:1;"></div>
+                  <button class="under-modal-overlay under-overlay close-abstract-button modal-button"
+                    id="close-External-Presentation12-button" type="button" aria-expanded="false"
+                    aria-controls="External_Presentation12" aria-label="close presentation abstract">Close<i
+                      class="abstract-icon icon-close"></i></button>
+                </div>
+              </div>
+            </li>
+
             <li> <!-- Surrey outreach talk -->
               <b> Post-degree Probability: The Likelihood of Getting a Job</b>
               <p class="small-para">
